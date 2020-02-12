@@ -17,8 +17,9 @@
 
 En esta sesión usaremos herramientas para automatización de tareas en nuestro flujo de trabajo en front-end. Estas herramientas son muy útiles porque nos ayudarán a ser más eficientes en nuestro trabajo y nos ahorrarán tareas repetitivas.
 
-> **NOTA:**
-> En esta sesión vamos a dar un repaso por encima a un flujo de trabajo con Gulp y Node pero no tendremos que configurarnos todavía nuestro entorno de trabajo, os proporcionaremos una base ya configurada sobre la que trabajar lo que queda de módulo :)
+> **NOTA:** En esta sesión vamos a dar un repaso por encima a un flujo de trabajo con Gulp y Node pero no tendremos que configurarnos todavía nuestro entorno de trabajo, os proporcionaremos una base ya configurada sobre la que trabajar lo que queda de módulo :)
+
+> **NOTA:** Para esta sesión debemos tener Node instalado en nuestro ordenador. Si no lo tenemos instalado debemos hacerlo siguiendo los pasos de Guía de instalación de ordenadores.
 
 ## ¿En qué casos se utiliza?
 
@@ -337,7 +338,7 @@ A veces queremos (o necesitamos) que la estructura de carpetas en `public/` sea 
 
 > **IMPORTANTE**: las rutas deben estar correctamente escritas en el código que esté en `public/`, porque ese es el código que estará en el servidor, esos son los ficheros que verán las usuarias de la web.
 
-### EJERCICIO 6
+#### EJERCICIO 6
 
 Hoy a venido la desarrolladora DevOps de la empresa y nos pide que la carpeta de imágenes se tiene que llamar `img/` porque así está en el resto de proyectos de la empresa, y le simplifica la gestión de los servidores. Para ello:
 
@@ -378,43 +379,3 @@ Plugins para copiar ficheros, por ejemplo, copiar las fuentes a nuestra carpeta 
 - [Documentación oficial de Gulp](https://Gulpjs.com/)
 - [Gulp for beginners](https://css-tricks.com/Gulp-for-beginners/)
 
-## BONUS: Instalar Node
-
-### Instalar Node en Ubuntu
-
-Para instalar la última versión estable de Node en Ubuntu, tenemos que ejecutar estas dos líneas de código en nuestra terminal:
-
-```shell
-curl -sL https://deb.nodesource.com/setup_10.x | sudo -E bash -
-sudo apt-get install -y nodejs
-```
-
-### Instalar Node en Mac
-
-Para instalar Node en Mac ejecutaremos el siguiente código para comprobar si tenemos instalado [Homebrew](https://brew.sh/index_es.html), que es una herramienta muy útil que nos permite instalar software en nuestro ordenador de forma muy sencilla.
-
-Para comprobar si tenemos instalado Homebrew, escribimos en la terminal lo siguiente:
-
-```shell
-brew --version
-```
-
-Igual que nos ha sucedido antes con Node, una vez ejecutado el comando nos aparecerá un mensaje en la terminal. Si nos aparece un mensaje del estilo `El comando no existe` o `command not found` es que no tenemos instalado Node en nuestro ordenador. Si por el contrario, se muestra un mensaje con una versión y un texto, sabremos que lo tenemos instalado.
-
-Si tenemos instalado Homebrew podemos saltarnos este comando, sino tenemos que ejecutarlo para instalarlo:
-
-```shell
-/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-```
-
-Tras realizarlo y que haga todo el proceso, volvemos a comprobar con `brew --version` si hemos instalado correctamente Homebrew. En caso de tener todo correcto, continuamos con el siguiente paso y si no sale lo que esperamos, es el momento de pedir ayuda :).
-
-Por último, ahora que tenemos instalado Homebrew, instalar Node será tan sencillo como hacer lo siguiente:
-
-```shell
-brew install node@10
-```
-
-### Instalar Node en otro sistema operativo distinto de Ubuntu o Mac
-
-Para el resto de sistemas seguimos las [instrucciones de instalación en su web oficial](https://nodejs.org/en/).
