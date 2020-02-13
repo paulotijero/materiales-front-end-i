@@ -82,7 +82,8 @@ Estos archivos, que no tiene sentido tener "controlados" pero que en nuestra car
 En [gitignore.io](https://www.gitignore.io) podemos encontrar una serie de configuraciones ya hechas que nos ayudan a ignorar tipos de archivos comunes según el sistema operativo o el lenguaje en el que trabajemos.
 
 ### Licencia
-Uno de los puntos claves un entorno social donde poner al alcance de todos tus proyectos es indicar cómo y en qué términos se deben usar. Para esto están las licencias, que son archivos legales que especifican qué se puede y qué no se puede hacer con los archivos asociados.
+
+Uno de los puntos claves en un entorno social donde poner al alcance de todos tus proyectos, es indicar cómo y en qué términos se deben usar. Para esto están las licencias, que son archivos legales que especifican qué se puede y qué no se puede hacer con los archivos asociados.
 
 GitHub nos ofrece un enlace donde nos intenta orientar sobre qué licencia elegir en cada caso: [choosealicense.com](https://choosealicense.com).
 
@@ -116,7 +117,7 @@ Pasan varias cosas:
 Y aquí tenemos dos escenarios diferentes:
 
 1. Los cambios que se han bajado de remoto (realizados por mis compañeras) y los míos se pueden mezclar (o mergear) automaticamente, Git crea un commit automático con esta mezcla (o merge) y nos lo muestra usando el editor por defecto que tenemos configurado en nuestra terminal (NANO, vim...).
-2. Otra posibilidad es que Git no pueda mezclar los cambios automáticamente. Entonces nos avisa de que hay conflictos que tendremos que resolver nosotras manualmente. Nos mostrará una lista de archivos donde encuentran los conflictos.
+2. Otra posibilidad es que Git no pueda mezclar los cambios automáticamente. Entonces nos avisa de que hay conflictos que tendremos que resolver nosotras manualmente. Nos mostrará una lista de archivos donde se encuentran los conflictos.
 
 > **NOTA**: En el primer caso podremos cambiar el mensaje del commit automático o poner uno nuevo. Guardamos aceptando el nombre que nos propone, salimos, y hacemos un push (se subirá el commit con nuestros cambios y el commit con el merge o mezcla).
 
@@ -256,7 +257,7 @@ Para ello:
 1. Nos movemos a la rama `footer`
 2. Comprobamos que está correcto y tenemos la última versión
 3. Nos movemos a la rama `master` (sí, es super buena idea asegurarnos de que también tenemos la última versión)
-4. Hacermos un merge de la rama `footer`
+4. Hacernos un merge de la rama `footer`
 5. Resolvemos los conflictos si los hay
 6. Comprobamos que los cambios está hechos
 7. Y subimos al repositorio remoto

@@ -310,11 +310,11 @@ Seguiremos los pasos anteriores para crear un nuevo proyecto usando el kit de Ad
 
 Una vez terminado, vamos a probar una opción muy chula del kit: la posibilidad de trabajar con ficheros parciales de HTML. Para eso, mirad el ejemplo de la carpeta `_src/templates` donde hay un fichero `index.html` que carga 2 ficheros parciales con trozos de HTML. En vuestro proyecto cread esta misma estructura y sacad la cabecera y el pie de página de la web a un parcial.
 
-Para terminar, vamos a publicar la web usando GitHub Pages. Para eso usaremos la tarea `gulp docs` que general una carpeta docs con la web preparada para subirla a GitHub Pages.
+Para terminar, vamos a publicar la web usando GitHub Pages. Para eso usaremos la tarea `gulp docs` que genera una carpeta docs con la web preparada para subirla a GitHub Pages.
 
 ## Rutas de ficheros en Starter Kit
 
-Las rutas que escribimos en un fichero, por ejemplo en un scss escribimos `background-image: url('../images/logo-adalab-80px.png')`, nos sirven para relacionar dos ficheros. En el fichero de origen se indica donde está el fichero de destino. Si las rutas están bien, el navegador sabrá dónde ir a buscar el fichero de destino.
+Las rutas que escribimos en un fichero, por ejemplo en un scss escribimos `background-image: url('../images/logo-adalab-80px.png')`, nos sirven para relacionar dos ficheros. En el fichero de origen se indica dónde está el fichero de destino. Si las rutas están bien, el navegador sabrá dónde ir a buscar el fichero de destino.
 
 Con las rutas se puede trabajar de dos maneras:
 
