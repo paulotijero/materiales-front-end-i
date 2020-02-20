@@ -58,16 +58,15 @@ Esto tiene una respuesta sencilla, por un lado, escribiendo un **HTML semántico
 
 3. Utilizar las **listas para contenidos que siguen una pauta de repetición y constituyen un listado**:
 
-	- Menús (cada item es un elemento de lista `<li>`)
-	- Migas de pan
-	- Categorías/Tags...
+   - Menús (cada item es un elemento de lista `<li>`)
+   - Migas de pan
+   - Categorías/Tags...
 
 4. En etiquetas `<input>`, especificar siempre su `type`, `value` y `name`, además, asociar siempre etiquetas `<label>` a sus respectivos `<input>`.
 
- ```html
-<label for="male">Male</label>
-<input type="radio" name="gender" id="male" value="male" />
- ```
+```html
+<label for="male">Male</label> <input type="radio" name="gender" id="male" value="male" />
+```
 
 5. Incorporar **textos alternativos** en imágenes y vídeos
 
@@ -88,14 +87,14 @@ Puedes leer más sobre landmarks en [https://olgacarreras.blogspot.com/2014/03/n
 
 3. **Navegación con teclado**
 
-	- **Focussable buttons**: Hacer siempre los botones de nuestra web visualmente destacados cuando nos posicionemos sobre ellos a través del foco. No deberíamos quitar nunca el `:focus` de nuestros botones.
+   - **Focussable buttons**: Hacer siempre los botones de nuestra web visualmente destacados cuando nos posicionemos sobre ellos a través del foco. No deberíamos quitar nunca el `:focus` de nuestros botones.
 
-	- **Tabbable elements:** Muchas veces el orden visual de los elemtnos de nuestras webs no se corresponde con el orden lógico en el que queremos que se navegue por ella, por ejemplo los campos de formulario. Para solucionar esto existe la propiedad `tabindex`.
+   - **Tabbable elements:** Muchas veces el orden visual de los elemtnos de nuestras webs no se corresponde con el orden lógico en el que queremos que se navegue por ella, por ejemplo los campos de formulario. Para solucionar esto existe la propiedad `tabindex`.
 
 ```html
-	<a href="https://www.w3schools.com/" tabindex="2">W3Schools</a>
-	<a href="http://www.google.com/" tabindex="1">Google</a>
-	<a href="http://www.microsoft.com/" tabindex="3">Microsoft</a>
+<a href="https://www.w3schools.com/" tabindex="2">W3Schools</a>
+<a href="http://www.google.com/" tabindex="1">Google</a>
+<a href="http://www.microsoft.com/" tabindex="3">Microsoft</a>
 ```
 
 Puedes leer más sobre el uso correcto de tabindex en [https://developers.google.com/web/fundamentals/accessibility/focus/using-tabindex?hl=es](https://developers.google.com/web/fundamentals/accessibility/focus/using-tabindex?hl=es)
@@ -103,7 +102,7 @@ Puedes leer más sobre el uso correcto de tabindex en [https://developers.google
 4. **Etiquetas ARIA**. Las etiquetas ARIA sirven para añadir descripciones y etiquetas a elementos para volverlos accesibles cuando por sí mismos no lo son. Vamos a ver un ejemplo. más abajo se aplica estilo a un botón para que parezca un típico botón "cerrar", con una X en medio. Al no haber nada que indique que el propósito del botón es cerrar el diálogo, se usa el atributo `aria-label` para proporcionar una etiqueta a cualquier lector de pantalla.
 
 ```html
-	<button aria-label="Close" onclick="myDialog.close()">X</button>
+<button aria-label="Close" onclick="myDialog.close()">X</button>
 ```
 
 Conoce más sobre este tipo de etiquetas en [https://developers.google.com/web/fundamentals/accessibility/semantics-aria/aria-labels-and-relationships?hl=es](https://developers.google.com/web/fundamentals/accessibility/semantics-aria/aria-labels-and-relationships?hl=es)
@@ -117,37 +116,41 @@ La empresa Bacon Yummy tiene una página anticuada que no sigue ninguna pauta de
 ```html
 <!DOCTYPE html>
 <html>
-<head>
-<title>Best bacon for your pizza</title>
-</head>
-<body>
-<div  class="header">
-<div  class="menu">
-<a  class="link"  href="#">Home</a>
-<a  class="link"  href="#">What is bacon</a>
-<a  class="link"  href="#">Contact</a>
-</div>
-</div>
-<div  class="aside">
-<div  class="aside-menu">
-<a  class="link"  href="#">Oink</a>
-<a  class="link"  href="#">Aside oink oink</a>
-<a  class="link"  href="#">More oinks</a>
-</div>
-</div>
-<div  class="main">
-<div  class="article">
-<h2>Bacon ipsum recipe</h2>
-<p>
-Bacon ipsum dolor amet shankle landjaeger flank jerky short loin drumstick tenderloin buffalo porchetta sausage. Burgdoggen flank pork belly, corned beef jerky cow capicola rump venison picanha frankfurter turducken hamburger cupim jowl. Rump tail pastrami short ribs picanha. Pig capicola shank t-bone pork belly turducken. Flank alcatra strip steak, pork loin jowl capicola prosciutto chicken pork belly pork chop.
-</p>
-</div>
-</div>
+  <head>
+    <title>Best bacon for your pizza</title>
+  </head>
+  <body>
+    <div class="header">
+      <div class="menu">
+        <a class="link" href="#">Home</a>
+        <a class="link" href="#">What is bacon</a>
+        <a class="link" href="#">Contact</a>
+      </div>
+    </div>
+    <div class="aside">
+      <div class="aside-menu">
+        <a class="link" href="#">Oink</a>
+        <a class="link" href="#">Aside oink oink</a>
+        <a class="link" href="#">More oinks</a>
+      </div>
+    </div>
+    <div class="main">
+      <div class="article">
+        <h2>Bacon ipsum recipe</h2>
+        <p>
+          Bacon ipsum dolor amet shankle landjaeger flank jerky short loin drumstick tenderloin
+          buffalo porchetta sausage. Burgdoggen flank pork belly, corned beef jerky cow capicola
+          rump venison picanha frankfurter turducken hamburger cupim jowl. Rump tail pastrami short
+          ribs picanha. Pig capicola shank t-bone pork belly turducken. Flank alcatra strip steak,
+          pork loin jowl capicola prosciutto chicken pork belly pork chop.
+        </p>
+      </div>
+    </div>
     <div class="footer">
-<h1>Visit us</h1>
-Copyright 2019. Bacon Yummy. All right reserved.
-</div>
-</body>
+      <h1>Visit us</h1>
+      Copyright 2019. Bacon Yummy. All right reserved.
+    </div>
+  </body>
 </html>
 ```
 
@@ -293,7 +296,7 @@ Lo bueno de esta técnica es que si en el futuro nos da por cambiar el color que
 
 **Colores**
 
-Vamos a descargarnos una solución al [ejercicio de evaluación intermedia del primer módulo de Adalab](https://github.com/Adalab/e-s1-evaluacion-intermedia-nasivuela). Y a continuación nos descargamos nuestro [Web starter kit](https://github.com/Adalab/Adalab-web-starter-kit).
+Vamos a descargarnos nuestro ejercicio de la evaluación intermedia. Y a continuación nos descargamos nuestro [Web starter kit](https://github.com/Adalab/Adalab-web-starter-kit).
 
 Fichero a fichero vamos a pasar los HTMLs, CSSs e imágenes del ejercicio de evaluación a la carpeta del starter kit, para tener funcionando el ejercicio de evalución con SASS, Gulp...
 
@@ -434,8 +437,8 @@ Creando estos estilos podremos reutilizarlos simplemente para dar estilo a nuest
 ```html
 <h1 class="txt-xl">Título</h1>
 <p class="txt-primary medium">
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-  tempor incididunt ut labore et dolore magna aliqua.
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+  labore et dolore magna aliqua.
 </p>
 <small class="txt-sm txt-center"></small>
 ```
@@ -558,8 +561,7 @@ $btn-font-weight: 500;
 Tras añadir estos estilos, sólo tendremos que hacer lo siguiente para que se apliquen sobre el elemento HTML que queramos:
 
 ```html
-<a class="btn btn-default" href="#">Continuar</a>
-<button class="btn btn-default">Continuar</button>
+<a class="btn btn-default" href="#">Continuar</a> <button class="btn btn-default">Continuar</button>
 ```
 
 [&rtrif; Ejemplo en CodePen](https://codepen.io/adalab/pen/vQEjGL)
