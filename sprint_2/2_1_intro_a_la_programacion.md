@@ -156,23 +156,7 @@ Otro aspecto a destacar es que escribimos cada orden en una línea y ponemos un 
 
 Puede que en este punto aún sigas perdida y no te haya quedado muy claro cómo usar realmente JavaScript pero no te preocupes, de momento sólo debes entender que programar no es otra cosa que pensar en los pasos para resolver un problema y traducirlo a órdenes con un lenguaje que entienda el navegador (JavaScript). Por tanto, lo que tenemos que hacer es practicar la lógica, familiarizarnos con la sintaxis de JavaScript y aprender a traducir pasos a este lenguaje para ir poco a poco mejorando y cogiendo soltura.
 
-* * *
-
-***
-
-*****
-
-- - -
-
-\-\-\-
-
-\_\_\_
-
----------------------------------------
-
-{{ <hr /> }}
-{{ < hr > }}
-{{ < p >asfasdf</p> }}
+\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
 
 #### EJERCICIO 1
 
