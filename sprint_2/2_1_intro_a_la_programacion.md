@@ -166,6 +166,8 @@ Puede que en este punto aún sigas perdida y no te haya quedado muy claro cómo 
 
 \-\-\-
 
+___
+
 ---------------------------------------
 
 {{ <hr /> }}
