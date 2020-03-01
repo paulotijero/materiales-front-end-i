@@ -156,8 +156,6 @@ Otro aspecto a destacar es que escribimos cada orden en una línea y ponemos un 
 
 Puede que en este punto aún sigas perdida y no te haya quedado muy claro cómo usar realmente JavaScript pero no te preocupes, de momento sólo debes entender que programar no es otra cosa que pensar en los pasos para resolver un problema y traducirlo a órdenes con un lenguaje que entienda el navegador (JavaScript). Por tanto, lo que tenemos que hacer es practicar la lógica, familiarizarnos con la sintaxis de JavaScript y aprender a traducir pasos a este lenguaje para ir poco a poco mejorando y cogiendo soltura.
 
-\_\_\_\_\_\_\_\_\_\_
-
 #### EJERCICIO 1
 
 **Mensaje de navegador obsoleto**
@@ -165,6 +163,8 @@ Puede que en este punto aún sigas perdida y no te haya quedado muy claro cómo 
 En este ejercicio y con lo poquito que hemos visto hasta ahora de JavaScript, vamos a crear un código que muestre un título con el mensaje "Esta página no es compatible con la versión actual de tu navegador. Por favor actualízalo a la versión más reciente.". Para ello utilizaremos `document.querySelector('h1').innerHTML` tal y como hemos visto en los ejemplos anteriores.
 
 Una vez que lo hayáis realizado podéis enviárselo a algún amigo o familiar y decirle que os diga que le parecen los colores de vuestra nueva web para que pase un rato divertido intentando actualizar el navegador :).
+
+* * *
 
 ## Variables
 
@@ -283,8 +283,6 @@ const sectionSize = remainingSpace / sections;
 
 En este caso el código es mucho más verboso y más largo pero se entiende mucho mejor para que sirve -> establecer la altura de una sección en función de la altura de la pantalla sin tener en cuenta la cabecera y la subcabecera. La idea es que nuestro código sea así, semántico y que se entienda perfectamente qué queremos hacer en cada momento. Por eso, a partir de ahora, todos nuestro ejercicios en JavaScript deberán intentar parecerse a este lo máximo posible para adquirir esta buena práctica muy bien valorada en las empresas.
 
-* * *
-
 #### EJERCICIO 2
 
 **Arreglando errores**
@@ -377,8 +375,6 @@ titleElement.innerHTML = titleElement.innerHTML + ', adalaber';
 
 Bien, ya sabemos cómo obtener un elemento y cómo modificarlo. Vamos a hacer un par de ejercicios para practicarlo.
 
-* * *
-
 #### EJERCICIO 3
 
 **Hola Mundo**
@@ -422,8 +418,6 @@ listElement.innerHTML = content;
 Esto añadirá dos `li`s a la lista y la página los mostrará automáticamente.
 
 Con esto ya podemos trabajar editando el contenido de nuestra página. A partir de ahora podremos añadir contenido a nuestra web o modificarlo y por tanto hacer nuestra web dinámica de verdad, genial ¿no? :).
-
-* * *
 
 #### EJERCICIO 6
 
@@ -495,8 +489,6 @@ Lo único nuevo de ese código sería `classList.remove()`. Como se puede deduci
 ```js
 sectionB.classList.remove('hidden', 'otraClase', 'otraMas');
 ```
-
-* * *
 
 #### EJERCICIO 8
 
