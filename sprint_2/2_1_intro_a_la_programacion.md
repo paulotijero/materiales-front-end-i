@@ -502,7 +502,7 @@ Crear dos botones sencillos con los mismos estilos (padding, borde, color) y, us
 
 ### getElementById
 
-Hemos visto como usar `querySelector()` para obtener un elemento de HTML usando selectores de CSS. Cuando el selector al que queremos acceder es un `id` también podemos utilizar `getElementById()`. Veamos ambas opciones:
+Hemos visto cómo usar `querySelector()` para obtener un elemento de HTML usando selectores de CSS. Cuando el selector al que queremos acceder es un `id` también podemos utilizar `getElementById()`. Veamos ambas opciones:
 
 ```js
 const mainTitle = document.querySelector('#mainTitle');
@@ -529,7 +529,7 @@ var pageBgColor;
 pageBgColor = '#3d7e9a';
 ```
 
-¿Pero y como diferenciabais si el valor podía variar o era constante? Con truquillos de la abuela, como por ejemplo nombrar las constantes en mayúscula.
+¿Pero y cómo diferenciabais si el valor podía variar o era constante? Con truquillos de la abuela, como por ejemplo nombrar las constantes en mayúscula.
 
 ```js
 var DAYS_PER_WEEK = 7;

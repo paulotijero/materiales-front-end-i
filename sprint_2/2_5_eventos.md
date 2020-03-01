@@ -471,9 +471,9 @@ Este comportamiento hace que:
 - podamos 'escuchar' un evento en un elemento, sin que esto implique que se haya iniciado en él
 - podamos poner `listeners` con `handlers` en varios padres y que todos se ejecuten si sucede un evento en un hijo común
 
-Pincha en los `divs` de este [codepen](https://codepen.io/adalab/pen/MPjyyW?editors=1010) y observa como se comportan.
+Pincha en los `divs` de este [codepen](https://codepen.io/adalab/pen/MPjyyW?editors=1010) y observa cómo se comportan.
 
-En este [pen](https://codepen.io/adalab/pen/zLKwwP) puedes ver como manejar eventos anidados sin que entren en conflicto.
+En este [pen](https://codepen.io/adalab/pen/zLKwwP) puedes ver cómo manejar eventos anidados sin que entren en conflicto.
 
 ## Otras formas de escuchar eventos
 
@@ -498,7 +498,7 @@ A partir de ahora usaremos **siempre, siempre, siempre** la forma recomendada, e
 
 ## Resumen
 
-En esta sesión hemos visto: como hacer nuestras webs interactivas de verdad, escuchando eventos y reaccionando a ellos gracias a `addEventListener(type, handler)`. Como utilizar información que nos devuelve el navegador sobre los eventos:
+En esta sesión hemos visto: cómo hacer nuestras webs interactivas de verdad, escuchando eventos y reaccionando a ellos gracias a `addEventListener(type, handler)`. Cómo utilizar información que nos devuelve el navegador sobre los eventos:
 
 - `event.currentTarget`: elemento con el listener
 - `event.target`: elemento sobre el que sucede el evento

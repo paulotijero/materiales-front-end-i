@@ -24,7 +24,7 @@ En la sesión anterior hablamos sobre como programar es básicamente realizar op
 
 Se aprecia con esto que la base de la información de nuestra aplicación reside en los valores. Éstos serán los encargados de representar los datos y serán sobre los que apliquemos las operaciones necesarias.
 
-Durante esta sesión vamos a ver algunos tipos de datos para poder operar con ellos de manera adecuada, y como trabajar con la consola del navegador, que es una herramienta indispensable a la hora de programar en la web. ¡Vamos a ello!
+Durante esta sesión vamos a ver algunos tipos de datos para poder operar con ellos de manera adecuada, y cómo trabajar con la consola del navegador, que es una herramienta indispensable a la hora de programar en la web. ¡Vamos a ello!
 
 ## La consola de JavaScript
 
