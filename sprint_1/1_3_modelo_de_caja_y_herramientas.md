@@ -271,7 +271,7 @@ Con la información de los enlaces anteriores, ¿sabrías resolver los casos de 
 
 **Equipo corchángulo**
 
-Nos vamos de hackaton, y la página con los detalles de nuestro equipo está sin terminar. La maquetadora la ha dejado preparada a falta de descomentar algunas lineas. Mira el [Codepen](https://codepen.io/adalab/pen/LrPbmb) que ha preparado y descomenta y comenta las lineas de CSS para ver como se comportan los elementos.
+Nos vamos de hackaton, y la página con los detalles de nuestro equipo está sin terminar. La maquetadora la ha dejado preparada a falta de descomentar algunas lineas. Mira el [Codepen](https://codepen.io/adalab/pen/LrPbmb) que ha preparado y descomenta y comenta las lineas de CSS para ver cómo se comportan los elementos.
 
 * * *
 
@@ -365,7 +365,7 @@ Network también muestra cuánto tarda en cargarse un elemento y qué tamaño ti
 
 Podemos seleccionar qué tipo de archivos queremos que se muestren y ver la dirección desde la que se están cargando esos archivos. Este último punto es fundamental y nos permitirá saber, en caso de que un archivo esté dando error, por qué está fallando, ya que normalmente será porque hemos introducido una ruta (URL) errónea, es decir, hemos puesto en el código que el recurso está en una carpeta en la que no está realmente.
 
-Otro recurso muy interesante que nos ofrece Network es que nos permite ver cuántos segundos tarda en cargarse nuestra página y tomar capturas de pantalla de cada momento para simular que será lo que verá un usuario durante el momento de la carga.
+Otro recurso muy interesante que nos ofrece Network es que nos permite ver cuántos segundos tarda en cargarse nuestra página y tomar capturas de pantalla de cada momento para simular qué será lo que verá un usuario durante el momento de la carga.
 
 * * *
 

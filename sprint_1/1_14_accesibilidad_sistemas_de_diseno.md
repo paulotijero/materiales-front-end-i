@@ -160,13 +160,13 @@ La empresa Bacon Yummy tiene una página anticuada que no sigue ninguna pauta de
 
 Un sistema de diseño es un conjunto de patrones y reglas que rigen el estilo de un producto de forma consistente y armoniosa.
 
-En el caso de un sistema de diseño web, éste definirá los estilos para los componentes, por ejemplo como deben ser los estilos de los botones o los inputs así como los iconos.
+En el caso de un sistema de diseño web, éste definirá los estilos para los componentes, por ejemplo cómo deben ser los estilos de los botones o los inputs así como los iconos.
 
 A la hora de dar coherencia, el sistema deberá mantener sus estilos a lo largo de todos sus componentes de tal forma que la línea gráfica se mantenga a través de todos ellos. Por ejemplo, esto se suele ver claramente cuando tenemos una visión global de todos los componentes. En el momento que tenemos esa visión global, si el sistema es bueno, veremos una relación clara entre todos ellos y una coherencia en sus estilos.
 
 Por último un sistema no sólo son estilos para nuestros componentes, sino que también define las reglas sobre cómo debe usarse, como los colores y cuándo usarlos, la tipografía y cuándo usar un tamaño u otro y los márgenes y paddings que se pueden aplicar.
 
-La idea principal del sistema es que cualquiera que lo analice sepa con claridad cuáles son sus reglas y cómo aplicarlas. De esta forma cualquier persona puede empezar a trabajar con él en muy poco tiempo y generar vistas que alineadas con el estilo del producto.
+La idea principal del sistema es que cualquiera que lo analice sepa con claridad cuáles son sus reglas y cómo aplicarlas. De esta forma cualquier persona puede empezar a trabajar con él en muy poco tiempo y generar vistas que estén alineadas con el estilo del producto.
 
 Y ahora pensarás _«vale sí muy bien, pero sigues hablándome en chino, ¿podrías ponerme un ejemplo?»_. Sin duda, el ejemplo más claro y que todos conocemos es [Material Design](https://material.io/guidelines/material-design/introduction.html) de Google, que es el sistema que se utiliza para diseñar la mayoría de aplicaciones de Google y que muchas otras empresas han utilizado para diseñar las suyas propias.
 

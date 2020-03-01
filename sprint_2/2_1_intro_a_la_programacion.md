@@ -61,7 +61,7 @@ Hasta ahora hemos estado trabajando con HTML y CSS y, aunque mucha gente se refi
 
 ## ¿Qué es JavaScript?
 
-JavaScript, a diferencia de HTML y CSS, sí que es un lenguaje de programación. Este lenguaje nos permite dar instrucciones al ordenador, en este caso al navegador web, para explicarle cómo debe mostrar nuestra página y que debe hacer en qué situación (si se pulsa un botón, si se rellena un campo, si pulsamos un enlace, etc.)
+JavaScript, a diferencia de HTML y CSS, sí que es un lenguaje de programación. Este lenguaje nos permite dar instrucciones al ordenador, en este caso al navegador web, para explicarle cómo debe mostrar nuestra página y qué debe hacer en qué situación (si se pulsa un botón, si se rellena un campo, si pulsamos un enlace, etc.)
 
 JavaScript en su día fue creado para realizar validaciones sobre datos en un formulario, pero ese tiempo quedó ya muy atrás. Hoy en día es uno de los lenguajes más populares y gran parte de ese mérito se debe a que es el lenguaje de la web, es decir, es el único lenguaje de programación que entienden los navegadores (debemos recordar que HTML y CSS no son lenguajes de programación). Desde su inicio se ha expandido y sus fronteras han ido más allá de la web hasta llegar al punto en el que se utiliza JavaScript para programar aplicaciones para ordenador, servidores, robots e incluso proyectos espaciales llevados a cabo por la NASA.
 
@@ -168,7 +168,7 @@ Una vez que lo hayáis realizado podéis enviárselo a algún amigo o familiar y
 
 ## Variables
 
-Uno de los problemas que no sabemos resolver aún es como guardar los datos de una operación o un texto para poder utilizarlo en otra operación posterior. JavaScript tiene un recurso para poder hacer esto, las variables.
+Uno de los problemas que no sabemos resolver aún es cómo guardar los datos de una operación o un texto para poder utilizarlo en otra operación posterior. JavaScript tiene un recurso para poder hacer esto, las variables.
 
 Para tener una idea de qué es una variable, podríamos pensar en ella como si fuese una caja con una etiqueta que describe su contenido, en la que guardamos algo.
 
@@ -297,9 +297,9 @@ Hay que leer la explicación y cambiar el código para que desaparezca el error.
 
 ## Programación en la web
 
-Ahora que hemos visto cómo funcionan las constantes y las variables para trabajar con valores, vamos a continuar aprendiendo como utilizar JavaScript para modificar el contenido y los estilos de nuestras páginas de formar ordenada.
+Ahora que hemos visto cómo funcionan las constantes y las variables para trabajar con valores, vamos a continuar aprendiendo cómo utilizar JavaScript para modificar el contenido y los estilos de nuestras páginas de forma ordenada.
 
-La operación más básica a la hora de trabajar con nuestra página web es obtener información acerca de una etiqueta bien sea para añadir algo a su contenido, modificarlo o eliminarlo directamente. En JavaScript nos referimos a las etiquetas de HTML como elementos ( en futuras lecciones veremos el porqué de esto ).
+La operación más básica a la hora de trabajar con nuestra página web es obtener información acerca de una etiqueta, bien sea para añadir algo a su contenido, modificarlo o eliminarlo directamente. En JavaScript nos referimos a las etiquetas de HTML como elementos ( en futuras lecciones veremos el porqué de esto ).
 
 Como vimos al principio de la lección con `document.querySelector('h1').innerHTML = '¡Hola Mundo!'` cambiábamos el texto de a la etiqueta `h1` del documento HTML. Vamos a desgranar esto un poco para entenderlo mejor.
 
@@ -360,7 +360,7 @@ De esta forma el contenido de h1 pasaría de ser _"Binvenida"_ a _"Bienvenida"_ 
 
 Ahora supongamos que tras cambiar con JavaScript el texto de _"Binvenida"_ a _"Bienvenida"_ queremos hacerlo más personal y queremos que ponga _"Bienvenida, adalaber"_ en vez de un soso _"Bienvenida"_.
 
-En este caso deberemos coger el contenido actual del elemento y añadirle ", adalaber". Aquí viene un concepto interesante, `innerHTML` nos solo nos permite cambiar el contenido de una etiqueta, también podemos recoger el valor actual, vamos a verlo:
+En este caso deberemos coger el contenido actual del elemento y añadirle ", adalaber". Aquí viene un concepto interesante, `innerHTML` no solo nos permite cambiar el contenido de una etiqueta, también podemos recoger el valor actual, vamos a verlo:
 
 ```js
 /*
@@ -546,8 +546,6 @@ Como hemos visto durante esta sesión, programar es simplemente dar órdenes al 
 
 Aparte de ver qué es programar también hemos visto:
 
-- Como usar variables y constantes en JavaScript para guardar valores y poder utilizarlos después y además que nuestro código sea legible por otras programadoras.
-
-- Como leer y modificar el contenido de las etiquetas de HTML.
-
-- Como añadir y quitar clases de las etiquetas de HTML.
+- Cómo usar variables y constantes en JavaScript para guardar valores y poder utilizarlos después y además que nuestro código sea legible por otras programadoras.
+- Cómo leer y modificar el contenido de las etiquetas de HTML.
+- Cómo añadir y quitar clases de las etiquetas de HTML.

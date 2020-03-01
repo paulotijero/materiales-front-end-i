@@ -14,7 +14,7 @@
 
 ## Introducción
 
-CSS es un lenguaje de estilo y con él decimos cómo tiene que verse nuestro HTML. Hasta ahora hemos visto algunas de las cosas que podemos hacer con estilos e incluso como aplicarlas cuando se cumplen ciertas condiciones gracias a las mediaqueries. Todavía nos falta el aspecto más vistoso que le da más vida al apartado gráfico: transiciones y animaciones.
+CSS es un lenguaje de estilo y con él decimos cómo tiene que verse nuestro HTML. Hasta ahora hemos visto algunas de las cosas que podemos hacer con estilos e incluso cómo aplicarlas cuando se cumplen ciertas condiciones gracias a las mediaqueries. Todavía nos falta el aspecto más vistoso que le da más vida al apartado gráfico: transiciones y animaciones.
 
 ## Transiciones
 
@@ -141,7 +141,7 @@ y luego se la aplicamos a nuestro selector con el atajo `animation` o con sus su
 - `animation-timing-function`: funciona igual que con las transiciones
 - `animation-fill-mode`: especifica si los valores de la animación se aplicarán al elemento animado una vez termine o antes de empezar
 
-Por ahora vamos a ver como aplicar nuestra animación sencilla:
+Por ahora vamos a ver cómo aplicar nuestra animación sencilla:
 
 ```css
 .hi {

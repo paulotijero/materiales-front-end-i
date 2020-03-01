@@ -181,7 +181,7 @@ Boostrap es una librería de grid (solo columnas) y componentes gráficos que cr
 
 A diferencia de otros temas, con Bootstrap os vamos a contar solo una pequeña introducción y vais a tener que enfrentaros con algo muy común como es usar una herramienta nueva y tener que revisar **la documentación ;)**
 
-Para poder usarlo en nuestro proyecto, enlazaremos los CSS alojado en un servidor de Internet, lo que suele llamarse CDN (como hemos hecho con las fuentes de Google Fonts o con FontAwesome)
+Para poder usarlo en nuestro proyecto, enlazaremos los CSS alojados en un servidor de Internet, lo que suele llamarse CDN (como hemos hecho con las fuentes de Google Fonts o con FontAwesome)
 
 > Alternativamente podríamos descargar el código CSS y usarlo en nuestro proyecto.
 

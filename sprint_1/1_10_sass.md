@@ -137,7 +137,7 @@ Esto nos generará el siguiente CSS:
 .content p a {color:red;}
 ```
 El anidado nos permite anidar bloques asimilándose un poco a la jerarquía visual de HTML. Esto nos permite ver algunos bloques más claros o agrupar clases que nos interese ver juntas. Pero atención: anidar genera estilos más específicos y hay que usarlo con mucho cuidado.
-Una buena regla es, cuando vayamos añadir un cuarto nivel de anidación, pararnos a repensar si realmente es necesario. Pero con el uso iremos viendo cuándo usarlo y cuándo no ;)
+Una buena regla es, cuando vayamos a añadir un cuarto nivel de anidación, pararnos a repensar si realmente es necesario. Pero con el uso iremos viendo cuándo usarlo y cuándo no ;)
 
 ### Referenciando al selector padre o madre: `&`
 ¡Pero no todo es tener cuidado! Una de las ventajas que nos ofrece el anidado es poder referenciar al selector padre o madre. Por ejemplo: queremos que los enlaces de nuestra página sean rojos, y el hover en azul, pero los enlaces del footer deben ser naranjas con el hover en verde.
@@ -184,7 +184,7 @@ Pues un marco de trabajo con CSS que hace que nuestro código quede limpio, orde
 
 Pero vamos a por un ejemplo para verlo claro.
 
-Supongamos que tenemos que crear tres botones en nuestro `header`. Uno llevaría los estilos por defecto de todos los botones de nuestra web, otro sería un botón de “success” con sus estilos propios y el último sería una variante del botón más pequeña. 
+Supongamos que tenemos que crear tres botones en nuestro `header`. Uno llevaría los estilos por defecto de todos los botones de nuestra web, otro sería un botón de “success” con sus estilos propios y el último sería una variante del botón más pequeña.
 
 ¿Cómo resolveríamos esta nomenclatura de CSS en nuestro HTML? Pues así:
 
@@ -199,7 +199,7 @@ Siendo `.header` nuestro contenedor principal o “block”, `button` nuestro el
 y `success / small` nuestros *modifiers*.
 
 Como puedes ver, para unir estos tres elementos utilizamos doble guión bajo y doble guión medio en todos los casos.
-```css 
+```css
 .header__button--small {}
 ```
 ¿Y cómo traducimos esto a SCSS con SASS?

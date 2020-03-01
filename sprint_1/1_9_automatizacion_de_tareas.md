@@ -134,7 +134,7 @@ Para probar el código anterior, en la terminal escribiremos el siguiente comand
 
 Como resultado aparecerá el mensaje 'Hola Gulp' en nuestra terminal. Lo que hace el comando `gulp` es buscar el archivo `gulpfile.js` en la ruta en la que estamos situados desde la terminal. Si existe ejecutará la función asociada a la tarea `'default'` de Gulp, que en este caso hace un `console.log`.
 
-Pero esto no es muy útil. Vamos a usar ahora otro _gulpfile_ más complejo que nos permita convertir Sass a CSS. Pero primera tendremos que instalar otro paquete que nos permite hacer esto:
+Pero esto no es muy útil. Vamos a usar ahora otro _gulpfile_ más complejo que nos permita convertir Sass a CSS. Pero primero tendremos que instalar otro paquete que nos permite hacer esto:
 
 `npm install --save-dev gulp-sass`
 
