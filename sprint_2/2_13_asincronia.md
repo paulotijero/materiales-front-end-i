@@ -87,13 +87,11 @@ Podéis [jugar con el código de este ejemplo en Codepen](https://codepen.io/ada
 
 Para obtener más información acerca de `setInterval`, consultaremos la [documentación de setInterval en MDN](https://developer.mozilla.org/es/docs/Web/API/WindowTimers/setInterval).
 
----
-
 #### EJERCICIO 1
 
 Partiendo del ejemplo anterior, vamos a realizar un temporizador que empiece en 0 y cada 2 segundos se incremente.
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 #### EJERCICIO 2
 
@@ -103,13 +101,13 @@ La cuenta se mostrará en la pantalla con números y si lo deseas puedes añadir
 
 > PISTA: la función se puede seguir ejecutando con setInterval pero para que se pare en 12 basta con dejar de pintar en el HTML en el momento adecuado.
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 #### EJERCICIO 3
 
 Vamos a realizar el típico mensaje que aparece en un blog con la información de hace cuanto se escribió un post. Por ejemplo, con el texto: "escrito hace 30 segundos". Al principio escribiremos en pantalla "escrito hace 1 segundo" e iremos aumentando el número de segundos. Cuando lleve más de 59 segundos queremos que ponga "escrito hace 1 min".
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 ### setTimeout
 
@@ -140,13 +138,11 @@ Para obtener más información acerca de `setTimeout()`, consultaremos la docume
 
 - [Documentación de setTimeout en MDN](https://developer.mozilla.org/es/docs/Web/API/WindowTimers/setTimeout)
 
----
-
 #### EJERCICIO 4
 
 Con JavaScript, crear un código para mostrar una ventana en nuestro navegador una vez transcurridos 15 segundos que ponga "su sesión ha expirado" (creada usando HTML y CSS).
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 ### Cancelar eventos de setInterval y setTimeout
 
@@ -179,32 +175,28 @@ Para obtener más información:
 - [clearInterval](https://www.w3schools.com/jsref/met_win_clearinterval.asp)
 - [clearTimeout](https://www.w3schools.com/jsref/met_win_cleartimeout.asp)
 
----
-
 #### EJERCICIO 5
 
 Vamos a modificar nuestra solución del ejercicio 2 para que, en lugar de seguir ejecutando la función indefinidamente, detengamos su ejecución con `clearInterval`.
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 #### EJERCICIO 6
 
 Crear un cronómetro que vaya aumentando en segundos y cuando se pulse el botón de parar deje de aumentar. Cuando pulsemos el de continuar, vuelva a empezar de nuevo.
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 #### EJERCICIO 7
 
 Crear una página con un botón que transcurridos 10 segundos te pregunte: "¿te has dormido?". Si pulsas en el botón la cuenta volverá a cero y otra vez, si transcurren 10 segundos sin pulsar volverá a preguntar de nuevo "¿te has dormido?"
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 En los videos que enlazamos a continuación, se explica de forma más detallada qué es la asincronía y cómo funciona ésta en JavaScript.
 
 - [Asincronía en JavaScript - Parte 1 - Sincronía y Concurrencia](https://www.youtube.com/watch?v=PndHsDpEfhU)
 - [Asincronía en JavaScript - Parte 2 - Event loop](https://www.youtube.com/watch?v=rgmej4Jx4WM)
-
----
 
 #### EJERCICIO 8
 
@@ -232,7 +224,7 @@ TAREAS C
 
 ¿Sabrías explicar por qué se ejecutan en ese orden? En caso de no ser así consulta y debate con el resto de tus compañeras.
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 ## Resumen
 En esta lección hemos profundizado un poco más en el concepto de asincronía y hemos conocido los temporizadores:

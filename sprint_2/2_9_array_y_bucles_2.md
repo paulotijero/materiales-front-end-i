@@ -45,15 +45,13 @@ arr.push(3, 5, 6, 7, 23, 34, 35, 34, 54, 34, 3434, 34); // Esto es totalmente v�
 
 > **NOTA:** ¿si `push` mete un elemento al final de un array qué método hará lo contrario? Si quieres saberlo investiga el método [`pop`](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/pop).
 
----
-
 #### EJERCICIO 1
 
 **Numeritos**
 
 Vamos a crear una función `get100Numbers` que devuelve un array con los números del 1 al 100. Como no nos apetece tener que escribir 100 números a mano, usaremos un bucle y el método `push` para ir guardándolos. Para comprobar que los tenemos todos, vamos a ejecutar la función y loguearlos (con `console.log`) uno a uno en la consola en orden.
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 ### `reverse`
 
@@ -65,15 +63,13 @@ console.log(arr.reverse()); // Loguea 3,2,1
 console.log(arr); // Loguea también 3,2,1 porque reverse modifica arr
 ```
 
----
-
 #### EJERCICIO 2
 
 **Sotiremun**
 
 Vamos a crear una nueva función `getReversed100Numbers` que llama a la función del ejercicio anterior para obtener 100 números y los cambia de orden. Para comprobar que los tenemos todos, vamos a ejecutar la función y a loguearlos (con `console.log`) uno a uno en la consola en orden.
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 ### `concat`
 
@@ -93,8 +89,6 @@ El array resultante tendrá los elementos ordenados según el orden en que hemos
 
 Puedes consultar el [listado completo de propiedades y métodos de array en MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array).
 
----
-
 #### EJERCICIO 3
 
 **The numbers**
@@ -111,7 +105,7 @@ Vamos a crear una función `bestLostNomber` que nos devuelve algunos números de
 
 Para comprobar que los tenemos todos, vamos a ejecutar la función y a loguearlos (con `console.log`) uno a uno en la consola en orden.
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 #### EJERCICIO 4
 
@@ -151,7 +145,7 @@ c) **Vamos a darle dinamismo.** Ahora viene lo bueno: vamos a añadir la lógica
 
 d) **Tareas totales.** No nos podemos olvidar de los detalles. Añadamos por encima del listado de tareas una frase que diga: Tienes _X_ tareas. _Y_ completadas y _Z_ por realizar. Cada vez que una tarea se marque/desmarque deberiamos actualizar esta información.
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 ### `slice`
 
@@ -163,8 +157,6 @@ console.log(names.slice(1, 3)); // ["María", "Lucía"]
 ```
 
 ¿Te atreves a adivinar qué devolverá este método si no le pasamos el segundo argumento? ¿Y si el segundo argumento es un número negativo? Todas las respuestas en la [documentación oficial de slice](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/slice).
-
----
 
 ### `splice`
 
@@ -190,7 +182,6 @@ console.log(springMonths);
 
 Investiga más acerca de [`splice()` aquí](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array/splice).
 
----
 ### `indexOf`
 
 El método `indexOf()` busca un elemento dentro de un array y nos devuelve la posición (o índice que es lo mismo) si lo encuentra. Si no lo encuentra nos devuelve `-1`.
@@ -215,12 +206,10 @@ Otro ejemplo es cuando queremos añadir un elemento a un array pero no queremos 
 const groceries = ['Eggs', 'Milk'];
 const newItem = 'Beer';
 if (groceries.indexOf(newItem) === -1) {
-  groceries.push(newItem)
+  groceries.push(newItem);
 }
 console.log(groceries); // esto muestra ['Eggs', 'Milk', 'Beer'] porque indexOf ha devuelto -1
 ```
-
----
 
 ## BONUS
 
@@ -238,7 +227,7 @@ Para que no nos pille el toro esta Navidad, vamos a crear un código que muestre
 ▲▲▲▲▲
 ```
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 #### EJERCICIO 6 BONUS
 
@@ -256,7 +245,7 @@ Intenta ponerle una estrella y un tronco al árbol para que quede mucho más mon
 |
 ```
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 #### EJERCICIO 7 BONUS
 
@@ -274,7 +263,7 @@ Intenta cambiar el código para que aparezca el árbol completo.
     |
 ```
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 ### Trabajar con arrays anidados
 
@@ -359,8 +348,6 @@ coordinates = [
 ];
 */
 ```
-
----
 
 ## Recorrer elementos anidados
 

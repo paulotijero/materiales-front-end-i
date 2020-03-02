@@ -100,8 +100,6 @@ Los **errores de ejecución** son errores que no se deben al lenguaje en sí y q
 
 Uno de los errores más comunes es el error tipográfico. Estamos escribiendo alguna de las palabras del lenguaje, o de las variables que hemos declarado, y nos baila una letra.
 
----
-
 #### EJERCICIO 1
 
 Encuentra el error tipográfico en estos ejemplos.
@@ -130,7 +128,7 @@ const button = document.qerySelector('.send');
 button.addEventListener('click', () => alert('Sent'));
 ```
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 2. **Errores de variables**
 
@@ -139,8 +137,6 @@ En nuestro programas siempre trabajamos con datos. Para guardarlo en JavaScript 
 - trabajar con el tipo de datos equivocado
 - errores al asignar o reasignar
 - uso de `let` y `const`
-
----
 
 #### EJERCICIO 2
 
@@ -186,7 +182,7 @@ html += '</p>';
 const html = '<html>';
 ```
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 3. **Errores de estructuras de datos**
 
@@ -194,8 +190,6 @@ Cuando manejamos estructuras de datos complejas, como arrays y objetos, también
 
 - error en la inicialización
 - acceso a posiciones del array fuera de los límites
-
----
 
 #### EJERCICIO 3
 
@@ -226,7 +220,7 @@ const teacher = {
 alert(teacher['pets'][1]);
 ```
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 4. **Errores de funciones**
 
@@ -234,8 +228,6 @@ Cuando trabajamos con funciones (que es casi siempre) también tenemos un listad
 
 - definimos la función y no ejecutamos
 - ejecutamos la función con parámetros inadecuados
-
----
 
 #### EJERCICIO 4
 
@@ -262,7 +254,7 @@ const sayHello = (age, name) => alert(`Hello, my name is ${name} and I'm ${age}`
 sayHello('Ada', 35);
 ```
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 5. **Errores de null / undefined**
 
@@ -270,8 +262,6 @@ Errores típicos cuando no manejamos valores nulos o indefinidos:
 
 - llamar a función que no existe
 - acceder a una propiedad de un objeto que no existe
-
----
 
 #### EJERCICIO 5
 
@@ -300,7 +290,7 @@ const item = {
 alert(item.description);
 ```
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 6. **Errores en bucles**
 
@@ -308,8 +298,6 @@ Errores típicos al trabajar con bucles son:
 
 - bucle infinito
 - cuando tengo bucles anidados, trabajar con distintos índices
-
----
 
 #### EJERCICIO 6
 
@@ -357,7 +345,7 @@ for (let i = 0; i < teachers.length; i++) {
 }
 ```
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 7. **Errores en condicionales**
 
@@ -366,8 +354,6 @@ Errores típicos al trabajar con condicionales son:
 - confundir condición con asignación
 - confundir operadores para unir condiciones (`&&` y `||`)
 - cuando hay varias condiciones, colocarlas en el orden adecuado
-
----
 
 #### EJERCICIO 7
 
@@ -411,7 +397,7 @@ const isEvenAndGreaterThan10 = number => {
 isEvenAndGreaterThan10(11);
 ```
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 #### EJERCICIO 8
 
@@ -420,7 +406,7 @@ Dado el [ejemplo en este codepen](https://codepen.io/adalab/pen/YvKERR?editors=1
 - un listado de productos con un precio fijado y un contador para poder aumentar o reducir la cantidad
 - un total que indica el precio total de los artículos seleccionados
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 ## Herramientas para solucionar errores
 
@@ -456,13 +442,11 @@ Cuando paramos la ejecución en un breakpoint podemos realizar distintas accione
 - inspeccionar el valor de variable locales, en el panel _Scope_
 - observar el valor de una _watch expression_, es decir, el valor de una expresión definidas en función de las variables del contexto con las que podemos hacer operaciones
 
----
-
 #### EJERCICIO 9
 
 Realiza el [tutorial básico de uso de breakpoints de DevTools](https://developers.google.com/web/tools/chrome-devtools/javascript/) y encuentra el error del código de la demostración.
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 ## Otras herramientas de Devtools
 
@@ -599,8 +583,6 @@ En este momento podemos ver a la derecha un panel con una sección que tiene el 
 
 Y hasta aquí sería la descripción de qué es el scope o ámbito en JavaScript. Si no te ha quedado todo perfectamente claro y no lo has pillado a la primera no te preocupes, este concepto es algo que a veces cuesta más, la idea es explicarlo y que, a base de consultarlo y volver de vez en cuando a esta explicación se llegue a un punto de entendimiento del concepto. Por el momento, con entender que el scope determina el alcance de nuestras variables y funciones y como funciona a grandes rasgos es más que suficiente. La práctica y repaso a base de constancia con el código harán el resto para entender a fondo de qué se trata.
 
----
-
 #### EJERCICIO 10
 
 **Averigua el resultado**
@@ -645,7 +627,7 @@ console.log(message);
 
 Una vez hayas intentado averiguar cuál es el resultado de estos código, comprueba si has acertado o no ejecutándolos en tu navegador.
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 #### EJERCICIO 11
 
@@ -655,7 +637,7 @@ Abre tu ejercicio de evaluación individual del segundo módulo (el de adivinar 
 
 Prueba a poner paradas tanto dentro de funciones como fuera para ver qué sucede.
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 ## Hoisting
 
@@ -750,15 +732,13 @@ function sum(a, b) {
 console.log(sum(2, 3));
 ```
 
----
-
 #### EJERCICIO 12
 
 **Comprobando cómo se aplica el hoisting con las Chrome Dev Tools**
 
 Abre tu ejercicio de evaluación individual del segundo módulo (el de adivinar el número aleatorio). Pon una parada en el código y comprueba si las variables se han añadido al scope para ver cómo JavaScript aplica el _hoisting_.
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 #### EJERCICIO 13
 
@@ -824,7 +804,7 @@ let message = 'Hello';
 showMessage();
 ```
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 ## Recursos externos
 

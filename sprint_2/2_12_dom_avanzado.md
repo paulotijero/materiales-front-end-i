@@ -51,8 +51,6 @@ Utilizar HTML como strings en JavaScript puede ser bastante molesto, se nos pued
 
 Todo esto hace que cuando empiezan a crecer nuestros strings con código HTML sea bastante engorroso y además complica el beneficiarnos de funciones para crear elementos. Si por el contrario utilizamos JavaScript para realizar esa misma tarea podremos beneficiarnos de indentación y separación en líneas, simplicidad a la hora de crear un elemento y reutilización de código mediante funciones, lo cual hará que nuestro código sea más fácil de mantener y más sencillo de entender.
 
----
-
 Aparte de esto existen otras mejoras en temas de seguridad y otros aspectos avanzados que hacen que `innerHTML` no sea el candidato indicado en proyectos de gran envergadura o mayor exigencia en cuanto a rendimiento y seguridad.
 
 Y ahora estarás pensando «¿y por qué entonces he aprendido `innerHTML`?» Gracias a haber trabajado con `innerHTML` ahora estás preparada para seguir avanzando y profundizar un poquito más en formas avanzadas de trabajar con el DOM, que son las que veremos hoy.
@@ -174,6 +172,7 @@ items.appendChild(newItem);
 
 Crear una página HTML con una lista `ul` vacía. Vamos a partir de un array con 3 elementos `const numbers = [1, 2, 3]`. Vamos a añadir a la lista tres elementos `li`, que corresponden al contenido del array. Usaremos los métodos avanzados para manipular el DOM, no `innerHTML`.
 
+\_\_\_\_\_\_\_\_\_\_
 
 ### Borrar elementos del DOM
 
@@ -252,7 +251,6 @@ const label = document.querySelector('.firstname-label');
 label.setAttribute('for', 'firstname'); // asignará for="firstname" al label
 ```
 
-* * *
 #### EJERCICIO 2
 
 **De viaje**
@@ -264,7 +262,8 @@ Crea una página que contenga tres imágenes, usando un select de formulario pre
 
 > **Nota**: Usa imágenes que encuentres por Internet.
 
-* * *
+\_\_\_\_\_\_\_\_\_\_
+
 #### EJERCICIO 3
 
 **Autocompletado**
@@ -277,14 +276,15 @@ Vamos a crear nuestro propio autocompletado de formularios. Para ello vamos a cr
 
 Por otro lado, en JavaScript tendremos un array de 3 objetos con esa estructura. Es decir, un listado 3 objetos, cada uno con nombre apellidos y teléfono. Pediremos a la usuaria que elija uno de esos 3 con un `select` con el nombre. Al seleccionarlo se rellenará el formulario automáticamente.
 
-* * *
+\_\_\_\_\_\_\_\_\_\_
+
 #### EJERCICIO 4
 
 **Párrafos de altura**
 
 Vamos a crear un div en HTML que contenga tres párrafos con un texto aleatorio. Con la ayuda de JavaScript vamos a obtener su tamaño usando la propiedad [`offsetHeight`](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/offsetHeight). Posteriormente y usando el atributo HTML [style](https://www.w3schools.com/Tags/att_global_style.asp) vamos a configurar que su altura será un tercio de la actual.
 
-* * *
+\_\_\_\_\_\_\_\_\_\_
 
 ## Atributos `data-*`
 
@@ -297,7 +297,6 @@ Como alternativa, podemos acceder también mediante `dataset`. Esta propiedad de
 
 Así que podriamos acceder al valor guardado en `data-id` con `myLink.dataset['id']` o con `myLink.dataset.id`.
 
-* * *
 #### EJERCICIO 5
 
 **Anclas de verdad**
@@ -310,7 +309,8 @@ Para ello seguimos estos pasos
 3. Con [getBoundingClientRect](https://developer.mozilla.org/en-US/docs/Web/API/Element/getBoundingClientRect) buscamos la posición del elemento en la página
 4. Usando [window.scrollTo](https://developer.mozilla.org/en-US/docs/Web/API/Window/scrollTo) hacemos scroll hasta el elemento pero restando alguno píxeles para que la cabecera fija no lo tape
 
-* * *
+\_\_\_\_\_\_\_\_\_\_
+
 #### EJERCICIO 6
 
 **Castigo**
@@ -337,7 +337,7 @@ La hemos fastidiado. Otra vez. Y el profe nos ha castigado, ¡y encima sin tener
 
 **¡A por ello!**
 
-* * *
+\_\_\_\_\_\_\_\_\_\_
 
 ## Resumen de la sesión
 

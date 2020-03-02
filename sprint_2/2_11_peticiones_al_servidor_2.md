@@ -65,8 +65,6 @@ El método HTTP junto a la URL es lo que define la acción que queremos realizar
 
 Otra característica habitual de un API REST es que cuando accedo a un listado de cosas, si hay muchas, no me devuelva todas en la misma petición sino que me devuelve solo las primeras. A esto se le llama _paginación_ y al hacer la petición recibiré solo _la primera página_ de resultados, por ejemplo 10. Y tendré que añadir un parámetro a la _querystring_ para recuperar el resto de páginas, por ejemplo, `?page=2`.
 
----
-
 #### EJERCICIO 1
 
 Vamos a explorar [un API abierto de información sobre el mundo Star Wars](https://swapi.co/). En esta página tenemos la documentación completa del API y un formulario que nos permite hacer peticiones a la URL que indiquemos. Identifica la siguiente información sobre SWAPI:
@@ -81,13 +79,13 @@ Vamos a explorar [un API abierto de información sobre el mundo Star Wars](https
 - cómo puedo buscar personajes mediante la URL
 - cómo puedo hacer que el JSON de una petición se me devuelva traducido a Wookiee
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 #### EJERCICIO 2
 
 Ahora que conocemos mejor el API de Star Wars vamos a hacer una sencilla web usándolo. En la web aparece una caja de texto donde escribimos el nombre de un personaje (o parte del nombre) y un botón, al hacer click, nuestra web muestra debajo un listado con los personajes que coinciden con la búsqueda indicando su nombre y género.
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 Seguimos aprendiendo un poco de HTTP. Para poder hacer una petición compleja con `fetch` tenemos que pasar un segundo parámetro para establecer opciones, donde podemos indicar
 
@@ -100,8 +98,6 @@ Puedes leer más detalles en [el tutorial de uso de `fetch` en MDN](https://deve
 **¡Vamos a parar un momento!** ¿Entonces me estás diciendo que muchas aplicaciones web, como Twitter o GMail, tienen un API al que yo puedo acceder desde mi programa en JavaScript? ¿Y que a través de un API yo puedo no solo consultar datos sino también enviarlos? ¿Qué me impide entonces enviar un tweet en Twitter como si fuera Pedro Sánchez?
 
 Pues porque las APIs normalmente requieren de una _autenticación_, es decir, que tengas que identificarte de alguna forma desde tu programa para que tus peticiones funcionen. Por ejemplo, en el API de GitHub que ya hemos usado podemos consultar datos sobre los repositorios públicos de Adalab. Pero no podemos, por ejemplo, crear un repositorio nuevo porque necesitamos ser miembro de la organización para poder hacerlo. En este curso por simplicidad vamos a trabajar con APIs abiertas, es decir, que no requieren autenticación y normalmente nos van a servir solo para consultar datos pero no para modificarlos.
-
----
 
 La **respuesta** HTTP que viene del servidor tiene más información además de los datos que le hemos pedido. Uno de ellos es el código del estado de la respuesta, en inglés _HTTP status code_. Existe un estándar definido para saber qué indica este código, y los principales son:
 
@@ -119,8 +115,6 @@ Otra herramienta fundamental son las propias DevTools del navegador en la pesta�
 
 ![Devtools Network](assets/images/2-10/devtools-network.png)
 
----
-
 #### EJERCICIO 3
 
 En la página de SWAPI o en la que habéis creado en el ejercicio 2 inspecciona las peticiones que has hecho al servidor. Al abrir la pestaña Network aparece vacía así que comienza a hacer peticiones con la pestaña abierta. Con la información que obtienes de esta pestaña averigua:
@@ -131,7 +125,7 @@ En la página de SWAPI o en la que habéis creado en el ejercicio 2 inspecciona 
 - la respuesta del servidor en JSON
 - al recargar la página aparecen un montón de peticiones en la pestaña Network, ¿sabrías filtrar solo las que son de AJAX? Pista: antes de `fetch` las peticiones se hacían con el objeto `XMLHttpRequest` (XHR)
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 ## LocalStorage
 
@@ -193,8 +187,6 @@ const savedTasks = JSON.parse(localStorage.getItem('tasks'));
 console.log(savedTasks.length); //4
 ```
 
----
-
 #### EJERCICIO 4
 
 **Conociendo LS**
@@ -205,7 +197,7 @@ Escribir datos en formularios es muy tedioso para los usuarios. ¡Vamos a cachea
 - Cada vez que la usuaria escriba su nombre (`keyUp`) tenemos que pintar el valor en el párrafo y guardarlo en `localStorage`.
 - Al recargar la página tenemos que consultar `localStorage` y, si hay algún nombre guardado, rellenar el input y el párrafo.
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 #### EJERCICIO 5
 
@@ -219,7 +211,7 @@ Vamos a preparar una página sencilla, con un título, un par de párrafos y un 
 - Paralelamente cada vez que la usuaria elija un tema, guardaremos esta información en `localStorage`.
 - Al cargar la página buscaremos en `localStorage` el tema seleccionado en la última visita y lo aplicaremos sin que la usuaria tenga que realizar ninguna acción.
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 #### EJERCICIO 6
 
@@ -231,7 +223,7 @@ Vamos a seguir trabajando sobre el [ejercicio 4](#ejercicio-4). El formulario no
 
 ¡A por ello!
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 #### EJERCICIO 7
 
@@ -243,13 +235,13 @@ Si al realizar esta acción nos encontramos algún error tenemos que apañarlo.
 
 A partir de ahora **recuerda** que siempre que recojas un dato del localStorage, deberías comprobar que existe antes de empezar a trabajar con el, y **realizar una limpieza del localStorage** manual para comprobar que todo funciona como esperas, haya o no datos cacheados.
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 #### EJERCICIO 8
 
 Sobre el ejercicio 2 vamos a _cachear_ las búsquedas al servidor. De forma que cuando a busquemos una cadena a través del campo de búsqueda, primero busque en localStorage si ya tenemos un resultado en local para esa cadena. Si no lo hay se pide al servidor y luego se guarda en `localStorage` usando como clave el texto de la búsqueda; si al buscarlo en `localStorage` lo encontramos pues le enseñamos el resultado directamente al usuario y nos evitamos una petición al servidor.
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 ## Linter
 
@@ -298,17 +290,14 @@ tabWidth: 2
 
 Para usarlo en VSCode instalamos la extensión `prettier-vscode`. Con esto podremos formatear el código de un fichero desde la paleta de comandos. Si queremos configurar que el código se formatee al guardar, podemos seguir esta [guía para modificar la opción de `formatOnSave`](https://github.com/prettier/prettier-vscode#format-on-save).
 
----
 
 #### EJERCICIO 9
 
 Para el proyecto anterior de la búsqueda en SWAPI, incluye ESLint y Prettier; corrige todos los errores detectados por el linter.
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 ## BONUS
-
----
 
 #### EJERCICIO 10 BONUS
 
@@ -324,7 +313,7 @@ En Adalab ya nos hemos registrado y tenemos nuestro _token_. Te dejamos [un ejem
 
 > **Nota**: esta api es muy chachi, y una vez que nos autenticamos nos permite hacer cosas interesantes como guardar nuestras propias imágenes de gatetes, añadir a favoritos, eliminar nuestras imágenes... etc. Os animamos a leer la documentación y hacer diferentes pruebas con ella.
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 ### Cazar errores del servidor
 

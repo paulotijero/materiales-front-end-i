@@ -99,10 +99,8 @@ function getEmoji() {
 }
 document.body.addEventListener("click", getEmoji);
 ```
-___
 
 > **Nota importante:** Cuando los hackers quieren boicotear una web una de las cosas que hacen es lanzar desde muchos ordenadores miles de peticiones AJAX al servidor de dicha web. De esta forma el servidor se satura y no puede funcionar correctamente. Esto se llama [Ataque por denegación de servicio](https://es.wikipedia.org/wiki/Ataque_de_denegaci%C3%B3n_de_servicio). La forma que tienen los servidores de defenderse de estos ataques es rechazando las peticiones que vengan de una IP en concreto, cuando superan un límite. Por ejemplo si desde una misma IP hacemos más de 100 peticiones por minuto, el servidor rechaza desde la petición 101 en adelante. Cuando hagamos los ejercicios en clase vamos a ser 20 alumnas haciendo cada una un montón de peticiones a un servidor en concreto y este nos denegará el servicio porque creerá que lo estamos atacando. Para minimizar el número de peticiones que hagamos, hoy no podemos trabajar desde Codepen. Recordemos que Codepen actualiza el resultado cada vez que escribimos una letra.
-___
 
 #### EJERCICIO 1
 
@@ -112,6 +110,7 @@ Vamos a jugar un poco con el código del ejemplo anterior. Mirando la [documenta
 
 Podemos jugar añadiendo parámetros a la URL del tipo `clave=valor`, siempre después de character `?` y separados por `&`, por ejemplo si quisieras pedir un `string` con determinada longitud, la url quedaría así `https://api.rand.fun/text/password?length=20`
 
+\_\_\_\_\_\_\_\_\_\_
 
 ## El formato JSON
 
@@ -181,7 +180,6 @@ btn.addEventListener("click", getDogImage);
 
 > **Nota**: Cuando recogemos un elemento de HTML podemos leer y modificar algunos de sus atributos directamente, como `src` y `alt` de la etiqueta `img` ¡Genial!
 
-* * *
 #### EJERCICIO 2
 
 **Chihuahas, chihuahas por todas partes**
@@ -192,7 +190,8 @@ a) Vamos a modificar el ejemplo anterior para que las fotos de nuestra página s
 
 b) Vamos a encapsular toda la lógica para crear una petición en una función. Añadimos un botón a la página con el título 'Enséñame otro Chihuahua' de forma que al pulsarlo se haga otra petición al servidor de una imagen aleatoria y aparezca una nueva imagen de Chihuaua.
 
-* * *
+\_\_\_\_\_\_\_\_\_\_
+
 #### EJERCICIO 3
 
 Ahora vamos a explorar un nuevo API: [el API de usuarios de GitHub](https://developer.github.com/v3/users/). La URL de este API es `https://api.github.com/users/{username}`, donde `{username}` es el nombre del usuario en GitHub. Por ejemplo, aquí tenéis la URL para obtener información del usuario de Isra `https://api.github.com/users/gootyfer`. Si ponéis esta URL en una nueva pestaña del navegador podréis observar qué datos nos devuelve el API.
@@ -204,7 +203,7 @@ Vamos a crear una página en la que haya un input de texto y un botón de buscar
 
 ![Screenshot buscador en GitHub](assets/images/2-9/buscador-github.png)
 
-* * *
+\_\_\_\_\_\_\_\_\_\_
 
 ## Peticiones encadenadas
 
@@ -293,8 +292,6 @@ Una de las características principales de las promesas es que nos facilitan enc
 
 Como hemos indicado antes, es importante que al final de los `then()` devolvamos una promesa para pasar los datos al siguiente `then()`. Así que en el segundo `then()` tenemos que devolver la promesa de `fetch`.
 
-***
-
 #### EJERCICIO 4
 
 **Listado de repos de una organización en Github**
@@ -312,7 +309,7 @@ Para ello vamos a hacer lo siguiente:
 3. Recoger la información de la URL donde consultar la información de los repositorios de la organización en la respuesta del servidor (en la propiedad `repos_url`) y hacer una nueva petición a esa URL.
 4. En el último `then` pintar en nuestra web el nombre de todos los repositorios de la organización en una lista (propiedad `name` de cada objeto repositorio).
 
-* * *
+\_\_\_\_\_\_\_\_\_\_
 
 #### EJERCICIO 5
 
@@ -320,7 +317,7 @@ Vamos a entrar en la URL `https://api.github.com/orgs/Adalab` a través de nuest
 
 Y si entramos en `https://dog.ceo/api/breeds/list` ¿de qué tipo es la propiedad `message`?
 
-* * *
+\_\_\_\_\_\_\_\_\_\_
 
 #### EJERCICIO 6
 
@@ -333,7 +330,7 @@ Vamos a realizar un ejercicio con la API de 'https://dog.ceo/dog-api/' y la api 
 Si has llegado hasta aquí te proponemos otro reto, intenta que la última función sea la única que se encargue de interactuar con `html`, y sea esta la que pinte la raza y la imagen.
 ¡Al turrón!
 
-* * *
+\_\_\_\_\_\_\_\_\_\_
 
 ## Peticiones en paralelo
 
@@ -382,15 +379,13 @@ Luego creamos el array de promesas ejecutando 2 veces la función anterior.
 Después ejecutamos `Promise.all` pasándole como argumento el array de promesas, cuando todas las peticiones al servidor hayan terminado, se ejecutará la función del `then()` a la que le llegan todos los resultados mediante el parámetro  `responses`.
 Finalmente recorremos el array que se encuentra en responses para ir pintando las imágenes en los `img` del HTML.
 
-***
-
 #### EJERCICIO 7
 
 **Pintando varias imágenes a la vez**
 
 Partiendo el ejemplo anterior, vamos a modificarlo para que en lugar de pedir 2 imágenes en paralelo pida 10, y el resultado sólo se pinte en la pantalla cuando las 10 imágenes hayan llegado del servidor. Ahora sí que se nota el efecto de que se pintan todas a la vez, ¿verdad? Vamos a probar también con 25 imágenes, para ver bien este efecto.
 
-***
+\_\_\_\_\_\_\_\_\_\_
 
 ## BONUS
 
@@ -430,7 +425,7 @@ Este error nos indica que ha sucedido un error en una de las promesas y que no l
 
 Vamos a ponerle un `catch` a nuestra promesa y a `loguear` el error.
 
-* * *
+\_\_\_\_\_\_\_\_\_\_
 
 Puede ser que tras este ejercicio no notes mucha diferencia entre el error que mostraba el navegador y nuestro `console.log`. Pero tener nuestros errores controlados es muy importante, aunque a día de hoy no vayamos a hacer nada más que `loguear` el error, ya tenemos el código preparado para en un futuro hacer otras cosas como:
 - Mostrar feedback a la usuaria sobre lo que ha ocurrido.

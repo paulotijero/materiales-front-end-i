@@ -161,7 +161,6 @@ Esto actualizará automáticamente nuestra PR y ahora ya sí que podremos irnos 
 
 Vamos a hacer unas Pull Request con revisión de código, ¿o qué?
 
-* * *
 Partimos de una base, html y css:
 
 **index.html**
@@ -209,15 +208,13 @@ A continuación hay un listado de ejercicios/tickets que habrá que ir resolvien
 
 > Si os queréis animar a hacer los tickets 1 y 2 a la vez, cada miembro de la pareja puede ponerse con uno.
 
-****
-
 #### EJERCICIO 1
 
 **Ticket #1: Centrar el careto**
 
 Este señor está como apartado, en una esquina... eso no puede ser, debería estar centrado vertical y horizontalmente en la pantalla.
 
-* * *
+\_\_\_\_\_\_\_\_\_\_
 
 #### EJERCICIO 2
 
@@ -225,7 +222,7 @@ Este señor está como apartado, en una esquina... eso no puede ser, debería es
 
 Un careto.. ¿es un careto si no es redondo?. Hay que redondear esa cara para que sea un círculo perfecto.
 
-* * *
+\_\_\_\_\_\_\_\_\_\_
 
 #### EJERCICIO 3
 
@@ -233,7 +230,7 @@ Un careto.. ¿es un careto si no es redondo?. Hay que redondear esa cara para qu
 
 ¿No está un poco serio? Hagamos que sonría un poco.
 
-* * *
+\_\_\_\_\_\_\_\_\_\_
 
 #### EJERCICIO 4
 
@@ -241,7 +238,7 @@ Un careto.. ¿es un careto si no es redondo?. Hay que redondear esa cara para qu
 
 Sería genial si al hacer `click` el careto guiñase un ojo. Hay que tener en cuenta que al dejar de hacer `hover` sobre el careto tiene que volver a la posición inicial.
 
-* * *
+\_\_\_\_\_\_\_\_\_\_
 
 ## Bonus
 
