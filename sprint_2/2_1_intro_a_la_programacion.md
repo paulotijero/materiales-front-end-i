@@ -164,7 +164,7 @@ En este ejercicio y con lo poquito que hemos visto hasta ahora de JavaScript, va
 
 Una vez que lo hayáis realizado podéis enviárselo a algún amigo o familiar y decirle que os diga que le parecen los colores de vuestra nueva web para que pase un rato divertido intentando actualizar el navegador :).
 
-* * *
+\_\_\_\_\_\_\_\_\_\_
 
 ## Variables
 
@@ -293,7 +293,7 @@ Ahora abrimos las herramientas para desarrolladoras de Chrome (DevTools) y selec
 
 Hay que leer la explicación y cambiar el código para que desaparezca el error.
 
-* * *
+\_\_\_\_\_\_\_\_\_\_
 
 ## Programación en la web
 
@@ -381,7 +381,7 @@ Bien, ya sabemos cómo obtener un elemento y cómo modificarlo. Vamos a hacer un
 
 Vamos a crear una página HTML con un párrafo en el que ponga _Hola_ y, usando JavaScript, vamos a cambiar ese texto por _Hola Mundo_.
 
-* * *
+\_\_\_\_\_\_\_\_\_\_
 
 #### EJERCICIO 4
 
@@ -395,7 +395,7 @@ La Adalaber seleccionada es: Lola
 
 Una vez hecho cambia el código para que el nombre sea el del segundo `li`.
 
-* * *
+\_\_\_\_\_\_\_\_\_\_
 
 #### EJERCICIO 5
 
@@ -403,7 +403,7 @@ Una vez hecho cambia el código para que el nombre sea el del segundo `li`.
 
 A partir de una página HTML en la que ponga "Mi contraseña es: Ada2019" y, usando JavaScript, tenemos que cambiar el texto 'Ada2019' por '****'.
 
-* * *
+\_\_\_\_\_\_\_\_\_\_
 
 Una cosa importante de `innerHTML` es que nos permite cambiar el contenido de un elemento y como en JavaScript podemos meter HTML dentro de HTML, `innerHTML` también nos va a permitir hacer esto, por lo que, si tuviésemos un HTML con una lista vacía (`<ul class="list"></ul>`) y quisiéramos introducir dos `li`s cada uno con un enlace, podríamos hacerlo de la siguiente manera:
 
@@ -425,7 +425,7 @@ Con esto ya podemos trabajar editando el contenido de nuestra página. A partir 
 
 Tenemos que crear una página HTML con un solo div, y usando JavaScript, añadir un h1 con el texto "Lorem ipsum", una imagen con el src `http://via.placeholder.com/350x150` y un párrafo con el texto "Lorem ipsum dolor sit amet, consectetur adipisicing elit".
 
-* * *
+\_\_\_\_\_\_\_\_\_\_
 
 #### EJERCICIO 7
 
@@ -433,7 +433,7 @@ Tenemos que crear una página HTML con un solo div, y usando JavaScript, añadir
 
 Crear una página HTML con una lista `ul` vacía y, usando JavaScript, añadir al contenido de esa lista tres `li`, el primero tendrá como texto 1, el segundo 2 y el tercero 3.
 
-* * *
+\_\_\_\_\_\_\_\_\_\_
 
 ### Obtener información sobre las clases y añadir o quitar clases
 
@@ -496,7 +496,7 @@ sectionB.classList.remove('hidden', 'otraClase', 'otraMas');
 
 Crear dos botones sencillos con los mismos estilos (padding, borde, color) y, usando JavaScript, al segundo añadirle una clase para que parezca que esta desactivado (por ejemplo, aplicarle una [opacidad](https://developer.mozilla.org/es/docs/Web/CSS/opacity) menor).
 
-* * *
+\_\_\_\_\_\_\_\_\_\_
 
 ## Bonus
 

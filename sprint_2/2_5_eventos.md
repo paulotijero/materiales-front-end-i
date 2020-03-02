@@ -130,15 +130,13 @@ button.addEventListener('click', () => console.log('alerta'));
 > NOTA:
 > Es muy importante entender que la función sólo se ejecutará cuando suceda el evento. Si el evento nunca sucede, la función nunca se ejecutará. Nosotros nunca ejecutamos la función: es el navegador quien la ejecuta cuando sucede el evento.
 
----
-
 #### EJERCICIO 1
 
 **Hola click**
 
 Crear una página HTML con un párrafo en el que ponga Hola y un botón. Cuando se pulse el botón hay que cambiar ese texto por "Mi primer click, ¡ole yo y la mujer que me parió!
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 #### EJERCICIO 2
 
@@ -148,7 +146,7 @@ Crear una página HTML con un input de tipo texto para introducir tu nombre y un
 
 > **Nota**: La etiqueta `input` no tiene apertura y cierre, por lo tanto técnicamente no tiene contenido. Si para leer y modificar el contenido de una etiqueta con apertura y cierre utilizábamos `innerHTML`, en el caso de los inputs utilizaremos `value`.
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 Aparte del evento click, podéis ver [el listado completo de eventos que podemos escuchar en MDN](https://developer.mozilla.org/en-US/docs/Web/Events). Aquí vamos a listar algunos de los más usados:
 
@@ -170,15 +168,13 @@ Aparte del evento click, podéis ver [el listado completo de eventos que podemos
   - `resize`: se ha cambiado el tamaño de la ventana
   - `scroll`: se ha hecho scroll en la ventana o un elemento
 
----
-
 #### EJERCICIO 3
 
 **Dame ipsum**
 
 Crear una página HTML con un párrafo con `lorem ipsum`. Al poner el ratón sobre el párrafo, vamos a añadir un nuevo párrafo a la página con `lorem ipsum`.
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 #### EJERCICIO 4
 
@@ -192,6 +188,8 @@ Cambiar el color de fondo de la página cuando se haga scroll. Para ello tenemos
 - Cuando la posición del scroll vertical supere 250 píxeles poner un color de fondo, cuando sea inferior a 250 píxeles poner otro.
 
 > **Nota**: `window.scrollY` nos devuelve la posición del scroll vertical.
+
+\_\_\_\_\_\_\_\_\_\_
 
 ## Información sobre el evento
 
@@ -222,7 +220,7 @@ En los eventos de teclado podemos [consultar la propiedad `key`](https://keycode
 
 Tenemos que crear una página vacía. Al pulsar la tecla 'r' su color de fondo cambia a rojo y al pulsar la 'm' a morado. Vamos a escuchar un evento de teclado directamente sobre el elemento `document`.
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 ### event.currentTarget
 
@@ -248,6 +246,8 @@ Crear una página con un input de texto y un párrafo vacío. Cada vez que la us
 
 > **Nota**: el objetivo es hacerlo utilizando `event.currentTarget`.
 
+\_\_\_\_\_\_\_\_\_\_
+
 #### EJERCICIO 7
 
 **Otro botón**
@@ -259,7 +259,7 @@ Vamos a preparar un botón y una clase de CSS. La clase tiene que cambiar alguno
 
 > **Nota**: para facilitar añadir y quitar clases de CSS, os recomendamos usar `classList.toggle`
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 `event.currentTarget` es muy útil cuando queremos que varios elementos tengan el mismo handler.
 
@@ -307,8 +307,6 @@ kiwi.addEventListener('click', handleFruitClick);
 
 Así podemos tener una sola `función manejadora` para dominarlos a todos :)
 
----
-
 #### EJERCICIO 8
 
 **Más botones**
@@ -317,7 +315,7 @@ Partiendo del ejercicio anterior vamos a añadir un nuevo botón a nuestra pági
 
 Cuando la usuaria pulse un botón el cambio de clase sucederá solamente sobre el botón pulsado.
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 #### EJERCICIO 9
 
@@ -333,7 +331,7 @@ Al pinchar en un elemento del listado tenemos que:
 
 > Si tuviéramos una constante llamada, por ejemplo, `sectionAboutElement` en la que hemos guardado un elemento de HTML, podríamos buscar dentro él otro elemento, tal que así `sectionAboutElement.querySelector()`.
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 #### EJERCICIO 10
 
@@ -351,7 +349,7 @@ const split = 'Split';
 
 Después vamos a escuchar eventos sobre cada elemento de la lista, de forma que al hacer click sobre el nombre de una película aparezca en la consola el nombre de esa película.
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 ### event.preventDefault()
 
@@ -368,8 +366,6 @@ Uno de los casos más comunes es prevenir el envío de un formulario.
 Aunque aún no hemos visto como enviar un formulario desde JavaScript, prevenir que lo envíe el navegador sería el primer paso para poder controlarlo, validando sus datos, enviándolos al servidor desde JavaScript y mostrando _feedback_ a la usuaria sobre el proceso.
 
 - [Ejemplo de botón submit en un formulario](https://codepen.io/adalab/pen/bjwJGv)
-
----
 
 #### EJERCICIO 11
 
@@ -390,7 +386,7 @@ Hhhmm, pero entonces no pasa nada al hacer click... Correcto, ¡ejercicio termin
 
 > **Nota**: no te preocupes, veremos cómo hacer que esos enlaces acaben de funcionar en futuras lecciones.
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 ## Dejando de escuchar eventos
 
@@ -445,8 +441,6 @@ Si pruebas el ejemplo anterior al hacer click sobre el texto y después sobre la
 
 En la mayoría de los casos querremos trabajar con `currentTarget`. Pero no está mal que nos suene como funciona `target`.
 
----
-
 #### EJERCICIO 12 BONUS
 
 **Un listener para todos**
@@ -457,7 +451,7 @@ Vamos a _refactorizar_ el [EJERCICIO 9](#ejercicio-9) para mejorarlo. Tenemos qu
 
 > **Nota**: esta técnica de poner un listener en la madre y acceder a la hija sobre la que se ha hecho click se llama **event delegation**.
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 ## Burbujeo de eventos o `event bubbling`
 

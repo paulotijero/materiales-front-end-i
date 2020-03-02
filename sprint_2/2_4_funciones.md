@@ -182,15 +182,13 @@ console.log('totalAges', totalAges);
 console.log('Exercises completed', sum(2, 6, 9));
 ```
 
----
-
 #### EJERCICIO 1
 
 **Función multiplicación**
 
 Crea una función que reciba como argumentos dos valores y devuelva como valor de retorno la multiplicación de ambos. Haz tres pruebas con distintos números para comprobar que funciona correctamente y muestra el resultado en la consola usando `console.log()`.
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 #### EJERCICIO 2
 
@@ -198,7 +196,7 @@ Crea una función que reciba como argumentos dos valores y devuelva como valor d
 
 Crea una función con 4 parámetros numéricos que devuelva como valor la media de todos ellos. Haz tres pruebas con distintos números para comprobar que funciona correctamente y muestra el resultado en la consola.
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 #### EJERCICIO 3
 
@@ -208,7 +206,7 @@ Crea una función que reciba por parámetro un número, que representará un pre
 
 Para probar que funciona, ejecuta la función recogiendo el resultado en una variable e imprímela en la consola para comprobarlo.
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 #### EJERCICIO 4
 
@@ -217,6 +215,8 @@ Para probar que funciona, ejecuta la función recogiendo el resultado en una var
 Crear una función que reciba por parámetro un número y devuelva `true` si es par y `false` si es impar.
 
 Ejecutala e imprime el resultado para comprobar que funciona.
+
+\_\_\_\_\_\_\_\_\_\_
 
 #### EJERCICIO 5
 
@@ -232,6 +232,8 @@ const btnEl = getEl('.btn');
 
 > **Nota**: Prepara un HTML con varios elementos para poder probarla.
 
+\_\_\_\_\_\_\_\_\_\_
+
 #### EJERCICIO 6
 
 **Logueando errores**
@@ -246,6 +248,8 @@ Vamos a mejorar nuestra función para que nos avise cuando esto ocurre. Dentro d
 
 > **Nota**: podemos imprimir/loguear errores con `console.error()`.
 
+\_\_\_\_\_\_\_\_\_\_
+
 #### EJERCICIO 7
 
 **Combinando funciones**
@@ -258,6 +262,8 @@ _Sin modificar estas dos funciones_, vamos a hacer lo siguiente:
 - convertimos ese valor a número y lo asignamos a una constante
 - usamos nuestra función del ejercicio 4 para saber si es par o impar
 - escribimos en la consola 'Este número es PAR: ...' o 'Este número es IMPAR: ...'
+
+\_\_\_\_\_\_\_\_\_\_
 
 ## Ámbito de las variables
 
@@ -377,6 +383,8 @@ console.log(secretLetter); // devuelve "x"
 
 En el ejemplo anterior prueba a cambiar el orden del los `console.log`. ¿Qué está pasando? ¿Por qué no se imprime en la consola 2 veces "x"?
 
+\_\_\_\_\_\_\_\_\_\_
+
 ## Arrow functions
 
 Las arrow functions ("funciones flecha") de ES6 son una forma simplificada para declarar funciones anónimas. La sintaxis básica es la siguiente:
@@ -405,7 +413,7 @@ const getWaitingTime = minutes => {
 };
 
 // equivale a
-const getWaitingTime = (minutes) => {
+const getWaitingTime = minutes => {
   return `Please, wait ${minutes} minutes`;
 };
 ```
@@ -428,15 +436,13 @@ console.log( getWaitingTime(4) );
 // devuelve "Please, wait 4 minutes"
 ```
 
----
-
 #### EJERCICIO 9
 
 **Arrow functions everywhere**
 
 Vamos a rehacer alguno de los ejercicios anteriores con funciones flecha. ¡A lo loco!
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 #### EJERCICIO 10
 
@@ -453,7 +459,7 @@ La función tendrá 4 parámetros:
 
 Para probar que funciona, ejecuta la función recogiendo el resultado en una variable e imprímela en la consola.
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 ## Bonus: Funciones en todas partes
 

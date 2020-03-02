@@ -25,13 +25,7 @@ Los arrays, también llamados arreglos o listas, nos permiten guardar una lista 
 
 ```js
 // Array con la lista de espera de los pacientes de un hospital
-[
-  'Manuela Eufemia',
-  'Benigna Imelda',
-  'Isaías Paquito',
-  'Ximena Adán',
-  'Nicolás Emiliana'
-];
+['Manuela Eufemia', 'Benigna Imelda', 'Isaías Paquito', 'Ximena Adán', 'Nicolás Emiliana'];
 ```
 
 Durante esta sesión veremos cuales son las características principales de este tipo de estructura de datos y veremos cómo trabajar con ellos, modificarlos y obtener información de ellos.
@@ -67,15 +61,7 @@ Cada elemento dentro de un array irá asociado a un índice, ese índice nos per
 
 ```js
 // Array donde el orden es importante
-const weekdays = [
-  'Lunes',
-  'Martes',
-  'Miércoles',
-  'Jueves',
-  'Viernes',
-  'Sábado',
-  'Domingo'
-];
+const weekdays = ['Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado', 'Domingo'];
 ```
 
 En este ejemplo, 'Lunes' está en la posición 0 del array, y 'Domingo' en la posición 6.
@@ -133,8 +119,7 @@ console.log(fruits[3]); // Muestra 'plátano'
 Un dato importante es que para obtener el valor que queremos del array podemos utilizar una variable en vez de un número. Imaginemos que queremos hacer una aplicación que simule el típico sorteo en el que cada uno de los participantes saca un papel de una urna y tiene un premio asociado. Si quisiéramos hacerlo con JavaScript, podríamos hacer algo parecido a lo siguiente:
 
 ```html
-<label for="lotteryNumber">Introduce un número del 1 al 4</label>
-<input id="lotteryNumber" type="text" />
+<label for="lotteryNumber">Introduce un número del 1 al 4</label> <input id="lotteryNumber" type="text" />
 ```
 
 ```js
@@ -184,8 +169,6 @@ arr[1] = 'limón'; // Sobrescribimos el valor que hay en la segunda posición de
 // Tras los pasos anteriores arr será igual a  ['plátano', 'limón', 'pera']
 ```
 
----
-
 #### EJERCICIO 1
 
 **Películas**
@@ -200,7 +183,7 @@ El teclado vuelve a la segunda de la pareja. Ahora es tu turno de modificar la p
 
 Para terminar este ejercicio, vamos a encapsular todo el código que hemos creado en una función que no toma parámetros y que llamaremos `workWithMovies`. Ejecutamos la función para comprobar que se muestran los mensajes en la consola correspondientes.
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 ### Los arrays son un tipo de datos especial
 
@@ -313,13 +296,11 @@ Este ejemplo hará aparecer 20 veces, en la consola, el texto:
 
 - Voy por la vuelta 19
 
----
-
 #### EJERCICIO 2
 
 Partiendo el ejemplo anterior, crea un bucle que muestre 10 veces, en la consola, el texto `Voy por la vuelta X` siendo el número de vueltas desde 1 hasta 10 (no desde 0 hasta 9).
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 #### EJERCICIO 3
 
@@ -327,7 +308,7 @@ Vamos a partir de una variable `acc` con valor 0. Construiremos un bucle que se 
 
 > NOTA: Este tipo de variables como `acc` que se va actualizando y al final tiene el resultado de varias operaciones se llama _acumulador_. Puede ser de tipo numérico pero también de tipo cadena si vamos acumulando una cadena cada vez más larga.
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 #### EJERCICIO 4
 
@@ -337,7 +318,7 @@ Cada 3 años se produce una luna llena completamente iluminada por el Sol durant
 
 > NOTA: Vamos a realizar este ejercicio de forma que, antes de programar nada, escribamos el un papel el listado de las acciones (_algoritmo_) que tenemos que realizar para conseguir el resultado que buscamos. Una vez escrito este listado, ya nos pondremos a programarlo en JS.
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 ### Iterando sobre los elementos de un array
 
@@ -360,8 +341,6 @@ for (let i = 0; i < scores.length; i++) {
 console.log('La puntuación final es ' + acc);
 ```
 
----
-
 #### EJERCICIO 5
 
 **La media**
@@ -372,28 +351,18 @@ b) Ahora vamos añadir un nuevo número al array y repetir el cálculo de la med
 
 c) Vamos a generalizar el código anterior creando una función `average`. Esta función toma como parámetro un array `numbers`, calula la media del array (de cualquier longitud) y devuelve la media. Para poder trabajar con arrays de cualquier longitud, deberemos consultar la longitud del array mediante su propiedad `length`. Para comprobar que la función hace el cálculo correcto, la invocaremos (o ejecutaremos para que no suene tan esotérico) varias veces pasándole como argumento un array con diferente longitud cada vez y mostraremos el resultado en la consola del navegador.
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 ## Bucle `for...of`
 
 El bucle `for...of` de ES6 nos permite recorrer un objeto iterable, como son los arrays, sin tener que escribir las condiciones de un `for`. Además, nos permite usar nombres mucho más reconocibles para los valores dentro del array.
 
 ```js
-const bestAnimatedFeature2016Nominees = [
-  'Zootopia',
-  'Kubo and the Two Strings',
-  'La tortue rouge',
-  'Ma vie de Courgette',
-  'Moana'
-];
+const bestAnimatedFeature2016Nominees = ['Zootopia', 'Kubo and the Two Strings', 'La tortue rouge', 'Ma vie de Courgette', 'Moana'];
 
 // bucle for
 for (let i = 0; i < bestAnimatedFeature2016Nominees.length; i++) {
-  console.log(
-    `"${
-      bestAnimatedFeature2016Nominees[i]
-    }" was nominated to 89th Academy Awards`
-  );
+  console.log(`"${bestAnimatedFeature2016Nominees[i]}" was nominated to 89th Academy Awards`);
 }
 
 // bucle for...of
@@ -404,15 +373,13 @@ for (const movie of bestAnimatedFeature2016Nominees) {
 
 > **Nota**: si quisiéramos modificar los valores del array, tendríamos que hacer un bucle `for` como ya sabíamos. `for...of` solo nos permite leer los datos, ya que no nos da información sobre el índice.
 
----
-
 #### EJERCICIO 6
 
 **Tenemos mucho en común**
 
 Usando `for...of` vamos a hacer un pequeño programa que le pregunte a la usuaria cuáles son sus dos películas o libros favoritos mediante un formulario. Cuando pulse el botón `enviar` guardaremos la información en un array, lo recorreremos y mostraremos este mensaje por cada obra: "¡A mí también me encantó "OBRA"! Tenemos mucho en común, humana.", donde OBRA será el nombre de la obra.
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 ### Combinando arrays con objetos
 
@@ -477,6 +444,8 @@ Después, vamos a crear varias funciones en JavaScript que nos permitan calcular
 
 Según vayáis creando las funciones, debéis ir probando que funcionan invocándolas con nuestra estrucutra de datos como argumento. Al final, modificad la estructura de datos para añadir, modificar o quitar adalabers. Y probad que las funciones siguen devolviendo el valor correcto.
 
+\_\_\_\_\_\_\_\_\_\_
+
 ## `querySelectorAll`
 
 Hay muchas funciones nativas de JavaScript que retornan arrays. Son aquellas funciones que devuelven un listado de elementos, propiedades u otras cosas... Una de estas funciones es `querySelectorAll`.
@@ -500,13 +469,13 @@ for (let i = 0; i < paragraphs.length; i++) {
 }
 ```
 
----
-
 #### EJERCICIO 8
 
 **Botones de alarma**
 
 Vamos a partir de un HTML que tiene 3 botones con el texto ALARMA en un fondo blanco. Vamos a hacer que al pulsar en cualquiera de ellos, el fondo de la pantalla se ponga rojo. Si volvemos a pulsar en cualquiera de ellos, el fondo se pondrá blanco. Y así sucesivamente. Vamos a hacer uso de `querySelectorAll` para evitar repetir mucho código.
+
+\_\_\_\_\_\_\_\_\_\_
 
 #### EJERCICIO 9
 
@@ -517,6 +486,8 @@ Vamos a practicar un poco más con el método `querySelectorAll`:
 1. Y si escribimos `document.querySelectorAll('h1')[0]` ¿qué está mostrando en consola este código?
 1. Ahora escribimos `document.querySelectorAll('h1')[0].className`. ¿qué información nos muestra? ¿Y el código `document.querySelectorAll('h1')[0].innerText`?
 1. Y por último ¿qué muestra el código `document.querySelectorAll('asdf')` y por qué?
+
+\_\_\_\_\_\_\_\_\_\_
 
 #### EJERCICIO 10
 
@@ -538,7 +509,7 @@ Escribid un script que recorra los datos de este array y pinte en consola por ca
 
 Por ejemplo "El dato Ada está en la posición 0 y es de tipo string".
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 ## Bonus `for...in`
 

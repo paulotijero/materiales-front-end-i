@@ -232,13 +232,10 @@ const isModerator = true;
 const moderatorText = isModerator && 'moderadora';
 
 // Como la primera expresión es `falsy`, se devuelve la segunda expresión
-welcomeMessageElement.innerHTML = `Bienvenida ${adminText ||
-  moderatorText}. ¡Es genial verte de nuevo!`;
+welcomeMessageElement.innerHTML = `Bienvenida ${adminText || moderatorText}. ¡Es genial verte de nuevo!`;
 ```
 
 > **Nota**: Aunque no lo hemos puesto en los ejemplos se pueden evaluar más de 2 condiciones seguidas, por ejemplo: `name === 'María' && age >= 30 && career === 'adalaber' && favoriteLanguaje === 'JavaScript'`
-
----
 
 #### EJERCICIO 1
 
@@ -284,7 +281,7 @@ Paso a paso:
 
 > **NOTA**: Cambia manualmente el valor de `userAvatar` ('http://www.fillmurray.com/300/300' o '') para comprobar que el programa funcionará para los usuarios que añadieron su foto y para los que no lo hicieron.
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 ## Condicionales
 
@@ -327,8 +324,6 @@ if (age > 30) {
 }
 ```
 
----
-
 #### EJERCICIO 2
 
 **Control de acceso**
@@ -337,7 +332,7 @@ En este ejercicio vamos a crear un control de acceso. Para ello prepararemos una
 
 > **Nota**: cambia el valor de la variable y comprueba que todo funciona como esperas.
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 Podemos complicar incluso más la estructura del condicional cuando queremos que se ejecute un código si NO se cumple la primera condición pero SOLO si se cumple una segunda condición. En este caso, a la estructura del condicional simple le añadimos:
 
@@ -376,8 +371,6 @@ if (age > 30) {
 
 > **Nota**: Los bloques de un condicional son excluyentes, es decir, solo se va a ejecutar el código de un bloque (if, else if o else). En ningún momento se ejecutará el código de dos bloques ya que si se cumple una condición se ejecuta el código de su bloque y se ignoran las posteriores condiciones.
 
----
-
 #### EJERCICIO 3
 
 **Completa las condiciones**
@@ -399,7 +392,7 @@ if (/* condición 1 */) {
 }
 ```
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 #### EJERCICIO 4
 
@@ -413,7 +406,7 @@ Te habrá pasado varias veces de ir por la calle y que alguien te pregunte "perd
 
 > **Nota**: Prueba que el código funciona correctamente con distintos años (1, 2, 12...). Imagina el alcance de los daños si la próxima vez que te pare una persona para preguntarte por el conversor... ¡no funciona correctamente!
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 ### classList.contains
 
@@ -454,7 +447,7 @@ Usando JavaScript, haremos que:
 
 Cambia la clase en HTML y comprueba que el código de JavaScript funciona.
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 ### Operador condicional o ternario
 
@@ -473,7 +466,7 @@ Solo debemos utilizamos el operador ternario cuando:
 
 ```js
 const theme = 'hallowen';
-const fontColor = (theme === 'hallowen') ? '#ff5722' : '#000';
+const fontColor = theme === 'hallowen' ? '#ff5722' : '#000';
 ```
 
 ## Expresiones (expressions) y sentencias (statements).
@@ -507,13 +500,11 @@ if (money >= avocadoPrice) {
 Normalmente cuando JavaScript espera una sentencia podemos escribir una expresión, pero no al revés. Por ejemplo podríamos haber escrito la sentencia `if...else` con un _ternario_, pero no podemos poner entre los paréntesis del if como condición otro if, ya que aquí JavaScript espera una expresión que produzca un valor `true`/`false`.
 Si en este punto el concepto de expresión y sentencia es confuso, no te preocupes, es natural. Es un primer acercamiento a un concepto teórico y se irá aclarando con el tiempo ;)
 
----
-
 #### EJERCICIO 6
 
 Reescribe el código del ejemplo anterior (no del ejercicio anterior) utilizando un ternario en lugar de un `if...else`.
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 ## BONUS
 
@@ -532,8 +523,6 @@ El operador de módulo tiene el mismo orden de ejecución que los operadores de 
 
 > **Nota**: este operador es muy util para saber si un número es par o impar. Como recordatorio todos los números cuya división entre dos tienen como resto 0 son pares.
 
----
-
 #### EJERCICIO 7 BONUS
 
 Calcular cuál va a ser el siguiente año bisiesto
@@ -542,7 +531,7 @@ Vamos a escribir un pequeño programa que nos permita saber cuál será el sigui
 
 **Pista:** Tenemos que escribir el año en el que estamos en una constante.
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 ## Recursos externos
 

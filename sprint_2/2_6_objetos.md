@@ -160,8 +160,6 @@ adalaber.isMarried = false;
 console.log(adalaber.age);
 ```
 
----
-
 #### EJERCICIO 1
 
 **Bio de Adalabers**
@@ -178,7 +176,7 @@ Ahora hacemos lo mismo (crear el objeto `adalaber2` y mostrar una frase descript
 
 - Rocío, 25 años, actriz
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 ### Métodos
 
@@ -193,9 +191,7 @@ adalaber.speak = phrase => `Yo digo: ${phrase}`;
 console.log(adalaber.speak('Hola'));
 ```
 
-> NOTA: Por convención, los métodos suelen tener como nombre un verbo (`show`, `hide`, `reset`, etc.) y las características (propiedades) suelen tener un sustantivo (`color`, `size`, `type`, `content`, `text`, etc)
-
----
+> NOTA: Por convención, los métodos suelen tener como nombre un verbo (`show`, `hide`, `reset`, etc.) y las características (propiedades) suelen tener un sustantivo (`color`, `size`, `type`, `content`, `text`, etc).
 
 #### EJERCICIO 2
 
@@ -205,7 +201,7 @@ Partiendo del objeto `adalaber1` del ejercicio anterior, añade un método (una 
 
 Ahora, vamos a añadir un nuevo método `runAMarathon` que toma un parámetro `distance` que es un número. Al ejecutarlo, debe mostrarse en la consola el texto 'Estoy corriendo un maratón de 50 kilómetros' siendo 50 el valor del argumento `distance` que le hemos pasado.
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 ### Breve introducción a `this`
 
@@ -226,8 +222,6 @@ console.log(adalaber.sayHello());
 
 > NOTA: El concepto de `this` en JavaScript es mucho más complejo de lo que hemos aprendido aquí. Por el momento con lo que hemos visto nos sirve para empezar a trabajar con él, pero sabiendo que alberga muchas más posibilidades.
 
----
-
 #### EJERCICIO 3
 
 **Bio de Adalabers 2**
@@ -238,7 +232,7 @@ Hacemos lo mismo para `adalaber2` definida en el ejercicio 1. ¿Hemos tenido que
 
 > **Nota**: para que el ejercicio funcione bien debéis usar funciones normales, no _arrow funtions_. En siguientes sesiones veremos por qué cambia el `this` al usar _arrow funtions_.
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 ### Objetos del navegador
 
@@ -254,8 +248,6 @@ Por ejemplo,
 
 En la sesión anterior vimos el parámetro `event` del `handler` de un `listener`. Ahora ya sabemos que es un objeto que tiene propiedades como `currentTarget` y métodos como `preventDefault`.
 
----
-
 #### EJERCICIO 4
 
 **Investigando event**
@@ -265,7 +257,7 @@ Investigar si la clave `type` que encontramos en él es una propiedad o un méto
 
 > **Nota**: cuando _logueamos_ un objeto en la consola, a su izquierda aparece un triangulo que nos permite _desplegarlo_ para ver sus métodos y propiedades.
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 ### Elementos de HTML
 
@@ -285,8 +277,6 @@ titleElement.classList;
 titleElement.classList.contains('.icon-star');
 ```
 
----
-
 #### EJERCICIO 5
 
 **Investigando los elementos**
@@ -299,7 +289,7 @@ Vamos a preparar un input de tipo texto, a recogerlo desde JavaScript y a imprim
 
 > **Nota** Cuando _imprimimos_ un elemento en la consola con `console.log` vemos la etiqueta de HTML y podemos _desplegarla_ para ver su contenido. Si queremos ver el objeto con sus propiedades y métodos tendremos que usar `console.dir`.
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 ## null
 
@@ -365,8 +355,6 @@ En el caso de los números necesitamos crearlos de una forma especial `Number(4)
 
 Puedes consultar el [listado completo de propiedades y métodos de los números en MDN](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Number).
 
----
-
 #### EJERCICIO 6
 
 **Crear una cesta de peras**
@@ -386,7 +374,7 @@ Y varios métodos que hagan:
 
 Con la ayuda de `console.log` probaremos a usar varios métodos distintos y comprobar el número actual de peras para ver si funciona correctamente.
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 #### EJERCICIO 7
 
@@ -405,7 +393,7 @@ Usando la notación con punto o la notación con corchetes (`[]`) (ej: `obj.prop
 7. Aumentaremos en 1 la edad del usuario
 8. Comprobaremos de nuevo que todo sigue funcionando correctamente
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 ## Recursos externos
 
