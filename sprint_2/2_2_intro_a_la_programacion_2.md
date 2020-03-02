@@ -382,7 +382,7 @@ console.log(`Te quedan ${yearsToRetirement} años para jubilarte`);
 
 **Recogiendo números de HTML**
 
-Vamos a duplicar el [ejercicio 5](#ejercicio-5) y a modificarlo, recogiendo la edad con la que vamos a operar de una etiqueta que prepararemos en HTML.
+Vamos a duplicar el [ejercicio 5](#ejercicio-5) y a modificarlo. En este caso en vez de tener nuestra edad en una constante dentro del fichero de JavaScript, debemos crear un párrafo en el fichero HTML, escribir en él nuestra edad. Desde JavaScript debemos leer la edad para calcular el número de horas que hemos vivido.
 
 \_\_\_\_\_\_\_\_\_\_
 
