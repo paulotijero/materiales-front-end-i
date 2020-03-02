@@ -32,7 +32,7 @@ En las herramientas para desarrolladoras de Chrome (las DevTools) hay una pesta�
 
 > **NOTA:** A veces no siempre vemos todos los mensajes que mostramos en consola con `console.log('...');`. Esto es porque DevTools los está filtrando y solo muestra algunos. Para ver todos los mensajes tenemos que seleccionar la opción **No messages** como se muestra en la siguiente imagen:
 
-![./assets/images/2_2_console_filter.png](./assets/images/2_2_console_filter.png)
+![assets/images/2_2_console_filter.png](assets/images/2_2_console_filter.png)
 
 #### EJERCICIO 1
 
