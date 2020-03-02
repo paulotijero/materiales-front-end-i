@@ -20,7 +20,7 @@
 
 ## Introducción
 
-En la sesión anterior hablamos sobre como programar es básicamente realizar operaciones sobre datos para obtener un resultado concreto. Estos datos con los que trabajamos en nuestro código se representan mediante valores. Por tanto un valor no es más que la representación de un dato sobre la que podemos aplicar las reglas comentadas anteriormente. Si queremos mostrar la temperatura en una pantalla, necesitaremos el valor numérico (por ejemplo, 27) que represente el dato de esa temperatura y sobre ese valor aplicaremos las reglas para obtener el resultado deseado (sacar la media de temperatura, calcular el día que más calor ha hecho, etc.).
+En la sesión anterior hablamos de cómo programar es básicamente realizar operaciones sobre datos para obtener un resultado concreto. Estos datos con los que trabajamos en nuestro código se representan mediante valores. Por tanto un valor no es más que la representación de un dato sobre la que podemos aplicar las reglas comentadas anteriormente. Si queremos mostrar la temperatura en una pantalla, necesitaremos el valor numérico (por ejemplo, 27) que represente el dato de esa temperatura y sobre ese valor aplicaremos las reglas para obtener el resultado deseado (sacar la media de temperatura, calcular el día que más calor ha hecho, etc.).
 
 Se aprecia con esto que la base de la información de nuestra aplicación reside en los valores. Éstos serán los encargados de representar los datos y serán sobre los que apliquemos las operaciones necesarias.
 
@@ -122,7 +122,7 @@ Cada uno de ellos, según sus características, se utilizará para representar u
 
 ### Number
 
-Cómo su nombre indica, el tipo de valor _number_ comprende cualquier tipo de número utilizado en JavaScript. Hay varios subtipos de números en JavaScript pero de momento aprenderemos los más importantes, números enteros o _integers_ y números decimales o _floating point numbers (comúnmente llamados float)_.
+Como su nombre indica, el tipo de valor _number_ comprende cualquier tipo de número utilizado en JavaScript. Hay varios subtipos de números en JavaScript pero de momento aprenderemos los más importantes, números enteros o _integers_ y números decimales o _floating point numbers (comúnmente llamados float)_.
 
 En JavaScript los números enteros se representan directamente con cifras, por lo que es totalmente válido escribir `14232` o `-42` en nuestro código. Por otro lado, los números decimales se escriben igual que en inglés, es decir, utilizando puntos en vez de comas. Por ejemplo, podemos representar el número _1,32_ escribiendo `1.32`.
 
@@ -233,7 +233,7 @@ Ejemplos de `string`s válidos en JavaScript:
 
 ### Concatenando cadenas
 
-En el caso de `string`, la única forma de operar con el es usando el operador de concatenación (`+`). Este operador nos permitirá unir (concatenar) dos o más textos para obtener uno nuevo. Algunos ejemplos:
+En el caso de `string`, la única forma de operar con él es usando el operador de concatenación (`+`). Este operador nos permitirá unir (concatenar) dos o más textos para obtener uno nuevo. Algunos ejemplos:
 
 ```js
 "Fecha de conexión: " + "jueves 15"  // Devuelve "Fecha de conexión: jueves 15"
@@ -456,7 +456,7 @@ console.log('La usuaria no ha introducido una edad válida:', isNaN(userAge));
 
 ## Resumen
 
-En esta sesión hemos visto como apoyarnos en la consola del navegador cuando programamos para la web.
+En esta sesión hemos visto cómo apoyarnos en la consola del navegador cuando programamos para la web.
 
 También hemos conocido algunos de los tipos de valores que se usan en JavaScript, como `string` y `number` y cómo operar con ellos para obtener distintos resultados. Y el valor de una variable vacía, cuyo tipo se llama igual que el valor, `undefined`.
 

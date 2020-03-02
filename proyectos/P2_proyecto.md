@@ -29,7 +29,7 @@ En este proyecto vamos a realizar una aplicación web que nos permite crear una 
 
 ## Caso de uso
 
-Con esta web podréis mostrar que, a parte de maquetar, podéis crear una página web con la que interactuar y sacar algo que vaya más allá de una página que solo muestra información. Esto os permitirá mostrar vuestras habilidades a la hora de trabajar con JavaScript en GitHub, algo que en las empresas se valora bastante a la hora de escoger candidatos para puestos de programadora front-end.
+Con esta web podréis mostrar que, a parte de maquetar, podéis crear una página web con la que interactuar y sacar algo que vaya más allá de una página que solo muestra información. Esto os permitirá mostrar vuestras habilidades a la hora de trabajar con JavaScript en GitHub, algo que en las empresas se valora bastante a la hora de escoger candidatas para puestos de programadora front-end.
 
 ## Especificaciones
 
@@ -44,10 +44,10 @@ En el desarrollo de esta aplicación web usaremos las siguientes tecnologías:
 - Uso de git para el control de versiones del proyecto
 - Publicación del resultado en Internet usando GitHub Pages
 
-El proyecto consta de 2 páginas
+El proyecto consta de 2 páginas:
 
-- una página landing de bienvenida
-- una página con la aplicación de crear tarjetas
+- Una página landing de bienvenida
+- Una página con la aplicación de crear tarjetas
 
 La aplicación funciona siguiendo estos pasos:
 
@@ -74,9 +74,9 @@ Respecto a la interacción con la web:
 - Las modificaciones que hacemos en el formulario (diseño y contenido), aparecen automáticamente en la vista previa de la tarjeta
 - Las 3 partes del proceso de creación serán elementos colapsables, que al hacer clic en el título se mostrará/ocultará solo mostrando una sección a la vez
 - Toda la información del formulario debe almacenarse en LocalStorage (almacenamiento local del navegador), de forma que al recargar la página siga disponible y podamos borrarla con un botón de _Reset_. Para esto, debemos definir una estructura de datos compleja (con arrays y objetos) que es lo que guardaremos en el navegador
-- Para compartir en Twitter seguiremos 2 pasos
+- Para compartir en Twitter seguiremos 2 pasos:
   1. Al hacer clic en el botón de "Enviar" enviaremos el formulario (_submit_) a un API que devolverá la URL de una web con la tarjeta de visita con la información rellena
-  2. Mostraremos esta URL para que el usuario verifique si la tarjeta está bien definida y un botón de "Compartir" que enlazará a Twitter donde habrá un tweet con texto predefinido que incluye la URL de la tarjeta
+  1. Mostraremos esta URL para que el usuario verifique si la tarjeta está bien definida y un botón de "Compartir" que enlazará a Twitter donde habrá un tweet con texto predefinido que incluye la URL de la tarjeta
 
 ## Diseño
 
@@ -117,7 +117,7 @@ Para la gestión del proyecto, usaremos _historias de usuario_, que es una herra
 - Desarrollar una primera versión básica de la web, con la maquetación de la estructura básica (para desktop y móvil) que incluye el formulario con los colapsables y la vista previa
 
 > **NOTA**:
-> Para considerar terminado esta historia y todas los siguientes debéis tener publicada la web en GitHub Pages.
+> Para considerar terminada esta historia y todas las siguientes debéis tener publicada la web en GitHub Pages.
 
 ### Segunda. Versión interactiva
 
@@ -168,7 +168,7 @@ A continuación algunos elementos que os pueden ayudar a enfocar la presentació
 Además de esto, para mejorar vuestras habilidades de exposición en público y hacer la presentación más rica, podréis incorporar otros elementos adicionales (son solo ideas, sentíos libres de innovar y ser creativas):
 
 - Dejar muy claro quién ha sido vuestro cliente y qué fue lo que os pidió.
-- Presentación de los diferentes integrantes del equipo desde un punto de vista profesionales. Se trata de practicar vuestro "relato" profesional en versión muy corta. Que las personas asistentes conozcan quienes sois como profesionales.
+- Presentación de los diferentes integrantes del equipo desde un punto de vista profesional. Se trata de practicar vuestro "relato" profesional en versión muy corta. Que las personas asistentes conozcan quienes sois como profesionales.
 - Aportaciones "únicas" de cada equipo al proyecto.
 - Cómo ha sido la organización del equipo, el reparto de tareas y la coordinación a la hora de trabajar todas en el mismo código.
 - Cuál de las tareas o los puntos ha sido el que más esfuerzo ha requerido.
