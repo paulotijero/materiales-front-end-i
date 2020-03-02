@@ -30,8 +30,6 @@ Durante esta sesión vamos a ver algunos tipos de datos para poder operar con el
 
 En las herramientas para desarrolladoras de Chrome (las DevTools) hay una pestaña que es una consola JavaScript. La consola nos permite escribir instrucciones JavaScript que al pulsar la tecla 'Enter' se ejecutan. En la consola puedes probar a hacer sumas, declarar variables, etc.
 
----
-
 #### EJERCICIO 1
 
 **"Trasteando" la consola**
@@ -41,7 +39,7 @@ Tenemos que abrirla y:
 - Realizar una suma sencilla con nuestro número favorito y el de nuestra compañera.
 - Hacer lo mismo, pero guardando los números en constantes y utilizando estas para sumar.
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 Con la consola también podemos interactuar desde nuestro programa JavaScript, es decir, desde el código que escribimos en nuestro fichero `.js`. Una de las cosas que podemos hacer es escribir información, esto se denomina comúnmente _loguear_ información. Lo hacemos mediante la función `console.log()`, en la que lo que pongamos entre paréntesis será lo que se escriba en la consola.
 
@@ -66,8 +64,6 @@ welcomeParagraph.innerHTML = 'Bienvenida Adalaber';
 La consola del navegador es a JavaScript lo que el inspector de elementos a HTML y CSS, es decir, herramientas indispensables para desarrollar.
 
 A partir de ahora cada vez que escribamos código JavaScript y sirvamos nuestra página en el navegador, por defecto abriremos la consola, ya que sin ella estaremos programando "a ciegas".
-
----
 
 #### EJERCICIO 2
 
@@ -114,7 +110,7 @@ const superWave = document.querySelector('.super-wave');
 Tenemos que crear una clase nueva para destacar el texto `OLA!` y añadirla con JavaScript al elemento con clase `super-wave`.
 A por ello!
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 ## Tipos de datos
 
@@ -166,8 +162,6 @@ Los paréntesis en JavaScript, a la hora de aplicarlos a los números, funcionan
 (4 + 4) * (4 / 8) // Devuelve 4 también
 ```
 
----
-
 #### EJERCICIO 3
 
 **El precio de la fruta**
@@ -180,7 +174,7 @@ Imagina que vamos a la frutería y compramos lo siguiente:
 
 Con lo que hemos visto durante los ejemplos y textos anteriores y usando JavaScript, vamos a calcular el precio total como si lo hiciésemos en una hoja de toda la vida pero de manera mucho más guay. El resultado debe mostrarse en la consola del navegador.
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 #### EJERCICIO 4
 
@@ -188,7 +182,7 @@ Con lo que hemos visto durante los ejemplos y textos anteriores y usando JavaScr
 
 Nos vamos de cena de Navidad, ¡qué alegría! Somos en total 9 personas y la cuenta del restaurante japonés es de 128€. Ana tiene que pagar 2€ más que los demás porque ha pedido un chupito de sake. ¿Cuánto tenemos que pagar cada una? ¿Y Ana? Hagamos un pequeño programa en JavaScript para calcularlo. El resultado debe mostrarse en la consola del navegador.
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 #### EJERCICIO 5
 
@@ -196,7 +190,7 @@ Nos vamos de cena de Navidad, ¡qué alegría! Somos en total 9 personas y la cu
 
 En este caso vamos a crear un código que nos diga cuantas horas en total hemos vivido. Por ejemplo, si alguien tiene 60 años, este código debería de mostrar un mensaje con el número "525600".
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 ### String
 
@@ -245,8 +239,6 @@ En el caso de `string`, la única forma de operar con el es usando el operador d
 "Faltan " + "3" + " días"            // Devuelve "Faltan 3 días"
 ```
 
----
-
 #### EJERCICIO 6
 
 **Hola Adalaber**
@@ -258,7 +250,7 @@ tenemos que escribir un saludo en la pantalla. Si nuestra compañera se llamará
 Hola Lola, encantada de conocerte.
 ```
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 ### Interpolación de cadenas (Template strings)
 
@@ -305,15 +297,13 @@ element.innerHTML = `
 
 [&blacktriangleright; Interpolación de cadenas en Codepen](https://codepen.io/adalab/pen/wpPZvN?editors=0010)
 
----
-
 #### EJERCICIO 7
 
 **Interpola a Lola**
 
 Hay que reescribir el [ejercicio 6](#ejercicio-6) utilizando la interpolación de cadenas.
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 #### EJERCICIO 8
 
@@ -334,7 +324,7 @@ const thirdDogName = 'Lana';
 
 En este caso para añadir cada uno de los elementos utilizaremos la propiedad `innerHTML` y la interpolación de cadenas.
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 ### Longitud de string
 
@@ -346,8 +336,6 @@ const browserName = 'Mozilla';
 console.log('Mozilla is ' + browserName.length + ' code units long');
 ```
 
----
-
 #### EJERCICIO 9
 
 **Cuántas letras tiene tu nombre**
@@ -357,7 +345,7 @@ Con todo lo aprendido hasta ahora vamos a hacer un programa que pinte en HTML lo
 
 > **Nota**: tendremos que guardar el nombre de nuestra compañera en una constante para poder trabajar con él.
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 ### Undefined
 
@@ -388,15 +376,13 @@ const yearsToRetirement = 67 - parseInt(userAge.innerHTML);
 console.log(`Te quedan ${yearsToRetirement} años para jubilarte`);
 ```
 
----
-
 #### EJERCICIO 10
 
 **Recogiendo números de HTML**
 
 Vamos a duplicar el [ejercicio 5](#ejercicio-5) y a modificarlo, recogiendo la edad con la que vamos a operar de una etiqueta que prepararemos en HTML.
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 #### EJERCICIO 11
 
@@ -416,7 +402,7 @@ Ahora realiza lo mismo con esta otra:
 
 Compara y comenta los resultado con tu compañera.
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 ### Type of
 
