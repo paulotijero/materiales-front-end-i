@@ -408,7 +408,7 @@ const sum = function(a, b) {
 En las funciones flecha podemos evitar los paréntesis solo cuando la función tenga 1 único parámetro:
 
 ```javascript
-const getWaitingTime = minutes => {
+const getWaitingTime = (minutes) => {
   return `Please, wait ${minutes} minutes`;
 };
 
