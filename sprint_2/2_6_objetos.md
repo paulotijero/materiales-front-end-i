@@ -20,7 +20,7 @@ Los objetos son un tipo de dato en JavaScript, como lo son `number`, `string`, `
 
 En JavaScript los objetos conforman un grupo de datos compuestos por una _clave_ a la que va asociada un _valor_. En esta sesión vamos a ver los _objetos literales_ o _diccionarios_, por cómo se asocia la clave a su valor, pero normalmente los llamaremos simplemente _objetos_.
 
-La idea de los objetos viene del mundo real. En nuestro mundo un objeto tiene una serie de características (_propiedades_) y puede realizar una serie de acciones (_métodos_). Si pensamos en algo tan sencillo como un lápiz podremos ver que algunas de sus propiedades podrían son color de la mina, nivel de afilado, cantidad de mina restante, etc. Por otro lado sus acciones serían muy reducidas y básicamente se resumiría en una, pintar.
+La idea de los objetos viene del mundo real. En nuestro mundo un objeto tiene una serie de características (_propiedades_) y puede realizar una serie de acciones (_métodos_). Si pensamos en algo tan sencillo como un lápiz podremos ver que algunas de sus propiedades podrían ser color de la mina, nivel de afilado, cantidad de mina restante, etc. Por otro lado sus acciones serían muy reducidas y básicamente se resumiría en una, pintar.
 
 Si trasladamos estos objetos a la web, el ejemplo más sencillo es el de un contador. Este contador tiene una serie de propiedades como pueden ser el valor inicial, el valor máximo permitido, el valor mínimo permitido y el valor actual. Por otro lado tiene también acciones, como aumentar la cuenta o reducirla. Los valores inicial, máximo, mínimo y actual serán _propiedades_ del objeto, y aumentar y reducir la cuenta serán acciones o _métodos_ (funciones).
 
@@ -97,7 +97,7 @@ La sintaxis para crear un objeto es la siguiente:
 const adalaber = {
   name: 'María',
   age: 31,
-  isMarried: false,
+  isMarried: false
 };
 ```
 
@@ -110,8 +110,8 @@ const adalaber = {
   isMarried: false,
   address: {
     street: 'Colegiata',
-    number: 9,
-  },
+    number: 9
+  }
 };
 ```
 
@@ -320,7 +320,7 @@ Cuando asignamos un objeto a una variable, realmente no estamos guardando su val
 
 ```js
 const adalaber = {
-  name: 'Rosa',
+  name: 'Rosa'
 };
 adalaber.name; // Rosa
 
