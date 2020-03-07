@@ -20,7 +20,7 @@ Utilizando aplicaciones y webs, muchas veces nos encontramos con casos en los qu
 
 Las condicionales permiten tomar decisiones y realizar acciones en función de una serie de datos. Gracias a ellas diremos qué pasos queremos que siga la aplicación en cada momento para que se cumpla el objetivo que deseamos alcanzar.
 
-Durante esta sesión veremos cómo controlar qué parte de nuestro código se ejecuta y cuál no. Aprenderemos a dar instrucciones a nuestras aplicaciones para realizar acciones en función de datos. Estableciendo normas al estilo si sucede esto haz esto otro y sino haz una orden alternativa. El condicional es una de las estructuras de control más básicas e importantes de la programación.
+Durante esta sesión veremos cómo controlar qué parte de nuestro código se ejecuta y cuál no. Aprenderemos a dar instrucciones a nuestras aplicaciones para realizar acciones en función de datos. Estableciendo normas al estilo si sucede esto haz esto otro y si no haz una orden alternativa. El condicional es una de las estructuras de control más básicas e importantes de la programación.
 
 ## ¿Para qué sirve lo que vamos a ver en esta sesión?
 
@@ -34,7 +34,7 @@ Veamos algunos ejemplos donde se utiliza lo que vamos a ver durante esta sesión
 
 Los booleanos se utilizan para almacenar datos verdaderos o falsos o convertir comparaciones a verdadero o falso:
 
-- Guardar información del estilo el usuario está registrado o no, el campo se ha rellenado o no, etc.
+- Guardar información del estilo, el usuario está registrado o no, el campo se ha rellenado o no, etc.
 - Guardar info sobre si un número es mayor o menor, si dos strings son iguales o no, si una variable existe, si una cadena de texto está vacía, etc.
 
 Los condicionales se usan para realizar o no un código en función de una condición:
@@ -169,7 +169,7 @@ Un truco para utilizar el operador `!` es pensar en humano. Para usarlo podemos 
 
   Cuando `!!nameField` devuelve `false`, la respuesta es NO, `nameField` tiene un valor falso.
 
-> **Nota**: Trabajar con el operador `!` puede parecer un poco lioso al principio, no te preocupes si aún no tienes claro como aplicarlo, irá asentándose poco a poco con su uso.
+> **Nota**: Trabajar con el operador `!` puede parecer un poco lioso al principio, no te preocupes si aún no tienes claro cómo aplicarlo, irá asentándose poco a poco con su uso.
 
 ### _AND_
 
@@ -189,7 +189,7 @@ name === 'María' && age >= 40; // false
 name === 'Marta' && age >= 40; // false
 ```
 
-Cuando trabajamos con no booleanos `&&` es muy útil para asignar un valores a constantes y variables de manera condicional.
+Cuando trabajamos con no booleanos `&&` es muy útil para asignar valores a constantes y variables de manera condicional.
 
 ```js
 const isModerator = true;
@@ -410,7 +410,7 @@ Te habrá pasado varias veces de ir por la calle y que alguien te pregunte "perd
 
 ### classList.contains
 
-Vamos a ver un método nuevo de`classList` que muy útil cuando trabajamos con condicionales, para ello vamos a plantear una posible situación. Imaginemos que tenemos un botón que sirve para mostrar y ocultar un elemento de nuestra página. De momento no vamos a ver cómo hacer que cuando pulses en un botón, se haga algo pero sí vamos a ver cómo podríamos ocultar un elemento sólo en el caso de que no estuviese oculto antes. Tendríamos que tener una forma de comprobar si un elemento tiene una clase o no, aquí es donde entra en juego `classList.contains()`. Con este método podremos comprobar si un elemento contiene una clase y nos devolverá un booleano (`true` o `false`).
+Vamos a ver un método nuevo de `classList` que es muy útil cuando trabajamos con condicionales, para ello vamos a plantear una posible situación. Imaginemos que tenemos un botón que sirve para mostrar y ocultar un elemento de nuestra página. De momento no vamos a ver cómo hacer que cuando pulses en un botón, se haga algo pero sí vamos a ver cómo podríamos ocultar un elemento sólo en el caso de que no estuviese oculto antes. Tendríamos que tener una forma de comprobar si un elemento tiene una clase o no, aquí es donde entra en juego `classList.contains()`. Con este método podremos comprobar si un elemento contiene una clase y nos devolverá un booleano (`true` o `false`).
 
 Veamos el caso que estábamos comentando, tenemos un elemento que puede o no tener la clase `.hidden`. Vamos a comprobar si la tiene y en caso de ser así se la quitaremos y en caso de no tenerla se la añadiremos. Esto huele a `if` ¿verdad? :). Veamos el código:
 

@@ -34,7 +34,7 @@ Es importante entender que nosotros no creamos eventos desde JavaScript sino que
 
 - click en un botón
 - scroll en la página
-- un cambio el contenido de un input
+- un cambio en el contenido de un input
 - expira un temporizador
 - llegan los datos del servidor
 
@@ -363,7 +363,7 @@ El método **`event.preventDefault()` nos permite prevenir** estos **comportamie
 
 Uno de los casos más comunes es prevenir el envío de un formulario.
 
-Aunque aún no hemos visto como enviar un formulario desde JavaScript, prevenir que lo envíe el navegador sería el primer paso para poder controlarlo, validando sus datos, enviándolos al servidor desde JavaScript y mostrando _feedback_ a la usuaria sobre el proceso.
+Aunque aún no hemos visto cómo enviar un formulario desde JavaScript, prevenir que lo envíe el navegador sería el primer paso para poder controlarlo, validando sus datos, enviándolos al servidor desde JavaScript y mostrando _feedback_ a la usuaria sobre el proceso.
 
 - [Ejemplo de botón submit en un formulario](https://codepen.io/adalab/pen/bjwJGv)
 
@@ -439,7 +439,7 @@ Si pruebas el ejemplo anterior al hacer click sobre el texto y después sobre la
 
 [Explicación de currentTarget vs target en 30 segundos](http://joequery.me/code/event-target-vs-event-currenttarget-30-seconds/)
 
-En la mayoría de los casos querremos trabajar con `currentTarget`. Pero no está mal que nos suene como funciona `target`.
+En la mayoría de los casos querremos trabajar con `currentTarget`. Pero no está mal que nos suene cómo funciona `target`.
 
 #### EJERCICIO 12 BONUS
 

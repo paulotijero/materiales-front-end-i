@@ -18,13 +18,13 @@
 
 Los objetos son un tipo de dato en JavaScript, como lo son `number`, `string`, `boolean`, `undefined`... Los objetos son en cierta forma diferentes a estos porque permiten agrupar varios datos de forma estructurada. En esta sesión, veremos tanto los aspectos que los diferencian como aquellos que los asemejan.
 
-En JavaScript los objetos conforman un grupo de datos compuestos por una _clave_ a la que va asociada un _valor_. En esta sesión vamos a ver los _objetos literales_ o _diccionarios_, por cómo se asocia la clave a su valor, pero normalmente los llamaremos simplemente _objetos_.
+En JavaScript los objetos conforman un grupo de datos compuestos por una _clave_ a la que va asociado un _valor_. En esta sesión vamos a ver los _objetos literales_ o _diccionarios_, por cómo se asocia la clave a su valor, pero normalmente los llamaremos simplemente _objetos_.
 
-La idea de los objetos viene del mundo real. En nuestro mundo un objeto tiene una serie de características (_propiedades_) y puede realizar una serie de acciones (_métodos_). Si pensamos en algo tan sencillo como un lápiz podremos ver que algunas de sus propiedades podrían ser color de la mina, nivel de afilado, cantidad de mina restante, etc. Por otro lado sus acciones serían muy reducidas y básicamente se resumiría en una, pintar.
+La idea de los objetos viene del mundo real. En nuestro mundo un objeto tiene una serie de características (_propiedades_) y puede realizar una serie de acciones (_métodos_). Si pensamos en algo tan sencillo como un lápiz podremos ver que algunas de sus propiedades podrían ser el color de la mina, nivel de afilado, cantidad de mina restante, etc. Por otro lado sus acciones serían muy reducidas y básicamente se resumiría en una, pintar.
 
 Si trasladamos estos objetos a la web, el ejemplo más sencillo es el de un contador. Este contador tiene una serie de propiedades como pueden ser el valor inicial, el valor máximo permitido, el valor mínimo permitido y el valor actual. Por otro lado tiene también acciones, como aumentar la cuenta o reducirla. Los valores inicial, máximo, mínimo y actual serán _propiedades_ del objeto, y aumentar y reducir la cuenta serán acciones o _métodos_ (funciones).
 
-Hasta aquí hay algo que no termina de cuadrar: ¿para que quiero que sean objetos? Es decir, a mí, como programadora ¿de qué me sirven? En programación interactuaremos con estos objetos, que no dejan de ser abstracciones de conjuntos de datos y acciones. Lo que haremos será, mediante código, decirle que cuando pulsemos un botón, por ejemplo, se ejecute el método para aumentar la cuenta y cambie así el valor actual del contador. Esto no es que cree un objeto y el trabaje por su cuenta sin que le digamos nada, todo el código (excepto el que nos brinda de serie JavaScript) lo creamos nosotros. La idea de utilizar esto es crear entidades o representaciones con las que es más fácil trabajar. Si vemos lo siguiente:
+Hasta aquí hay algo que no termina de cuadrar: ¿para que quiero que sean objetos? Es decir, a mí, como programadora ¿de qué me sirven? En programación interactuaremos con estos objetos, que no dejan de ser abstracciones de conjuntos de datos y acciones. Lo que haremos será, mediante código, decirle que cuando pulsemos un botón, por ejemplo, se ejecute el método para aumentar la cuenta y cambie así el valor actual del contador. Esto no es que cree un objeto y él trabaje por su cuenta sin que le digamos nada, todo el código (excepto el que nos brinda de serie JavaScript) lo creamos nosotros. La idea de utilizar esto es crear entidades o representaciones con las que es más fácil trabajar. Si vemos lo siguiente:
 
 ```
 si se pulsa el botón, el contador aumenta
@@ -61,7 +61,7 @@ Aumentar valor del contador
 Disminuir valor del contador
 ```
 
-De la primera forma agrupamos todo dentro del contador y es más fácil ver la relación que tienen entre ellos los elementos y sabemos que van a tener sentido sólo dentro de éste.
+De la primera forma agrupamos todo dentro del contador, así es más fácil ver la relación que tienen entre ellos los elementos y saber que van a tener sentido sólo dentro de éste.
 
 ## ¿Para qué sirve lo que vamos a ver en esta sesión?
 
