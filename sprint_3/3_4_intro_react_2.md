@@ -23,33 +23,33 @@ En esta sesión vamos a seguir aprendiendo cómo funciona la librería [React.js
 
 Un **componente web** es una parte de la interfaz de una página o aplicación web que podemos reutilizar. Por ejemplo, una línea de producto de un carrito de la compra, o un elemento colapsable.
 
-Los frameworks o librerías como React se basan en el concepto de componente. De esta forma, todo lo que vamos a crear son componentes que iremos usando para crear la interfaz deseada.
+Los frameworks o las librerías como React se basan en este concepto de componentes. De esta forma, todo lo que vamos a crear son componentes que iremos usando para crear la interfaz deseada.
 
 Los componentes de React, además, pueden personalizarse a través de un mecanismo llamado `props`, que no es otra cosa que pasarle valores a través de los atributos del componente HTML.
 
-## Creando nuestro primer componente
+Aprenderemos que en React actualmente conviven dos tipos de componentes, los componentes de clase y los componentes funcionales, así que aprenderemos las diferencias entre ellos y en qué casos podemos usar unos u otros.
 
-_¡Manos a la obra!_ Vamos a crear nuestro primer componente de React. Va a ser un componente que nos muestre una imagen aleatoria de un gato usando la web de lorempixel, y que además será un enlace a una página. Primero, creamos un proyecto nuevo con `create-react-app`.
+## Creando nuestro primer componente de clase
 
-Para comenzar, vamos a crear un nuevo módulo JavaScript para definir el componente. Crearemos un archivo `RandomCat.js` en la misma carpeta `src` donde definiremos el componente. Tendremos que importar React de su módulo, así que añadiremos al principio:
+_¡Manos a la obra!_ Vamos a crear nuestro primer componente de clase en React. Va a ser un componente que nos muestre una imagen aleatoria de un gato usando la web de lorempixel, y que además será un enlace a una página. Primero, creamos un proyecto nuevo con `create-react-app`.
+
+Para comenzar, vamos a crear un nuevo módulo JavaScript para definir el componente.
+
+Para empezar a trabajar con componentes, y como ya hemos visto cómo se ordenan los proyectos en React, vamos a crear una carpeta `components` donde guardaremos nuestro componente principal `App.js`y los nuevos componentes que creemos a partir de ahora.
+
+Crearemos un archivo dentro de esta carpeta llamado `RandomCat.js`. Tendremos que importar React de su módulo, y también exportar nuestro componente para que pueda ser usado desde fuera,por lo que nuestro código debería tener este aspecto:
 
 **RandomCat.js**:
 
 ```js
 import React from 'react';
 // ...
-```
-
-Para que nuestro componente se pueda usar desde fuera del módulo, lo exportaremos. Para eso, añadiremos al final:
-
-**RandomCat.js**:
-
-```js
+// ...AQUÍ ESCRIBIREMOS NUESTRO COMPONENTE
 // ...
 export default RandomCat;
 ```
 
-Crearemos el componente después del `import`. Un componente será una subclase de la clase `Component` de React, así que escribiremos lo siguiente:
+Crearemos el componente después del `import`. Un componente de clase será una subclase de la clase `Component` de React, así que escribiremos lo siguiente:
 
 ```js
 class RandomCat extends React.Component {
@@ -57,9 +57,11 @@ class RandomCat extends React.Component {
 }
 ```
 
-> Crearemos nuestros componentes siempre con **mayúscula inicial**. Así los diferenciaremos de los componentes en JSX que representan etiquetas de HTML
+> ¿Nos suena esta estructura? ¡Claro que sí! Es la misma que hemos aprendido en las clases de JS. 
 
-Los componentes de React tienen un método `render()` que devuelve un elemento de JSX para que React lo pinte. Así que sobrescribiremos ese método (es decir, que declararemos un método con ese nombre):
+Crearemos nuestros componentes siempre con **mayúscula inicial**, independientemente de si usamos componentes de clase o funcionales. Así los diferenciaremos de los componentes en JSX que representan etiquetas de HTML
+
+Los componentes de clase tienen un método `render()` que devuelve un elemento de JSX para que React lo pinte. Así que sobrescribiremos ese método (es decir, que declararemos un método con ese nombre):
 
 ```js
 class RandomCat extends React.Component {
@@ -73,22 +75,29 @@ class RandomCat extends React.Component {
 }
 ```
 
-_¡Ya está!_ Ahora para ver el resultado tendremos que decirle a React que lo pinte. Para usar nuestro componente en el archivo `index.js`, tendremos que importar nuestro componente del módulo, naturalmente. Escribiremos arriba:
+_¡Ya está!_ Ahora para ver el resultado tendremos que decirle a React que lo pinte. Vamos a ver que para trabajar en React es buena idea utilizar `App.js` como componente principal que monte toda nuestra aplicación y llamar al resto de componentes desde ahí, así que para usar nuestro componente `RandomCat.js` en `App.js`, tendremos que importar nuestro componente del módulo, naturalmente. Escribiremos arriba:
 
-**index.js**:
+**App.js**:
 
 ```js
 import React from 'react';
-// ...
 import RandomCat from './RandomCat';
 ```
 
 > Para importar de un archivo local, utilizaremos el prefijo `./` antes de la ruta. Sin embargo, no pondremos el prefijo cuando sea una dependencia en `npm`, como nos preconfigura `create-react-app` para `react` y `react-dom`.
 
-Solo falta el paso final: es tan fácil como cambiar la línea que empieza por `ReactDOM.render` y reemplazar `<App />` por `<RandomCat />`:
+Solo falta el paso final: es tan fácil como llamar a nuestro componente dentro del `return` de `App.js`:
 
 ```js
-ReactDOM.render(<RandomCat />, document.getElementById('root'));
+class App extends React.Component {
+  render() {
+    return (
+      <div className="App">
+        <RandomCat/>
+      </div>
+    );
+  }
+}
 ```
 
 **Y voilá!** Nos debería quedar así:
@@ -111,26 +120,78 @@ class RandomCat extends React.Component {
 export default RandomCat;
 ```
 
-**index.js**:
+**App.js**:
 
 ```js
 import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
 import RandomCat from './RandomCat';
-//import registerServiceWorker from './registerServiceWorker';
 
-ReactDOM.render(<RandomCat />, document.getElementById('root'));
-//registerServiceWorker();
+class App extends React.Component {
+  render() {
+    return (
+      <div className="App">
+        <RandomCat/>
+      </div>
+    );
+  }
+}
+
+export default App;
 ```
-
-> Las líneas comentadas son una añadidura de `create-react-app` para facilitar hacer _progressive web apps_, pero son completamente opcionales y por ahora no las utilizaremos.
 
 ---
 
 #### EJERCICIO 1
 
-Vamos a partir del ejercicio 1 (o del 2) de la sesión anterior. En lugar de usar el componente genérico App, vamos a crear un nuevo componente `MediaCard` encargado de pintar una tarjeta social para un usuario. Vamos a cargar ese nuevo componente desde el `index.js` para pintarlo con ReactDOM.
+Vamos a partir del ejercicio 1 (o del 2) de la sesión anterior. Vamos a crear un nuevo componente `MediaCard` encargado de pintar una tarjeta social para un usuario. Vamos a cargar ese nuevo componente en nuestro componente principal`App.js`.
+
+---
+
+### Componentes funcionales. Otro tipo de componentes
+
+Ya hemos visto como escribir un componente de clase en React, y curiosamente su estructura es igual a la estructura de las clases JS, vamos a ver ahora qué es un componente funcional.
+
+Los componentes funcionales son otro tipo de componentes que utilizan la estructura de una función para definirse y más adelante, cuando veamos el uso de los hooks, aprenderemos que son los que vamos a utilizar en estos casos.
+
+Actualmente y dado que React es una tecnología muy nueva que aún está evolucionando, conviven estos dos tipos de componentes en los proyectos actuales (por eso, cuando habéis instalado React la primera vez habéis visto App.js escrtio en forma de función en lugar de como clase).
+
+Vamos a ver cómo sería nuestro componente Greeting escrito como clase:
+
+```js
+import React from 'react';
+
+class Greetings extends React.Component {
+  render() {
+    return <h1>Hello, {this.props.name}!</h1>;
+  }
+}
+
+export default Greetings;
+```
+
+Ahora echa un vistazo a cómo sería Greeting escrito como componente funcional:
+
+```js
+import React from 'react';
+
+const Greetings = props => {
+  return <h1>Hello, {props.name}!</h1>;
+};
+
+export default Greetings;
+```
+
+Si lo combinamos con el _return_ implícito de las _arrow functions_ podríamos incluso hacer una estructura más corta, quedando así:
+
+```js
+import React from 'react';
+// "arrow function" sin llaves, con "return" implícito
+const Greetings = props => <h1>Hello, {props.name}!</h1>;
+
+export default Greetings;
+```
+
+Puesto que, como ya hemos visto actualmente nos encontraremos los dos tipos de componentes en proyectos React vamos a potenciar que manejéis el uso de componentes de clase para aquellos que tienen un estado (concepto que ya aprenderemos) y el uso de componentes funcionales si desarrollais con _hooks_ (también os los presentaremos más adelante).
 
 ---
 
@@ -152,7 +213,7 @@ const componentToRender = <Greeting name="María Moliner" />;
 ReactDOM.render(componentToRender, document.getElementById('root'));
 ```
 
-Estos datos se llaman `props` y se guardan en un atributo de las instancias del mismo nombre. Podemos acceder a él a través de `this.props`, que es un objeto que contiene las claves y los valores de estos "atributos".
+Estos datos se llaman `props` y se guardan en un atributo de las instancias del mismo nombre. Podemos acceder a él a través de `this.props`, en el caso de los componentes de clase o directamente usando `props` en el caso de un componente funcional. Es un objeto que contiene las claves y los valores de estos "atributos". Mira este ejemplo de props en usadas en un componente de clase.
 
 ```js
 render() {
@@ -186,53 +247,6 @@ Vamos a partir del ejercicio 1 (el anterior). Vamos a usar las `props` para pers
 - el número de likes
 - si el corazón está o no relleno
 
----
-
-### Crear componentes _dummies_ más rápido
-
-Llamamos componente _dummy_ (títere) a los componentes en React que **no tienen ni estado ni comportamiento**. Es decir, lo único de lo que dependerán son las `props` que se les pase, y solo en función de eso se pintarán. Sus cambios serán gestionados por otros componentes superiores que les pasarán esas `props`.
-
-Hasta ahora los hemos escrito como componentes completos para que os familiarizaseis con la sintaxis de clases de React:
-
-```js
-import React from 'react';
-
-class Greetings extends React.Component {
-  render() {
-    return <h1>Hello, {this.props.name}!</h1>;
-  }
-}
-
-export default Greetings;
-```
-
-Pero React también tiene una manera de escribir estos componentes de manera más sencilla. La idea, sencillamente, es pensar en los componentes _dummies_ como funciones que reciben unas `props` como parámetros y devuelven elementos y componentes de JSX:
-
-```js
-import React from 'react';
-
-const Greetings = props => {
-  return <h1>Hello, {props.name}!</h1>;
-};
-
-export default Greetings;
-```
-
-> Estos componentes _dummies_ también se llaman componentes funcionales (_functional components_) o, más específicamente, componentes funcionales sin estado (_stateless functional components_), porque tienen forma de función y carecen de estado.
-
-Si lo combinamos con el _return_ implícito de las _arrow functions_ queda así:
-
-```js
-import React from 'react';
-// "arrow function" sin llaves, con "return" implícito
-const Greetings = props => <h1>Hello, {props.name}!</h1>;
-
-export default Greetings;
-```
-
-Hemos reducido la declaración de un componente de siete líneas a tres. Es una práctica común hacerlo al revés: declarar un componente nuevo primero como función, _dummy_, y si más tarde necesita estado o comportamiento, [ampliar su declaración](https://reactjs.org/docs/state-and-lifecycle.html#converting-a-function-to-a-class) a la de un componente de clase completo.
-
----
 
 #### EJERCICIO 3
 
@@ -242,9 +256,9 @@ Convierte el componente `MediaCard` del ejercicio anterior en un componente func
 
 ## Creando varios componentes
 
-Vamos a hacer un componente más que sea la sección donde se mostrarán distintos gatos. Tendrá un título y una lista con los gatos. Así veremos cómo usar componentes anidados.
+Vamos a hacer un componente de clase más que sea la sección donde se mostrarán distintos gatos. Tendrá un título y una lista con los gatos. Así veremos cómo usar componentes anidados.
 
-Nos vamos a acostumbrar a crear nuestros componentes de React en un directorio `components` para tenerlos todos juntos. Creamos el directorio, movemos `RandomCat.js` dentro y creamos un nuevo archivo `CatList.js`:
+En nuestra carpeta components vamos a crear un nuevo archivo `CatList.js`:
 
 **components/CatList.js**:
 
@@ -313,15 +327,25 @@ Lo siguiente tenemos que agradecérselo a JSX: para usar nuestro componente solo
 // ...
 ```
 
-Finalmente, en el archivo `index.js` importaremos el componente `CatList` y le diremos a `ReactDOM` que renderice `<CatList />`:
+Finalmente, en el componente principal `App.js` importaremos el componente `CatList`:
 
-**index.js**:
+**App.js**:
 
 ```js
-// ...
-import CatList from './components/CatList';
+import React from 'react';
+import CatList from './CatList';
 
-ReactDOM.render(<CatList />, document.getElementById('root'));
+class App extends React.Component {
+  render() {
+    return (
+      <div className="App">
+        <CatList/>
+      </div>
+    );
+  }
+}
+
+export default App;
 ```
 
 Ahora se verán tres gatos iguales por la caché de los navegadores web (la dirección de la imagen es la misma y reutilizan la llamada al servidor). Podemos modificar el componente `RandomCat` para que siempre sea diferente generando un número aleatorio. Declaramos una pequeña función y el número de gatos disponibles:
@@ -355,15 +379,23 @@ render() {
 
 **¡Genial!** Nos quedará así:
 
-**index.js**:
+**components/App.js**:
 
 ```js
 import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import CatList from './components/CatList';
+import CatList from './CatList';
 
-ReactDOM.render(<CatList />, document.getElementById('root'));
+class App extends React.Component {
+  render() {
+    return (
+      <div className="App">
+        <CatList/>
+      </div>
+    );
+  }
+}
+
+export default App;
 ```
 
 **components/CatList.js**:
