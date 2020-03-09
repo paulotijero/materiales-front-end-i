@@ -37,7 +37,7 @@ Para comenzar, vamos a crear un nuevo módulo JavaScript para definir el compone
 
 Para empezar a trabajar con componentes, y como ya hemos visto cómo se ordenan los proyectos en React, vamos a crear una carpeta `components` donde guardaremos nuestro componente principal `App.js`y los nuevos componentes que creemos a partir de ahora.
 
-Crearemos un archivo dentro de esta carpeta llamado `RandomCat.js`. Tendremos que importar React de su módulo, y también exportar nuestro componente para que pueda ser usado desde fuera,por lo que nuestro código debería tener este aspecto:
+Crearemos un archivo dentro de esta carpeta llamado `RandomCat.js`. Tendremos que importar React de su módulo, y también exportar nuestro componente para que pueda ser usado desde fuera, por lo que nuestro código debería tener este aspecto:
 
 **RandomCat.js**:
 
@@ -57,9 +57,9 @@ class RandomCat extends React.Component {
 }
 ```
 
-> ¿Nos suena esta estructura? ¡Claro que sí! Es la misma que hemos aprendido en las clases de JS. 
+> ¿Nos suena esta estructura? ¡Claro que sí! Es la misma que hemos aprendido en las clases de JS.
 
-Crearemos nuestros componentes siempre con **mayúscula inicial**, independientemente de si usamos componentes de clase o funcionales. Así los diferenciaremos de los componentes en JSX que representan etiquetas de HTML
+Crearemos nuestros componentes siempre con **mayúscula inicial**, independientemente de si usamos componentes de clase o funcionales. Así los diferenciaremos de los componentes en JSX que representan etiquetas de HTML.
 
 Los componentes de clase tienen un método `render()` que devuelve un elemento de JSX para que React lo pinte. Así que sobrescribiremos ese método (es decir, que declararemos un método con ese nombre):
 
@@ -139,13 +139,11 @@ class App extends React.Component {
 export default App;
 ```
 
----
-
 #### EJERCICIO 1
 
 Vamos a partir del ejercicio 1 (o del 2) de la sesión anterior. Vamos a crear un nuevo componente `MediaCard` encargado de pintar una tarjeta social para un usuario. Vamos a cargar ese nuevo componente en nuestro componente principal`App.js`.
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 ### Componentes funcionales. Otro tipo de componentes
 
@@ -234,8 +232,6 @@ render() {
 }
 ```
 
----
-
 #### EJERCICIO 2
 
 Vamos a partir del ejercicio 1 (el anterior). Vamos a usar las `props` para personalizar el contenido de una tarjeta social `MediaCard`. En concreto, vamos a personalizar
@@ -247,12 +243,13 @@ Vamos a partir del ejercicio 1 (el anterior). Vamos a usar las `props` para pers
 - el número de likes
 - si el corazón está o no relleno
 
+\_\_\_\_\_\_\_\_\_\_
 
 #### EJERCICIO 3
 
 Convierte el componente `MediaCard` del ejercicio anterior en un componente funcional.
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 ## Creando varios componentes
 
@@ -456,8 +453,6 @@ export default RandomCat;
 
 > **NOTA**: cuando manejamos un listado de componentes hermanos (como en los `li`s del ejemplo anterior), React nos da un _warning_ en la consola indicando que debemos dar un atributo `key` a cada elemento del listado. Este atributo debe ser único para cada elemento de la lista, normalmente se usa el `id` del elemento si viene del servidor aunque si no lo tenemos puede usarse el índice de un `for` o un `map`. Sirve para que React internamente pueda optimizar el pintado de los elementos.
 
----
-
 #### EJERCICIO 4
 
 Vamos a partir del ejemplo con un listado de gatos con fotos aleatorias. Usaremos las `props` para pasar el tamaño de la imagen a `RandomCat`. Pasaremos una anchura (`width`) y una altura (`height`), que serán enteros (píxeles). En el caso de que no se pasen `props`, `width` será de `400` y `height` será `200`.
@@ -468,17 +463,17 @@ Desde `CatList` declararemos que se pinten tres componentes `RandomCat`:
 - Otro de 200x400 px
 - Otro, al que no pasaremos `props`, que será de 400x200 px
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 #### EJERCICIO 5
 
 En nuestra web de tarjetas sociales, vamos a crear un nuevo componente `MediaList` para manejar una lista de componentes `MediaCard`. Para ello, mostrará una nueva sección con un título y un listado de 3 componentes `MediaCard`. Cada tarjeta tendrá datos personalizados que definiremos mediantes `props` desde el componente madre, es decir, el que maneja la lista.
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 ## Publicar nuestra app React en GitHub Pages
 
-`create-react-app` nos crea un entorno de desarrollo donde empezar a trabajar con React en nuestra máquina. Si queremos enseñar el resultado con GitHub Pages hay que hacer algunas cosillas antes de generar una versión para producción
+`create-react-app` nos crea un entorno de desarrollo donde empezar a trabajar con React en nuestra máquina. Si queremos enseñar el resultado con GitHub Pages hay que hacer algunas cosillas antes de generar una versión para producción:
 
 - rutas a los archivos principales serán relativas al dominio
 - necesitaremos una carpeta determinada
@@ -489,23 +484,21 @@ En nuestra web de tarjetas sociales, vamos a crear un nuevo componente `MediaLis
 Entraremos por terminal a nuestra carpeta de proyecto y esto es lo que hay que hacer:
 
 1. Modificar `package.json` para que las rutas sean relativas a nuestros archivos: hay que añadir `"homepage": "./",`.
-2. Ya que lo vamos a servir desde GitHub, y usa https, tendremos que cambiar cualquier recurso `http` a `https`: por ejemplo, en un fetch
-3. Ejecutar `npm run build` para que nos cree la versión para producción en la carpeta **build/**.
+1. Ya que lo vamos a servir desde GitHub, y usa https, tendremos que cambiar cualquier recurso `http` a `https`: por ejemplo, en un fetch.
+1. Ejecutar `npm run build` para que nos cree la versión para producción en la carpeta **build/**.
 
 GitHub Pages funciona en la carpeta raíz o en la **docs/** de la rama master, así que querremos cambiar la carpeta **build/** por la carpeta **docs/**. Para ello, desde la terminal y colocados en la carpeta raíz del proyecto ejecutaremos `mv build docs`. Es importante saber que este paso lo tendremos que hacer cada vez que hagamos cambios y queramos reflejarnos en nuestra página de GitHub Pages.
 
 4. Add, commit y push.
-5. Casi listo, solo falta activar GitHub Pages para que se sirva desde la carpeta docs de nuestra rama master. Para eso como ya sabéis, desde la página principal del repositorio, podéis ir a la pestaña de Settings y una vez dentro, en la sección GitHub Pages, donde pone _"Source"_ seleccionar _"master branch /docs folder"_
+1. Casi listo, solo falta activar GitHub Pages para que se sirva desde la carpeta docs de nuestra rama master. Para eso como ya sabéis, desde la página principal del repositorio, podéis ir a la pestaña de Settings y una vez dentro, en la sección GitHub Pages, donde pone _"Source"_ seleccionar _"master branch /docs folder"_
 
 **Ya.**
-
----
 
 #### EJERCICIO 6
 
 Publiquemos la aplicación del último ejercicio en GitHub Pages. ¡A por ello!
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 ## _Debugging_ de aplicaciones en React
 
