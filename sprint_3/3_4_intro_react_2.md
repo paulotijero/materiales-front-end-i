@@ -191,8 +191,6 @@ export default Greetings;
 
 Puesto que, como ya hemos visto actualmente nos encontraremos los dos tipos de componentes en proyectos React vamos a potenciar que manejéis el uso de componentes de clase para aquellos que tienen un estado (concepto que ya aprenderemos) y el uso de componentes funcionales si desarrollais con _hooks_ (también os los presentaremos más adelante).
 
----
-
 ## Las `props` para personalizar un componente
 
 Hasta aquí todo bien, pero ¿y si queremos que `RandomCat` no sea siempre igual? De la misma manera que pasamos atributos a los elementos del DOM, podemos pasar datos a los componentes de React.
@@ -521,8 +519,6 @@ Cuando estemos en una página hecha con React, la pestaña React de las herramie
 Tras seleccionar un componente, en el panel lateral de esa misma pestaña podremos ver más detalles y cambiar las `props` y el estado del componente en tiempo real:
 
 ![React DevTools editando el estado de un componente en tiempo real](assets/images/3_13_devtools-side-pane.gif)
-
----
 
 ## Recursos externos
 
