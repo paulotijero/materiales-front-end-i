@@ -89,15 +89,32 @@ Entonces, sobre una promesa podemos hacer un `.then()` pero ¿para qué? Para po
 
 Prueba este ejercicio con este código:
 
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Ejercicio</title>
+  </head>
+  <body>
+    <button class="js-emoji">Emoji!!!</button>
+    <p class="js-result"></p>
+    <script src="./js/main.js"></script>
+  </body>
+</html>
+```
+
 ```js
 function getEmoji() {
   fetch("https://api.rand.fun/games/rockpaperscissorslizardspock")
     .then(response => response.json())
     .then(data => {
-      document.body.innerHTML = data.result
+      document.querySelector('.js-result').innerHTML = data.result
     });
 }
-document.body.addEventListener("click", getEmoji);
+document.querySelector('.js-emoji').addEventListener("click", getEmoji);
 ```
 
 > **Nota importante:** Cuando los hackers quieren boicotear una web una de las cosas que hacen es lanzar desde muchos ordenadores miles de peticiones AJAX al servidor de dicha web. De esta forma el servidor se satura y no puede funcionar correctamente. Esto se llama [Ataque por denegación de servicio](https://es.wikipedia.org/wiki/Ataque_de_denegaci%C3%B3n_de_servicio). La forma que tienen los servidores de defenderse de estos ataques es rechazando las peticiones que vengan de una IP en concreto, cuando superan un límite. Por ejemplo si desde una misma IP hacemos más de 100 peticiones por minuto, el servidor rechaza desde la petición 101 en adelante. Cuando hagamos los ejercicios en clase vamos a ser 20 alumnas haciendo cada una un montón de peticiones a un servidor en concreto y este nos denegará el servicio porque creerá que lo estamos atacando. Para minimizar el número de peticiones que hagamos, hoy no podemos trabajar desde Codepen. Recordemos que Codepen actualiza el resultado cada vez que escribimos una letra.
@@ -160,6 +177,7 @@ Podéis jugar con este código:
   <body>
     <button class="js-dog">Perretes!!!</button>
     <img />
+    <script src="./js/main.js"></script>
   </body>
 </html>
 ```
@@ -351,6 +369,7 @@ Para trabajar con varias promesas en paralelo usamos el método `Promise.all` qu
     <button class="js-btn">Breeds</button>
     <img class="dog1" src="" alt="Dog">
     <img class="dog2" src="" alt="Dog">
+    <script src="./js/main.js"></script>
   </body>
 </html>
 ```
@@ -444,22 +463,39 @@ Por si tenéis curiosidad aquí tenéis otra API: estudio Ghibli https://ghiblia
 
 Para ver la diferencia del uso de callbacks y promesas (verás que con promesas el código es mucho más simple y legible), te dejo explorar el primer ejemplo que vimos usando `XMLHttpRequest` en este código:
 
-```js
-const request = new XMLHttpRequest();
-request.open('GET', 'https://api.rand.fun/games/rockpaperscissorslizardspock');
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Ejercicio</title>
+  </head>
+  <body>
+    <button class="js-emoji">Emoji!!!</button>
+    <p class="js-result"></p>
+    <script src="./js/main.js"></script>
+  </body>
+</html>
+```
 
-request.addEventListener('load', showPicture);
+```js
+let request;
 
 function showPicture() {
   const response = JSON.parse(request.responseText).result;
-  document.body.innerHTML = response;
+  document.querySelector('.js-result').innerHTML = response;
 }
 
 function sendRequest () {
+  request = new XMLHttpRequest();
+  request.open('GET', 'https://api.rand.fun/games/rockpaperscissorslizardspock');
+  request.addEventListener('load', showPicture);
   request.send();
 }
 
-document.body.addEventListener('click', sendRequest);
+document.querySelector('.js-emoji').addEventListener("click", sendRequest);
 ```
 
 ## Resumen
