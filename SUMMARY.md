@@ -51,6 +51,7 @@
 - [3.4 Componentes en React](sprint_3/3_4_componentes_react.md)
 - [3.5 Eventos en React](sprint_3/3_5_eventos_react.md)
 - [3.6 Estado en React](sprint_3/3_6_estado_react.md)
+- [3.7 React Hooks](sprint_3/3_7_react_hooks.md)
 - [Repaso intermedio](sprint_3/3_repaso-intermedio.md)
 - [3.8 Formularios en React](sprint_3/3_8_formularios_en_react.md)
 - [3.9 Buenas prácticas](sprint_3/3_9_buenas_practicas.md)
