@@ -123,7 +123,7 @@ const users = [
   { name: 'Lucía', isPremium: true },
   { name: 'Susana', isPremium: true },
   { name: 'Rocío', isPremium: false },
-  { name: 'Inmaculada', isPremium: false },
+  { name: 'Inmaculada', isPremium: false }
 ];
 ```
 
@@ -202,7 +202,7 @@ const users = [
   { name: 'Lucía', isPremium: true, pin: 2384 },
   { name: 'Susana', isPremium: true, pin: 2837 },
   { name: 'Rocío', isPremium: false, pin: 5232 },
-  { name: 'Inmaculada', isPremium: false, pin: 8998 },
+  { name: 'Inmaculada', isPremium: false, pin: 8998 }
 ];
 ```
 
@@ -286,7 +286,7 @@ const runners = [
   { name: 'Nymphadora Tonks', time: 9 },
   { name: 'Luna Lovegood', time: 45 },
   { name: 'Cedric Diggory', time: 28 },
-  { name: 'Cho Chang', time: 35 },
+  { name: 'Cho Chang', time: 35 }
 ];
 ```
 
@@ -298,9 +298,7 @@ Dado que el resultado de aplicar `map` y `filter` es un array, querríamos poder
 
 ```js
 const names = ['María', 'Lucía', 'Susana', 'Rocío', 'Inmaculada'];
-const longNames = names
-  .filter(name => name.length > 5)
-  .map(name => name.toUpperCase());
+const longNames = names.filter(name => name.length > 5).map(name => name.toUpperCase());
 
 console.log(longNames);
 ```
@@ -321,7 +319,7 @@ const runners = [
   { name: 'Nymphadora Tonks', time: 9, student: false },
   { name: 'Luna Lovegood', time: 45, student: true },
   { name: 'Cedric Diggory', time: 28, student: true },
-  { name: 'Cho Chang', time: 35, student: true },
+  { name: 'Cho Chang', time: 35, student: true }
 ];
 ```
 
@@ -385,7 +383,7 @@ const users = [
   { name: 'Lucía', isPremium: true, pin: 2384 },
   { name: 'Susana', isPremium: true, pin: 2837 },
   { name: 'Rocío', isPremium: false, pin: 5232 },
-  { name: 'Inmaculada', isPremium: false, pin: 8998 },
+  { name: 'Inmaculada', isPremium: false, pin: 8998 }
 ];
 ```
 
@@ -465,5 +463,7 @@ console.log(keys); //['title', 'ds_title', 'author', 'ds_author', ...]
 - [Array `map` en MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map)
 - [Array `filter` en MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter)
 - [Array `reduce` en MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce)
+- [Array `find` en MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find)
+- [Array `findIndex` en MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/findindex)
 - [Array `sort` en MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort)
 - [`Object.keys` en MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/keys)
