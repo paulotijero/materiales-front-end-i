@@ -43,15 +43,15 @@
 - [Preguntas entrevista](sprint_2/2_questions.md)
 - [Recursos](sprint_2/recursos.md)
 
-<!-- ## Módulo 3. React
+## Módulo 3. React
 
-- [3.1 Métodos funcionales de array](sprint_3/3_1_metodos_funcionales_array.md)
-- [3.2 Clases de ES6](sprint_3/3_2_clases_es6.md)
-- [3.3 Intro a React](sprint_3/3_3_intro_react.md)
-- [3.4 Intro a React II](sprint_3/3_4_intro_react_2.md)
-- [3.5 Componentes en React](sprint_3/3_5_componentes_react.md)
-- [3.6 Eventos en React](sprint_3/3_6_eventos_react.md)
-- [3.7 Estado en React](sprint_3/3_7_estado_react.md)
+- [3.1 Clases de ES6](sprint_3/3_1_clases_es6.md)
+- [3.2 Intro a React](sprint_3/3_2_intro_react.md)
+- [3.3 Intro a React II](sprint_3/3_3_intro_react_2.md)
+- [3.4 Componentes en React](sprint_3/3_4_componentes_react.md)
+- [3.5 Eventos en React](sprint_3/3_5_eventos_react.md)
+- [3.6 Estado en React](sprint_3/3_6_estado_react.md)
+  <!--
 - [Repaso intermedio](sprint_3/3_repaso-intermedio.md)
 - [3.8 Estado en React 2](sprint_3/3_8_estado_react_2.md)
 - [3.9 Buenas prácticas](sprint_3/3_9_buenas_practicas.md)
@@ -61,7 +61,8 @@
 - [3.13 Testing con JavaScript](sprint_3/3_13_testing_js.md)
 - [3.14 Refactoring](sprint_3/3_14_refactoring.md)
 - [Repaso](sprint_3/3_repaso.md)
-- [Preguntas entrevista](sprint_3/3_questions.md) -->
+- [Preguntas entrevista](sprint_3/3_questions.md)
+  -->
 
 ## Proyectos
 
