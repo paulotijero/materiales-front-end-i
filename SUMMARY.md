@@ -37,13 +37,13 @@
 - [2.10 Peticiones al servidor](sprint_2/2_10_peticiones_al_servidor.md)
 - [2.11 Peticiones al servidor 2](sprint_2/2_11_peticiones_al_servidor_2.md)
 - [2.12 DOM avanzado](sprint_2/2_12_dom_avanzado.md)
-- [2.13 Asincronía y temporizadores](sprint_2/2_13_asincronia.md)
-- [2.14 Debugging](sprint_2/2_14_debugging.md)
+- [2.13 Métodos funcionales de array](sprint_2/2_13_metodos_funcionales_array.md)
+- [2.14 Asincronía y temporizadores](sprint_2/2_14_asincronia.md)
 - [Repaso](sprint_2/2_repaso.md)
 - [Preguntas entrevista](sprint_2/2_questions.md)
 - [Recursos](sprint_2/recursos.md)
 
-## Módulo 3. React
+<!-- ## Módulo 3. React
 
 - [3.1 Métodos funcionales de array](sprint_3/3_1_metodos_funcionales_array.md)
 - [3.2 Clases de ES6](sprint_3/3_2_clases_es6.md)
@@ -61,7 +61,7 @@
 - [3.13 Testing con JavaScript](sprint_3/3_13_testing_js.md)
 - [3.14 Refactoring](sprint_3/3_14_refactoring.md)
 - [Repaso](sprint_3/3_repaso.md)
-- [Preguntas entrevista](sprint_3/3_questions.md)
+- [Preguntas entrevista](sprint_3/3_questions.md) -->
 
 ## Proyectos
 
@@ -69,7 +69,7 @@
 - [Anexo. Diseña tu web desde cero](proyectos/p1_anexo.md)
 - [Proyecto 2. Awesome profile-cards](proyectos/P2_proyecto.md)
 - [Anexo. Documentación del API de Awesome Profile Cards](proyectos/P2_anexo.md)
-<!-- - [Proyecto 3. Un caso de código heredado](proyectos/P3_proyecto_sprint_3.md) -->
+  <!-- - [Proyecto 3. Un caso de código heredado](proyectos/P3_proyecto_sprint_3.md) -->
 
 ## Guías
 
