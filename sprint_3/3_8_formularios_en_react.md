@@ -1,4 +1,4 @@
-# Estado en React 2
+# Formularios en React
 
 [codepen-form-example]: https://codepen.io/adalab/pen/WyBqdK?editors=0010
 

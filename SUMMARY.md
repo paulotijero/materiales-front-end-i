@@ -51,9 +51,8 @@
 - [3.4 Componentes en React](sprint_3/3_4_componentes_react.md)
 - [3.5 Eventos en React](sprint_3/3_5_eventos_react.md)
 - [3.6 Estado en React](sprint_3/3_6_estado_react.md)
-  <!--
 - [Repaso intermedio](sprint_3/3_repaso-intermedio.md)
-- [3.8 Estado en React 2](sprint_3/3_8_estado_react_2.md)
+- [3.8 Formularios en React](sprint_3/3_8_formularios_en_react.md)
 - [3.9 Buenas prácticas](sprint_3/3_9_buenas_practicas.md)
 - [3.10 Arquitectura de aplicaciones React](sprint_3/3_10_arquitectura_estado.md)
 - [3.11 React router](sprint_3/3_11_react_router.md)
@@ -62,7 +61,6 @@
 - [3.14 Refactoring](sprint_3/3_14_refactoring.md)
 - [Repaso](sprint_3/3_repaso.md)
 - [Preguntas entrevista](sprint_3/3_questions.md)
-  -->
 
 ## Proyectos
 
