@@ -241,7 +241,7 @@ Muy parecido al JSX que hemos escrito, ¿verdad?
 
 #### EJERCICIO 1
 
-Vamos a crear un nuevo proyecto de React llamado **mediacard**. Vamos a modificar el método `render` del componente `App` para que tenga un diseño similar al de la imagen. Podéis usar una imagen a vuestra elección en lugar de la que aparece en el diseño, y Font-Awesome para el icono del corazón. De esta forma, aprenderemos a cómo trabajar con cosas que ya conocemos (HTML y CSS) en una aplicación de React.
+Vamos a crear un nuevo proyecto de React llamado **mediacard**. Vamos a maquetar esta tarjeta dentro del método `render` de nuestro componente `App` para que tenga un diseño lo más parecido posible al de la imagen. Podéis usar una imagen a vuestra elección en lugar de la que aparece en el diseño, y Font-Awesome para el icono del corazón. De esta forma, aprenderemos a cómo trabajar con cosas que ya conocemos (HTML y CSS) en una aplicación de React.
 
 ![Media Card](assets/images/3_4_media-card.png)
 
@@ -249,9 +249,7 @@ Vamos a crear un nuevo proyecto de React llamado **mediacard**. Vamos a modifica
 
 #### EJERCICIO 2
 
-Partiendo del ejercicio anterior, en este ejercicio aprenderemos mejor cómo funciona JSX. Para ello vamos a asignar nombres a las variables, un tema que será importante cuando creemos nuestros componentes más adelante.
-
-Partiendo del proyecto anterior, solo modificaremos el método `render()` dentro del archivo `App.js`. El objetivo será que el `return` de `render()` devuelva una sola variable. Para lo que extraeremos a variables cada una de las "etiquetas" del contenido del `return` original. Por ejemplo, una variable para la cabecera, y otra para el párrafo. Haremos que los nombres de nuestras variables sean descriptivos y, cuando sea posible, cortos.
+Partiendo del ejercicio anterior, en este ejercicio aprenderemos mejor cómo funciona JSX. Para ello vamos a asignar nombres a las variables, un tema que será importante cuando creemos nuestros componentes más adelante. Partiendo del ejercicio anterior vamos a hacer que el `return` de `render()` devuelva una sola variable, para ello, vamos a extraer a variables cada una de las "etiquetas" del contenido del `return` del ejercicio original. Por ejemplo, una variable para la cabecera, y otra para el párrafo. Haremos que los nombres de nuestras variables sean descriptivos y, cuando sea posible, cortos.
 
 ```js
 render() {
@@ -324,12 +322,14 @@ Este flujo es más útil cuando creamos una aplicación web compleja que cambie 
 
 Durante el curso hemos usado `gulp` para compilar Sass en nuestro proyectos. En el caso de los proyectos de React, que creamos con `create-react-app`, ya tienen su propio sistema de automatización de tareas que convierte los ficheros en ES6 a ES5 con Babel, y lanza un servidor local. Es mejor que, por tanto, en vez de incluir más herramientas como `gulp` usamos el sistema de automatización que ya tenemos (basado en [webpack](https://webpack.js.org/), por cierto) para observar los ficheros SCSS y compilarlos a CSS.
 
-Desde la versión 2 de `create-react-app` (octubre 2018) simplemente podemos enlazar ficheros `.scss` desde nuestros componentes de React y webpack directamente hará la conversión a CSS y lo cargará correctamente. El único paso adicional es instalar `node-sass` y nos aparecerá este warning al intentar usar Sass por primera vez.
+Para utilizar SASS en nuestro proyecto REACT simplemente podemos enlazar ficheros `.scss` desde nuestros componentes y webpack se encargará de hacer la conversión a CSS. El único paso adicional es instalar `node-sass`, cuando lo hagamos nos aparecerá este warning al intentar usar Sass por primera vez.
 
 ```
 To import Sass files, you first need to install node-sass.
 Run `npm install node-sass` or `yarn add node-sass` inside your workspace.
 ```
+
+Así que si ejecutamos `npm install node-sass` en nuestra terminal la primera vez, tendremos listo nuestro proyecto para utilizar SASS.
 
 ### ¿Y cómo quedará esto en nuestros proyectos?
 
