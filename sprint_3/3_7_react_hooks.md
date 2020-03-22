@@ -206,3 +206,37 @@ const App = function() {
   );
 }
 ``````
+
+## Otros hooks predefinidos importantes
+
+Aunque useState sea probablemente el más importante ya que nos permite controlar el estado de nuestra aplicación hay muchos otros hooks listos para usar que realizan distintas funciones, algunos los veremos más adelante.
+ - useEffect (controla el ciclo de vida de nuestros componentes y lo veremos más adelante
+ - useRef
+ - useContext
+ - useReducer
+ 
+Entre muchos otros que puedes encontrar aquí: https://reactjs.org/docs/hooks-reference.html
+
+## Limitaciones de los hooks
+
+Aunque los hooks son el futuro de React y son geniales, tienen alguna que otra limitación. 
+Debido a cómo interpreta React el orden en que mandas a llamar tus hooks siempre debes declararlos en el cuerpo de tu componente funcional y no pueden llamarse dentro de condicionales, ciclos, o cualquier otra estructura que agregue un nuevo nivel de ejecución al componente:
+
+**CORRECTO VS INCORRECTO**
+``````
+import React from 'react';
+function App(){
+  const [name,setName] = useState('Elena'); // Correcto ✅
+  if(true){ const [counter,setCounter] = useState(0) // Incorrecto ❌ }
+  return(
+        <div>{name}</div>
+    )
+}
+``````
+
+## Recursos externos
+
+# Documentación en React sobre hooks
+https://es.reactjs.org/docs/hooks-intro.html
+
+# Tutorial explicando el uso de hooks en profundidad
