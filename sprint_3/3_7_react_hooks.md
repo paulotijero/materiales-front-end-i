@@ -104,3 +104,105 @@ Para definir una propiedad del estado del componente con hooks usamos algo así:
 ``````````
 const [name, setName] = useState('Elena');
 ``````````
+
+Las variable name contendrá el valor del estado y setName, será una función para modificar ese estado respectivamente, el valor que enviamos como argumento de useState es el valor por defecto para name, el equivalente a `this.state = {name: Elena}` Una vez declarado nuestro hook si queremos setear de nuevo el estado utilizaremos la función que hemos creado para ello:
+
+``````````
+setName('Daenerys');
+``````````
+Que es el equivalente a lo que en componentes de clase usamos como:
+
+``````
+this.setState({
+    name: 'Daenerys'
+})
+``````
+
+Después de cada modificación React sabrá que tiene que actualizar el estado del componente como siempre lo ha hecho.
+
+Todo esto es muy bonito, pero ¿podemos ver un ejemplo más real?
+
+Mira el componente App.js que hemos utilizado al inicio:
+
+**App.js**
+``````
+const App = function() {
+  const [number,setNumber] = useState(0);
+  const generateRandomInteger = () => Math.floor(Math.random() * 100);
+
+  const handleRandomInteger = () => {
+    setNumber(generateRandomInteger())
+  }
+
+  return (
+    <div className="App">
+      <RandomInteger getRandom={handleRandomInteger} randomNumber={number}/>
+    </div>
+  );
+}
+``````
+Como puedes ver es nuestro ya conocido componente principal que renderiza a su vez un componente llamado RandomInteger.
+
+**RandomInteger.js**
+``````
+const RandomInteger = (props) => {
+
+const getRandomNumber = function() {
+  props.getRandom();
+}
+
+return <div>
+  <span>Mi número aletorio es {props.randomNumber}</span>
+    <button type='button' onClick={getRandomNumber}>Dame random</button>
+  </div>
+}
+``````
+RandomInteger recibe el valor del estado actual de `number` a través de las props, también recibe una función para ejecutar por lifting y actualizar el valor de `number`.
+
+En App.js primero definimos nuestro hook useState, dando un nombre a la variable que contendrá el valor de nuestro estado {number} y a la función que se encargará de actualizar dicho estado setNumber(), a las que accederemos mediante destructuring. Lo que recibirá setState como argumento será el valor inicial de number, 0.
+
+````````
+const [number,setNumber] = useState(0);
+````````
+Así nuestro componente App.j quedaría así:
+
+``````
+const App = function() {
+  const [number,setNumber] = useState(0);
+
+  return (
+    <div className="App">
+      <RandomInteger getRandom={handleRandomInteger} randomNumber={number}/>
+    </div>
+  );
+}
+``````
+
+Pero claro, como hemos visto nuestro componente RandomInteger consta de un botón para generar un número aleatorio, es decir, actualizar o setear de nuevo el estado de {number} ¿cómo lo hacemos?. Pues de esta manera:
+
+````````
+const generateRandomInteger = () => Math.floor(Math.random() * 100);
+
+const handleRandomInteger = () => {
+  setNumber(generateRandomInteger())
+}
+````````
+En nuestra función manejadora del click ejecutamos la función que setea el nuevo valor de number (lo que antes hacíamos con setState), y le pasamos el valor que devuelve nuestra función generateRandomInteger, de esto modo nuestro App.js completo quedaría así:
+
+**App.js**
+``````
+const App = function() {
+  const [number,setNumber] = useState(0);
+  const generateRandomInteger = () => Math.floor(Math.random() * 100);
+
+  const handleRandomInteger = () => {
+    setNumber(generateRandomInteger())
+  }
+
+  return (
+    <div className="App">
+      <RandomInteger getRandom={handleRandomInteger} randomNumber={number}/>
+    </div>
+  );
+}
+``````
