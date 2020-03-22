@@ -236,7 +236,7 @@ function App(){
 
 ## Recursos externos
 
-# Documentación en React sobre hooks
+### Documentación en React sobre hooks
 https://es.reactjs.org/docs/hooks-intro.html
 
-# Tutorial explicando el uso de hooks en profundidad
+### Tutorial explicando el uso de hooks en profundidad
