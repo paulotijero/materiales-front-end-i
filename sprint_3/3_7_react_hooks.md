@@ -17,7 +17,90 @@ Antes de continuar, debes saber que los Hooks son:
  - 100% compatibles con versiones anteriores de React. 
  - Por el momento no hay planes para eliminar el modelo de clases de React. 
  
-Los Hooks no reemplazan tu conocimiento de los conceptos de React. Todo lo contrario, los Hooks complementan y amplian estos conceptos que ya conoces: props, estado... y otros que veremos más adelante. 
+Los Hooks no reemplazan tu conocimiento de los conceptos de React. Todo lo contrario, complementan y amplian estos conceptos que ya conoces: props, estado,lifting... y otros que veremos más adelante. Además seguiremos manejando la estructura que ya conocemos con un componente principal que "dirija" nuestra aplicación, la única diferencia es que ya podríamos usarlo como componente funcional y seguir controlando el estado.
 
+## Qué son los hooks
 
+La palabra Hook se traduce como Gancho en español, y la razón de este nombre, es que un Hook en React te permite "colgarte" del estado y los métodos del ciclo de vida de un componente, desde un componente funcional.
 
+Vamos a recordar cómo escribíamos hasta ahora un componente de clase con estado, por ejemplo App.js. Imagina que desde App.js se llama a otro componene RandomInteger que tiene un botón para generar un número aleatorio y pintarlo. La estructura de App.js sería la siguiente:
+
+**App.js como componente de clase**
+``````
+class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.handleRandomInteger = this.handleRandomInteger.bind(this);
+    this.getRandomInteger = this.getRandomInteger.bind(this);
+    this.state = {
+      number : 0
+    }
+  }
+
+  getRandomInteger() {
+    return Math.floor(Math.random() * 100)
+  }
+
+  handleRandomInteger() {
+    this.setState((prevState) => {
+      return prevState.number = this.getRandomInteger();
+    })
+  }
+  
+  render() {
+    return (
+      <div className="App">
+        <RandomInteger getRandom={this.handleRandomInteger} randomNumber={this.state.number}/>
+      </div>
+    );
+  }
+}
+``````
+
+Bien, hasta aquí es terreno conocido, y ahora ¿cómo podríamos pasar App.js a componente funcional utilizando hooks? La respuesta es sencilla por medio de nuestro nuevo mejor amigo `useState`. Echa un vistazo a cómo quedaría App.js con hooks:
+
+**App.js como componente funcional con el hook useState**
+``````
+const App = function() {
+  const [number,setNumber] = useState(0);
+  const generateRandomInteger = () => Math.floor(Math.random() * 100);
+
+  const handleRandomInteger = () => {
+    setNumber(generateRandomInteger())
+  }
+
+  return (
+    <div className="App">
+      <RandomInteger getRandom={handleRandomInteger} randomNumber={number}/>
+    </div>
+  );
+}
+``````
+Como puedes ver, y aunque explicaremos más adelante este primer hook, `useState`, el tamaño y la complejidad del componente se ha reducido. Además se ha eliminado la posible confusión que generan el uso de componentes de clase.
+
+## Manejando el estado con hooks. useState()
+
+Existen dos tipos de Hooks en React, los hooks de la propia librería, que vienen predefinidos y los hooks personalizados (que no veremos de momento).
+
+Uno de los hooks predefinidos más populares y útiles es `useState`, por cierto, la convención para nombrar un Hook es usar la palabra use, seguida de otra palabra que lo describa, como en este caso 'state' porque a través de este hook podemos manejar el estado del componente.
+
+Para usar un Hook primero necesitamos un componente funcional, ojo, los hooks sólo funcionan con componentes funcionales y no con componentes clase:
+
+**App.js**
+````````
+import React from 'react';
+
+function App(){
+  return(
+        <div>{name}</div>
+    )
+}
+````````
+
+`{name}` será una propiedad de nuestro componente funcional que aún no hemos definido, pero que tiene la particularidad de poder ser modificado, por lo que es parte del estado del componente, hasta antes de los hooks eso significaba que teníamos que migrar nuestro componente funcional a uno de clase, pero ya no más.
+
+Para definir una propiedad del estado del componente con hooks usamos algo así:
+
+``````````
+const [name, setName] = useState('Elena');
+``````````
