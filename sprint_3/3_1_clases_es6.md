@@ -146,7 +146,7 @@ console.log(laika.name); // 'Laika'
 console.log(hachiko.name); // 'Hachiko'
 ```
 
-La palabra clave `this` dentro de la declaración de una clase hace referencia a la instancia de la clase que crearemos. Cuando declaramos atributos en el constructor con `this.<atributo>` como en el ejemplo anterior, estamos efectivamente declarando que "la instancia resultante (`this`) tendrá la propiedad `<atributo>`". Una vez creada la instancia, para acceder a los atributos lo hacemos directamente como en el ejemplo, `laika.name`.
+La palabra clave `this` dentro de la declaración de una clase hace referencia a la instancia de la clase que crearemos. Cuando declaramos atributos en el constructor con `this.miAtributo` como en el ejemplo anterior, estamos efectivamente declarando que "la instancia resultante (`this`) tendrá la propiedad `miAtributo`". Una vez creada la instancia, para acceder a los atributos lo hacemos directamente como en el ejemplo, `laika.name`.
 
 De igual manera que los declaramos, con `this` podemos acceder a esos atributos desde los métodos:
 
@@ -479,7 +479,7 @@ Podemos declarar archivos de JavaScript como módulos en el HTML de la siguiente
 
 En el ejemplo, declararíamos **main.js** de esta manera.
 
-Sin embargo, esta forma de trabajo [no está completamente soportada aún](https://caniuse.com/#feat=es6-module) por los navegadores: un 84% de las últimas versiones de los navegadores lo soporta (en abril de 2019). Sin embargo, no tendremos ningún problema cuando usemos _module bundlers_ o [Babel](http://babeljs.io/) para compilar nuestro código, y en estos casos no será necesario declarar los módulos en el HTML.
+Sin embargo, esta forma de trabajo [no está completamente soportada aún](https://caniuse.com/#feat=es6-module) por los navegadores: un 90% de las últimas versiones de los navegadores lo soporta (en marzo de 2020). Sin embargo, no tendremos ningún problema cuando usemos _module bundlers_ o [Babel](http://babeljs.io/) para compilar nuestro código, y en estos casos no será necesario declarar los módulos en el HTML.
 
 #### EJERCICIO 3
 
@@ -592,7 +592,7 @@ Páginas donde se explica en más profundidad los conceptos de esta sesión
 
 - [Classes](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes)
 - [Constructor](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/constructor)
-- [`this`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this)
+- [this](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this)
 - [Getters](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/get) y [Setters](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/set)
 
 ### Mozilla Hacks: ES6 in Depth
