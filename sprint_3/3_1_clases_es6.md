@@ -8,8 +8,6 @@
 - [EJERCICIO 2](#ejercicio-2)
 - [EJERCICIO BONUS A](#ejercicio-bonus-a)
 - [EJERCICIO 3](#ejercicio-3)
-- [EJERCICIO BONUS B](#ejercicio-bonus-b)
-- [EJERCICIO BONUS C](#ejercicio-bonus-c)
 
 <!-- /TOC -->
 
@@ -63,8 +61,6 @@ hachiko.bark(); // Woof, woof!
 
 > **Nota**: Debes notar que para declarar un método en una clase, no usamos la palabra `function` sino directamente el nombre del método
 
----
-
 #### EJERCICIO 1
 
 Vamos a crear un programita que haga cálculos geométricos sencillos. En el programa definiremos la clase `Square`, que tendrá al menos:
@@ -76,7 +72,7 @@ Los métodos recibirán la longitud del lado (`side`) como parámetro.
 
 Calcularemos y mostraremos el perímetro y el área de un cuadrado de `9` de lado.
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 ## Métodos de clase VS métodos de instancia
 
@@ -179,8 +175,6 @@ laika.reactToCall('Hey, Laika!'); // 'Laika wags its tail, happily.'
 laika.reactToCall('Hey, Hachiko!'); // 'Woof, woof!'
 ```
 
----
-
 #### EJERCICIO 2
 
 Vamos a mejorar nuestra calculadora geométrica sencilla. En el programa definiremos la clase `Square`, que tendrá al menos:
@@ -193,7 +187,7 @@ Los métodos no recibirán parámetros, sino que cogerán los datos necesarios d
 
 Crearemos tres instancias: una con `1` de lado, otra con `3` y otra con `7`. Llamaremos a los dos métodos en todas las instancias.
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 ## Herencia (`extends`)
 
@@ -310,8 +304,6 @@ const leo = new Dog('Leo');
 leo.bark(); // 'Woof, woof!'
 ```
 
----
-
 #### EJERCICIO BONUS A
 
 Vamos a mejorar ¡aún más! nuestra calculadora geométrica sencilla. En el programa definiremos la clase `Polygon`, `Square` y `Triangle` para polígonos regulares (todos sus lados miden lo mismo). Ya os imagináis por dónde van los tiros: las clases `Square` y `Triangle` serán subclases de `Polygon`. La clase `Polygon` tendrá, al menos:
@@ -332,8 +324,6 @@ La subclase `Triangle` tendrá:
 - Un método `area()` que sobrescibirá al de la clase base. Devolverá la mitad de lo que devuelva llamar al área de la clase base (`super.area() / 2`)
 
 Crearemos dos instancias: un cuadrado de `4` de lado y un triángulo de `4` de base y `3` de altura. Llamaremos a los dos métodos en todas las instancias.
-
----
 
 ## Módulos de JS
 
@@ -491,13 +481,13 @@ En el ejemplo, declararíamos **main.js** de esta manera.
 
 Sin embargo, esta forma de trabajo [no está completamente soportada aún](https://caniuse.com/#feat=es6-module) por los navegadores: un 84% de las últimas versiones de los navegadores lo soporta (en abril de 2019). Sin embargo, no tendremos ningún problema cuando usemos _module bundlers_ o [Babel](http://babeljs.io/) para compilar nuestro código, y en estos casos no será necesario declarar los módulos en el HTML.
 
----
-
 #### EJERCICIO 3
 
 Prueba los ejemplos anteriores exportando datos desde un fichero e importándolos desde otros. Asegúrate de entender bien cómo funcionan las rutas para importar/exportar adecuadamente.
 
----
+\_\_\_\_\_\_\_\_\_\_
+
+<!--
 
 ## BONUS: _getters_ y _setters_
 
@@ -565,8 +555,6 @@ hachiko.printHappiness(); // 'Little Paws is 25% happy.'
 
 > Es una convención usar nombres de atributos precedidos con barra baja (`_atributo`) para diferenciar los atributos de uso interno, que no deben ser usados desde fuera de la declaración.
 
----
-
 #### EJERCICIO BONUS B
 
 Vamos a mejorar crear una clase `Person` que recibe un nombre `firstName` y apellido `lastName` como parámetros de su constructor.
@@ -575,7 +563,7 @@ También definiremos un _getter_ `fullName` para obtener el nombre completo, que
 
 Crearemos 2 instancias con distintos nombres para probar que funciona.
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 #### EJERCICIO BONUS C
 
@@ -592,7 +580,9 @@ Crearemos una instancia: un cuadrado de `7` de lado. Haremos lo siguiente:
 3. Pediremos de nuevo el área y la guardaremos en otra variable
 4. Compararemos que los valores son distintos. Si son iguales, ¡meeec!
 
----
+\_\_\_\_\_\_\_\_\_\_
+
+-->
 
 ## Recursos externos
 
@@ -603,7 +593,7 @@ Páginas donde se explica en más profundidad los conceptos de esta sesión
 - [Classes](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes)
 - [Constructor](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/constructor)
 - [`this`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this)
-- [_getters_](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/get) y [_setters_](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/set)
+- [Getters](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/get) y [Setters](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/set)
 
 ### Mozilla Hacks: ES6 in Depth
 
