@@ -69,7 +69,7 @@
 - [Anexo. Diseña tu web desde cero](proyectos/p1_anexo.md)
 - [Proyecto 2. Awesome profile-cards](proyectos/P2_proyecto.md)
 - [Anexo. Documentación del API de Awesome Profile Cards](proyectos/P2_anexo.md)
-- [Proyecto 3. Un caso de código heredado](proyectos/P3_proyecto_sprint_3.md)
+- [Proyecto 3. Un caso de código heredado](proyectos/P3_proyecto.md)
 
 ## Guías
 
