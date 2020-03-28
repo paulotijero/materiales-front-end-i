@@ -37,17 +37,7 @@ Vimos en la sesión anterior cómo usar un componente dentro de otro: el compone
 
 Los componentes padre/madre pueden tener múltiples componentes hijo/hija, pero los componentes hijo/hija solo tienen un componente padre/madre. Cabe destacar que un componente puede ser hijo/hija de un componente padre/madre y a la vez ser padre/madre de otros componentes hijo/hija.
 
-```
-                  ┌───────────┐
-                  │ CatList  │
-                  └─┬───┬───┬─┘
-                   ┊  ┊  ┊
-       ┌╌╌╌╌╌╌╌╌╌╌╌╌┘   ┊   └╌╌╌╌╌╌╌╌╌╌╌╌┐
-       ┊                ┊                ┊
-┌──────┴──────┐  ┌──────┴──────┐  ┌──────┴──────┐
-│ RandomCat  │  │ RandomCat  │  │ RandomCat  │
-└─────────────┘  └─────────────┘  └─────────────┘
-```
+![CatList](assets/images/3_4_catlist.png)
 
 Estas relaciones forman una jerarquía importante para entender React. Desde los componentes padre/madre podremos pasar datos _hacia abajo_ a los componentes hijo/hija, mediante las `props`, pero **no al revés**. Un hijo/a no podrá pasar datos _hacia arriba_ libremente. Veremos en una sesión posterior cómo "solucionar" los problemas que _a priori_ parece generar este **flujo unidireccional**.
 
