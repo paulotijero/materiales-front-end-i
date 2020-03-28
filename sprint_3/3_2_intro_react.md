@@ -400,9 +400,10 @@ Vamos a modificar el ejercicio anterior de la tarjeta para hacerlo con Sass dent
 
 ### React Docs
 
-Documentación oficial de React.
+La documentación de React está **muy bien organizada y explicada**. Os recomendamos que recurráis a ella como consulta y ampliación de nuestros materiales:
 
 - [Getting started](https://reactjs.org/docs/)
+- [Versión española](https://es.reactjs.org/)
 
 ### Create React App
 
