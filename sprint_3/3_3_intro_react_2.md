@@ -191,6 +191,12 @@ export default Greetings;
 
 Puesto que, como ya hemos visto actualmente nos encontraremos los dos tipos de componentes en proyectos React vamos a potenciar que manejéis el uso de componentes de clase para aquellos que tienen un estado (concepto que ya aprenderemos) y el uso de componentes funcionales si desarrollais con _hooks_ (también os los presentaremos más adelante).
 
+## Algunos detalles para tener en cuenta
+
+Los conceptos que manejamos en los dos tipos de componentes, props, eventos, datos... son los mismos. Lo que cambia es la forma de escribirlos.
+Los componentes de clase son antiguos. React ha decidido utilizar componentes funcionales porque son más sencillos y cómodos.
+Por desgracia, hay muchas empresas que usan los componentes de clase y por ello tenemos que enseñar la versión antigua y la nueva. Puedes trabajar en un proyecto que maneje componentes de clase y es esencial que entiendas cómo se comportan hasta que el uso de hooks y componentes funcionales esté completamente extendido.
+
 ## Las `props` para personalizar un componente
 
 Hasta aquí todo bien, pero ¿y si queremos que `RandomCat` no sea siempre igual? De la misma manera que pasamos atributos a los elementos del DOM, podemos pasar datos a los componentes de React.
