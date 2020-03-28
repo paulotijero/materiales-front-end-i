@@ -17,7 +17,7 @@ Antes de continuar, debes saber que los Hooks son:
  - 100% compatibles con versiones anteriores de React.
  - Por el momento no hay planes para eliminar el modelo de clases de React.
 
-Los Hooks no reemplazan tu conocimiento de los conceptos de React. Todo lo contrario, complementan y amplian estos conceptos que ya conoces: props, estado,lifting... y otros que veremos más adelante. Además seguiremos manejando la estructura que ya conocemos con un componente principal que "dirija" nuestra aplicación, la única diferencia es que ya podríamos usarlo como componente funcional y seguir controlando el estado.
+Los Hooks no reemplazan tu conocimiento de los conceptos de React. Todo lo contrario, complementan y amplian estos conceptos que ya conoces: props, estado, lifting... y otros que veremos más adelante. Además seguiremos manejando la estructura que ya conocemos con un componente principal que "dirija" nuestra aplicación, la única diferencia es que ya podríamos usarlo como componente funcional y seguir controlando el estado.
 
 ## Qué son los hooks
 
@@ -33,7 +33,7 @@ class App extends React.Component {
     this.handleRandomInteger = this.handleRandomInteger.bind(this);
     this.getRandomInteger = this.getRandomInteger.bind(this);
     this.state = {
-      number : 0
+      number: 0
     }
   }
 
@@ -42,7 +42,7 @@ class App extends React.Component {
   }
 
   handleRandomInteger() {
-    this.setState((prevState) => {
+    this.setState(prevState => {
       return prevState.number = this.getRandomInteger();
     })
   }
@@ -63,7 +63,7 @@ Bien, hasta aquí es terreno conocido, y ahora ¿cómo podríamos pasar App.js a
 
 ```javascript
 const App = function() {
-  const [number,setNumber] = useState(0);
+  const [number, setNumber] = useState(0);
   const generateRandomInteger = () => Math.floor(Math.random() * 100);
 
   const handleRandomInteger = () => {
@@ -80,7 +80,7 @@ const App = function() {
 
 Como puedes ver, y aunque explicaremos más adelante este primer hook, `useState`, el tamaño y la complejidad del componente se ha reducido. Además se ha eliminado la posible confusión que generan el uso de componentes de clase.
 
-## Manejando el estado con hooks. useState()
+## Manejando el estado con hooks.useState()
 
 Existen dos tipos de Hooks en React, los hooks de la propia librería, que vienen predefinidos y los hooks personalizados (que no veremos de momento).
 
@@ -132,7 +132,7 @@ Mira el componente App.js que hemos utilizado al inicio:
 
 ```javascript
 const App = function() {
-  const [number,setNumber] = useState(0);
+  const [number, setNumber] = useState(0);
   const generateRandomInteger = () => Math.floor(Math.random() * 100);
 
   const handleRandomInteger = () => {
@@ -167,10 +167,10 @@ return <div>
 
 RandomInteger recibe el valor del estado actual de `number` a través de las props, también recibe una función para ejecutar por lifting y actualizar el valor de `number`.
 
-En App.js primero definimos nuestro hook useState, dando un nombre a la variable que contendrá el valor de nuestro estado {number} y a la función que se encargará de actualizar dicho estado setNumber(), a las que accederemos mediante destructuring. Lo que recibirá setState como argumento será el valor inicial de number, 0.
+En App.js primero definimos nuestro hook useState, dando un nombre a la variable que contendrá el valor de nuestro estado `{number}` y a la función que se encargará de actualizar dicho estado `setNumber()`, a las que accederemos mediante destructuring. Lo que recibirá `setState` como argumento será el valor inicial de number, 0.
 
 ```javascript
-const [number,setNumber] = useState(0);
+const [number, setNumber] = useState(0);
 ```
 
 Así nuestro componente App.j quedaría así:
@@ -187,7 +187,7 @@ const App = function() {
 }
 ```
 
-Pero claro, como hemos visto nuestro componente RandomInteger consta de un botón para generar un número aleatorio, es decir, actualizar o setear de nuevo el estado de {number} ¿cómo lo hacemos?. Pues de esta manera:
+Pero claro, como hemos visto nuestro componente RandomInteger consta de un botón para generar un número aleatorio, es decir, actualizar o setear de nuevo el estado de `{number}` ¿cómo lo hacemos?. Pues de esta manera:
 
 ```javascript
 const generateRandomInteger = () => Math.floor(Math.random() * 100);
@@ -221,7 +221,7 @@ const App = function() {
 ## Otros hooks predefinidos importantes
 
 Aunque useState sea probablemente el más importante ya que nos permite controlar el estado de nuestra aplicación hay muchos otros hooks listos para usar que realizan distintas funciones, algunos los veremos más adelante.
- - useEffect (controla el ciclo de vida de nuestros componentes y lo veremos más adelante
+ - useEffect (controla el ciclo de vida de nuestros componentes y lo veremos más adelante)
  - useRef
  - useContext
  - useReducer
@@ -237,12 +237,14 @@ Debido a cómo interpreta React el orden en que mandas a llamar tus hooks siempr
 
 ```javascript
 import React from 'react';
-function App(){
-  const [name,setName] = useState('Elena'); // Correcto ✅
-  if(true){ const [counter,setCounter] = useState(0) // Incorrecto ❌ }
+function App() {
+  const [name, setName] = useState('Elena'); // Correcto ✅
+  if (true) {
+    const [counter, setCounter] = useState(0) // Incorrecto ❌
+  }
   return(
-        <div>{name}</div>
-    )
+    <div>{name}</div>
+  );
 }
 ```
 
