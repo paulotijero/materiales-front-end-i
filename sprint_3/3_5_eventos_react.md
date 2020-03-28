@@ -31,6 +31,8 @@ React solo nos permite pasar datos unidireccionalmente, de padres/madres a hijos
 
 React tiene un sistema de eventos sintéticos que ejecutan una acción cuando ocurre un acontecimiento. Con los eventos declararemos cómo _react-cionarán_ nuestros componentes a la interacción con el usuario. Por ejemplo, cuando haga clic en un botón dentro de un componente que hemos definido.
 
+> **NOTA:** Tanto en React como en JavaScript nativo queremos escuchar eventos para hacer alguna acción. Normalmente lo que haremos será cambiar datos de la página y a continuación pintarlos, es decir, renderizarlos. En la próxima lección veremos cómo cambiar estos datos. Por ello la lección de hoy está un poco coja, y tendrá mucho más sentido cuando veamos la de mañana.
+
 ## Eventos sintéticos de React
 
 Ya hemos visto cómo escribimos código parecido a HTML con JSX que se transforma en código HTML de verdad tras pasar por React. De una manera parecida, en React tenemos un sistema de **eventos sintéticos** que usaremos como si fueran normales. Aunque están diseñados para que pasen por [eventos regulares](https://www.w3.org/TR/DOM-Level-3-Events/), igual que JSX pasa por etiquetas HTML normales, cabe destacar que son una capa que nos proporciona React y que **no son eventos reales del DOM**, y por eso se llaman **sintéticos**.
