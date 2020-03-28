@@ -39,7 +39,7 @@ Ya hemos visto cómo escribimos código parecido a HTML con JSX que se transform
 
 En el módulo 2 vimos los eventos del DOM y cómo escuchar eventos desde JavaScript con `addEventListener()`. También vimos una manera de hacerlo desde atributos de HTML que **recomendamos no utilizar**, pero la enseñamos por si os la encontrábais en el futuro. Las funciones escuchadoras (_listeners_) de React se declaran de forma parecida a aquellos que no recomendábamos. Esto no es una contradicción: recordemos que en React escribimos interfaces declarativas, y esto es solo una sintaxis comprensible para asignar comportamiento. No debéis declarar funciones escuchadoras así fuera de React.
 
-> Cuando escuchamos un evento, declaramos una función escuchadora (_listener_) que se ejecutará cuando se reciba un evento de cierto tipo. Esto es así tanto para eventos del DOM como para eventos sintéticos de React, sólo cambiaremos cómo asignamos la función al tipo de evento.
+> Cuando escuchamos un evento en JavaScript normal, declaramos una función escuchadora (_listener_) con un `addEventListener`. En React funciona igual pero lo escribimos de otra manera. React hace un `addEventListener` por detrás, invisible para nosotras y nos facilita una sintaxis más sencilla.
 
 Vamos a ver un ejemplo. Queremos escuchar un evento de `click` desde un botón que declaramos con JSX. Escribiremos el botón (`<button>texto</button>`) y en un atributo `onClick` (ojo con la mayúscula) añadiremos la función "escuchadora", que será la reacción. Quedará así:
 
@@ -53,7 +53,7 @@ const alertButton =
 Podríamos escribir directamente la función escuchadora como una _arrow function_ ahí, pero no quedaría legible. Preferiremos declararla fuera y la pasaremos (sin llamarla) al atributo de JSX:
 
 ```js
-const onClickListener = event => {
+const onClickListener = ev => {
   alert('Para más información, acuda a recepción.');
 };
 const alertButton = (
@@ -73,6 +73,7 @@ Naturalmente, hay más atributos para escuchar eventos a parte de `onClick`. Los
   - `onMouseOut`: sacar el ratón del elemento
 - Escuchadores de eventos de teclado:
   - `onKeyPress`: pulsar una tecla
+  - `onKeyUp`: levantar el dedo de una tecla
 - Escuchadores de eventos sobre elementos:
   - `onFocus`: poner el foco (seleccionar) en un elemento, por ejemplo un `<input>`
   - `onBlur`: quitar el foco de un elemento
@@ -87,19 +88,17 @@ React no puede controlar los eventos de la ventana, así que los siguiente event
   - ~~`onResize`: se ha cambiado el tamaño de la ventana~~
   - ~~`onScroll`: se ha hecho scroll en la ventana o un elemento~~
 
----
-
 #### EJERCICIO 1
 
 **Odio la cebolla**
 
 Vamos a crear un componente `OnionHater` que consta de un `textarea`. Escucharemos los evento de cambio del valor del `textarea` de forma que, si el texto escrito contiene la palabra 'cebolla' hagamos un `alert` diciendo 'ODIO LA CEBOLLA'.
 
-> PISTA: para acceder al valor del `textarea` lo podemos hacer desde el objeto evento, el parámetro de la función escuchadora, con `event.target.value`
+> PISTA: para acceder al valor del `textarea` lo podemos hacer desde el objeto evento, el parámetro de la función escuchadora, con `ev.target.value`
 
 > PISTA: para comprobar si una cadena contiene un texto podemos usar el método `includes` de las cadenas
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 #### EJERCICIO 2
 
@@ -107,11 +106,11 @@ Vamos a crear un componente `OnionHater` que consta de un `textarea`. Escucharem
 
 Vamos a crear un componente `Destiny` que contiene un `select` con un listado de ciudades: Buenos Aires, Sydney, Praga, Boston y Tokio. Al cambiar el valor del `select`, haremos aparecer un `alert` que diga 'Tu destino es viajar a XXX', siendo XXX la ciudad seleccionada.
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 ## Uso de métodos `handleEvent` para manejar eventos
 
-No solo podemos usar funciones escuchadoras en elementos sueltos de JSX, como hemos hecho en la sección anterior, sino que también podemos declararlas en nuestros componentes de React. Pero antes de hacerlo, vamos a aclarar un término. Las funciones escuchadoras también se llaman _"event handlers"_, que significa "encargadas del evento", porque son **las funciones encargadas** de reaccionar al evento. En esta sección las llamaremos así para entender mejor y recordar los nombres que usaremos para estas funciones.
+No solo podemos usar funciones escuchadoras en componentes funcionales de React, como hemos hecho en la sección anterior, sino que también podemos declararlas en nuestros componentes de clase. Pero antes de hacerlo, vamos a aclarar un término. Las funciones escuchadoras también se llaman _"event handlers"_, que significa "encargadas del evento", porque son **las funciones encargadas** de reaccionar al evento. En esta sección las llamaremos así para entender mejor y recordar los nombres que usaremos para estas funciones.
 
 Es una práctica común declarar **dentro** del componente las _event handlers_ que se usan en el componente. Como los componentes son clases, los _event handlers_ serán **métodos** de la clase, y su nombre suele empezar por `handle` ("encargarse de", en inglés), seguido del nombre del evento. Por ejemplo, un _event handler_ que se ocupe del evento `click` se llamará `handleClick()`.
 
@@ -193,6 +192,8 @@ class RandomMurray extends React.Component {
 }
 ```
 
+> **Nota:** Si utilizamos `this` dentro de un método escuchador **sin haber hecho el `bind` en el constructor** nos dará un error en consola. Este es un error que nos pasa mucho al principio de trabajar con React.
+
 Ahora que tenemos nuestro método `handleClick()` declarado y enlazado, podemos registrarlo en el elemento JSX donde queremos escuchar el evento.
 
 ```js
@@ -204,7 +205,6 @@ const MAX_SIZE = 400;
 class RandomMurray extends React.Component {
   constructor(props) {
     super(props);
-
     this.handleClick = this.handleClick.bind(this);
   }
 
@@ -214,7 +214,6 @@ class RandomMurray extends React.Component {
 
   render() {
     const randomMurray = getRandomInteger(MIN_SIZE, MAX_SIZE);
-
     return (
       <img
         src={`http://www.fillmurray.com/200/${randomMurray}`}
@@ -228,22 +227,20 @@ class RandomMurray extends React.Component {
 
 [&blacktriangleright; Métodos `handleEvent()` en Codepen][codepen-handleevent-methods]
 
----
-
 #### EJERCICIO 3
 
 **Expreso mi odio en rojo**
 
-Partiendo del código ejercicio 1, vamos a hacer que nuestro componente ocupe toda la pantalla disponible, y tenga el `textarea` en el centro. Vamos a hacer que al detectar la palabra cebolla en el texto, en vez de mostrar un alert mostrando nuestro odio, pongamos el fondo del componente de color rojo. Al volver a un texto sin cebolla, el fondo vuelve a ser blanco.
+Partiendo del código ejercicio 1, vamos a hacer que nuestro componente ocupe toda la pantalla disponible, y tenga el `textarea` en el centro. Vamos a hacer que al detectar la palabra cebolla en el texto del `textarea`, en vez de mostrar un alert mostrando nuestro odio, pongamos el fondo del componente de color rojo. Al volver a un texto sin cebolla, el fondo vuelve a ser blanco.
 
-1. Guardaremos la información de si estamos odiando o no en un atributo de la clase que al comienzo es falso `this.isHating = false`
-2. En la función que maneja el evento `change` del textarea modificaremos el atributo `isHating` y usaremos el método `forceUpdate` para forzar el repintado
+1. Guardaremos la información de si estamos odiando o no en un atributo de la clase. Para ello en el constructor pondremos `this.isHating = false`.
+2. En la función que maneja el evento `change` del textarea modificaremos el atributo `isHating` y usaremos el método `this.forceUpdate()` para forzar el repintado.
 
 > PISTA: recuerda que para que el `this` funcione correctamente en nuestra función de _handle_ debemos hacer el `bind` adecuado en el constructor
 
 _BONUS_: ¿Podrías hacer que nuestro odio aparezca tanto si 'cebolla' tiene mayúsculas o minúsculas?
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 #### EJERCICIO 4
 
@@ -270,11 +267,15 @@ Una vez que tenemos este componente funcionando, vamos a crear uno como hija de 
 Para terminar, vamos hacer que la magia suceda: en vez de hacer un alert, cuando la usuaria elija una ciudad en el select aparece la imagen de esa ciudad y se muestra el texto 'Tu destino es viajar a XXX'.
 Para conseguirlo os recomendamos usar un atributo de la clase `this.city` que cambie su valor al cambiar el select. También tendremos que usar `forceUpdate` para se ejecute el método `render` y a) se pasen unas props diferentes al componente `CityImage` y b) se pinte una ciudad diferente en el título.
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 ## _Lifting_ (alzamiento) para pasar datos de hijos a padres
 
 _Lifting_ es una técnica que consiste en pasar funciones a los hijos/as y que sean estos quienes se encarguen de ejecutarlas cuando sea necesario, provocando un cambio _hacia arriba_, en los padres. Generalmente se usa para cambiar el _estado_ de los padres, que luego provocará un re-`render`izado de los hijos/as con nuevas `props`. Aún no sabemos qué es el estado de un componente ni cómo usarlo, así que de momento utilizaremos `forceUpdate()` para provocar el re-renderizado manualmente.
+
+Hasta ahora hemos pasado `props` desde un componente madre a sus componentes hijas para pintar cada hija con una información u otra. Estas `props` son strings, números, booleanos...
+
+Con el lifting lo que vamos a hacer es pasar desde un componente madre a sus hijas una **función o método**. Las hijas ejecutarán ese método cuando suceda un evento. Dicho de otra forma es como si una madre le dice a su hija: "Hija, toma este método y cuando quieras avisarme de algo lo ejecutas, y así yo me enteraré.".
 
 Vamos a ver un ejemplo, con Murrays de nuevo. Tenemos tres componentes, `MurrayList`, `RandomMurray` y `ReloadButton`, cada uno en su módulo. `MurrayList` renderiza una lista con varios componentes `RandomMurray`, y además un botón `ReloadButton`.
 
@@ -381,8 +382,6 @@ ReactDOM.render(<MurrayList />, document.getElementById('react-root'));
 
 &blacktriangleright; [_Lifting_ de eventos en Codepen][codepen-lifting-events]
 
----
-
 #### EJERCICIO 5
 
 **Ciudades**
@@ -395,7 +394,7 @@ Para terminar de entender bien cómo funciona el lifting vamos a hacer un ejerci
 
 > NOTA: en la próxima sesión veremos el estado de React que nos facilitará este flujo, pero de momento hacemos el repintado "a mano" con `forceUpdate`
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 #### EJERCICIO 6
 
@@ -413,13 +412,13 @@ Vamos a partir de un formulario simple con un textarea donde escribimos una fras
 
 > PISTA: para realizar la traducción basta con buscar [una expresión regular (RegExp)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp) y el método `replace` de las cadenas. Si buscas "javascript regex replace vowels" en Google va a ser fácil de encontrar.
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 #### EJERCICIO 7
 
 **Filtrando artículos**
 
-Vamos a partir del ejercicio 1 de la sesión 3.5 (los items de la lista de la compra). Si recuerdas bien, teníamos un componente `ItemList` que mostraba un listado de `Item`s. Vamos a crear un nuevo componente `CategoryButton` que es un botón con el nombre de una categoría de productos y que recibe por `props` el nombre de la categoría.
+Vamos a partir del ejercicio 1 de la sesión 3.4 (los items de la lista de la compra). Si recuerdas bien, teníamos un componente `ItemList` que mostraba un listado de `Item`s. Vamos a crear un nuevo componente `CategoryButton` que es un botón con el nombre de una categoría de productos y que recibe por `props` el nombre de la categoría.
 
 ```html
 <CategoryButton category="Bebida" />
@@ -437,7 +436,7 @@ Al final tendremos que realizar un cambio en un atributo y forzar la ejecución 
 
 _BONUS_: cuando tenemos todo funcionando para una categoría, podemos añadir botones para cada de las que tengamos productos. Incluso un botón especial 'Todos' para mostrar de nuevo los productos de todas las categorías.
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 ## Recursos externos
 
