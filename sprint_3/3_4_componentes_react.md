@@ -39,13 +39,13 @@ Los componentes padre/madre pueden tener múltiples componentes hijo/hija, pero 
 
 ```
                   ┌───────────┐
-                  │  CatList  │
+                  │ CatList  │
                   └─┬───┬───┬─┘
-                    ┊   ┊   ┊
+                   ┊  ┊  ┊
        ┌╌╌╌╌╌╌╌╌╌╌╌╌┘   ┊   └╌╌╌╌╌╌╌╌╌╌╌╌┐
        ┊                ┊                ┊
 ┌──────┴──────┐  ┌──────┴──────┐  ┌──────┴──────┐
-│  RandomCat  │  │  RandomCat  │  │  RandomCat  │
+│ RandomCat  │  │ RandomCat  │  │ RandomCat  │
 └─────────────┘  └─────────────┘  └─────────────┘
 ```
 

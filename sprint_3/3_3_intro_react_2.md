@@ -145,7 +145,7 @@ Vamos a partir del ejercicio 1 (o del 2) de la sesión anterior. Vamos a crear u
 
 \_\_\_\_\_\_\_\_\_\_
 
-### Componentes funcionales. Otro tipo de componentes
+### Componentes funcionales, otro tipo de componentes
 
 Ya hemos visto como escribir un componente de clase en React, y curiosamente su estructura es igual a la estructura de las clases JS, vamos a ver ahora qué es un componente funcional.
 
@@ -189,9 +189,9 @@ const Greetings = props => <h1>Hello, {props.name}!</h1>;
 export default Greetings;
 ```
 
-Puesto que, como ya hemos visto actualmente nos encontraremos los dos tipos de componentes en proyectos React vamos a potenciar que manejéis el uso de componentes de clase para aquellos que tienen un estado (concepto que ya aprenderemos) y el uso de componentes funcionales si desarrollais con _hooks_ (también os los presentaremos más adelante).
+Puesto que, como ya hemos visto actualmente nos encontraremos los dos tipos de componentes en proyectos React vamos a potenciar que manejéis el uso de componentes de clase para aquellos que tienen un estado (concepto que ya aprenderemos) y el uso de componentes funcionales si desarrollais con _hooks_ (también os los presentaremos en próximas lecciones).
 
-## Algunos detalles para tener en cuenta
+### Algunos detalles para tener en cuenta
 
 Los conceptos que manejamos en los dos tipos de componentes, props, eventos, datos... son los mismos. Lo que cambia es la forma de escribirlos.
 Los componentes de clase son antiguos. React ha decidido utilizar componentes funcionales porque son más sencillos y cómodos.
@@ -490,13 +490,11 @@ Entraremos por terminal a nuestra carpeta de proyecto y esto es lo que hay que h
 1. Modificar `package.json` para que las rutas sean relativas a nuestros archivos: hay que añadir `"homepage": "./",`.
 1. Ya que lo vamos a servir desde GitHub, y usa https, tendremos que cambiar cualquier recurso `http` a `https`: por ejemplo, en un fetch.
 1. Ejecutar `npm run build` para que nos cree la versión para producción en la carpeta **build/**.
-
-GitHub Pages funciona en la carpeta raíz o en la **docs/** de la rama master, así que querremos cambiar la carpeta **build/** por la carpeta **docs/**. Para ello, desde la terminal y colocados en la carpeta raíz del proyecto ejecutaremos `mv build docs`. Es importante saber que este paso lo tendremos que hacer cada vez que hagamos cambios y queramos reflejarnos en nuestra página de GitHub Pages.
-
-4. Add, commit y push.
+1. GitHub Pages funciona en la carpeta raíz o en la **docs/** de la rama master, así que querremos cambiar la carpeta **build/** por la carpeta **docs/**. Para ello, desde la terminal y colocados en la carpeta raíz del proyecto ejecutaremos `mv build docs`. Es importante saber que este paso lo tendremos que hacer cada vez que hagamos cambios y queramos reflejarnos en nuestra página de GitHub Pages.
+1. Add, commit y push.
 1. Casi listo, solo falta activar GitHub Pages para que se sirva desde la carpeta docs de nuestra rama master. Para eso como ya sabéis, desde la página principal del repositorio, podéis ir a la pestaña de Settings y una vez dentro, en la sección GitHub Pages, donde pone _"Source"_ seleccionar _"master branch /docs folder"_
 
-**Ya.**
+**Y ya estaría.**
 
 #### EJERCICIO 6
 
