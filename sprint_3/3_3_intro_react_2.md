@@ -179,6 +179,11 @@ const Greetings = props => {
 export default Greetings;
 ```
 
+> **IMPORTANTE:** Como se puede ver en los dos ejemplos de código anteriores:
+> - Las props en un componente de clase se usan con `this.props.name`. Las props están en `this` porque **son un atributo** de una clase de JavaScript.
+> - Las props en un componente funcional se usan con `props.name`. Aquí las props son **el primer argumento de la función** y son un argumento de tipo objeto.
+> La única diferencia entre ambas es sintáctica. Por lo demás funcionan exactamente igual.
+
 Si lo combinamos con el _return_ implícito de las _arrow functions_ podríamos incluso hacer una estructura más corta, quedando así:
 
 ```js
