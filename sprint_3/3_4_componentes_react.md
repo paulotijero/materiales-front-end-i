@@ -97,7 +97,7 @@ Ahora, desde un componente padre para crear un item y pasarle la información po
 />
 ```
 
-Fíjate que cuando queremos pasar datos distintos a una cadena, tendremos que usar los {} para incrustar JS, en este caso, para meter un número.
+Fíjate que cuando queremos pasar datos distintos a una string, tendremos que usar los {} para incrustar JS, en este caso, para meter un número.
 
 > NOTA: el valor de los atributos de un componente en JSX debe ser **SIEMPRE** una cadena (entre comillas) o una expresión JS (entre llaves)
 
@@ -133,8 +133,6 @@ class ItemList extends React.Component {
 }
 ```
 
----
-
 #### EJERCICIO 1
 
 Echa un ojo al [ejemplo anterior en codepen][codepen-props-example], e intenta añadir un nuevo `Item` a la lista.
@@ -169,9 +167,9 @@ const items = [
 
 a) ¿Serías capaz de crear el JSX que devuelve el método `render` de `ItemList` usando un bucle o un `map`? Para hacerlo debes saber que para pintar varios componentes en JSX basta con crear un array con cada JSX y devolverlo en una expresión entre {}.
 
-b) Ahora vamos a filtrar el array antes convertirlo a JSX con `map`, tirando de nuestra amiga `filter`. Motraremos en la página solo los productos cuyo precio es inferior a 10.
+b) Ahora vamos a filtrar el array antes convertirlo a JSX con `map`, tirando de nuestra amiga `filter`. Mostraremos en la página solo los productos cuyo precio es inferior a 10.
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 ## Uso de `children` para acceder a los componentes hijo cuando no los conoces
 
@@ -204,13 +202,11 @@ ReactDOM.render(
 
 Como se puede observar en el ejemplo, inyectaremos `props.children` en el JSX del componente genérico como una variable cualquiera. Cuando usemos el componente, escribiremos el contenido en JSX dentro de sus etiquetas de apertura (`<Popup>`) y de cierre (`</Popup>`).
 
----
-
 #### EJERCICIO 2
 
 Desarrolla un componente `HalfPage` que todo su contenido lo ponga en la mitad izquierda de la pantalla (mitad de ancho y todo el alto). Usa `children` para introducir todo el contenido entre la apertura y cierre de `HalfPage` en su interior. Crea 2 componentes `HalfPage` con algo de contenido HTML (en JSX) para ver cómo se posiciona en una mitad y la otra.
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 ## Valores por defecto de las `props`
 
@@ -244,13 +240,11 @@ Button.defaultProps = {
 
 > No hace falta importar el paquete `prop-types` para usar valores por defecto
 
----
-
 #### EJERCICIO 3
 
 Partiendo del código del ejercicio 1, usa las `defaultProps` para que la descripción del item sea opcional y si no nos lo pasan por `props` aparezca 'No hay descripción'.
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 ## `props` tipadas con `propTypes`
 
@@ -369,13 +363,11 @@ VerticalCenter.propTypes = {
 };
 ```
 
----
-
 #### EJERCICIO 4
 
 Dado el resultado del ejercicio 3, vamos a hacer que el nombre de los items sea obligatorio y que el precio sea también obligatorio y de tipo numérico. Crea después un nuevo item con valores erróneos para ver qué pinta tiene el error que nos envía React.
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 ## Recursos externos
 
