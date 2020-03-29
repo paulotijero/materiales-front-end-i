@@ -6,7 +6,6 @@
 
 - [EJERCICIO 1](#ejercicio-1)
 - [EJERCICIO 2](#ejercicio-2)
-- [EJERCICIO 3](#ejercicio-3)
 
 <!-- /TOC -->
 
@@ -273,15 +272,12 @@ const App = () => {
 Como puedes ver en nuestro componente principal tenemos dos hooks, uno que actualiza el estado de mi input "name" y otro que actualiza el estado de mi input "email" cuando hago click en el botón.
 
 Cada uno de esos hooks actúa sobre la propiedad especificada por medio de la función que le hemos pasado en cada caso, recibiendo como argumento inicial de useState un string vacío.
+
 ---
 
 #### EJERCICIO 2
 
 Vamos a partir del componente del ejercicio 1, ahora vamos a tener otro texto que diga "Tengo 1 regalo" con un nuevo botón "Dame regalos". Cada vez que pulse en el botón debo incrementar en uno mi número de regalos, manteniendo la funcionalidad de hacerme un año más viejo.
-
-### EJERCICIO 3
-
-...
 
 ---
 
