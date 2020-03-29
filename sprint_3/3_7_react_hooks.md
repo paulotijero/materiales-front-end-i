@@ -1,5 +1,15 @@
 # 3.7 React Hooks
 
+## Contenidos
+
+<!-- TOC -->
+
+- [EJERCICIO 1](#ejercicio-1)
+- [EJERCICIO 2](#ejercicio-2)
+- [EJERCICIO 3](#ejercicio-3)
+
+<!-- /TOC -->
+
 ## Introducción
 
 En esta sesión vamos a aprender una nueva manera de trabajar con el estado en componentes funcionales, los React Hooks.
@@ -217,6 +227,65 @@ const App = function() {
   );
 }
 ```
+---
+
+#### EJERCICIO 1
+
+Hoy nos sentimos como si fuera nuestro cumpleaños así que vamos a crear un componente funcional con un texto y un botón que diga "Hazme más viejo". El texto contendrá la frase: "Hoy tengo 20 años de edad", siendo 20 una variable que se actualice un año cada vez que pulse el botón. La única regla es que lo hagas por medio de hooks.
+
+---
+
+## Manejando el estado de varias propiedades
+
+Hasta ahora hemos visto cómo se maneja el estado de una propiedad, pero ¿y si tengo varias propiedades en el estado? muy sencillo, en el cuerpo de nuestra función vamos a ir escribiendo cada uno de los hooks que vamos a necesitar para actualizar el estado de cada una de las propiedades. Mira este ejemplo:
+
+**App.js**
+```
+const App = () => {
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+
+  const handleInputName = () => {
+    setName(ev.target.value);
+  };
+  const handleInputEmail = () => {
+    setEmail(ev.target.value);
+  };
+
+  return (
+    <div className='App'>
+      <form>
+        <label htmlFor='name'>Nombre</label>
+        <input type='text' name='name' onClick={handleInputName} placeholder='Escribe aquí tu nombre' />
+        <label htmlFor='email'>Email</label>
+        <input type='text' name='email' onClick={handleInputEmail} placeholder='Escribe aquí tu email' />
+      </form>
+
+      <section>
+        <p>Tu nombre es: {name}</p>
+        <p>Tu email es: {email}</p>
+      </section>
+
+    </div>
+  );
+};
+```
+Como puedes ver en nuestro componente principal tenemos dos hooks, uno que actualiza el estado de mi input "name" y otro que actualiza el estado de mi input "email" cuando hago click en el botón.
+
+Cada uno de esos hooks actúa sobre la propiedad especificada por medio de la función que le hemos pasado en cada caso, recibiendo como argumento inicial de useState un string vacío.
+
+---
+
+#### EJERCICIO 2
+
+Vamos a partir del componente del ejercicio 1, ahora vamos a tener otro texto que diga "Tengo 1 regalo" con un nuevo botón "Dame regalos". Cada vez que pulse en el botón debo incrementar en uno mi número de regalos, manteniendo la funcionalidad de hacerme un año más viejo.
+
+### EJERCICIO 3
+
+....
+
+---
+
 
 ## Otros hooks predefinidos importantes
 
@@ -254,3 +323,5 @@ function App() {
 https://es.reactjs.org/docs/hooks-intro.html
 
 ### Tutorial explicando el uso de hooks en profundidad
+https://www.youtube.com/watch?v=ISGCTngdp8c&t=16s
+
