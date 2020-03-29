@@ -312,6 +312,40 @@ console.log(fruits[0]); // primer elemento del array
 console.log(fruits[1]); // segundo elemento del array
 ```
 
+## Métodos funcionales de array
+
+```javascript
+// find y findIndex
+const fruits = [
+  {
+    name: 'apple',
+    color: 'green'
+  },
+  {
+    name: 'orange',
+    color: 'orange'
+  }
+];
+// buscamos la fruta cuyo nombre es orange
+const foundItem = fruits.find(fruit => fruit.name === 'orange');
+const foundIndex = fruits.findIndex(fruit => fruit.name === 'orange');
+console.log(foundItem, foundIndex);
+```
+
+```javascript
+// map
+const numbers = [1, 2, 3, 4];
+const result = numbers.map(number => number * 2);
+console.log(result); // array de números multiplicados por 2
+```
+
+```javascript
+// reduce
+const numbers = [1, 2, 3, 4];
+const result = numbers.reduce((total, number) => total + number, 0);
+console.log(result); // sumatorio de los números del array
+```
+
 ## Bucles
 
 ### for con índice
@@ -362,6 +396,17 @@ const element = header.querySelector('.js-element');
 ```javascript
 // obtener todos los elementos dentro de toda la página que tengan el selector .js-element
 const elements = document.querySelectorAll('.js-element'); // elements es un array de elementos del DOM
+
+function handleClick(ev) {
+  console.log('Se ha clickado un elemento');
+  console.log('Evento', ev);
+  console.log('Elemento clickado', ev.target);
+  console.log('Elemento escuchado', ev.currentTarget);
+}
+
+for (const element of elements) {
+  element.addEventListener('click', handleClick)
+}
 ```
 
 ## Fetch y promesas
