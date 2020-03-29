@@ -108,7 +108,7 @@ Para definir una propiedad del estado del componente con hooks usamos algo así:
 const [name, setName] = useState('Elena');
 ```
 
-Las variable name contendrá el valor del estado y setName, será una función para modificar ese estado respectivamente, el valor que enviamos como argumento de useState es el valor por defecto para name, el equivalente a `this.state = {name: Elena}` Una vez declarado nuestro hook si queremos setear de nuevo el estado utilizaremos la función que hemos creado para ello:
+Las variable `name` contendrá el valor del estado y `setName`, será una función para modificar ese estado respectivamente, el valor que enviamos como argumento de `useState` es el valor por defecto para `name`, el equivalente a `this.state = { name: 'Elena' }`. Una vez declarado nuestro hook si queremos setear de nuevo el estado utilizaremos la función que hemos creado para ello:
 
 ```javascript
 setName('Daenerys');
