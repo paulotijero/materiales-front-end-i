@@ -95,15 +95,16 @@ Existen dos tipos de Hooks en React, los hooks de la propia librería, que viene
 
 Uno de los hooks predefinidos más populares y útiles es `useState`. Por cierto, la convención para nombrar un Hook es usar la palabra 'use', seguida de otra palabra que lo describa, como en este caso 'state' porque a través de este hook podemos manejar el estado del componente.
 
-Para usar un Hook primero necesitamos un componente funcional, ojo, los hooks sólo funcionan con componentes funcionales y no con componentes clase:
+Para usar un Hook primero necesitamos un componente funcional, ojo, los hooks sólo funcionan con componentes funcionales y no con componentes clase, también necesitamos importar el hook que vamos a utilizar, en este caso, useState:
 
 **App.js**
 
 ```javascript
 import React from 'react';
+import { useState }, React from React;
 
-function App(){
-  return(
+const App = () => {
+  return (
         <div>{name}</div>
     )
 }
@@ -140,7 +141,7 @@ Mira el componente App.js que hemos utilizado al inicio:
 **App.js**
 
 ```javascript
-const App = function() {
+const App = () => {
   const [number, setNumber] = useState(0);
   const generateRandomInteger = () => Math.floor(Math.random() * 100);
 
@@ -185,7 +186,7 @@ const [number, setNumber] = useState(0);
 Así nuestro componente App.j quedaría así:
 
 ```javascript
-const App = function() {
+const App = () => {
   const [number,setNumber] = useState(0);
 
   return (
@@ -211,7 +212,7 @@ En nuestra función manejadora del click ejecutamos la función que setea el nue
 **App.js**
 
 ```javascript
-const App = function() {
+const App = () => {
   const [number,setNumber] = useState(0);
   const generateRandomInteger = () => Math.floor(Math.random() * 100);
 
@@ -301,12 +302,12 @@ Debido a cómo interpreta React el orden en que ejecutas tus hooks siempre debes
 
 ```javascript
 import React from 'react';
-function App() {
+const App = () => {
   const [name, setName] = useState('Elena'); // Correcto ✅
   if (true) {
     const [counter, setCounter] = useState(0) // Incorrecto ❌
   }
-  return(
+  return (
     <div>{name}</div>
   );
 }
