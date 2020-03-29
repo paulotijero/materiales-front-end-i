@@ -231,7 +231,7 @@ Entre muchos otros que puedes encontrar aquí: https://reactjs.org/docs/hooks-re
 ## Limitaciones de los hooks
 
 Aunque los hooks son el futuro de React y son geniales, tienen alguna que otra limitación.
-Debido a cómo interpreta React el orden en que mandas a llamar tus hooks siempre debes declararlos en el cuerpo de tu componente funcional y no pueden llamarse dentro de condicionales, ciclos, o cualquier otra estructura que agregue un nuevo nivel de ejecución al componente:
+Debido a cómo interpreta React el orden en que ejecutas tus hooks siempre debes declararlos en el cuerpo de tu componente funcional y no pueden llamarse dentro de condicionales, ciclos, o cualquier otra estructura que agregue un nuevo nivel de ejecución al componente:
 
 **CORRECTO VS INCORRECTO**
 
