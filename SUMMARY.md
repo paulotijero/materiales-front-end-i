@@ -41,6 +41,7 @@
 - [2.14 Asincronía y temporizadores](sprint_2/2_14_asincronia.md)
 - [Repaso](sprint_2/2_repaso.md)
 - [Preguntas entrevista](sprint_2/2_questions.md)
+- [Sintaxis de JS](sprint_2/sintaxis-de-js.md)
 - [Recursos](sprint_2/recursos.md)
 
 ## Módulo 3. React
