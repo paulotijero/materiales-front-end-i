@@ -44,9 +44,7 @@ class App extends React.Component {
   }
 
   handleRandomInteger() {
-    this.setState(prevState => {
-      return prevState.number = this.getRandomInteger();
-    })
+    this.setState({number = this.getRandomInteger()})
   }
 
   render() {
