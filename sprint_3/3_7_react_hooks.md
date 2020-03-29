@@ -84,7 +84,7 @@ Como puedes ver, y aunque explicaremos más adelante este primer hook, `useState
 
 Existen dos tipos de Hooks en React, los hooks de la propia librería, que vienen predefinidos y los hooks personalizados (que no veremos de momento).
 
-Uno de los hooks predefinidos más populares y útiles es `useState`, por cierto, la convención para nombrar un Hook es usar la palabra use, seguida de otra palabra que lo describa, como en este caso 'state' porque a través de este hook podemos manejar el estado del componente.
+Uno de los hooks predefinidos más populares y útiles es `useState`. Por cierto, la convención para nombrar un Hook es usar la palabra 'use', seguida de otra palabra que lo describa, como en este caso 'state' porque a través de este hook podemos manejar el estado del componente.
 
 Para usar un Hook primero necesitamos un componente funcional, ojo, los hooks sólo funcionan con componentes funcionales y no con componentes clase:
 
