@@ -71,7 +71,7 @@ Bien, hasta aquí es terreno conocido, y ahora ¿cómo podríamos pasar App.js a
 **App.js como componente funcional con el hook useState**
 
 ```javascript
-const App = function() {
+const App = () => {
   const [number, setNumber] = useState(0);
   const generateRandomInteger = () => Math.floor(Math.random() * 100);
 
