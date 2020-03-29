@@ -593,7 +593,6 @@ Páginas donde se explica en más profundidad los conceptos de esta sesión
 - [Classes](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes)
 - [Constructor](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes/constructor)
 - [this](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this)
-- [Getters](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/get) y [Setters](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/set)
 
 ### Mozilla Hacks: ES6 in Depth
 
