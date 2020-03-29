@@ -223,19 +223,6 @@ const showWarning = (selector, text) => {
 showWarning('body', 'Aviso!!!');
 ```
 
-## Eventos
-
-```javascript
-// escuchamos el evento click sobre el elemento con selector .js-element
-const handleClick = function(ev) {
-  console.log('Elemento que lanza el evento:', ev.target);
-  console.log('Elemento que escucha el evento:', ev.currentTarget);
-  console.log('Evento:', ev);
-};
-const element = document.querySelector('.js-element');
-element.addEventListener('click', handleClick);
-```
-
 ## Objetos
 
 ```javascript
@@ -312,7 +299,7 @@ console.log(fruits[0]); // primer elemento del array
 console.log(fruits[1]); // segundo elemento del array
 ```
 
-## Métodos funcionales de array
+### Métodos funcionales de array
 
 ```javascript
 // find y findIndex
@@ -379,6 +366,19 @@ for (const fruit of fruits) {
 }
 ```
 
+## Eventos
+
+```javascript
+// escuchamos el evento click sobre el elemento con selector .js-element
+const handleClick = function(ev) {
+  console.log('Elemento que lanza el evento:', ev.target);
+  console.log('Elemento que escucha el evento:', ev.currentTarget);
+  console.log('Evento:', ev);
+};
+const element = document.querySelector('.js-element');
+element.addEventListener('click', handleClick);
+```
+
 ## querySelector y querySelectorAll
 
 ```javascript
@@ -396,16 +396,14 @@ const element = header.querySelector('.js-element');
 ```javascript
 // obtener todos los elementos dentro de toda la página que tengan el selector .js-element
 const elements = document.querySelectorAll('.js-element'); // elements es un array de elementos del DOM
-
 function handleClick(ev) {
-  console.log('Se ha clickado un elemento');
-  console.log('Evento', ev);
-  console.log('Elemento clickado', ev.target);
-  console.log('Elemento escuchado', ev.currentTarget);
+  console.log('Elemento que lanza el evento:', ev.target);
+  console.log('Elemento que escucha el evento:', ev.currentTarget);
+  console.log('Evento:', ev);
 }
-
 for (const element of elements) {
-  element.addEventListener('click', handleClick)
+  // recorremos el array de elementos del DOM para aplicar a cada uno de ellos un addEventListener
+  element.addEventListener('click', handleClick);
 }
 ```
 

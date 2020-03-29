@@ -438,6 +438,8 @@ _BONUS_: cuando tenemos todo funcionando para una categoría, podemos añadir bo
 
 \_\_\_\_\_\_\_\_\_\_
 
+### Lifting en componentes funcionales
+
 ## Recursos externos
 
 ### Egghead
