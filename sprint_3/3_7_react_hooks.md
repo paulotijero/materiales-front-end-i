@@ -240,7 +240,7 @@ Hoy nos sentimos como si fuera nuestro cumpleaños así que vamos a crear un com
 Hasta ahora hemos visto cómo se maneja el estado de una propiedad, pero ¿y si tengo varias propiedades en el estado? muy sencillo, en el cuerpo de nuestra función vamos a ir escribiendo cada uno de los hooks que vamos a necesitar para actualizar el estado de cada una de las propiedades. Mira este ejemplo:
 
 **App.js**
-```
+``````javascript
 const App = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -265,7 +265,6 @@ const App = () => {
         <p>Tu nombre es: {name}</p>
         <p>Tu email es: {email}</p>
       </section>
-
     </div>
   );
 };
@@ -273,7 +272,6 @@ const App = () => {
 Como puedes ver en nuestro componente principal tenemos dos hooks, uno que actualiza el estado de mi input "name" y otro que actualiza el estado de mi input "email" cuando hago click en el botón.
 
 Cada uno de esos hooks actúa sobre la propiedad especificada por medio de la función que le hemos pasado en cada caso, recibiendo como argumento inicial de useState un string vacío.
-
 ---
 
 #### EJERCICIO 2
@@ -282,7 +280,7 @@ Vamos a partir del componente del ejercicio 1, ahora vamos a tener otro texto qu
 
 ### EJERCICIO 3
 
-....
+...
 
 ---
 
