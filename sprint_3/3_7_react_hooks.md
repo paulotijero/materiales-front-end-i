@@ -2,11 +2,13 @@
 
 ## Introducción
 
-En esta sesión vamos a aprender una nueva manera de manipular el estado de nuestra aplicación, los React Hooks.
+En esta sesión vamos a aprender una nueva manera de trabajar con el estado en componentes funcionales, los React Hooks.
 
-Hasta ahora hemos visto que, para manejar nuestro `state` necesitamos trabajar en un componente principal, App.js, que controla de manera global los datos que cambian en nuestra apliacación y para ello necesitamos conocer los componentes de clase. Esta manera de manejar el `state` hace que nuestro componente principal sea el que tiene "el mando" de nuestra aplicación, dejando al resto de componentes a las órdenes de lo que suceda en este componente. Es decir, el resto de componentes no manejaban estado. Con los React Hooks esto va a cambiar.
+Hemos visto que en React podemos crear tanto componentes de clase como componentes funcionales. Los componentes de clase al ser más complejos nos permiten hacer más cosas, como por ejemplo tener un estado para manejar los datos de nuestra aplicación y modificarlo para que se repinte por medio del método render.
 
-Vamos a hacer que nuestros componentes funcionales también manejen el estado.
+El problema es que los componentes de clase son más complejos y nos obligan a escribir más. Por ello, los creadores de React, han desarrollado los Hooks. Los Hooks son una nueva característica de React 16.8 que nos permite usar el estado y otras características sin escribir una clase. Es una nueva forma de escribir el código, una nueva sintáxis. Los conceptos que manejábamos hasta ahora como estado, eventos, lifting... se mantienen, pero con los Hooks cambia la forma de escribirlos.
+
+Ahora nuestros componentes funcionales también manejarán el estado.
 
 ## ¿Para qué sirve lo que vamos a ver en esta sesión?
 
