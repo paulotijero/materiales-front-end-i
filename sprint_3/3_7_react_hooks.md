@@ -268,7 +268,8 @@ const App = () => {
     </div>
   );
 };
-```
+``````
+
 Como puedes ver en nuestro componente principal tenemos dos hooks, uno que actualiza el estado de mi input "name" y otro que actualiza el estado de mi input "email" cuando hago click en el botón.
 
 Cada uno de esos hooks actúa sobre la propiedad especificada por medio de la función que le hemos pasado en cada caso, recibiendo como argumento inicial de useState un string vacío.
