@@ -24,7 +24,7 @@ En la última sección, veremos cómo reutilizar nuestro código entre distintos
 
 JavaScript es un lenguaje muy flexible. Por eso, en la práctica, muchos programadores recurren a otros conceptos asentados de programación al escribir JavaScript. Con ES6 se guiñó un ojo a los programadores que usaban las posibilidades de JavaScript para la POO y se introdujeron las **clases**.
 
-Las clases nos ayudan a delimitar la responsabilidad de ciertas partes de nuestro código y organizarlo de manera más clara y también nos ayudan a reutilizar partes del código y ahorrar líneas y posibilidades de error.
+Las clases nos ayudan a delimitar la responsabilidad de ciertas partes de nuestro código y organizarlo de manera más clara. También nos ayudan a reutilizar partes del código y ahorrar líneas y posibilidades de error.
 
 ## Clases y objetos
 
@@ -96,7 +96,7 @@ hachiko.waitForOwner(); // Hachiko is waiting.
 laika.waitForOwner(); // TypeError: laika.waitForOwner no es una función
 ```
 
-Si una instancia declara un método con el mismo nombre que su clase, entonces el método se **sobrescribe** para esa instancia solo:
+Si una instancia declara un método con el mismo nombre que la recibida de su clase, entonces el método se **sobrescribe** para esa instancia solo:
 
 ```js
 class Dog {
