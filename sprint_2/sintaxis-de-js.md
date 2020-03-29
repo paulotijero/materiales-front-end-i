@@ -299,6 +299,37 @@ console.log(fruits[0]); // primer elemento del array
 console.log(fruits[1]); // segundo elemento del array
 ```
 
+### for clásico o con índice
+
+```javascript
+// recorrer el array de forma ascendente
+const fruits = ['apple', 'orange'];
+// "i" coge el valor del índice en cada iteración
+for (let i = 0; i < fruits.length; i = i + 1) {
+  console.log(fruits[i]);
+}
+```
+
+```javascript
+// recorrer el array de forma ascendente
+const fruits = ['apple', 'orange'];
+for (let i = fruits.length - 1; i >= 0; i = i - 1) {
+  console.log(fruits[i]);
+}
+```
+
+> **Nota:** para incrementar el índice de uno en uno podemos usar estas tres formas que son equivalentes: `i = i + 1`, `i += 1` y `i++`.
+
+### for ... of
+
+```javascript
+const fruits = ['apple', 'orange'];
+// "fruit" coge el valor de la posición (o lo que es lo mismo, el índice) en cada iteración
+for (const fruit of fruits) {
+  console.log(fruit);
+}
+```
+
 ### Métodos funcionales de array
 
 ```javascript
@@ -331,39 +362,6 @@ console.log(result); // array de números multiplicados por 2
 const numbers = [1, 2, 3, 4];
 const result = numbers.reduce((total, number) => total + number, 0);
 console.log(result); // sumatorio de los números del array
-```
-
-## Bucles
-
-### for con índice
-
-```javascript
-// recorrer el array de forma ascendente
-const fruits = ['apple', 'orange'];
-// "i" coge el valor del índice en cada iteración
-for (let i = 0; i < fruits.length; i = i + 1) {
-  console.log(fruits[i]);
-}
-```
-
-```javascript
-// recorrer el array de forma ascendente
-const fruits = ['apple', 'orange'];
-for (let i = fruits.length - 1; i >= 0; i = i - 1) {
-  console.log(fruits[i]);
-}
-```
-
-> **Nota:** para incrementar el índice de uno en uno podemos usar estas tres formas que son equivalentes: `i = i + 1`, `i += 1` y `i++`.
-
-### for ... of
-
-```javascript
-const fruits = ['apple', 'orange'];
-// "fruit" coge el valor de la posición (o lo que es lo mismo, el índice) en cada iteración
-for (const fruit of fruits) {
-  console.log(fruit);
-}
 ```
 
 ## Eventos
