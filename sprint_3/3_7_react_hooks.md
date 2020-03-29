@@ -15,7 +15,7 @@ Antes de continuar, debes saber que los Hooks son:
 
  - Completamente opcionales. Es necesario que sepas que existen pero su uso no es obligatorio.
  - 100% compatibles con versiones anteriores de React.
- - Por el momento no hay planes para eliminar el modelo de clases de React.
+ - Por el momento no hay planes para eliminar los componentes de clases de React.
 
 Los Hooks no reemplazan tu conocimiento de los conceptos de React. Todo lo contrario, complementan y amplian estos conceptos que ya conoces: props, estado, lifting... y otros que veremos más adelante. Además seguiremos manejando la estructura que ya conocemos con un componente principal que "dirija" nuestra aplicación, la única diferencia es que ya podríamos usarlo como componente funcional y seguir controlando el estado.
 
