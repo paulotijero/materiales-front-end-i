@@ -123,7 +123,7 @@ cd my-react-project
 npm start
 ```
 
-`create-react-app` nos ha instalado un _live-server_, así que sin cerrar el navegador ni el terminal, vamos a abrir el archivo `my-react-project/src/App.js` y probar a cambiar la frase "Edit src/App.js and save to reload" por "¡Hola, mundo!". Guardamos y cambiamos al navegador.
+`create-react-app` nos ha instalado un _live-server_, así que sin cerrar el navegador ni el terminal, vamos a abrir el archivo `my-react-project/src/App.js` y probar a cambiar la frase **Edit src/App.js and save to reload** por **¡Hola, mundo!**. Guardamos y cambiamos al navegador.
 
 !["Hola, mundo" en React](assets/images/3_4_react-hello-world.png)
 
