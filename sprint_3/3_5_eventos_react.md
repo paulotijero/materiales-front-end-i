@@ -535,7 +535,7 @@ Copia estos los dos ficheros del ejemplo anterior en un proyecto de React. Y a c
 
 #### EJERCICIO 9
 
-Si observar la función `handleFormInput` del ejercicio anterior verás que recibe un único argumento de tipo objeto que tiene las propiedades `name` y `value`.
+Si observamos la función `handleFormInput` del ejercicio anterior verás que recibe un único argumento llamado data de tipo objeto que tiene las propiedades `name` y `value`.
 
 Te pedimos que cambies las funciones `handleFormInput` y `handleKeyUp` para que `handleFormInput` en vez de recibir un argumento reciba:
 
