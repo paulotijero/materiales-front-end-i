@@ -114,6 +114,8 @@ npm install -g create-react-app
 create-react-app my-react-project
 ```
 
+> **NOTA:** Recuerda que si al instalar algo en la consola nos da un error **EACCES** es porque necesitamos hacerlo con permisos de super administrador y para ello usamos `sudo`.
+
 Esto nos creará una carpeta `my-react-project` y dentro tendremos todo listo. Para verlo, entramos dentro de la carpeta y ejecutaremos el proyecto con `npm`:
 
 ```sh
@@ -121,7 +123,7 @@ cd my-react-project
 npm start
 ```
 
-`create-react-app` nos ha instalado un _live-server_, así que sin cerrar el navegador ni el terminal, vamos a abrir el archivo `my-react-project/src/App.js` y probar a cambiar la frase "Welcome to React" por "¡Hola, mundo!". Guardamos y cambiamos al navegador.
+`create-react-app` nos ha instalado un _live-server_, así que sin cerrar el navegador ni el terminal, vamos a abrir el archivo `my-react-project/src/App.js` y probar a cambiar la frase "Edit src/App.js and save to reload" por "¡Hola, mundo!". Guardamos y cambiamos al navegador.
 
 !["Hola, mundo" en React](assets/images/3_4_react-hello-world.png)
 
