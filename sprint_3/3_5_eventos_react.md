@@ -16,6 +16,8 @@
 - [EJERCICIO 5](#ejercicio-5)
 - [EJERCICIO 6](#ejercicio-6)
 - [EJERCICIO 7](#ejercicio-7)
+- [EJERCICIO 8](#ejercicio-8)
+- [EJERCICIO 9](#ejercicio-9)
 
 <!-- /TOC -->
 
@@ -435,6 +437,108 @@ En `ItemList` definimos ese método para que si se pulsa el botón de la categor
 Al final tendremos que realizar un cambio en un atributo y forzar la ejecución del método `render` de `ItemList` que a su vez fuerza el de sus hijas.
 
 _BONUS_: cuando tenemos todo funcionando para una categoría, podemos añadir botones para cada de las que tengamos productos. Incluso un botón especial 'Todos' para mostrar de nuevo los productos de todas las categorías.
+
+\_\_\_\_\_\_\_\_\_\_
+
+### Lifting en componentes funcionales
+
+Como ya hemos visto en lecciones anteriores, todo lo que se puede hacer con componentes de clase también se puede hacer con componentes funcionales. Vamos a ver un ejemplo de **lifting con componentes funcionales**.
+
+Tenemos un componente principal que es `Form.js`, en el que podemos ver que:
+
+- En la línea 11 y 17 estamos usando dos veces el componente hijo `InputText`. Esto es lo que llamamos **reutilización de componentes**.
+- Al componente `InputText` le estamos pasando por props un `id`, `label` y `name` que son strings. Estas props se usan en `handleInput` para crear el código HTML personalizado.
+- Además al componente `InputText` le estamos pasando por props un `handleInput` que es una función. **La función `handleFormInput` será ejecutada por el componente hijo `handleInput` cuando suceda un evento.** A esto es a lo que llamamos **lifting**.
+
+```javascript
+import React from 'react';
+import InputText from './InputText';
+
+const handleFormInput = data => {
+  console.log(data);
+};
+
+const Form = () => {
+  return (
+    <form>
+      <InputText
+        id="name"
+        label='Escribe tu nombre:'
+        name='name'
+        handleInput={handleFormInput}
+      />
+      <InputText
+        id="email"
+        label='Escribe tu email:'
+        name='email'
+        handleInput={handleFormInput}
+      />
+    </form>
+  );
+};
+
+export default Form;
+```
+
+El componente hijo es `InputText.js`, en el que podemos ver que:
+
+- Este componente `InputText`, recibe por props `id`, `label` y `name` para generar un HTML personalizado.
+- En la línea 22 estamos escuchando el evento `keyup`.
+- Cuando la usuaria produce un `keyup` en el input, React ejecuta la función `handleKeyUp` de la línea 5.
+- Cuando React ejecuta la función `handleKeyUp` se ejecuta la función `props.handleInput` en la línea 10. Aquí se produce el lifting: **un componente hijo ejecuta una función que ha recibido por props del componente madre**.
+- En la línea 10 estamos ejecutando `props.handleInput`. Ya que estamos ejecutando una función, si queremos podemos pasarle datos por parámetros. Estos datos los estamos generando en el objeto `data` en la línea 6.
+- Os preguntaréis por qué hemos metido la función `handleKeyUp` dentro del componente `InputText` y no lo hemos puesto fuera como habíamos hecho hasta ahora. La respuesta es que si queremos usar las props dentro de la función `handleKeyUp` (como por ejemplo `props.name` y `props.handleInput`) **necesitamos hacerlo en un ámbito o scope donde tengamos acceso a las props**. Si hubieramos puesto la función `handleKeyUp` en la línea 2, `props` no existiría.
+
+```javascript
+import React from 'react';
+
+const InputText = props => {
+
+  const handleKeyUp = ev => {
+    const data = {
+      name: props.name,
+      value: ev.currentTarget.value
+    };
+    props.handleInput(data);
+  };
+
+  return (
+    <div>
+      <label htmlFor={props.id}>
+        {props.label}
+      </label>
+      <input
+        id={props.id}
+        type='text'
+        name={props.name}
+        onKeyUp={handleKeyUp}
+      />
+    </div>
+  );
+};
+
+export default InputText;
+```
+
+En resumen, para hacer lifting con componentes funcionales **tenemos que ejecutar la función que nos pasan por props** (en este caso `props.handleInput(data);`) **dentro del componente funcional** (en este caso `InputText`).
+
+#### EJERCICIO 8
+
+Copia estos los dos ficheros del ejemplo anterior en un proyecto de React. Y a continuación:
+
+- Añade un tercer campo al formulario para que la usuaria escriba su ciudad.
+- Observa los datos que aparecen en consola cuando la usuaria escribe en los campos del formulario.
+
+\_\_\_\_\_\_\_\_\_\_
+
+#### EJERCICIO 9
+
+Si observar la función `handleFormInput` del ejercicio anterior verás que recibe un único argumento de tipo objeto que tiene las propiedades `name` y `value`.
+
+Te pedimos que cambies las funciones `handleFormInput` y `handleKeyUp` para que `handleFormInput` en vez de recibir un argumento reciba:
+
+- Primer argumento: un string con el nombre del input modificado.
+- Segundo argumento: un string con el valor del input modificado.
 
 \_\_\_\_\_\_\_\_\_\_
 
