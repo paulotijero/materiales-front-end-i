@@ -15,7 +15,7 @@ En esta sesión vamos a aprender una nueva manera de trabajar con el estado en c
 
 Hemos visto que en React podemos crear tanto componentes de clase como componentes funcionales. Los componentes de clase al ser más complejos nos permiten hacer más cosas, como por ejemplo tener un estado para manejar los datos de nuestra aplicación y modificarlo para que se repinte por medio del método render.
 
-El problema es que los componentes de clase son más complejos y nos obligan a escribir más. Por ello, los creadores de React, han desarrollado los Hooks. Los Hooks son una nueva característica de React 16.8 que nos permite usar el estado y otras características sin escribir una clase. Es una nueva forma de escribir el código, una nueva sintáxis. Los conceptos que manejábamos hasta ahora como estado, eventos, lifting... se mantienen, pero con los Hooks cambia la forma de escribirlos.
+El problema es que los componentes de clase son más complejos y nos obligan a escribir más. Por ello, los creadores de React, han desarrollado los Hooks. **Los Hooks son una nueva característica de React 16.8 que nos permite usar el estado y otras características sin escribir una clase.** Es una nueva forma de escribir el código, una nueva sintáxis. **Los conceptos que manejábamos hasta ahora como estado, eventos, lifting... se mantienen**, pero con los Hooks cambia la forma de escribirlos.
 
 Ahora nuestros componentes funcionales también manejarán el estado.
 
@@ -32,13 +32,15 @@ Los Hooks no reemplazan tu conocimiento de los conceptos de React. Todo lo contr
 
 ## Qué son los hooks
 
-La palabra Hook se traduce como Gancho en español, y la razón de este nombre, es que un Hook en React te permite "colgarte" del estado y los métodos del ciclo de vida de un componente, desde un componente funcional.
+La palabra Hook se traduce como Gancho en español, y la razón de este nombre, es que un Hook en React te permite "colgarte" del estado y los métodos del ciclo de vida de un componente (que veremos en próximas lecciones), desde un componente funcional.
 
 Vamos a recordar cómo escribíamos hasta ahora un componente de clase con estado, por ejemplo App.js. Imagina que desde App.js se llama a otro componene RandomInteger que tiene un botón para generar un número aleatorio y pintarlo. La estructura de App.js sería la siguiente:
 
 **App.js como componente de clase**
 
-```javascript
+```jsx
+import React from 'react';
+
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -46,15 +48,17 @@ class App extends React.Component {
     this.getRandomInteger = this.getRandomInteger.bind(this);
     this.state = {
       number: 0
-    }
+    };
   }
 
   getRandomInteger() {
-    return Math.floor(Math.random() * 100)
+    return Math.floor(Math.random() * 100);
   }
 
   handleRandomInteger() {
-    this.setState({number = this.getRandomInteger()})
+    this.setState({
+      number: this.getRandomInteger()
+    });
   }
 
   render() {
@@ -71,13 +75,15 @@ Bien, hasta aquí es terreno conocido, y ahora ¿cómo podríamos pasar App.js a
 
 **App.js como componente funcional con el hook useState**
 
-```javascript
+```jsx
+import { useState }, React from 'react';
+
 const App = () => {
   const [number, setNumber] = useState(0);
   const generateRandomInteger = () => Math.floor(Math.random() * 100);
 
   const handleRandomInteger = () => {
-    setNumber(generateRandomInteger())
+    setNumber(generateRandomInteger());
   }
 
   return (
@@ -100,9 +106,8 @@ Para usar un Hook primero necesitamos un componente funcional, ojo, los hooks s�
 
 **App.js**
 
-```javascript
-import React from 'react';
-import { useState }, React from React;
+```jsx
+import { useState }, React from 'react';
 
 const App = () => {
   return (
@@ -115,22 +120,22 @@ const App = () => {
 
 Para definir una propiedad del estado del componente con hooks usamos algo así:
 
-```javascript
+```jsx
 const [name, setName] = useState('Elena');
 ```
 
-Las variable `name` contendrá el valor del estado y `setName`, será una función para modificar ese estado respectivamente, el valor que enviamos como argumento de `useState` es el valor por defecto para `name`, el equivalente a `this.state = { name: 'Elena' }`. Una vez declarado nuestro hook si queremos setear de nuevo el estado utilizaremos la función que hemos creado para ello:
+`name` es una variable que contiene el valor del estado y `setName` es una función para modificar ese estado respectivamente. El valor que enviamos como argumento de `useState` es el valor por defecto o valor inicial para `name`, el equivalente a `this.state = { name: 'Elena' }`. Una vez declarado nuestro hook si queremos setear de nuevo el estado utilizaremos la función que hemos creado para ello:
 
-```javascript
+```jsx
 setName('Daenerys');
 ```
 
 Que es el equivalente a lo que en componentes de clase usamos como:
 
-```javascript
+```jsx
 this.setState({
   name: 'Daenerys'
-})
+});
 ```
 
 Después de cada modificación React sabrá que tiene que actualizar el estado del componente como siempre lo ha hecho.
@@ -141,13 +146,15 @@ Mira el componente App.js que hemos utilizado al inicio:
 
 **App.js**
 
-```javascript
+```jsx
+import { useState }, React from 'react';
+
 const App = () => {
   const [number, setNumber] = useState(0);
   const generateRandomInteger = () => Math.floor(Math.random() * 100);
 
   const handleRandomInteger = () => {
-    setNumber(generateRandomInteger())
+    setNumber(generateRandomInteger());
   }
 
   return (
@@ -162,17 +169,21 @@ Como puedes ver es nuestro ya conocido componente principal que renderiza a su v
 
 **RandomInteger.js**
 
-```javascript
-const RandomInteger = (props) => {
+```jsx
+import { useState }, React from 'react';
 
-const getRandomNumber = function() {
-  props.getRandom();
-}
+const RandomInteger = props => {
 
-return <div>
-  <span>Mi número aletorio es {props.randomNumber}</span>
-    <button type='button' onClick={getRandomNumber}>Dame random</button>
-  </div>
+  const getRandomNumber = function() {
+    props.getRandom();
+  }
+
+  return (
+    <div>
+      <span>Mi número aletorio es {props.randomNumber}</span>
+        <button type='button' onClick={getRandomNumber}>Dame random</button>
+    </div>
+  );
 }
 ```
 
@@ -180,15 +191,17 @@ RandomInteger recibe el valor del estado actual de `number` a través de las pro
 
 En App.js primero definimos nuestro hook useState, dando un nombre a la variable que contendrá el valor de nuestro estado `{number}` y a la función que se encargará de actualizar dicho estado `setNumber()`, a las que accederemos mediante destructuring. Lo que recibirá `setState` como argumento será el valor inicial de number, 0.
 
-```javascript
+```jsx
 const [number, setNumber] = useState(0);
 ```
 
-Así nuestro componente App.j quedaría así:
+Así nuestro componente App.js quedaría así:
 
-```javascript
+```jsx
+import { useState }, React from 'react';
+
 const App = () => {
-  const [number,setNumber] = useState(0);
+  const [number, setNumber] = useState(0);
 
   return (
     <div className="App">
@@ -200,25 +213,27 @@ const App = () => {
 
 Pero claro, como hemos visto nuestro componente RandomInteger consta de un botón para generar un número aleatorio, es decir, actualizar o setear de nuevo el estado de `{number}` ¿cómo lo hacemos?. Pues de esta manera:
 
-```javascript
+```jsx
 const generateRandomInteger = () => Math.floor(Math.random() * 100);
 
 const handleRandomInteger = () => {
-  setNumber(generateRandomInteger())
+  setNumber(generateRandomInteger());
 }
 ```
 
-En nuestra función manejadora del click ejecutamos la función que setea el nuevo valor de number (lo que antes hacíamos con setState), y le pasamos el valor que devuelve nuestra función generateRandomInteger, de esto modo nuestro App.js completo quedaría así:
+En nuestra función manejadora del click ejecutamos la función que setea el nuevo valor de number (lo que antes hacíamos con setState), y le pasamos el valor que devuelve nuestra función `generateRandomInteger`, de esto modo nuestro App.js completo quedaría así:
 
 **App.js**
 
-```javascript
+```jsx
+import { useState }, React from 'react';
+
 const App = () => {
-  const [number,setNumber] = useState(0);
+  const [number, setNumber] = useState(0);
   const generateRandomInteger = () => Math.floor(Math.random() * 100);
 
   const handleRandomInteger = () => {
-    setNumber(generateRandomInteger())
+    setNumber(generateRandomInteger());
   }
 
   return (
@@ -241,7 +256,9 @@ Hasta ahora hemos visto cómo se maneja el estado de una propiedad, pero ¿y si 
 
 **App.js**
 
-```javascript
+```jsx
+import { useState }, React from 'react';
+
 const App = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -299,7 +316,8 @@ Debido a cómo interpreta React el orden en que ejecutas tus hooks siempre debes
 **CORRECTO VS INCORRECTO**
 
 ```javascript
-import React from 'react';
+import { useState }, React from 'react';
+
 const App = () => {
   const [name, setName] = useState('Elena'); // Correcto ✅
   if (true) {
