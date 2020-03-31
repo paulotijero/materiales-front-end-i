@@ -37,6 +37,7 @@ La palabra Hook se traduce como Gancho en español, y la razón de este nombre, 
 Vamos a recordar cómo escribíamos hasta ahora un componente de clase con estado, por ejemplo App.js. Imagina que desde App.js se llama a otro componene RandomInteger que tiene un botón para generar un número aleatorio y pintarlo. La estructura de App.js sería la siguiente:
 
 **App.js como componente de clase**
+
 ```javascript
 class App extends React.Component {
   constructor(props) {
@@ -105,8 +106,8 @@ import { useState }, React from React;
 
 const App = () => {
   return (
-        <div>{name}</div>
-    )
+    <div>{name}</div>
+  )
 }
 ```
 
@@ -128,7 +129,7 @@ Que es el equivalente a lo que en componentes de clase usamos como:
 
 ```javascript
 this.setState({
-    name: 'Daenerys'
+  name: 'Daenerys'
 })
 ```
 
@@ -227,20 +228,20 @@ const App = () => {
   );
 }
 ```
----
 
 #### EJERCICIO 1
 
 Hoy nos sentimos como si fuera nuestro cumpleaños así que vamos a crear un componente funcional con un texto y un botón que diga "Hazme más viejo". El texto contendrá la frase: "Hoy tengo 20 años de edad", siendo 20 una variable que se actualice un año cada vez que pulse el botón. La única regla es que lo hagas por medio de hooks.
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 ## Manejando el estado de varias propiedades
 
 Hasta ahora hemos visto cómo se maneja el estado de una propiedad, pero ¿y si tengo varias propiedades en el estado? muy sencillo, en el cuerpo de nuestra función vamos a ir escribiendo cada uno de los hooks que vamos a necesitar para actualizar el estado de cada una de las propiedades. Mira este ejemplo:
 
 **App.js**
-``````javascript
+
+```javascript
 const App = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -268,20 +269,17 @@ const App = () => {
     </div>
   );
 };
-``````
+```
 
 Como puedes ver en nuestro componente principal tenemos dos hooks, uno que actualiza el estado de mi input "name" y otro que actualiza el estado de mi input "email" cuando hago click en el botón.
 
 Cada uno de esos hooks actúa sobre la propiedad especificada por medio de la función que le hemos pasado en cada caso, recibiendo como argumento inicial de useState un string vacío.
 
----
-
 #### EJERCICIO 2
 
 Vamos a partir del componente del ejercicio 1, ahora vamos a tener otro texto que diga "Tengo 1 regalo" con un nuevo botón "Dame regalos". Cada vez que pulse en el botón debo incrementar en uno mi número de regalos, manteniendo la funcionalidad de hacerme un año más viejo.
 
----
-
+\_\_\_\_\_\_\_\_\_\_
 
 ## Otros hooks predefinidos importantes
 
