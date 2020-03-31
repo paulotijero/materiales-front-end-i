@@ -450,7 +450,7 @@ Tenemos un componente principal que es `Form.js`, en el que podemos ver que:
 - Al componente `InputText` le estamos pasando por props un `id`, `label` y `name` que son strings. Estas props se usan en `handleInput` para crear el código HTML personalizado.
 - Además al componente `InputText` le estamos pasando por props un `handleInput` que es una función. **La función `handleFormInput` será ejecutada por el componente hijo `handleInput` cuando suceda un evento.** A esto es a lo que llamamos **lifting**.
 
-```javascript
+```jsx
 // Form.js
 import React from 'react';
 import InputText from './InputText';
@@ -490,7 +490,7 @@ El componente hijo es `InputText.js`, en el que podemos ver que:
 - En la línea 11 estamos ejecutando `props.handleInput`. Ya que estamos ejecutando una función, si queremos podemos pasarle datos por parámetros. Estos datos los estamos generando en el objeto `data` en la línea 7.
 - Os preguntaréis por qué hemos metido la función `handleKeyUp` dentro del componente `InputText` y no lo hemos puesto fuera como habíamos hecho hasta ahora. La respuesta es que si queremos usar las props dentro de la función `handleKeyUp` (como por ejemplo `props.name` y `props.handleInput`) **necesitamos hacerlo en un ámbito o scope donde tengamos acceso a las props**. Si hubieramos puesto la función `handleKeyUp` en la línea 3, `props` no existiría.
 
-```javascript
+```jsx
 // InputText.js
 import React from 'react';
 
