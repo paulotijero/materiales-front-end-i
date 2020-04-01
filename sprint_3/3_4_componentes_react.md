@@ -130,7 +130,7 @@ Echa un ojo al [ejemplo anterior en codepen][codepen-props-example], e intenta a
 Ahora tenemos los datos de cada item en un array de objetos (como variable global):
 
 ```js
-const items = [
+const arrayOfItems = [
   {
     name: 'Cereales con chocolate',
     description: 'Cereales rellenos de chocolate',
