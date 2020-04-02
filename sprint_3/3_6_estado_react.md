@@ -31,7 +31,7 @@ React es especialmente bueno manejando los pequeños cambios que se necesitan en
 
 ## Manejo del estado en un componente de React
 
-El estado de un componente es la memoria **en cada momento** que tiene la instancia de un componente que se está mostrando en pantalla. Se trata de un atributo de la instancia parecido a las `props`, al que podremos acceder con `this.state`. Al contrario que las `props`, el **estado varía** durante el tiempo en que el componente aparece pintado en la pantalla. Es decir, las `props` no podemos cambiarlas, pero los estados, sí, aunque de cierta manera. En la siguiente sección (_¿Qué pasa cuando hay un cambio de estado?_) veremos cómo afecta esto a nuestro componente.
+El estado de un componente es la memoria **en cada momento** que tiene la instancia de un componente que se está mostrando en pantalla. Se trata de un atributo de la instancia parecido a las `props`, al que podremos acceder con `this.state`. Al contrario que las `props`, el **estado varía** durante el tiempo en que el componente aparece pintado en la pantalla. Es decir, las `props` no podemos cambiarlas desde dentro del componente, pero los estados, sí, aunque de cierta manera. En la siguiente sección (_¿Qué pasa cuando hay un cambio de estado?_) veremos cómo afecta esto a nuestro componente.
 
 Por defecto, el estado de un componente está vacío. Hay dos momentos y maneras distintas de darle valor: en el `constructor()` del componente, y en cualquier otro momento con `setState()`.
 
@@ -39,7 +39,7 @@ Por defecto, el estado de un componente está vacío. Hay dos momentos y maneras
 
 En el `constructor()` podemos definir el estado que tendrá el componente en el primer momento en que se muestre en pantalla. En otras palabras, el estado inicial del componente. Lo haremos asignando a `this.state` un objeto con los valores iniciales de **todos los estados** que vaya a tener el componente:
 
-```js
+```jsx
 const generateRandomInteger = maxValue => Math.floor(Math.random() * maxValue);
 
 class RandomInteger extends React.Component {
@@ -60,11 +60,11 @@ class RandomInteger extends React.Component {
 
 > Nota: El `constructor` es el **único lugar** donde podremos asignar directamente un valor a `this.state`. En el resto, debemos usar `setState()`
 
-Como en este ejemplo el estado nunca cambia más, puede parecer que esto no sirve de mucho comparado con las `props`, pero en realidad ya hemos delegado la responsabilidad de generar el número aleatorio al propio componente. El componente ahora es independiente y ningún componente padre o madre debe mandarle qué número mostrar. Hemos declarado un componente con identidad propia (y quizá adolescente, :P ).
+Como en este ejemplo el estado nunca cambia, puede parecer que esto no sirve de mucho comparado con las `props`, pero en realidad ya hemos delegado la responsabilidad de generar el número aleatorio al propio componente. El componente ahora es independiente y ningún componente padre o madre debe mandarle qué número mostrar. Hemos declarado un componente con identidad propia (y quizá adolescente, :P ).
 
 ### Actualizar el estado: el método `setState()`
 
-Ahora bien, hemos dicho que podemos cambiar el estado. Sin embargo, tenemos que hacerlo de cierta manera. Sabemos que los componentes en React son declarativos: no decimos _cómo_ se hace un componente, sino el _qué_, y React es quien se encarga del _cómo_. A la hora de cambiar los valores del estado, **no podremos asignar directamente los valores a `this.state`** o cualquiera de sus propiedades, sino que utilizaremos el método `setState()` del componente: React se encargará del resto.
+Ahora bien, hemos dicho que podemos cambiar el estado del componente, por ejemplo cuando la usuaria pulse en un botón o escriba en un campo de texto. Sin embargo, tenemos que hacerlo de cierta manera. Sabemos que los componentes en React son declarativos: no decimos _cómo_ se hace un componente, sino el _qué_, y React es quien se encarga del _cómo_. A la hora de cambiar los valores del estado, **no podremos asignar directamente los valores a `this.state`** o cualquiera de sus propiedades, sino que utilizaremos el método `setState()` del componente: React se encargará del resto.
 
 Podemos llamar a `setState()` de varias maneras. La más común y sencilla de ellas es pasarle un **objeto literal** con las claves (nombres) del estado que queremos cambiar y sus valores. Es decir, si tenemos tres estados `a`, `b` y `c`, pero solo queremos cambiar el valor de `c`, pasaremos un objeto `{ c: 'nuevo valor' }`, sin incluir `a` ni `b`. React lo mezclará con el estado actual y solo cambiará las propiedades que deba cambiar.
 
@@ -101,7 +101,9 @@ class BipolarButton extends React.Component {
 
 &blacktriangleright; [`setState()` de objeto literal en Codepen][codepen-setstate-object-literal]
 
-Utilizaremos la forma del objeto literal cuando el nuevo valor no dependa del anterior o de ningún otro estado del componente actual. Como React no asegura que los cambios de estado se ejecuten en el momento (los agrupa en lotes), si usamos el valor de un estado actual para calcular otro podemos estar usando un estado que no tiene el valor que pretendemos. Eso es una fuente de errores. Para esos casos existe otra manera de llamar a `setState()`, esta vez le pasamos una función, un `callback`. El `callback` recibe como parámetros el estado que modificaremos (`prevState`), y las `props` del componente, y devolverá un objeto literal con las claves (nombres) de los estados que queremos cambiar. Es más fácil verlo que contarlo:
+### Actualizar el estado con el estado previo
+
+Utilizaremos la forma del objeto literal **cuando el nuevo valor no dependa del anterior** o de ningún otro estado del componente actual. Como React no asegura que los cambios de estado se ejecuten en el momento (los agrupa en lotes), si usamos el valor de un estado actual para calcular otro podemos estar usando un estado que no tiene el valor que pretendemos. Eso es una fuente de errores. Para esos casos existe otra manera de llamar a `setState()`, esta vez le pasamos una función, un `callback`. El `callback` recibe como parámetros el estado que modificaremos (`prevState`), y las `props` del componente, y devolverá un objeto literal con las claves (nombres) de los estados que queremos cambiar. Es más fácil verlo que contarlo:
 
 ```js
 class BipolarButton extends React.Component {
@@ -152,15 +154,13 @@ this.setState((prevState, props) => ({
 
 [&blacktriangleright; `setState()` con función en Codepen][codepen-setstate-incremental-function]
 
----
-
 #### EJERCICIO 1
 
 **Mostrando info relacionada**
 
 Vamos a partir de una web sencilla con un input de tipo texto y un párrafo vacío. ¿Seremos capaces de hacer que con React y el estado, cuando modificamos el input aparezca el texto en el párrafo?
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 #### EJERCICIO 2
 
@@ -170,19 +170,19 @@ Vamos a crear una página con una cuadrado de tamaño fijo (por ejemplo un `div`
 
 > PISTA: Al escuchar el evento de clic para comprobar de qué color estaba anteriormente el cuadrado, usaremos la versión de `setState` que toma como parámetro el `prevState`
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 #### EJERCICIO 3
 
 **Qué hora será**
 
-Hace unas semanas, la empresa Time2Sleep nos encargó una página que mostrase sus ejercicios de relajación orientados a agilizar el sueño. Después de publicarla, recibieron _feedback_ de sus usuarios: se quedaban tan profundamente dormidos que, al despertar, no recordaban ni su nombre. Como quedaron muy contentos con el trabajo (literalmente: _"¡cómo nos flipan estas adalabers!"_), ahora nos han pedido una evolutiva, que es como se llama a las funcionalidades que se añaden a un proyecto ya hecho, para que añadamos un reloj a la web. Así sus usuarios sabrán al menos qué hora es.
+Hace unas semanas, la empresa Time2Sleep nos encargó una página que mostrase sus ejercicios de relajación orientados a agilizar el sueño. Después de publicarla, recibieron _feedback_ de sus usuarios: se quedaban tan profundamente dormidos que, al despertar, no recordaban ni su nombre. Como quedaron muy contentos con el trabajo (literalmente: _"¡cómo nos flipan estas adalabers!"_), ahora nos han pedido una evolutiva (que es como se llama a las funcionalidades que se añaden a un proyecto ya hecho) para que añadamos un reloj a la web. Así sus usuarios sabrán al menos qué hora es.
 
 Vamos a crear un componente reloj (`Clock`) que nos muestre la hora en cada momento. Tendrá un método `updateClock()` en el componente para actualizar el estado con `setState(/* objeto */)`, que actualizará la hora con `new Date()`. En el constructor del componente declararemos un `setInterval()` que ejecute `updateClock` cada segundo.
 
 > PISTA: para obtener la información de la hora con un objeto de tipo fecha, podemos usar los métodos `getHours`, `getMinutes` y `getSeconds` como se explica en [la página de MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date)
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 #### EJERCICIO 4
 
@@ -192,7 +192,7 @@ Definitivamente, Time2Sleep es fan de Adalab. Esta vez, basándose en unos noved
 
 Crearemos un componente cuentaovejas (`SheepCounter`) que mostrará un número en grande y un botón. El botón tendrá asignado un escuchador al evento `click` que aumentará el contador. Actualizaremos el valor del contador con `setState(/* función */)`.
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 ## ¿Qué pasa cuando hay un cambio de estado?
 
@@ -200,9 +200,9 @@ Como hemos visto varias veces arriba, React no asegura que los cambios de estado
 
 Un cambio de estado no solo cambia los valores de `this.state`. Lo más importante que hace es **volver a llamar al método `render()`** del componente después. Recordemos que podemos usar valores del estado en nuestro JSX como texto, para calcular otros valores que utilizaremos o como `props` para otros componentes hijo, por ejemplo. Cuando el estado cambia, el componente se tiene que re-`render`izar de nuevo, y si las `props` de los hijos cambian, esos componentes hijos también tienen que re-`render`izarse, y sus hijos a su vez. Así que cambiar el estado es costoso, porque hace que vuelvan a `render`izarse varios componentes **en cadena**.
 
-> **NOTA**: a partir de ahora tenemos que recordar que, para que un componente vuelva a pintarse, es decir, se ejecute su método `render` puede ser por 2 motivos: 1) por un cambio en el estado (`this.state`) o 2) por un cambio en las `props` que le llegan del componente padre.
+> **NOTA**: a partir de ahora tenemos que recordar que, para que un componente vuelva a pintarse, es decir, se ejecute su método `render` puede ser por 2 motivos: 1) por un cambio en el estado (`this.state`) o 2) por un cambio en las `props` que le llegan del componente madre.
 
-Ahora podemos entender por qué React no asegura que los cambios de estado ocurran al momento, aunque sean bastante rápidos. Cuando llamamos a `setState()` en cualquiera de sus formas, React registra esa **petición** de cambio de estado y la añade a una cola de tareas por hacer. Para no tener que re-`render`izar componentes demasiadas veces, es posible que agrupe en lotes (_batches_) algunos cambios de estado a la vez y los procese juntos para mejorar con eso el rendimiento. Esto significa que tendremos que pensar **las llamadas a `setState()` como llamadas asíncronas**.
+Ahora podemos entender porqué React no asegura que los cambios de estado ocurran al momento, aunque sean bastante rápidos. Cuando llamamos a `setState()` en cualquiera de sus formas, React registra esa **petición** de cambio de estado y la añade a una cola de tareas por hacer. Para no tener que re-`render`izar componentes demasiadas veces, es posible que agrupe en lotes (_batches_) algunos cambios de estado a la vez y los procese juntos para mejorar con eso el rendimiento. Esto significa que tendremos que pensar **las llamadas a `setState()` como llamadas asíncronas**.
 
 ### El `callback` de `setState()`
 
@@ -221,8 +221,6 @@ this.setState(
 
 El `callback` se ejecutará justo después de que el cambio de estado haya tenido lugar, así que se pueden usar los nuevos valores de `this.state` sin problema.
 
----
-
 #### EJERCICIO 5
 
 **Contador de ovejas avanzado**
@@ -231,11 +229,11 @@ Sobre el componente cuentaovejas (`SheepCounter`) del ejercicio anterior, añadi
 
 > Podéis usar esta imagen por ejemplo: http://www.clker.com/cliparts/e/4/8/7/13280460782141411990Cartoon%20Sheep.svg.hi.png
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 ## _Spread operator_
 
-El operador _spread_ (`...`) convierte un array o un objeto en el conjunto de valores que contiene, por lo que nos permite usarlos como si estuvieran escritos en el propio código. Una de las ventajas que nos ofrece el operador _spread_ es que no tenemos por qué saber qué hay en el array u objeto en cada momento.
+El operador _spread_ (que se expresa con 3 puntos suspensivos `...`) convierte un array o un objeto en el conjunto de valores que contiene, por lo que nos permite usarlos como si estuvieran escritos en el propio código. Una de las ventajas que nos ofrece el operador _spread_ es que **no tenemos por qué saber qué hay en el array u objeto cuando estamos escribiendo nuestro código**.
 
 ### _Spreading_ de array
 
@@ -248,6 +246,14 @@ const newNames = [...names, 'Williams'];
 
 console.log(newNames)); // ['Smith', 'White', 'Black', 'Pinkman', 'Williams']
 ```
+
+Lo que JavaScript está haciendo por detrás es:
+
+```js
+const newNames = [names[0], names[1], names[2], names[3], 'Williams'];
+```
+
+JavaScript nos evita escribir a mano el código anterior. Imagina que `names` en vez de tener 4 nombres tuviera 400. O imagina que no sabemos cuántos nombres tiene cuando estamos escribiendo nuestro código.
 
 Ahora pongamos que queremos mezclar dos arrays distintos que tenemos:
 
@@ -275,6 +281,21 @@ const twinSister = { ...person, name: 'Juliette' };
 
 console.log(twinSister); // { name: 'Juliette', lastName: 'Smith', age: 39 }
 ```
+
+Lo que JavaScript está haciendo por detrás es:
+
+```js
+const twinSister = {
+  name: 'Marie',
+  lastName: 'Smith',
+  age: 39,
+  name: 'Juliette'
+};
+```
+
+Como en el objeto `twinSister` está dos veces la propiedad `name`, la segunda sobre escribe a la primera, y el valor final de `name` es 'Juliette'.
+
+Al igual que en el ejemplo anterior de los arrays, puede ser que a la hora de escribir nuestro código no sepamos cuántas propiedades tiene el objeto ni con qué valores.
 
 ### Copia vs referencia
 
@@ -344,8 +365,6 @@ this.setState(prevState => {
 
 En este ejemplo creamos una copia del objeto `userData` usando spread y después actualizamos la propiedad `age` al nuevo valor (33). Ten en cuenta que el orden es importante, y si hay una propiedad repetida, prevalece la de más abajo (como en la cascada de CSS).
 
----
-
 #### EJERCICIO 6
 
 **Info del usuario**
@@ -379,6 +398,8 @@ this.setState(prevState => {
 });
 ```
 
+\_\_\_\_\_\_\_\_\_\_
+
 ### BONUS
 
 #### EJERCICIO BONUS 7
@@ -405,7 +426,7 @@ this.state = {
 
 Al turrón!
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 ### Spread y parámetros de funciones
 
@@ -438,8 +459,6 @@ function showFavoriteFruits(first, ...rest) {
 const myFavoriteFruits = ['orange', 'banana', 'pear'];
 showFavoriteFruits(...myFavoriteFruits); // 'My favourite fruit is the orange, although I like banana and pear also.'
 ```
-
----
 
 ## Recursos externos
 
