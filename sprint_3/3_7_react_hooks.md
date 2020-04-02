@@ -140,6 +140,8 @@ this.setState({
 
 Después de cada modificación React sabrá que tiene que actualizar el estado del componente como siempre lo ha hecho.
 
+> **NOTA:** La forma de declarar `name` y `setName` con esta sintaxis `const [name, setName] = useState('Elena');` todavía no la conocéis, se llama [destructuring](https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Operadores/Destructuring_assignment) y la explicaremos en próximas lecciones.
+
 Todo esto es muy bonito, pero ¿podemos ver un ejemplo más real?
 
 Mira el componente App.js que hemos utilizado al inicio:
