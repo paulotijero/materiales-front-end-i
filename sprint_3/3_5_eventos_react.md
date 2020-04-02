@@ -45,16 +45,17 @@ En el módulo 2 vimos los eventos del DOM y cómo escuchar eventos desde JavaScr
 
 Vamos a ver un ejemplo. Queremos escuchar un evento de `click` desde un botón que declaramos con JSX. Escribiremos el botón (`<button>texto</button>`) y en un atributo `onClick` (ojo con la mayúscula) añadiremos la función "escuchadora", que será la reacción. Quedará así:
 
-```js
-const alertButton =
+```jsx
+const alertButton = (
   <button onClick={ /* aquí va la función */ }>
     Pedir más información
-  </button>;
+  </button>
+);
 ```
 
 Podríamos escribir directamente la función escuchadora como una _arrow function_ ahí, pero no quedaría legible. Preferiremos declararla fuera y la pasaremos (sin llamarla) al atributo de JSX:
 
-```js
+```jsx
 const onClickListener = ev => {
   alert('Para más información, acuda a recepción.');
 };
