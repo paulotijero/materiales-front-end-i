@@ -155,7 +155,7 @@ Este fichero corresponde a nuestro primer _componente_ de React, pero ya veremos
 
 #### IMPORTANTE
 
-En las nuevas versiones de **Create React App** el componente `App` ya no es una clase sino una función y algunos de los ejemplos de código pueden variar. En clase veremos como gestionar esto y para ello debéis instalar esta extensión de Code: [react-pure-to-class-vscode](https://marketplace.visualstudio.com/items?itemName=angryobject.react-pure-to-class-vscode).
+En las nuevas versiones de **Create React App** el componente `App` ya no es una clase sino una función y algunos de los ejemplos de código pueden variar. En clase veremos cómo gestionar esto y para ello debéis instalar esta extensión de Code: [react-pure-to-class-vscode](https://marketplace.visualstudio.com/items?itemName=angryobject.react-pure-to-class-vscode).
 
 ---
 
@@ -322,7 +322,7 @@ Este flujo es más útil cuando creamos una aplicación web compleja que cambie 
 
 ## Usando Sass en nuestro proyecto de React
 
-Durante el curso hemos usado `gulp` para compilar Sass en nuestro proyectos. En el caso de los proyectos de React, que creamos con `create-react-app`, ya tienen su propio sistema de automatización de tareas que convierte los ficheros en ES6 a ES5 con Babel, y lanza un servidor local. Es mejor que, por tanto, en vez de incluir más herramientas como `gulp` usamos el sistema de automatización que ya tenemos (basado en [webpack](https://webpack.js.org/), por cierto) para observar los ficheros SCSS y compilarlos a CSS.
+Durante el curso hemos usado `gulp` para compilar Sass en nuestro proyectos. En el caso de los proyectos de React, que creamos con `create-react-app`, ya tienen su propio sistema de automatización de tareas que convierte los ficheros en ES6 a ES5 con Babel, y lanza un servidor local. Es mejor que, por tanto, en vez de incluir más herramientas como `gulp` usemos el sistema de automatización que ya tenemos (basado en [webpack](https://webpack.js.org/), por cierto) para observar los ficheros SCSS y compilarlos a CSS.
 
 Para utilizar SASS en nuestro proyecto REACT simplemente podemos enlazar ficheros `.scss` desde nuestros componentes y webpack se encargará de hacer la conversión a CSS. El único paso adicional es instalar `node-sass`, cuando lo hagamos nos aparecerá este warning al intentar usar Sass por primera vez.
 
@@ -335,7 +335,7 @@ Así que si ejecutamos `npm install node-sass` en nuestra terminal la primera ve
 
 ### ¿Y cómo quedará esto en nuestros proyectos?
 
-Vamos a partir de el proyecto base que nos crea `create-react-app` y vamos a cambiar nuestro `App.css` a `App.scss`, ahora enlazamos directamente nuestro scss:
+Vamos a partir del proyecto base que nos crea `create-react-app` y vamos a cambiar nuestro `App.css` a `App.scss`, ahora enlazamos directamente nuestro scss:
 
 **App.js**
 ```js
