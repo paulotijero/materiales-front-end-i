@@ -21,14 +21,14 @@ Ahora nuestros componentes funcionales también manejarán el estado.
 
 ## ¿Para qué sirve lo que vamos a ver en esta sesión?
 
-Ya sabemos lo que es el estado de nuestra aplicación y cómo lo hemos manejado hasta ahora a través de componentes de clase. A medida que las aplicaciones crecían y se volvían más grandes los componentes de clase se volvían más complejos por eso a partir de la versión 16.8 de React surgió una nueva manera de manipular el estado a través de componentes funcionales, evitando así todo el "engorro" de tener que escribir un componente de clase cada vez que necesitaba manejar el estado de una aplicación. En el mundo React actualmente conviven las dos maneras de trabajar, ya que los React Hooks son un concepto muy nuevo y aún no están completamente extendidos.
+Ya sabemos lo que es el estado de nuestra aplicación y cómo lo hemos manejado hasta ahora a través de componentes de clase. A medida que las aplicaciones crecían y se volvían más grandes, los componentes de clase se volvían más complejo. Por eso, a partir de la versión 16.8 de React, surgió una nueva manera de manipular el estado a través de componentes funcionales, evitando así todo el "engorro" de tener que escribir un componente de clase cada vez que necesitábamos manejar el estado de una aplicación. En el mundo React actualmente conviven las dos maneras de trabajar, ya que los React Hooks son un concepto muy nuevo y aún no están completamente extendidos.
 Antes de continuar, debes saber que los Hooks son:
 
  - Completamente opcionales. Es necesario que sepas que existen pero su uso no es obligatorio.
  - 100% compatibles con versiones anteriores de React.
  - Por el momento no hay planes para eliminar los componentes de clases de React.
 
-Los Hooks no reemplazan tu conocimiento de los conceptos de React. Todo lo contrario, complementan y amplian estos conceptos que ya conoces: props, estado, lifting... y otros que veremos más adelante. Además seguiremos manejando la estructura que ya conocemos con un componente principal que "dirija" nuestra aplicación, la única diferencia es que ya podríamos usarlo como componente funcional y seguir controlando el estado.
+Los Hooks no reemplazan tu conocimiento de los conceptos de React. Todo lo contrario, complementan y amplian estos conceptos que ya conoces: props, estado, lifting... y otros que veremos más adelante. Además, seguiremos manejando la estructura que ya conocemos con un componente principal que "dirija" nuestra aplicación, la única diferencia es que ya podríamos usarlo como componente funcional y seguir controlando el estado.
 
 ## Qué son los hooks
 
@@ -94,7 +94,7 @@ const App = () => {
 }
 ```
 
-Como puedes ver, y aunque explicaremos más adelante este primer hook, `useState`, el tamaño y la complejidad del componente se ha reducido. Además se ha eliminado la posible confusión que generan el uso de componentes de clase.
+Como puedes ver, y aunque explicaremos más adelante este primer hook, con `useState`, el tamaño y la complejidad del componente se ha reducido. Además, se ha eliminado la posible confusión que generan el uso de componentes de clase.
 
 ## Manejando el estado con hooks.useState()
 
@@ -102,7 +102,7 @@ Existen dos tipos de Hooks en React, los hooks de la propia librería, que viene
 
 Uno de los hooks predefinidos más populares y útiles es `useState`. Por cierto, la convención para nombrar un Hook es usar la palabra 'use', seguida de otra palabra que lo describa, como en este caso 'state' porque a través de este hook podemos manejar el estado del componente.
 
-Para usar un Hook primero necesitamos un componente funcional, ojo, los hooks sólo funcionan con componentes funcionales y no con componentes clase, también necesitamos importar el hook que vamos a utilizar, en este caso, useState:
+Para usar un Hook primero necesitamos un componente funcional, ojo, los hooks sólo funcionan con componentes funcionales y no con componentes de clase. También necesitamos importar el hook que vamos a utilizar, en este caso, useState:
 
 **App.js**
 
