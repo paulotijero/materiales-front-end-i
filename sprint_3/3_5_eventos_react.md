@@ -234,7 +234,7 @@ class RandomMurray extends React.Component {
 
 **Expreso mi odio en rojo**
 
-Partiendo del código ejercicio 1, vamos a hacer que nuestro componente ocupe toda la pantalla disponible, y tenga el `textarea` en el centro. Vamos a hacer que al detectar la palabra cebolla en el texto del `textarea`, en vez de mostrar un alert mostrando nuestro odio, pongamos el fondo del componente de color rojo. Al volver a un texto sin cebolla, el fondo vuelve a ser blanco.
+Partiendo del código del ejercicio 1, vamos a hacer que nuestro componente ocupe toda la pantalla disponible, y tenga el `textarea` en el centro. Vamos a hacer que al detectar la palabra cebolla en el texto del `textarea`, en vez de mostrar un alert mostrando nuestro odio, pongamos el fondo del componente de color rojo. Al volver a un texto sin cebolla, el fondo vuelve a ser blanco.
 
 1. Guardaremos la información de si estamos odiando o no en un atributo de la clase. Para ello en el constructor pondremos `this.isHating = false`.
 2. En la función que maneja el evento `change` del textarea modificaremos el atributo `isHating` y usaremos el método `this.forceUpdate()` para forzar el repintado.
@@ -391,7 +391,7 @@ ReactDOM.render(<MurrayList />, document.getElementById('react-root'));
 
 Para terminar de entender bien cómo funciona el lifting vamos a hacer un ejercicio muy sencillo. Partimos de un select con nombre de ciudades que encapsulamos en un componente `CitySelector`. Vamos a hacer que, al seleccionar una ciudad del select, aparezca una foto de la misma al lado. La diferencia con ejercicios anteriores es que ahora el select está en su propio componente. Para llevarlo a cabo debemos:
 
-- guardar en un atributo de la clase la ciudad seleccionada inicial, por ejemplo, `this.selectedCity = 'Madrid'` y usarlo para pintar la imagen en el `render`
+- guardar en un atributo de la clase la ciudad seleccionada como inicial, por ejemplo, `this.selectedCity = 'Madrid'` y usarlo para pintar la imagen en el `render`
 - crear un método `handleClick` que actualice el valor de `selectedCity` y llame a `forceUpdate` para forzar el repintado de la imagen
 - y usar lifting para pasarlo al componente hijo que se ejecute al cambiar el select
 
@@ -411,7 +411,7 @@ Para terminar de entender bien cómo funciona el lifting vamos a hacer un ejerci
 
 Pues es hora de contraatacar y crear nuestro propio traductor MIMIMI con React.
 
-Vamos a partir de un formulario simple con un textarea donde escribimos una frase. Según vamos escribiendo, obtendremos en un párrafo el resultado de la traducción a MIMIMI. Es importante que tanto formulario como el párrafo resultado estén cada uno en su propio componente independiente. El componente del formulario, por ejemplo `TextInput`, simplemente se encarga de recoger los cambios de la usuaria y enviarlo al componente madre `App`, que los guarda en un atributo y fuerza el repintado. El componente `MIMIMITranslator` recoge el texto que le pasan por props, lo traduce y muestra en un párrafo.
+Vamos a partir de un formulario simple con un textarea donde escribimos una frase. Según vamos escribiendo, obtendremos en un párrafo el resultado de la traducción a MIMIMI. Es importante que tanto el formulario como el párrafo resultado estén cada uno en su propio componente independiente. El componente del formulario, por ejemplo `TextInput`, simplemente se encarga de recoger los cambios de la usuaria y enviarlo al componente madre `App`, que los guarda en un atributo y fuerza el repintado. El componente `MIMIMITranslator` recoge el texto que le pasan por props, lo traduce y muestra en un párrafo.
 
 > PISTA: para realizar la traducción basta con buscar [una expresión regular (RegExp)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp) y el método `replace` de las cadenas. Si buscas "javascript regex replace vowels" en Google va a ser fácil de encontrar.
 
@@ -449,7 +449,7 @@ Tenemos un componente principal que es `Form.js`, en el que podemos ver que:
 
 - En la línea 12 y 18 estamos usando dos veces el componente hijo `InputText`. Esto es lo que llamamos **reutilización de componentes**.
 - Al componente `InputText` le estamos pasando por props un `id`, `label` y `name` que son strings. Estas props se usan en `handleInput` para crear el código HTML personalizado.
-- Además al componente `InputText` le estamos pasando por props un `handleInput` que es una función. **La función `handleFormInput` será ejecutada por el componente hijo `handleInput` cuando suceda un evento.** A esto es a lo que llamamos **lifting**.
+- Además, al componente `InputText` le estamos pasando por props un `handleInput` que es una función. **La función `handleFormInput` será ejecutada por el componente hijo `handleInput` cuando suceda un evento.** A esto es a lo que llamamos **lifting**.
 
 ```jsx
 // Form.js
@@ -527,7 +527,7 @@ En resumen, para hacer lifting con componentes funcionales **tenemos que ejecuta
 
 #### EJERCICIO 8
 
-Copia estos los dos ficheros del ejemplo anterior en un proyecto de React. Y a continuación:
+Copia estos dos ficheros del ejemplo anterior en un proyecto de React. Y a continuación:
 
 - Añade un tercer campo al formulario para que la usuaria escriba su ciudad.
 - Observa los datos que aparecen en consola cuando la usuaria escribe en los campos del formulario.
