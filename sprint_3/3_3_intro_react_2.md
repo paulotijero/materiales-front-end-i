@@ -17,13 +17,13 @@
 
 [react]: https://reactjs.org/
 
-En esta sesión vamos a seguir aprendiendo cómo funciona la librería [React.js][react]. En concreto, vamos a ver que está basada en componentes y cómo crear un componentes personalizable.
+En esta sesión vamos a seguir aprendiendo cómo funciona la librería [React.js][react]. En concreto, vamos a ver que está basada en componente y cómo crear un componentes personalizable.
 
 ## ¿Para qué sirve lo que vamos a ver en esta sesión?
 
 Un **componente web** es una parte de la interfaz de una página o aplicación web que podemos reutilizar. Por ejemplo, una línea de producto de un carrito de la compra, o un elemento colapsable.
 
-Los frameworks o las librerías como React se basan en este concepto de componentes. De esta forma, todo lo que vamos a crear son componentes que iremos usando para crear la interfaz deseada.
+Los frameworks o las librerías como React se basan en este concepto de componentes. De esta forma, todo lo que vamos a desarrollar son componentes que iremos usando para crear la interfaz deseada.
 
 Los componentes de React, además, pueden personalizarse a través de un mecanismo llamado `props`, que no es otra cosa que pasarle valores a través de los atributos del componente HTML.
 
@@ -147,11 +147,11 @@ Vamos a partir del ejercicio 1 (o del 2) de la sesión anterior. Vamos a crear u
 
 ### Componentes funcionales, otro tipo de componentes
 
-Ya hemos visto como escribir un componente de clase en React, y curiosamente su estructura es igual a la estructura de las clases JS, vamos a ver ahora qué es un componente funcional.
+Ya hemos visto cómo escribir un componente de clase en React, y curiosamente su estructura es igual a la estructura de las clases JS, vamos a ver ahora qué es un componente funcional.
 
 Los componentes funcionales son otro tipo de componentes que utilizan la estructura de una función para definirse y más adelante, cuando veamos el uso de los hooks, aprenderemos que son los que vamos a utilizar en estos casos.
 
-Actualmente y dado que React es una tecnología muy nueva que aún está evolucionando, conviven estos dos tipos de componentes en los proyectos actuales (por eso, cuando habéis instalado React la primera vez habéis visto App.js escrtio en forma de función en lugar de como clase).
+Actualmente, y dado que React es una tecnología muy nueva que aún está evolucionando, conviven estos dos tipos de componentes en los proyectos actuales (por eso, cuando habéis instalado React la primera vez habéis visto App.js escrtio en forma de función en lugar de como clase).
 
 Vamos a ver cómo sería nuestro componente Greeting escrito como clase:
 
@@ -221,7 +221,7 @@ const componentToRender = <Greeting name="María Moliner" />;
 ReactDOM.render(componentToRender, document.getElementById('root'));
 ```
 
-Estos datos se llaman `props` y se guardan en un atributo de las instancias del mismo nombre. Podemos acceder a él a través de `this.props`, en el caso de los componentes de clase o directamente usando `props` en el caso de un componente funcional. Es un objeto que contiene las claves y los valores de estos "atributos". Mira este ejemplo de props en usadas en un componente de clase.
+Estos datos se llaman `props` y se guardan en un atributo de las instancias del mismo nombre. Podemos acceder a él a través de `this.props`, en el caso de los componentes de clase o directamente usando `props` en el caso de un componente funcional. Es un objeto que contiene las claves y los valores de estos "atributos". Mira este ejemplo de props usadas en un componente de clase.
 
 ```js
 render() {
