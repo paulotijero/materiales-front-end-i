@@ -75,7 +75,7 @@ class Item extends React.Component {
 }
 ```
 
-Ahora, desde un componente padre para crear un item y pasarle la información por `props` lo hacemos así (recordad que esto es JSX pero es la sintaxis de HTML que ya conocemos):
+Ahora, desde un componente padre para crear un item y pasarle la información por `props`, lo hacemos así (recordad que esto es JSX pero es la sintaxis de HTML que ya conocemos):
 
 ```js
 <Item
@@ -374,4 +374,4 @@ Documentación oficial de React (en inglés).
 
 Serie de clases en vídeo que introduce y explora los fundamentos básicos de React.
 
-- [Cómo usar componentes como `children` de otros componentes en React](https://reactjs.org/docs/typechecking-with-proptypes.html#default-prop-values)
+- [Cómo usar componentes como `children` de otros componentes en React](https://egghead.io/lessons/react-use-react-components-as-children-for-other-components)
