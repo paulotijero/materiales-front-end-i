@@ -225,7 +225,7 @@ El `callback` se ejecutará justo después de que el cambio de estado haya tenid
 
 **Contador de ovejas avanzado**
 
-Sobre el componente cuentaovejas (`SheepCounter`) del ejercicio anterior, añadimos la funcionalidad de que, además de mostrar el número de ovejas, muestra también la imagen de una oveja. Por ejemplo, si el contador está en 6, además de aparecer el número 6 veremos 6 imágenes de ovejas.
+Sobre el componente cuentaovejas (`SheepCounter`) del ejercicio anterior, añadimos la funcionalidad de que, además de mostrar el número de ovejas, muestre también la imagen de una oveja. Por ejemplo, si el contador está en 6, además de aparecer el número 6 veremos 6 imágenes de ovejas.
 
 > Podéis usar esta imagen por ejemplo: http://www.clker.com/cliparts/e/4/8/7/13280460782141411990Cartoon%20Sheep.svg.hi.png
 
@@ -301,7 +301,7 @@ Al igual que en el ejemplo anterior de los arrays, puede ser que a la hora de es
 
 Recordemos que en el módulo de javascript aprendimos que si teniamos un array o un objeto literal en una variable, al guardarlo en otra, en realidad guardábamos una _referencia_ del array/objeto.
 
-De manera que si modificábamos o mutábamos una de las dos variables, por ejemplo con un `.push` para el caso del array o cambiando el valor de una propiedad para el caso del objeto, estos cambios también sucedían en la otra variable, ya que el array u objeto contenido en ambas era el mismo.
+De manera que si modificábamos o mutábamos una de las dos variables, por ejemplo con un `.push`, para el caso del array, o cambiando el valor de una propiedad para el caso del objeto. Estos cambios también sucedían en la otra variable, ya que el array u objeto contenido en ambas era el mismo.
 
 El operador _spread_ nos permite hacer una copia de un objeto o array en un momento dado. De manera que si cambiamos o mutamos, por ejemplo, el original, la copia no se ve afectada, ya que son independientes y no comparten referencia.
 
@@ -339,7 +339,7 @@ Este objeto debía tener, como mínimo, una de las propiedades que se encuentran
 
 Pero, ¿y si queremos actualizar una propiedad que no está a primer nivel, por ejemplo `age`?. En estos casos tenemos que identificar la propiedad madre en el primer nivel, en nuestro ejemplo sería `userData`, y es la que tenemos que modificar.
 
-Las propiedades hijas de `userData` (`eyeColor, mostHatedFruit...`) ya no se encuentran a primer nivel y React no las controla, es nuestra responsabilidad que al modificar una las otras no se vean afectadas.
+Las propiedades hijas de `userData` (`eyeColor, mostHatedFruit...`) ya no se encuentran a primer nivel y React no las controla, es nuestra responsabilidad que, al modificar una, las otras no se vean afectadas.
 
 En este punto, si tenéis que modificar la clave `age`, es posible que penséis en algo así:
 
@@ -420,7 +420,7 @@ this.state = {
 1. Cada vez que el input cambie, hay que actualizar la clave del estado `newFruit`
 1. Cuando se pulse el botón 'Añadir' hay que:
    - actualizar la clave del estado `popularFruits` con el valor de `newFruit`. Ojo, no vale mutar el array contenido en `popularFruits` con un push. Usaremos `spread` o el método de array `.concat` para generar un nuevo array.
-   - actualizar el valor de `newFruit` cn comitas vacias para limpiar el input.
+   - actualizar el valor de `newFruit` con comitas vacías para limpiar el input.
 1. Ahora vamos a añadir un botón 'Eliminar' junto a cada fruta, a este botón tenemos que añadirle un atributo `value` o `data-fruit` con el nombre de la fruta junto a la que se encuentra como valor.
 1. Cuando se pulse el botón tenemos que recoger la fruta que queremos eliminar y actualizar la clave del estado `popularFruits` con un nuevo array que no contenga dicha fruta. El método `.filter` de array que devuelve una copia nueva puede ayudaros con esta tarea.
 
