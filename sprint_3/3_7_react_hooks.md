@@ -76,7 +76,8 @@ Bien, hasta aquí es terreno conocido, y ahora ¿cómo podríamos pasar App.js a
 **App.js como componente funcional con el hook useState**
 
 ```jsx
-import React, { useState } from 'react';
+import { useState } from 'react';
+import React from 'react';
 
 const App = () => {
   const [number, setNumber] = useState(0);
@@ -107,7 +108,8 @@ Para usar un Hook primero necesitamos un componente funcional, ojo, los hooks s�
 **App.js**
 
 ```jsx
-import React, { useState } from 'react';
+import { useState } from 'react';
+import React from 'react';
 
 const App = () => {
   return (
@@ -149,7 +151,8 @@ Mira el componente App.js que hemos utilizado al inicio:
 **App.js**
 
 ```jsx
-import React, { useState } from 'react';
+import { useState } from 'react';
+import React from 'react';
 
 const App = () => {
   const [number, setNumber] = useState(0);
@@ -172,7 +175,8 @@ Como puedes ver es nuestro ya conocido componente principal que renderiza a su v
 **RandomInteger.js**
 
 ```jsx
-import React, { useState } from 'react';
+import { useState } from 'react';
+import React from 'react';
 
 const RandomInteger = props => {
 
@@ -200,7 +204,8 @@ const [number, setNumber] = useState(0);
 Así nuestro componente App.js quedaría así:
 
 ```jsx
-import React, { useState } from 'react';
+import { useState } from 'react';
+import React from 'react';
 
 const App = () => {
   const [number, setNumber] = useState(0);
@@ -228,7 +233,8 @@ En nuestra función manejadora del click ejecutamos la función que setea el nue
 **App.js**
 
 ```jsx
-import React, { useState } from 'react';
+import { useState } from 'react';
+import React from 'react';
 
 const App = () => {
   const [number, setNumber] = useState(0);
@@ -259,26 +265,27 @@ Hasta ahora hemos visto cómo se maneja el estado de una propiedad, pero ¿y si 
 **App.js**
 
 ```jsx
-import React, { useState } from 'react';
+import { useState } from 'react';
+import React from 'react';
 
 const App = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
 
-  const handleInputName = () => {
-    setName(ev.target.value);
+  const handleInputName = (evt) => {
+    setName(evt.target.value);
   };
-  const handleInputEmail = () => {
-    setEmail(ev.target.value);
+  const handleInputEmail = (evt) => {
+    setEmail(evt.target.value);
   };
 
   return (
     <div className='App'>
       <form>
         <label htmlFor='name'>Nombre</label>
-        <input type='text' name='name' onClick={handleInputName} placeholder='Escribe aquí tu nombre' />
+        <input type='text' name='name' onChange={handleInputName} placeholder='Escribe aquí tu nombre' />
         <label htmlFor='email'>Email</label>
-        <input type='text' name='email' onClick={handleInputEmail} placeholder='Escribe aquí tu email' />
+        <input type='text' name='email' onChange={handleInputEmail} placeholder='Escribe aquí tu email' />
       </form>
 
       <section>
@@ -318,7 +325,8 @@ Debido a cómo interpreta React el orden en que ejecutas tus hooks siempre debes
 **CORRECTO VS INCORRECTO**
 
 ```javascript
-import React, { useState } from 'react';
+import { useState } from 'react';
+import React from 'react'; 
 
 const App = () => {
   const [name, setName] = useState('Elena'); // Correcto ✅
