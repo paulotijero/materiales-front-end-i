@@ -175,7 +175,6 @@ Como puedes ver es nuestro ya conocido componente principal que renderiza a su v
 **RandomInteger.js**
 
 ```jsx
-import { useState } from 'react';
 import React from 'react';
 
 const RandomInteger = props => {
@@ -326,7 +325,7 @@ Debido a cómo interpreta React el orden en que ejecutas tus hooks siempre debes
 
 ```javascript
 import { useState } from 'react';
-import React from 'react'; 
+import React from 'react';
 
 const App = () => {
   const [name, setName] = useState('Elena'); // Correcto ✅
