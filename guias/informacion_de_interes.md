@@ -15,5 +15,5 @@
 - [Live share](https://marketplace.visualstudio.com/items?itemName=MS-vsliveshare.vsliveshare)
 - [Formateador Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
 - [Code validator](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
-- [Git history](https://marketplace.visualstudio.com/items?itemName=donjayamanne.githistory)
+- [Git Graph](https://marketplace.visualstudio.com/items?itemName=mhutchie.git-graph)
 - [ES lint](https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint)
