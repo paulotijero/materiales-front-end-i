@@ -76,8 +76,7 @@ Bien, hasta aquí es terreno conocido, y ahora ¿cómo podríamos pasar App.js a
 **App.js como componente funcional con el hook useState**
 
 ```jsx
-import { useState } from 'react';
-import React from 'react';
+import React, { useState } from 'react';
 
 const App = () => {
   const [number, setNumber] = useState(0);
@@ -108,8 +107,7 @@ Para usar un Hook primero necesitamos un componente funcional, ojo, los hooks s�
 **App.js**
 
 ```jsx
-import { useState } from 'react';
-import React from 'react';
+import React, { useState } from 'react';
 
 const App = () => {
   return (
@@ -151,8 +149,7 @@ Mira el componente App.js que hemos utilizado al inicio:
 **App.js**
 
 ```jsx
-import { useState } from 'react';
-import React from 'react';
+import React, { useState } from 'react';
 
 const App = () => {
   const [number, setNumber] = useState(0);
@@ -203,8 +200,7 @@ const [number, setNumber] = useState(0);
 Así nuestro componente App.js quedaría así:
 
 ```jsx
-import { useState } from 'react';
-import React from 'react';
+import React, { useState } from 'react';
 
 const App = () => {
   const [number, setNumber] = useState(0);
@@ -232,8 +228,7 @@ En nuestra función manejadora del click ejecutamos la función que setea el nue
 **App.js**
 
 ```jsx
-import { useState } from 'react';
-import React from 'react';
+import React, { useState } from 'react';
 
 const App = () => {
   const [number, setNumber] = useState(0);
@@ -264,8 +259,7 @@ Hasta ahora hemos visto cómo se maneja el estado de una propiedad, pero ¿y si 
 **App.js**
 
 ```jsx
-import { useState } from 'react';
-import React from 'react';
+import React, { useState } from 'react';
 
 const App = () => {
   const [name, setName] = useState('');
@@ -324,8 +318,7 @@ Debido a cómo interpreta React el orden en que ejecutas tus hooks siempre debes
 **CORRECTO VS INCORRECTO**
 
 ```javascript
-import { useState } from 'react';
-import React from 'react';
+import React, { useState } from 'react';
 
 const App = () => {
   const [name, setName] = useState('Elena'); // Correcto ✅
