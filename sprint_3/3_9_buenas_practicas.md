@@ -79,19 +79,19 @@ Esto suele usarse mucho para mostrar elementos de _loading_ (_loaders_) mientras
 
 ### Comprobaciones y valores por defecto
 
-Muchas veces vamos a querer hacer comprobaciones antes de pintar cosas en pantalla, por ejemplo, que una variable o sus claves no sean nulas. Lo haremos usando el operador `&&` ya que las condiciones se ejecutan en orden desde la primera y si alguna es falsa dejan de ejecutarse. Por ejemplo, aquí comprobamos primero que `data` no sea null, luego que tenga una clave `name` que no sea nula y si ambas se cumplen pinta el contenido en pantalla. Si no se cumplen, no se pintará nada.
+Muchas veces vamos a querer hacer comprobaciones antes de pintar cosas en pantalla, por ejemplo, que una variable o sus claves no sean nulas. Lo haremos usando el operador `&&` ya que las condiciones se ejecutan en orden desde la primera y, si alguna es falsa, dejan de ejecutarse. Por ejemplo, aquí comprobamos primero que `data` no sea null, luego que tenga una clave `name` que no sea nula y, si ambas se cumplen, pinta el contenido en pantalla. Si no se cumplen, no se pintará nada.
 
 ```js
 return data && data.name && <p>Bienvenido, {data.name}</p>;
 ```
 
-También se usa bastante el operador `||` que ya hemos visto sirve, por ejemplo, para dar valores por defecto. Esto es porque la segunda parte del las operaciones solo se ejecuta si la primera es falsa (o null que es un falsy).
+También se usa bastante el operador `||` que ya hemos visto y que sirve, por ejemplo, para dar valores por defecto. Esto es porque la segunda parte del las operaciones sólo se ejecuta si la primera es falsa (o null, que es un falsy).
 
 ```js
 return data && <p>Bienvenido, {data.name || 'invitado'}</p>;
 ```
 
-En este ejemplo dejamos la primera comprobación de que `data` no sea null, y luego si el nombre no está definido usamos el valor de `'invitado'`.
+En este ejemplo dejamos la primera comprobación de que `data` no sea null; y luego, si el nombre no está definido, usamos el valor de `'invitado'`.
 
 ### `null` no pinta nada
 
@@ -281,7 +281,7 @@ const users = [
 
 ### _Destructuring_ en React
 
-Llegado este punto, es posible que te estés preguntando, "Por mis props ¿dónde encaja esto en React?"
+Llegado este punto, es posible que te estés preguntando, "Por mis props, ¿dónde encaja esto en React?".
 Piensa en los componentes que has desarrollado hasta ahora, ¿cuantas veces has escrito `this.props.something` (clase) o `props.something` (funcional)?, ¡seguro que bastantes!
 
 Veamos un ejemplo de la definición de un componente llamado `Field` que pinta un `label` y un `input` cada vez que es instanciado.
@@ -400,7 +400,7 @@ class Field extends Component {
 ...
 ```
 
-Voila!
+Voilà!
 
 #### EJERCICIO 6
 
