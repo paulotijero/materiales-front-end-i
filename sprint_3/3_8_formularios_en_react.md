@@ -66,7 +66,7 @@ Muy bien, pero hay una cosa más que tenemos que hacer para asegurarnos de que l
 El ciclo que siguen los datos es:
 
 1. el usuario escribe en el `input`
-2. en el evento de cambio se guardan en el estado
+2. a través del evento de cambio se guardan en el estado
 3. al cambiar el estado se ejecuta en método `render` y se asignan como `value` al `input`
 
 ¿Y para qué tanto lío? Pues para garantizar que en el estado tenemos todos los datos necesarios para pintar la interfaz. Vamos a ver cómo queda en el ejemplo anterior.
@@ -103,9 +103,9 @@ class AwesomeForm extends React.Component {
 }
 ```
 
-A estos elemento de formulario que tienen su `value` enlazado al estado del componente se les llama **componentes controlados** (_controlled components_) y son la forma habitual de manejar campos de formulario en React.
+A estos elementos de formulario, que tienen su `value` enlazado al estado del componente, se les llama **componentes controlados** (_controlled components_) y son la forma habitual de manejar campos de formulario en React.
 
-Usar un _componente controlado_ tiene más ventajas, por ejemplo, nos permite validar los datos que introduce el usuario. Como nosotras guardamos los datos en el estado, podemos ejecutar el código que queramos antes de guardarlo y lo que hagamos se verá reflejado en el `input` puesto que está enlazado al estado a través de su `value`. Veamos el ejemplo anterior, pero forzando a que el nombre esté en mayúsculas.
+Usar un _componente controlado_ tiene más ventajas, por ejemplo, nos permite validar los datos que introduce el usuario. Como nosotras guardamos los datos en el estado, podemos ejecutar el código que queramos antes de guardarlo, y lo que hagamos se verá reflejado en el `input`, puesto que está enlazado al estado a través de su `value`. Veamos el ejemplo anterior, pero forzando a que el nombre esté en mayúsculas.
 
 ```js
     handleChange(event) {
@@ -169,11 +169,11 @@ Vamos a añadir más información a nuestro formulario de películas
 
 ## Refs
 
-Hasta ahora sabemos que para pintar la información de nuestro componentes en el DOM hemos delegado totalmente en React: nos hemos olvidado de los `querySelector` y los `innerHTML`. Para modificar en pantalla los datos de un componente, le paso nuevas `props` o modifica su estado y se vuelve a pintar actualizado.
+Hasta ahora sabemos que para pintar la información de nuestros componentes en el DOM hemos delegado totalmente en React: nos hemos olvidado de los `querySelector` y los `innerHTML`. Para modificar en pantalla los datos de un componente, le pasamos nuevas `props` o modifica su estado y se vuelve a pintar actualizado.
 
-Pero para algunos casos concretos vamos a necesitar acceder al DOM directamente y para estos casos React nos ofrece una alternativa: los Refs o referencias al DOM. Debemos usarlos solo en casos muy específicos como:
+Pero para algunos casos concretos vamos a necesitar acceder al DOM directamente y, para estos casos, React nos ofrece una alternativa: los Refs o referencias al DOM. Debemos usarlos solo en ocasiones muy específicas como:
 
-- manejar el foco de un elemento de formulario, la selección de texto o la reproducción multimedia
+- manejar el foco de un elemento de un formulario, la selección de texto o la reproducción multimedia
 - iniciar animaciones
 - integrar en nuestra aplicación librerías externas que usan el DOM
 
