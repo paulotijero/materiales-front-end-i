@@ -2,7 +2,7 @@
 
 ## Mis clubes favoritos
 
-Vamos a recordad nuestros tiempos de universidad y de clubes de actividades, con React!
+Vamos a recordar nuestros tiempos de universidad y de clubes de actividades, con React!
 
 A continuación tenemos una constante con información de nuestros clubes favoritos, del icono que usan (eran unos adelantados usando FontAwesome) y su lista de miembros.
 
