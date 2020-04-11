@@ -427,3 +427,4 @@ Componentes de clase:
 Componentes funcionales:
 
 - [Usando el Hook de Efecto](https://es.reactjs.org/docs/hooks-effect.html)
+- Os recomendamos leer más sobre [Hooks de React](https://es.reactjs.org/docs/hooks-intro.html) y [cuáles hay](https://es.reactjs.org/docs/hooks-reference.html).
