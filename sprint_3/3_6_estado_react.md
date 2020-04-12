@@ -375,7 +375,7 @@ Vamos a partir de un objeto con información de un usuario que tenemos en el est
 {
   firstName: 'Ada',
   lastName: 'Lovelace',
-  birdthDate: {
+  birthDate: {
     day: 10,
     month: 'diciembre',
     year: 1815
@@ -385,7 +385,7 @@ Vamos a partir de un objeto con información de un usuario que tenemos en el est
 
 Vamos a crear un formulario donde vamos a poder modificar estos campos del estado.
 
-> NOTA: Cuidado al modificar los campos anidados dentro del objeto `birdthDate`; recuerda que para modificarlos es muy útil usar en el `setState` el operador spread `...` para mantener el resto de datos de ese objeto. Por ejemplo:
+> NOTA: Cuidado al modificar los campos anidados dentro del objeto `birthDate`; recuerda que para modificarlos es muy útil usar en el `setState` el operador spread `...` para mantener el resto de datos de ese objeto. Por ejemplo:
 
 ```js
 this.setState(prevState => {
