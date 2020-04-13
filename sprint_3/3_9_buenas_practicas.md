@@ -107,7 +107,7 @@ return quixoteFan ? <p>En un lugar de La Mancha ...</p> : null;
 
 Vamos a partir de nuestro ya [querido JSON con un listado de paletas](https://raw.githubusercontent.com/Adalab/Easley-ejercicios-de-fin-de-semana/master/data/palettes.json), para pintar un listado de colapsables. Vamos a pintar el nombre de la paleta y la flechita del colapsable por cada una. Al desplegar un colapsable, se muestra su contenido, que es simplemente el campo `from` del JSON.
 
-> NOTA: Recordad que debemos guardar en el estado del componente de React si los colapsables están o no desplegados. Es más sencillo si solo se puede tener un colapsable desplegado a la vez.
+> NOTA: Recordad que debemos guardar en el estado del colapsable de React si el colapsable está o no desplegados.
 
 \_\_\_\_\_\_\_\_\_\_
 
