@@ -79,8 +79,6 @@ Junto con el atributo `type`, tenemos otro atributo especial llamado `name` que 
 > **Nota:**
 > La etiqueta input es una etiqueta sin contenido, por lo que no es necesario escribir la etiqueta de cierre. Otro detalle que podemos apreciar es que los campos se muestran en línea ya que por defecto los navegadores lo muestran con `display: inline-block;`. Podemos asignarles `display: block` para hacer que se apilen en vertical, uno debajo de otro.
 
----
-
 Ya tenemos nuestro formulario con los dos campos necesarios para que funcione, pero nos falta lo más importante, poder enviar el formulario. Para esto vamos a usar también una etiqueta input pero en este caso va a ser del tipo `submit` (`type="submit"`). Si introducimos esta etiqueta en nuestro formulario se mostrará un botón que, al ser pulsado, enviará el formulario. Para establecer qué texto queremos que vaya dentro del botón, usaremos el atributo `value`. Otra cosa a destacar es que el botón tiene una serie de estilos CSS aplicados por defecto pero que podemos modificar añadiéndole unos nuevos que sobrescriban a los anteriores.
 
 ```html
@@ -92,8 +90,6 @@ Ya tenemos nuestro formulario con los dos campos necesarios para que funcione, p
 ```
 
 ![Ejemplo de formulario con botón de enviar](assets/images/1-11/submit.png)
-
----
 
 Hay dos cosas que son recomendables y nos faltan aquí, y son bastante importantes de cara a la experiencia del usuario. Como se puede ver, no sabemos qué debemos meter en cada campo y no tenemos un ejemplo del texto que podemos introducir, lo que hace muy difícil saber que se nos está pidiendo. Para solucionar este problema tenemos el atributo `placeholder` y la etiqueta `<label>`.
 
@@ -116,8 +112,6 @@ Para decirle al navegador que nuestra etiqueta `<label>` está relacionada con u
 > **Nota:**
 > Es importante apreciar que dentro del input el atributo `name` y el `id` pueden ser distintos, pero el `for` del label siempre debe coincidir con el `id` del input.
 
----
-
 El atributo `placeholder` se puede asignar a un input y sirve para establecer el texto que se mostrará en el campo cuando este esté vacío. Es una buena práctica usarlo como pista para que la persona que está rellenando el formulario sepa qué información debe introducir. Por ejemplo, podemos darle pistas sobre cómo debe escribir los datos para que no pase un error típico que escribir el nombre y el apellido en el mismo campo (poner Jon Nieve puede ser una opción).
 
 ```html
@@ -132,8 +126,6 @@ El atributo `placeholder` se puede asignar a un input y sirve para establecer el
 
 ![Ejemplo de placeholder para un campo de texto](assets/images/1-11/placeholder.png)
 
----
-
 Bien, continuemos introduciendo campos. Este ejemplo se empieza a parecer a un formulario de registro, así que vamos a continuar como si se tratase de uno. En un formulario de este tipo, lo normal después del nombre es escribir el mail, para esto utilizaremos también la etiqueta `<input>` pero esta vez utilizaremos `type="email"` para definir el campo como una dirección de correo.
 
 ```html
@@ -145,8 +137,6 @@ Bien, continuemos introduciendo campos. Este ejemplo se empieza a parecer a un f
   <input type="submit" value="Enviar" />
 </form>
 ```
-
----
 
 A simple vista, parece que no hay diferencia entre los tipos `email` y `text` pero sí que la hay, lo que pasa es que es difícilmente perceptible. La diferencia entre ambos es que cuando usamos el tipo `email`, al pulsar el botón de enviar en el formulario, se comprobará primero que el mail introducido es una dirección de correo válida y si es así se enviará y si no es correcta se mostrará un mensaje como el que aparece en la imagen que se muestra a continuación.
 
@@ -182,8 +172,6 @@ Otra peculiaridad de los campos del tipo `password` es que su contenido se borra
 
 ![El contenido de los campos del tipo contraseña se sustituye por puntos](assets/images/1-11/password.png)
 
----
-
 #### EJERCICIO 1
 
 Sin que sirva de precedente, vamos a realizar este ejercicio directamente en Codepen. Esto nos permitirá comprobar cuales son los datos que se envían en el formulario ya que cuando creamos un formulario en Codepen, al enviarlo, nos muestra una ventana con la información que le llegaría al servidor. Esto nos permite comprobar que funciona correctamente y ver qué es lo que llegaría en cada caso. Es importante que dejemos el atributo `action` de la etiqueta `<form>` vacío y que el método sea del tipo `post`.
@@ -209,7 +197,7 @@ Todos los elementos deberán de tener un atributo `placeholder` e ir acompañado
 
 > **NOTA**: en los ejercicios largos como este, recordad cambiar quién está a los mandos en el pair programming a mitad del ejercicio.
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 ## Atributos básicos
 
@@ -262,8 +250,6 @@ El atributo `disabled` sirve para desactivar un campo de un formulario.
 />
 ```
 
----
-
 #### EJERCICIO 2
 
 Vamos a añadir un atributo `required` a todos los campos del ejercicio anterior excepto al apellido.
@@ -272,7 +258,7 @@ Además añadiremos un valor por defecto a la ciudad y al país para poner Madri
 
 Para comprobar que funciona correctamente intentaremos enviar el formulario sin rellenar ningún campo y ver si nos muestra el error.
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 ## Opciones: Checkbox, Radio y Select
 
@@ -435,8 +421,6 @@ Por defecto las etiquetas ocultas se muestran con el atributo `display: none;` a
 <input type="hidden" id="productid" name="productid" value="xm234jq" />
 ```
 
----
-
 #### EJERCICIO 3
 
 En este ejercicio vamos a crear el formulario de Facebook. Para crearlo utilizaremos lo que hemos visto hasta ahora de formularios. El formulario en sí será el que se muestra en la imagen inferior. El objetivo es crear sólo el HTML pero si te atreves puedes probar también a realizar un CSS similar.
@@ -450,7 +434,7 @@ Además de lo que se ve, vamos a crear los siguientes campos:
 - Un área de texto donde escribir un comentario para tu perfil
 - Un tipo de campo que se pueda activar y desactivar y en el que el usuario indique que ha aceptado los términos y condiciones de Facebook
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 ## Agrupando partes del formulario por contexto
 
@@ -506,13 +490,11 @@ Para crear un botón en nuestro formulario que realice esta acción de establece
 
 Este botón siempre borrará toda la información de los campos que haya dentro de la etiqueta `<form>` que lo contenga.
 
----
-
 #### EJERCICIO 4
 
 En el formulario de facebook, añadir un botón para borrar la información.
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 ## Estilos CSS de un formulario
 
@@ -530,8 +512,6 @@ input {
 
 > **Nota:**
 > El prefijo `-webkit-` y `-moz-` es específico para aplicar esto a los navegadores Safari y Chrome, y Mozilla Firefox respectivamente
-
----
 
 ## Expresiones regulares (aka regex) (aka regexp)
 
@@ -575,7 +555,7 @@ Modifica el formulario anterior para que se hagan las siguientes validaciones:
 - El teléfono debe ser un número de teléfono válido en España (**PISTA**: buscad cómo usar el atributo `pattern`)
 - Día y año (de la fecha de nacimiento) deben ser numéricos
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 ## BONUS
 

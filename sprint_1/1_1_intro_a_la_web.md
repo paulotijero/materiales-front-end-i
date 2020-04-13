@@ -131,8 +131,6 @@ Vamos a ver los pasos básicos para empezar a trabajar en un proyecto sencillo d
 
 6. Volvemos a _Code_ y continuamos trabajando, guardando frecuentemente (`Ctrl+S` o `⌘S`) y comprobando que los cambios se reflejan en el navegador, yendo a este y pulsando `Ctrl+R` o `⌘R` para refrescar la página.
 
----
-
 #### EJERCICIO 1
 
 **Mi primer 'Hola Mundo'**
@@ -160,7 +158,7 @@ Para realizar el paso 6 podemos cambiar el texto 'Hola Mundo' por 'Hola mundo, d
 
 > **Nota**: Observa como cuando realizas algún cambio sobre un archivo en _Code_, en la pestaña superior del archivo, junto al nombre, aparece una bolita, esta nos indica que hay cambios sin guardar. Como consejo nunca deberías pasar mucho tiempo sin guardar los cambios realizados sobre un archivo.
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 ## HTML Y CSS
 
@@ -286,8 +284,6 @@ En algún momento vamos a necesitar añadir una serie de elementos e indicar que
 
 La lista ordenada produce una lista numerando cada ítem por orden de escritura y la desordenada añade un símbolo (por defecto pinta un círculo) delante de cada elemento de la lista, también por orden de escritura.
 
----
-
 #### EJERCICIO 2
 
 Con estos elementos vamos a crear nuestra primera página con una receta de Gazpacho fresquito. Añade el texto de la receta al fichero `index.html` (dentro de la etiqueta `body`) y añade las etiquetas HTML que necesites para que se parezca al texto que hay a continuación:
@@ -327,7 +323,7 @@ Hay dos ingredientes que aparecen en casi todas las recetas actuales, incluidas 
 
 El aceite de oliva, vinagre, agua y sal son el resto de ingredientes. Suelen emplearse los de mejor calidad, bien conocido es el refrán popular «Con mal vinagre y peor aceite, buen gazpacho no puede hacerse».
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 ## CSS
 
@@ -427,8 +423,6 @@ h1 {
 
 Al abrir nuestra web en un navegador, la etiqueta link indica al navegador que debe buscar y aplicar los estilos de la hoja de estilos enlazada, en este caso `style.css`.
 
----
-
 #### EJERCICIO 3
 
 Añadir hoja de estilos al ejercicio anterior donde:
@@ -437,7 +431,7 @@ Añadir hoja de estilos al ejercicio anterior donde:
 - El título tiene que tener asignado un tipo de letra `Arial` a `24px` de tamaño y color de texto `black`.
 - Para el texto de los párrafos, tendremos que usar la fuente `Georgia` a `18px` de tamaño y color de texto `#757575`.
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 ## Estándar de HTML5
 
@@ -525,8 +519,6 @@ Para la estructura del proyecto usaremos estas carpetas:
 
 Code tiene una paleta de comandos que nos permite acceder a los comandos del editor mediante el teclado. La podemos abrir con `Ctrl+Shift+P` o `⌘+Shift+P`.
 
----
-
 #### EJERCICIO 5
 
 **Quita ese scroll loco**
@@ -538,7 +530,7 @@ Vamos a abrir la paleta de comandos de Code para abrir los _settings_ (ajustes).
 - Cambia el valor de la opción `Editor: Word Wrap Column` a 20 y observa como cambia el `html` del ejercicio del Gazpacho
 - Vuelve a cambiarla para dejar una longitud final a tu gusto
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 ## El explorador de archivos en Code
 
@@ -559,15 +551,13 @@ Aunque vayamos indentando a la par que escribimos, a veces se nos queda alguna l
 
 - Con `Ctrl+Shift+I` (Ubuntu) o `⇧⌥F` (MAC) indentamos todo el documento
 
----
-
 #### EJERCICIO 6
 
 **Todo indentado**
 
 Vamos a indentar el ejercicio del Gazpacho con auto-indent.
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 ### Atajos de teclado
 

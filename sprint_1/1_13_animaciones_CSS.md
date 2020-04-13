@@ -70,8 +70,6 @@ a {
 }
 ```
 
----
-
 #### EJERCICIO 1
 
 Dado [este botón](https://codepen.io/adalab/pen/XVXGVN?editors=1100):
@@ -79,13 +77,11 @@ Dado [este botón](https://codepen.io/adalab/pen/XVXGVN?editors=1100):
 - Añade transiciones para que el coloreado y el sombreado no sean tan bruscos en hover y click ;)
 - Añade transiciones para modificar alguna propiedad (tamaño, redondeado, color de fuente...)
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 Con este tipo de efectos podemos limar pequeños detalles o resolver interacciones más complejas, sólo cambiando clases.
 
 En [este Codepen](https://codepen.io/adalab/pen/goPZep) usamos javascript para que al hacer click en el botón "Menú" se aplique una clase al elemento `.page`, que se elimina al hacer click en la X de "Cerrar".
-
----
 
 #### EJERCICIO 2
 
@@ -100,7 +96,7 @@ En [este Codepen](https://codepen.io/adalab/pen/qJGGoe) hemos preparado un dashb
 
 ![Dashboard](assets/images/1-13/dashboard.png)
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 #### EJERCICIO 3
 
@@ -108,7 +104,7 @@ En [este Codepen](https://codepen.io/adalab/pen/qJGGoe) hemos preparado un dashb
 
 ![Ejemplo](assets/images/1-13/popup-transition.png)
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 ## Animaciones
 
@@ -173,8 +169,6 @@ Tenéis la documentación completa de las sub propiedades de `animation` en la M
 > **NOTA**:
 > Animar es un trabajo en sí mismo y aunque, de entrada, nadie nos va a pedir que seamos animadoras profesionales está bien conocer las posibilidades que nos da CSS para tener un repertorio más amplio de opciones a la hora de desarrollar una web. Otra cosa es que nos guste y CSS es suficientemente potente para hacer locuras.
 
----
-
 #### EJERCICIO 4
 
 Vamos a hacer algo más del día a día: partiendo de un contenedor que ocupe el 100% de la pantalla (en alto y ancho) con una imagen de fondo y un título centrado...
@@ -182,7 +176,7 @@ Tendremos que hacer que el título tenga una animación que lo haga entrar suave
 
 ![Ejemplo](assets/images/1-13/title-animation.png)
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 #### EJERCICIO 5
 
@@ -190,4 +184,4 @@ Vamos a terminar con una transición también del día a día: vamos hacer que a
 
 ![Transición del label encima del input](assets/images/1-13/exercise-5.gif)
 
----
+\_\_\_\_\_\_\_\_\_\_

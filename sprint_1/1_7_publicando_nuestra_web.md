@@ -155,15 +155,11 @@ cd nombre-de-carpeta/carpeta-hija/carpeta-nieta
 
 > **NOTA**: la terminal de comandos nos permite autocompletar los comandos como `cd` usando la tecla tabulador (Tab); por ejemplo, si escribimos `cd a` y damos a tabulador, aparecerán las opciones de carpetas o ficheros en la carpeta actual que comienza por 'a'.
 
----
-
 ```shell
 cd /ruta/absoluta/a/una/carpeta
 ```
 
 También podemos escribir la ruta absoluta desde la raíz de nuestro equipo `/` a la carpeta a la que queremos entrar.
-
----
 
 ```shell
 cd
@@ -171,15 +167,11 @@ cd
 
 `cd` solo nos devuelve a la carpeta de nuestro usuario (esta es la localización por defecto donde se abrirá nuestra terminal)
 
----
-
 ```shell
 cd ..
 ```
 
 `..` nos permite subir un nivel, esto es, ir a la carpeta que contiene nuestra carpeta actual
-
----
 
 ```shell
 cd -
@@ -263,8 +255,6 @@ o
 ls -r
 ```
 
----
-
 #### EJERCICIO 1
 
 Desde la terminal, id a vuestra carpeta de documentos y cread la siguiente estructura de carpetas y archivos (vacíos):
@@ -281,7 +271,7 @@ nombre
 - En el archivo **ruta-del-proyecto.txt** pondremos la ruta del archivo desde nuestra carpeta de `Documentos`
 - Mover los dos archivos a la carpeta principal, que sería **nombre**
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 #### EJERCICIO 2
 
@@ -295,7 +285,7 @@ Ahora, editando el archivo `index.html` en VSCode se tiene que ver la imagen de 
 ¿Cómo es la ruta de ambas imágenes? ¿Absoluta? ¿Relativa?
 ¿Es diferente en los dos casos? ¿Por qué?
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 ## Git
 
@@ -465,8 +455,6 @@ Un ejemplo de un buen commit:
 $ git commit -m "Fix typo in article title"
 ```
 
----
-
 #### EJERCICIO 3
 
 Vamos a crear nuestro primer proyecto con git, al que llamaremos `testing-git`. Dentro de él, crearemos un archivo HTML con un título HEAD en el que ponga "Testing Git" y un `h1` con el mismo texto. Además, crearemos un archivo para los estilos (`main.css`) dónde añadiremos un estilo para que la familia de texto que se use en la web sea `sans-serif`. Organizaremos el proyecto siguiendo la estructura de siempre:
@@ -493,7 +481,7 @@ git add -A
 git commit -m "Initial commit"
 ```
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 #### EJERCICIO 4
 
@@ -501,7 +489,7 @@ Modificar el archivo `index.html` para que en el título de la página ponga "My
 
 **Nota:** El mensaje del commit deberá explicar de forma clara los cambios que hemos realizado
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 #### EJERCICIO 5
 
@@ -515,19 +503,17 @@ Dummy project to learn Git basics
 
 **Nota:** El mensaje del commit deberá explicar de forma clara los cambios que hemos realizado
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 ## GitHub
 
 Como hemos explicado anteriormente, GitHub es una plataforma de desarrollo colaborativo para alojar proyectos utilizando el sistema de control de versiones de git. Está muy enfocada a proyectos de código abierto y la verdadera fuerza de GitHub está en la comunidad tan grande que se ha montado sobre la idea de código abierto u _open source_ :)
 
----
-
 #### EJERCICIO 6
 
 Poneros, ambas compañeras, una imagen de perfil en vuestras cuentas de GitHub. No tiene por qué ser una fotografía.
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 Hasta ahora sabemos crear un repositorio git local, ahora vamos a ver cómo creamos un repositorio remoto en GitHub, de esta forma podremos acceder al código desde cualquier equipo y podremos colaborar con nuestras compañeras.
 
@@ -580,8 +566,6 @@ En el video que mostramos a continuación se hace un pequeño tour alrededor de 
 
 - [Curso Git - Empezando con GitHub](https://www.youtube.com/watch?v=Qn186NyDqOk)
 
----
-
 #### EJERCICIO 7
 
 Vamos a:
@@ -592,7 +576,7 @@ Vamos a:
 1. Realizar un cambio en el CSS del proyecto para que el texto de la cara sonriente se muestre centrado vertical y horizontalmente en la página.
 1. Una vez que estemos conforme con nuestro tipo sonriente, haremos un commit para añadir el cambio a nuestro repositorio y otro push, para sincronizar los cambios de nuestro repositorio local con los del remoto y, de esta forma, subir los cambios a GitHub.
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 #### EJERCICIO 8
 
@@ -609,15 +593,11 @@ Puesto que trabajamos en parejas o en grupos queremos trabajar con el mismo cód
 
 > **NOTA:** Cada vez que ejecutamos un comando de Git en la terminal es muy interesante leer la información que aparece en la terminal para saber lo que está haciendo Git.
 
----
-
 ## GitHub Pages
 
 Como hemos comentado previamente, GitHub ofrece un servicio llamado [GitHub Pages](https://pages.GitHub.com) que pueden utilizar los usuarios como hosting gratuito para los proyectos que estén alojados en GitHub.
 
 Un hosting es un servicio de almacenamiento de datos para poder tener tu web en un servidor y que esté disponible en Internet y esto es lo que ofrece exactamente GitHub Pages.
-
----
 
 #### EJERCICIO 9
 
@@ -625,15 +605,13 @@ Desde la página de nuestro proyecto `testing-git` en GitHub, activar GitHub Pag
 
 **Pista:** Hay que ir a la pestaña _settings_ del proyecto ;)
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 ## Github Classroom
 
 GitHub Classroom es un "módulo" de GitHub que permite automatizar el control de acceso y la creación de repositorios. Durante este curso lo usaremos para asignar ejercicios.
 
 Classroom permite asignar repositorios vacíos o con un código inicial.
-
----
 
 #### EJERCICIO 10
 
@@ -645,7 +623,7 @@ Haz clic en el siguiente enlace [https://classroom.github.com/a/cdZUSdeT](https:
 4. Haz `add` y `commit`
 5. Haz un `push` al repo remoto :)
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 ## Más ejercicios de la terminal
 
@@ -660,6 +638,8 @@ A través de la terminal entra en la carpeta del ejercicio 1 y investiga el coma
 
 En cada caso mira detenidamente toda la información que muestra la columna.
 
+\_\_\_\_\_\_\_\_\_\_
+
 #### EJERCICIO 12
 
 A través de la terminal:
@@ -667,11 +647,15 @@ A través de la terminal:
 - Copia la carpeta `rutas-relativas` del ejercicio 2 en la carpeta `rutas-relativas-2`.
 - Copia la carpeta `rutas-relativas` del ejercicio 2 en la carpeta `rutas-relativas-3` con la opción `verbose` y observa qué aparece en la terminal.
 
+\_\_\_\_\_\_\_\_\_\_
+
 #### EJERCICIO 13
 
 A través de la terminal:
 
 - Renombra (o mueve) la carpeta `rutas-relativas-2` del ejercicio 12, y ponle el nombre `nuevas-rutas-relativas`.
+
+\_\_\_\_\_\_\_\_\_\_
 
 ## Recursos extra
 

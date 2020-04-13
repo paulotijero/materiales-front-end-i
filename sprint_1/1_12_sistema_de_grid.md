@@ -82,15 +82,13 @@ Para las filas funciona exactamente igual:
 
 También podemos indicar el tamaño del espaciado de elementos en el contenedor con la propiedad `grid-gap`. Podemos indicar 2 valores si queremos espaciado distinto entre filas y columnas.
 
----
-
 #### EJERCICIO 1
 
 Partiendo del ejemplo de codepen, conseguid una composición como la de la imagen.
 
 ![Exercise 1](assets/images/1-12/exercise-1.png)
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 A la hora de posicionar los elementos en el grid, también podemos usar la palabra `span` para indicar cuánto se expande desde la fila/columna actual. Por ejemplo, para el `item1` que se expandía desde la línea de grid 1 a la 4 podríamos usar:
 
@@ -100,13 +98,13 @@ A la hora de posicionar los elementos en el grid, también podemos usar la palab
 }
 ```
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 #### EJERCICIO 2
 
 Vamos a modificar el ejercicio anterior para usar `span` en vez de punto inicial y final.
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 #### EJERCICIO 3
 
@@ -114,7 +112,7 @@ Vamos a crear un grid de 12 columnas y 3 filas, la primera y la última ocupan e
 
 ![Exercise 3](assets/images/1-12/exercise-3.png)
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 Hasta ahora hemos definido una rejilla fija donde colocar nuestros elementos pero **¿Qué pasa cuando hay más elementos que "huecos"?**
 
@@ -165,13 +163,11 @@ Si ahora quisiésemos que un elemento en concreto se colocase en una de estas á
 }
 ```
 
----
-
 #### EJERCICIO 4
 
 ¿Seremos capaces de [colocar cada elemento en su sitio](https://codepen.io/adalab/pen/zjPjER)? ;)
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 El soporte el navegadores de CSS grid aún no es completo pero a día de hoy (junio de 2019) es de [casi del 92% según caniuse](https://caniuse.com/#feat=css-grid). Para los casos en que aún no podamos usarlo, tenemos como alternativa usar flexbox o el sistema de grid que nos ofrece Bootstrap.
 
@@ -223,13 +219,11 @@ Como base usaremos un elemento `container` que contiene nuestro grid (como el wr
 </div>
 ```
 
----
-
 #### EJERCICIO 5
 
 Vamos a crear la composición del **ejercicio 3** con Bootstrap para ver las diferencias de uso respecto a CSS grid.
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 #### EJERCICIO 6
 
@@ -245,7 +239,7 @@ Con suficientes divs (las cajas verdes) vamos a mostrar las columnas y opciones 
 4. 2 columnas
 5. 1 columna
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 #### EJERCICIO 7
 
@@ -256,7 +250,7 @@ Responde a las siguiente preguntas:
 1. ¿Qué clase tendrá un elemento que ocupe 6 columnas en el breakpoint Large?
 1. ¿Qué clase tendrá un elemento que ocupe 11 columnas en el breakpoint Extra Small?
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 #### EJERCICIO 8
 
@@ -267,7 +261,7 @@ Los breakpoints que usaremos son Extra small, Medium y Large ;)
 
 > las imágenes de los gaticos están en [este zip](assets/images/1-12/cats.zip)
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 #### EJERCICIO 9
 
@@ -275,7 +269,7 @@ Ahora iremos a un paso más y, vamos a crear una página simple que se ajuste a 
 
 ![Distribución de columnas](assets/images/1-12/bootstrap-site.png)
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 #### EJERCICIO 10
 
@@ -283,13 +277,13 @@ Ahora vamos a explorar las posibilidades de Bootstrap que, además del sistema d
 
 ![Página de pricing con bootstrap](assets/images/1-12/bootstrap-pricing.png)
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 #### EJERCICIO 11
 
 Vamos a crear el layout para páginas con las que habitualmente trabajaremos, usando CSS grid y/o el sistema de grid de Bootstrap. Para ello, os proponemos replicar [el experimento de Jo Franchetti de este artículo en Medium](https://medium.com/samsung-internet-dev/common-responsive-layouts-with-css-grid-and-some-without-245a862f48df), donde replica layouts típicos usando CSS grid. Realizad al menos el primer ejemplo _"Large Image followed by articles"_ usando Sass y el sistema de grid que elijáis.
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 ### Accesibilidad en Bootstrap
 

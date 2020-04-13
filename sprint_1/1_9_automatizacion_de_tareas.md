@@ -204,8 +204,6 @@ Ahora ejecutamos nuestra nueva tarea `gulp watch`. Una vez ejecutada, lo primero
 
 Prueba a modificar el fichero Sass y ver que el CSS se modifica automáticamente.
 
----
-
 #### EJERCICIO 1
 
 Ahora vamos a trabajar con un proyecto que ya tiene configurado Gulp. Primero tendremos que clonarlo en nuestro ordenador y en la carpeta ejecutar `npm install` para instalar las dependencias.
@@ -214,7 +212,7 @@ https://github.com/Adalab/testing-Gulp
 
 Luego probamos a ejecutar la tarea por defecto `gulp` y la tarea `gulp watch`. Observamos el resultado en la carpeta CSS. Investigad un poco el código y probad a comentar cosas para averiguar qué hacen las 2 nuevas funcionalidades que hemos añadido.
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 #### EJERCICIO 2
 
@@ -229,7 +227,7 @@ Probamos a ejecutar la tarea `gulp html`, que inserta los parciales en el HTML y
 - identificar cómo podemos pasar información a los parciales a través de los atributos HTML
 - crear un nuevo parcial para el footer
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 ### Bueno, ¿y ahora?
 
@@ -247,19 +245,17 @@ Tendremos tres carpetas (por defecto solo viene una en el kit):
 - **public/**: será donde se genere una versión de desarrollo, nosotras trabajaremos sobre los archivos de trabajo y gulp se encargará de pasarlos correctamente a esta carpeta. El servidor web se ejecutará aquí.
 - **docs/**: esta es opcional y nos dejará generar una versión de producción de nuestro proyecto para que activemos GitHub Pages.
 
----
-
 #### EJERCICIO 3
 
 ¿Quién sabe decir qué hace la tarea **styles**?
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 #### EJERCICIO 4
 
 ¿Que diferencias hay entre la tarea **styles** y **styles-dist**?
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 ### Tareas incluidas
 
@@ -302,8 +298,6 @@ Descargando el repo en un fichero:
 
 En ambos casos, si quieres conectar el proyecto que acabas de crear con un repositorio en GitHub debes hacer lo que aprendimos en lecciones anteriores... (pista: `git remote ...`).
 
----
-
 #### EJERCICIO 5
 
 Seguiremos los pasos anteriores para crear un nuevo proyecto usando el kit de Adalab. Después, en esta misma carpeta meteremos un ejercicio de la sesión de responsive para probar que se lanza el navegador que se actualiza solo con los cambios que hacemos en el HTML o CSS. Comprobad que la carpeta donde debemos meter el código de nuestro proyecto es **\_src**.
@@ -311,6 +305,8 @@ Seguiremos los pasos anteriores para crear un nuevo proyecto usando el kit de Ad
 Una vez terminado, vamos a probar una opción muy chula del kit: la posibilidad de trabajar con ficheros parciales de HTML. Para eso, mirad el ejemplo de la carpeta `_src/templates` donde hay un fichero `index.html` que carga 2 ficheros parciales con trozos de HTML. En vuestro proyecto cread esta misma estructura y sacad la cabecera y el pie de página de la web a un parcial.
 
 Para terminar, vamos a publicar la web usando GitHub Pages. Para eso usaremos la tarea `gulp docs` que genera una carpeta docs con la web preparada para subirla a GitHub Pages.
+
+\_\_\_\_\_\_\_\_\_\_
 
 ## Rutas de ficheros en Starter Kit
 
@@ -350,7 +346,7 @@ Hoy a venido la desarrolladora DevOps de la empresa y nos pide que la carpeta de
 1. Abre el _Devtools_ de _Chrome_, entra en la pestaña de _Console_ y mira el mensaje de error que aparece. ¿Qué nos está diciendo?
 1. Arregla este error sin modificar el fichero `config.json`.
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 ## BONUS: Más plugins de Gulp
 

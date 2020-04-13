@@ -8,8 +8,8 @@
 - [EJERCICIO 2](#ejercicio-2)
 - [EJERCICIO 3](#ejercicio-3)
 - [EJERCICIO 4](#ejercicio-4)
-- [EJERCICIO BONUS 1](#ejercicio-bonus-1)
-- [EJERCICIO BONUS 2](#ejercicio-bonus-2)
+- [EJERCICIO BONUS 5](#ejercicio-bonus-5)
+- [EJERCICIO BONUS 6](#ejercicio-bonus-6)
 
 <!-- /TOC -->
 
@@ -290,8 +290,6 @@ Que generarían este código CSS:
 
 Lo bueno de esta técnica es que si en el futuro nos da por cambiar el color que estamos usando por otro, sólo tendremos que cambiarlo en `$color-primary` y automáticamente cambiará en todos los sitios que lo utilicemos y nos sentiremos en la gloria.
 
----
-
 #### EJERCICIO 2
 
 **Colores**
@@ -308,7 +306,7 @@ Para finalizar, vamos a cambiar los colores que tenemos por los de esta página:
 
 > NOTA: Si hemos realizado bien el código, cada uno de estos cambios de color lo podremos llevar a cabo cambiando solo una línea.
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 ### Tipografía
 
@@ -443,8 +441,6 @@ Creando estos estilos podremos reutilizarlos simplemente para dar estilo a nuest
 <small class="txt-sm txt-center"></small>
 ```
 
----
-
 #### EJERCICIO 3
 
 **Tipografía**
@@ -461,7 +457,7 @@ Además, asignaremos a `body` los estilos que consideremos necesarios pero usand
 
 `"Georgia", "times", serif`
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 ### Componentes
 
@@ -691,7 +687,7 @@ A continuación generaremos un HTML en el que probaremos que funciona cada uno d
 
 > **NOTA**: No es necesario que los estilos sean idénticos a los que aparecen en la foto, pero si deben de estar definidos los estilos para cada uno de los estados y para cada una de las variaciones.
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 ## Ejemplos de sistemas de diseño
 
@@ -948,9 +944,7 @@ Si copiamos ese código y lo utilizamos en vez del anterior veremos que el resul
 
 Si quieres experimentar más y ver cómo convierte el código Sass a CSS, puedes usar [Sassmeister](http://sassmeister.com/). Prueba a escribir Sass en el panel izquierdo y verás el resultado CSS en el derecho.
 
----
-
-#### EJERCICIO BONUS 1
+#### EJERCICIO BONUS 5
 
 **Mixin para el tamaño de los botones**
 
@@ -958,9 +952,9 @@ Como hemos visto en el ejemplo, podemos crear un mixin para los distintos estilo
 
 Puedes partir de [este codePen](https://codepen.io/adalab/pen/MzYGZR) como base.
 
----
+\_\_\_\_\_\_\_\_\_\_
 
-#### EJERCICIO BONUS 2
+#### EJERCICIO BONUS 6
 
 **Un sistema completo**
 
@@ -970,4 +964,4 @@ La tipografía es Roboto Slab y puedes obtenerla de Google Fonts.
 
 ![Botón de Carbon](assets/images/1-14/ui.png)
 
----
+\_\_\_\_\_\_\_\_\_\_

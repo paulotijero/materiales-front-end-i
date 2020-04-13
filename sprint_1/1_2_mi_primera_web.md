@@ -253,15 +253,13 @@ y en código quedaría así:
 
 En principio, en las tablas siempre tiene que haber igual número de celdas en cada fila.
 
----
-
 #### EJERCICIO 1
 
 **Organizando la semana**
 
 Hacer una tabla con la comida de cada día de la semana usando `<th>` para las celdas que contienen los días.
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 ### La MDN
 
@@ -298,8 +296,6 @@ Buscar información sobre todos estos elementos en la [MDN](https://developer.mo
   _ tfoot
   _ col, colgroup
 
----
-
 #### EJERCICIO 2
 
 **Una página clásica**
@@ -313,7 +309,7 @@ Realizar una página semántica explicando algunos de los lenguajes de programac
   - Un listado de 4 lenguajes de programación.
 - Un texto de copy (© 2020).
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 ## CSS
 
@@ -496,8 +492,6 @@ Para practicar los selectores, desde los más sencillos a los más complejos, te
 
 Hay una serie de estilos que se heredan, es decir, que se transmiten a las hijas. Entonces, si aplicamos una de estas propiedades a una etiqueta, todos las etiquetas anidadas en ella la heredarán también.
 
----
-
 #### EJERCICIO 3
 
 **Coloreame esos links**
@@ -523,11 +517,9 @@ El color es una de la propiedades que se heredan así que si tenemos esta estruc
 
 y al `<aside>` con clase `.links` le aplicamos una regla que ponga el texto rojo, ¿qué quedará en rojo?
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 - [Más info sobre herencia en la MDN](https://developer.mozilla.org/es/docs/Web/CSS/inheritance)
-
----
 
 #### EJERCICIO 4
 
@@ -543,7 +535,7 @@ Partiendo del [ejercicio 2](#ejercicio-2) vamos a hacer uso de la herencia, y ut
 
 > **Pista**: Tenemos que trabajar con la primera etiqueta del contenido de `html` que es `<body>`, y utilizar el selector de etiqueta para que todas sus hijas anidadas hereden de ella.
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 ### Cascada y especificidad de selectores
 
@@ -564,8 +556,6 @@ Dos enlaces sobre la especificidad más... a menos
 - [CSS Specifity Wars](https://stuffandnonsense.co.uk/archives/css_specificity_wars.html)
 - [CSS SPECIFITY](http://cssspecificity.com/#)
 
----
-
 #### EJERCICIO 5
 
 **Conociendo la especifidad**
@@ -578,7 +568,7 @@ Partiendo de este [Codepen de ejemplo](https://codepen.io/oneeyedman/pen/vWEBex)
 4. Comentar el CSS que no se puede tocar y reescribirlo usando una clase por selector para que se vea igual.
 5. BONUS: Cambiar ahora entre `<div>` y `<ul>`/`<li>`
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 ## Colores
 
@@ -646,8 +636,6 @@ p {
 
 Para más información, consultad [la guía de colores de MDN](http://devdocs.io/css/color_value).
 
----
-
 ### Background
 
 Como veremos más adelante, cada elemento se puede ver como una caja, veamos cómo añadir un fondo a dicha "caja":
@@ -683,13 +671,11 @@ Realmente, la propiedad _background_ es una versión acortada de estas propiedad
 - **background-clip:** [Ver detalle](http://devdocs.io/css/background-clip)
 - **background-blend-mode:** [Ver detalle](http://devdocs.io/css/background-blend-mode)
 
----
-
 #### EJERCICIO 6
 
 ¿Sabrías replicar los ejemplos de fondo usando [este Codepen](https://codepen.io/adalab/pen/JLwQpz)?
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 ### Cuándo usar las propiedades de background o la versión acortada
 

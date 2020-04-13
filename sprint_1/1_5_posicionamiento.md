@@ -57,8 +57,6 @@ Los navegadores web aplican por defecto un valor `display` a todos los elementos
 - **Inline-block:** Los elementos inline-block ocupan por defecto el ancho de su contenido y se comportan como si se tratase de un elemento en línea, pero permiten tener un ancho, un alto y relleno y márgenes verticales, como sucede con los elementos en bloque.
 - **None**: Oculta por completo cualquier elemento al que se lo apliquemos, será como si ese elemento no existiese ya que no se mostrará y el resto de elementos de la página lo ignorarán.
 
----
-
 #### EJERCICIO 1
 
 **Listas horizontales**
@@ -71,7 +69,7 @@ Vista de la lista sin estilos
 Vista de la lista con estilos
 ![Menu con estilos](assets/images/1-5/1_5_ejercicio_10_menu_con_estilo.png)
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 ## Posicionamiento de elementos
 
@@ -107,8 +105,6 @@ La posición Z de cada capa representa el orden de apilamiento. Podemos modifica
 
 - Video para entender [z-index](https://www.youtube.com/watch?v=u2O_ys4X1cQ)
 
----
-
 #### EJERCICIO 2
 
 **Desplazando divs relativamente**
@@ -121,7 +117,7 @@ b) El div 2 deberá desplazarse 150 píxeles a la izquierda y 320 píxeles hacia
 
 c) El div 3 deberá desplazarse 180 píxeles a la derecha y 240 píxeles hacia arriba respecto a lo que sería su posición normal.
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 #### EJERCICIO 3
 
@@ -135,7 +131,7 @@ b) Hacer que la cabecera no tape el contenedor principal cuando no hemos hecho s
 
 c) Hacer que cuando la usuaria haga scroll, la cabecera se apile o superponga por encima del contenedor principal.
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 ## Transform
 
@@ -177,8 +173,6 @@ Permite rotar el elemento:
 }
 ```
 
----
-
 #### EJERCICIO 4
 
 **Transformers**
@@ -187,13 +181,11 @@ Permite rotar el elemento:
 
 [&rtrif; Los ejercicios de transform en codepen](https://codepen.io/adalab/pen/YLKaox)
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 `Transform` se suele usar mucho junto con posiciones fijas o absolutas para centrar elementos horizontal y verticalmente:
 
 ![Ejemplo de centrado con position y transform](assets/images/1-5/absolute-horizontal-and-vertical-centering.png)
-
----
 
 #### EJERCICIO 5
 
@@ -215,7 +207,7 @@ Ahora tenemos que hacer que las cajas estén centradas vertical y horizontalment
 
 Para esto usad `box-sizing: border-box;`.
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 #### EJERCICIO 6
 
@@ -228,13 +220,15 @@ Vamos a definir un documento HTML con varios `div`s que contengan suficiente tex
 
 Usando posicionamiento fixed, tenemos que fijar este `div` en la parte inferior de la página de modo que se visualize siempre, aún cuando hagamos scroll.
 
+\_\_\_\_\_\_\_\_\_\_
+
 #### EJERCICIO 7
 
 **Ese texto necesita aire**
 
 Crea un texto que ocupe el 86% de la pantalla y esté centrado dentro del body. Usaremos la propiedad `max-width` para dar un ancho máximo de 600px. [Más info acerca de max-width](http://devdocs.io/css/max-width).
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 #### EJERCICIO 8
 
@@ -244,7 +238,7 @@ Hacer un enlace de descarga de un archivo (por ejemplo PDF) con una etiqueta que
 
 ![Enlace de descarga de un pdf](assets/images/1-5/1_5_ejercicio_2_pdf.png)
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 #### EJERCICIO 9
 
@@ -263,7 +257,7 @@ Las dimensiones de esta composición serían las siguientes:
 - Cada párrafo tendrá un tamaño de fuente de 18px y un margen inferior de 27px
 - El enlace tendrá un padding superior e inferior de 8px y otro izquierdo y derecho de 16px y un margen izquierdo de -16px
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 #### EJERCICIO 10
 
@@ -279,7 +273,7 @@ La web que vamos a crear consta de las siguientes características:
    1. el cursor cambia para indicar que estamos obteniendo ayuda
    1. aparece un tooltip (recuadro flotante de 400px por 200px) de color blanco, con el nombre de la tecnología como título del tooltip y una breve descripción de la misma
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 #### EJERCICIO 11
 
@@ -294,7 +288,7 @@ Vamos a crear una web sencilla, con las siguientes características:
    1. Un listado de redes sociales de la empresa (en formato texto o imagen) que aparezcan en línea
 1. Un texto para indicar que el sitio web usa cookies con un enlace para ver más info, que aparece en la esquina inferior derecha de la pantalla y que sigue ahí al hacer scroll
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 #### EJERCICIO 12
 
@@ -308,7 +302,7 @@ Crearemos un elemento que se superponga sobre él. Ese elemento tendrá un fondo
 
 En la imagen, es importante observar que la cabecera estará por debajo de la ventana emergente.
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 ## Bonus
 
