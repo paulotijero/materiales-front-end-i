@@ -233,10 +233,6 @@ El resultado debe ser parecido a este diseño de LinkedIn:
 
 ## Recursos externos
 
-### React Hooks
-
-- Otra arquitectura de React son los Hooks. Es una nueva forma de utilizar componentes funcionales con estado, y así prescindir de los componentes de clase. Os recomendamos leer esta [guía de la documentación oficial](https://es.reactjs.org/docs/hooks-intro.html). Además, en las entrevistas de trabajo se suele preguntar si la candidata conoce React Hooks.
-
 ### Egghead
 
 Serie de clases en vídeo que introduce y explora los fundamentos básicos de React (en inglés).
