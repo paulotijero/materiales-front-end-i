@@ -89,15 +89,13 @@ console.log(capitalNames);
 
 ¿Qué argumento recibe `map`?
 
----
-
 #### EJERCICIO 1
 
 **Inflar las notas**
 
 ¡Ya tenemos las notas del examen! Los profes, como somos así, las hemos metido en un array: `const marks = [5, 4, 6, 7, 9];`. Casi todo el mundo lo ha hecho bastante bien pero... vamos a hacer un poco de trampa de la buena :) Vamos a modificar las notas de todas para añadirles 1 punto, ¿no? Pues usemos nuestro reciente amigo `map` para crear un nuevo array `inflatedMarks` con las notas modificadas. Finalmente, mostraremos en la consola las notas modificadas para ver que funciona correctamente. ¡Al lío!
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 #### EJERCICIO 2
 
@@ -105,7 +103,7 @@ console.log(capitalNames);
 
 Estamos creando una aplicación web, y lo primero que queremos hacer es saludar al usuario por su nombre, ¡como es debido! Tenemos un array con el listado de usuarios de nuestra aplicación `const names = ['María', 'Lucía', 'Susana', 'Rocío', 'Inmaculada'];` y queremos conseguir otro array con los saludos, por ejemplo, _'Bienvenida Yolanda'_. ¿Podríamos usar `map` para que nos echase una mano?
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 #### EJERCICIO 3
 
@@ -127,7 +125,7 @@ const users = [
 ];
 ```
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 ### filter
 
@@ -164,15 +162,13 @@ En este caso hemos ejecutado el método `filter` sobre el array `names` y le pas
 
 > **NOTA**: El return siempre deberá devolver un booleano o una operación que devuelva un valor de este tipo, por ejemplo, `3 < 4` o `'hola' === 'adios'`.
 
----
-
 #### EJERCICIO 4
 
 **Solo los premium**
 
 Seguimos con nuestra app de moda y vamos a utilizar el listado de usuarios del ejercicio 3. Pero ahora queremos tener un listado de usuarios (en un array `premiumUsers`) que solo tenga los usuarios premium. ¿Sabremos hacerlo con `filter`?
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 #### EJERCICIO 5
 
@@ -188,7 +184,7 @@ De ese listado de contraseñas, queremos que solo puedan entrar los que han eleg
 
 > PISTA: Recuerda que el resto de la división entera (módulo `%`) de número par es 0.
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 #### EJERCICIO 6
 
@@ -206,7 +202,7 @@ const users = [
 ];
 ```
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 ### reduce
 
@@ -258,8 +254,6 @@ const result = scores.reduce((acc, number) => acc + number);
 
 Esta forma de trabajar es bastante compleja y requiere de mucha práctica, así que vamos a practicar realizando unos ejercicios.
 
----
-
 #### EJERCICIO 7
 
 **La media de la carrera**
@@ -270,7 +264,7 @@ Hemos organizado una carrera de escobas para que podáis exprimir a fondo vuestr
 const times = [56, 9, 45, 28, 35];
 ```
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 #### EJERCICIO 8
 
@@ -290,7 +284,7 @@ const runners = [
 ];
 ```
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 ### Estos métodos pueden encadenarse
 
@@ -304,8 +298,6 @@ console.log(longNames);
 ```
 
 En este caso queremos filtrar los nombres largos pero además obtenerlos en mayúscula. Para eso vamos a, primero filtrar con `filter` por longitud del nombre y luego convertirlos en mayúscula usando `map`.
-
----
 
 #### EJERCICIO 9
 
@@ -323,7 +315,7 @@ const runners = [
 ];
 ```
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 ### find y findIndex
 
@@ -369,8 +361,6 @@ console.log(index);
 
 En este caso el resultado es 2 porque es el índice del array del primer nombre con más de 5 letras (Susana).
 
----
-
 #### EJERCICIO 10
 
 **Encuentra el usuario**
@@ -389,7 +379,7 @@ const users = [
 
 b) Resulta que el usuario se ha dado de baja por la incidencia :( ¿Podrías borrarlo del array de usuarios? Usa el método `findIndex` para encontrar su posición y bórralo usando `splice`.
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 ### BONUS: sort
 
@@ -421,8 +411,6 @@ console.log(times);
 
 De esta forma, si un número `a` es mayor que otro `b` el resultado es positivo y `b` se posiciona antes en el resultado. Lo contrario ocurre cuando `a` es menor que `b`. Si son iguales, el resultado es 0 y se quedan como están.
 
----
-
 #### EJERCICIO 11
 
 **Clasificación de la carrera**
@@ -431,7 +419,7 @@ Volviendo a nuestra carrera de escobas, queremos tener el array del ejercicio 8 
 
 > PISTA: la función que le pasamos a sort toma como parámetros 2 elementos del array, así que para acceder a una propiedad de un objeto en la función podemos hacerlo con el operador punto (`a.time`), como hemos hecho hasta ahora ;).
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 #### EJERCICIO 12
 
@@ -439,7 +427,7 @@ Volviendo a nuestra carrera de escobas, queremos tener el array del ejercicio 8 
 
 Vamos a volver al listado de usuarios del ejercicio 6, porque nos ha dado la manía de tenerlos ordenados. ¿Podrías ordenarlos por orden alfabético? ¿Y por su número de PIN?
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 ### Recorriendo las propiedades de un objeto
 
