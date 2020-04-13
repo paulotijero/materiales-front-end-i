@@ -5,7 +5,7 @@
 <!-- TOC depthFrom:4 depthTo:4 -->
 
 - [EJERCICIO 1](#ejercicio-1)
-- [EJERCICIO 2:](#ejercicio-2)
+- [EJERCICIO 2](#ejercicio-2)
 - [EJERCICIO 3](#ejercicio-3)
 - [EJERCICIO 4](#ejercicio-4)
 - [EJERCICIO 5](#ejercicio-5)
@@ -105,8 +105,6 @@ Ahora que ya tenemos unos conocimientos básicos de testing, vamos a ver qué he
 
 Para instalar Jest en nuestro proyecto lo hacemos usando `npm`. Para eso, tenemos que tener un fichero `package.json` que gestione las dependencias de nuestra aplicación.
 
----
-
 #### EJERCICIO 1
 
 **Instalación de Jest**
@@ -160,7 +158,7 @@ Para ver si todo está funcionando, ejecutaremos `npm test` en la terminal. Tras
 
 ![Resultado de ejecutar los tests en la terminal con watch](./assets/images/3_14_tests_resultado_watch.png)
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 ### Definiendo tests y test suites
 
@@ -217,8 +215,6 @@ Jest nos ofrece un montón de matchers para comparar el resultado de nuestra act
 
 Puedes encontrar en resto de matchers y algunos tutoriales en la [documentación de Jest sobre matchers](https://facebook.github.io/jest/docs/en/using-matchers.html).
 
----
-
 #### EJERCICIO 2:
 
 Partiendo del código del ejercicio 1, vamos a:
@@ -227,7 +223,7 @@ Partiendo del código del ejercicio 1, vamos a:
 - añadir un test que pruebe que la función `sum` es capaz de sumar números decimales
 - meter todos los test en un test suite con la descripción `Sum App`
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 #### EJERCICIO 3
 
@@ -253,7 +249,7 @@ Ejemplos:
 
 En primer lugar, desarrollad el código de la función `paddingLeft` en un fichero. Cuando lo tengáis, cread un fichero de tests y cread un test para cada uno de los ejemplos anteriores. Así estamos comprobando que la función hacía lo que se ha pedido que haga.
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 #### EJERCICIO 4
 
@@ -292,7 +288,7 @@ Modificamos esa línea en la parte izquierda y le damos al botón 'Run tests' o 
 
 Debéis conseguir pasar el resto de tests de este fichero. Algunas katas que os recomendamos para repasar ES6 en el futuro: string, template strings, destructuring, rest operator, spread operator, arrow functions, array.find, block scope
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 ## BONUS: Introducción a TDD
 
@@ -342,8 +338,6 @@ Algunas indicaciones a la hora de practicar TDD:
     Espero que el resultado sea ESTE
 ```
 
----
-
 #### EJERCICIO 5
 
 **Kata Fizzbuzz**
@@ -357,7 +351,7 @@ Usando TDD, desarrollamos una función Fizzbuzz que toma como parámetro un núm
 
 Este ejercicio es equivalente a la kata del ejercicio 3, pero vamos a hacerla usando la metodoogía de TDD, es decir, escribiendo los tests primero.
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 ## Recursos externos
 
