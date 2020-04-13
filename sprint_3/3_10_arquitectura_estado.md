@@ -203,8 +203,6 @@ render() {
 }
 ```
 
----
-
 #### EJERCICIO 1
 
 **Directorio**
@@ -229,7 +227,7 @@ El resultado debe ser parecido a este diseño de LinkedIn:
 
 **¡Al lío!**
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 ## Recursos externos
 

@@ -151,13 +151,9 @@ Para pintar el componente `App` usamos una sintaxis un poco rara: _¡es como si 
 
 Este fichero corresponde a nuestro primer _componente_ de React, pero ya veremos qué es un componente más adelante. De momento, vamos a pensar que quizá al modificar el archivo `App.js` os haya sorprendido algo. _"¿Eso no es HTML? ¡Pero si esto es un archivo JavaScript!"_:
 
----
-
 #### IMPORTANTE
 
 En las nuevas versiones de **Create React App** el componente `App` ya no es una clase sino una función y algunos de los ejemplos de código pueden variar. En clase veremos cómo gestionar esto y para ello debéis instalar esta extensión de Code: [react-pure-to-class-vscode](https://marketplace.visualstudio.com/items?itemName=angryobject.react-pure-to-class-vscode).
-
----
 
 ```js
 import React, { Component } from "react";
@@ -239,15 +235,13 @@ React pintará en el DOM el HTML correspondiente al JSX que se devuelve desde el
 
 Muy parecido al JSX que hemos escrito, ¿verdad?
 
----
-
 #### EJERCICIO 1
 
 Vamos a crear un nuevo proyecto de React llamado **mediacard**. Vamos a maquetar esta tarjeta dentro del método `render` de nuestro componente `App` para que tenga un diseño lo más parecido posible al de la imagen. Podéis usar una imagen a vuestra elección en lugar de la que aparece en el diseño, y Font-Awesome para el icono del corazón. De esta forma, aprenderemos a cómo trabajar con cosas que ya conocemos (HTML y CSS) en una aplicación de React.
 
 ![Media Card](assets/images/3_4_media-card.png)
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 #### EJERCICIO 2
 
@@ -266,7 +260,7 @@ render() {
 }
 ```
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 ## Interfaz declarativa VS imperativa
 
@@ -390,13 +384,11 @@ class App extends Component {
 export default App;
 ```
 
----
-
 #### EJERCICIO 3
 
 Vamos a modificar el ejercicio anterior de la tarjeta para hacerlo con Sass dentro de nuestro proyecto de React.
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 ## Recursos externos
 

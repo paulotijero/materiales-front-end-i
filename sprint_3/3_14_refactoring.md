@@ -23,10 +23,8 @@ Se pueden aprender muchas estrategias de cómo refactorizar y son temas avanzado
 
 Esta parte de refactorización requeriría todo un curso en sí misma. Pero lo que sí queremos que entiendas es la importancia de tener tests para refactorizar porque nos permiten cambiar cosas comprobando que nuestra aplicación sigue funcionando (no se rompe). Haremos un ejercicio específico para demostrar esta afirmación.
 
----
-
 #### EJERCICIO 1
 
 Para comprobar que se refactoriza mucho mejor con tests, os pasamos un ejercicio que ya tiene tests pero un código malísimo. Nuestro objetivo es mejorar el código que nos dan sin modificar el comportamiento (refactorizar) y que los tests sigan pasando. Se trata de la famosa [kata _Gilded Rose_ con JavaScript](https://github.com/gootyfer/gilded-rose-js-with-tests).
 
----
+\_\_\_\_\_\_\_\_\_\_

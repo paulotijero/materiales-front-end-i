@@ -128,8 +128,6 @@ class App extends React.Component {
 
 [&blacktriangleright; Rutas con React Router en Codepen][codepen-react-router-basic]
 
----
-
 #### EJERCICIO 1
 
 **Me gustan tus pestañas**
@@ -142,7 +140,7 @@ Luego, en nuestro componente principal (`App`) vamos a dibujar las 3 pestañas (
 
 Finalmente instalamos React Router en nuestro proyecto, y conseguimos que al pinchar en una pestaña, se pinte debajo el componentne correspondiente. **¡A por ello!**
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 ## Usando parámetros en las rutas
 
@@ -250,8 +248,6 @@ Un ejemplo de como hacer esto lo tenemos en [este codepen](https://codepen.io/ad
 
 > NOTA: al usar la función `render` la información del match no le llega directamente al componente que queremos pintar. Para que le llegue, debemos recogerla de las `props` y pasársela como en el ejemplo anterior.
 
----
-
 #### EJERCICIO 2
 
 **Directorio con detalle**
@@ -266,7 +262,7 @@ Implementaremos la vista de detalle con un nuevo componente `PersonDetail` al qu
 
 > PISTA: Para resolver este segundo ejercicio `PersonDetail` debe tener acceso al id de cada usuario y a los datos (que seguramente estarán en App). Usaremos `render` para poder pasarle ambos datos, recordando que los datos del `match` debemos pasárselos explícitamente al contrario que usando `component`.
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 ## Gestión avanzada de rutas: uso de children
 

@@ -43,8 +43,6 @@ En este ejemplo, partimos de un conjunto de números, sobre los que queremos rea
 
 Hemos realizado ambas operaciones encadenando un `map` que añade 1 a cada número con un `filter` para quedarnos solo con los números pares resultado de la operación anterior.
 
----
-
 #### EJERCICIO 1
 
 **Numeritos**
@@ -55,7 +53,7 @@ a) Vamos a añadir un formulario a la página, que contiene un input donde podem
 
 b) Vamos a añadir un nuevo campo al formulario de tipo checkbox, que al marcarlo filtre además los números pares, desapareciendo de pantalla los impares. Este filtro debe actuar además del anterior, es decir, podremos filtrar los números mayores de 6 y que además sean pares.
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 ## Pintado condicional
 
@@ -103,8 +101,6 @@ const { quixoteFan } = this.state;
 return quixoteFan ? <p>En un lugar de La Mancha ...</p> : null;
 ```
 
----
-
 #### EJERCICIO 2
 
 **Colapsables**
@@ -113,7 +109,7 @@ Vamos a partir de nuestro ya [querido JSON con un listado de paletas](https://ra
 
 > NOTA: Recordad que debemos guardar en el estado del componente de React si los colapsables están o no desplegados. Es más sencillo si solo se puede tener un colapsable desplegado a la vez.
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 ## Listados y keys
 
@@ -155,6 +151,8 @@ a) Para terminar, vamos a repasar los ejercicios anteriores y comprobar que no t
 
 b) En el ejercicio anterior vamos a extraer un nuevo componente llamado `ColapsiblePalette`. ¿Dónde hay que poner el `key` ahora?
 
+\_\_\_\_\_\_\_\_\_\_
+
 ## Destructuring
 
 La sintaxis _destructuring_ de ES6 nos facilita recoger valores de una estructura de datos, como los arrays o los objetos. Simulando la sintaxis de un array o de un objeto, en cada caso, podemos declarar varias variables a la vez, ¡y en una sola línea! Vemos unos ejemplos a continuación:
@@ -190,8 +188,6 @@ const [, , z] = coordinates;
 console.log(`The z-index is ${z}`); // The z-index is 12
 ```
 
----
-
 #### EJERCICIO 4
 
 **La carrera de escobas**
@@ -208,7 +204,7 @@ const users = [
 ];
 ```
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 ### _Destructuring_ de objetos
 
@@ -261,8 +257,6 @@ const {
 console.log(`${secondLanguage} is my second language`); // French is my second language
 ```
 
----
-
 #### EJERCICIO 5
 
 **De nuevo la carrera de escobas**
@@ -278,6 +272,8 @@ const users = [
   { name: 'Gregory Goyle', time: 56 }
 ];
 ```
+
+\_\_\_\_\_\_\_\_\_\_
 
 ### _Destructuring_ en React
 
@@ -408,6 +404,8 @@ Voilà!
 
 Vamos a partir del ejercicio **Formulario para pelis** de la sesión **Estado en React 2** y a hacer destructuring de los objetos `this.props` y `this.state`.
 
+\_\_\_\_\_\_\_\_\_\_
+
 #### EJERCICIO 7
 
 **Destructuring everywhere**
@@ -416,7 +414,7 @@ En el ejercicio anterior ¿localizas algún otro objeto dónde hacer destructuri
 
 **PISTA**: observa tu handler, quizás estés creando una constante y asignandole el valor contenido en la propiedad `value` del objeto `event.currentTarget`.
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 ## Recursos externos
 

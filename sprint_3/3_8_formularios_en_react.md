@@ -115,8 +115,6 @@ Usar un _componente controlado_ tiene más ventajas, por ejemplo, nos permite va
 
 [&blacktriangleright; Usando un componente controlado en Codepen][codepen-form-example]
 
----
-
 #### EJERCICIO 1
 
 **Formulario para pelis**
@@ -129,7 +127,7 @@ Vamos a crear un formulario en un componente de React que recoja información de
 
 El resultado de rellenar el formulario, debe aparecer en una tarjeta de previsualización que va mostrando la información según se rellena.
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 #### EJERCICIO 2
 
@@ -154,7 +152,7 @@ onChange = event => {
 
 ```
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 #### EJERCICIO 3
 
@@ -165,7 +163,7 @@ Vamos a añadir más información a nuestro formulario de películas
 - **clasificación por edades**, donde usaremos radio buttons con las opciones: A (todos los públicos, aparece marcada por defecto), 7, 12, 16 y 18
 - **género**, donde usaremos checkboxes y podrán marcarse un máximo de 3 de las opciones: comedia, drama, fantasía, acción, familia, terror
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 ## Refs
 
@@ -250,15 +248,13 @@ class FileInput extends React.Component {
 }
 ```
 
----
-
 #### EJERCICIO 4
 
 **Pelis con carátula**
 
 Partiendo del ejercicio anterior, vamos a añadir un campo más al formulario que sea la carátula de la película. Al elegir el usuario una carátula, se muestra una previsualización de la misma, y se guardan los datos en el estado. Recuerda que para leer la información de ficheros debemos usar un `FileReader` y para recoger la información de una imagen su método `readAsDataURL`.
 
----
+\_\_\_\_\_\_\_\_\_\_
 
 ## Recursos externos
 
