@@ -225,6 +225,8 @@ El resultado debe ser parecido a este diseño de LinkedIn:
 
 ![Faceted search](assets/images/3_9_faceted-search.png)
 
+> **Nota:** os recomendamos hacer este ejercicio con componentes de clase ya que para hacerlo con un componente funcional necesitamos el Hook `useEffect` que lo aprenderemos en los ciclos de vida de los componentes.
+
 **¡Al lío!**
 
 \_\_\_\_\_\_\_\_\_\_
