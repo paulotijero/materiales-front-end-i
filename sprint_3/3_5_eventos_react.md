@@ -380,7 +380,7 @@ import ReactDOM from 'react-dom';
 import './stylesheets/index.css';
 import MurrayList from './components/MurrayList';
 
-ReactDOM.render(<MurrayList />, document.getElementById('react-root'));
+ReactDOM.render(<MurrayList />, document.getElementById('root'));
 ```
 
 &blacktriangleright; [_Lifting_ de eventos en Codepen][codepen-lifting-events]

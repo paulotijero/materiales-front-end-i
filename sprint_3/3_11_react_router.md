@@ -59,7 +59,7 @@ ReactDOM.render(
   <HashRouter>
     <App />
   </HashRouter>,
-  document.getElementById('react-root')
+  document.getElementById('root')
 );
 ```
 

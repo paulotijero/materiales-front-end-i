@@ -184,7 +184,7 @@ ReactDOM.render(
     <p>Thank you for visiting our webpage!</p>
     <p>We hope you enjoy our new shiny site!</p>
   </Popup>,
-  document.getElementById('react-root')
+  document.getElementById('root')
 );
 ```
 
