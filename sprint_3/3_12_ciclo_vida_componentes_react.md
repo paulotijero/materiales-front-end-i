@@ -88,8 +88,8 @@ class App extends React.Component {
   componentDidMount() {
     // guardamos el identificador del interval para limpiarlo en componentWillUnmount
     this.intervalId = setInterval(this.incrementCounter, 1000);
-    // NOTA: guardamos el identificador en un atributo y no en el estado
-    // ya que no queremos pintar el identificador en el DOM
+    // NOTA: guardamos el identificador en un atributo de la clase y
+    // no en el estado ya que no queremos pintar el identificador en el DOM
   }
   componentWillUnmount() {
     // limpiamos el interval
