@@ -204,13 +204,13 @@ Ya conocemos el Hook `useState` para gestionar el estado del componente. Ahora v
 
 Si analizamos el código de `useEffect` vemos:
 
-- `useEffect` **recibe como primer parámetro una función**, que será utilizada en el montaje del componente. Son las líneas:
+- `useEffect` **recibe como primer parámetro una función (sin ejecutar)**, que React ejecutará en el montaje del componente. Son las líneas:
    ```js
    let intervalId = setInterval(() => {
      setCounter(counter + 1);
    }, 1000);
    ```
-- `useEffect` puede **retornar una función (sin ejecutar)**, que será utilizada en el desmontaje del componente. Son las líneas:
+- `useEffect` puede **retornar una función (sin ejecutar)**, que React ejecutará en el desmontaje del componente. Son las líneas:
    ```js
    () => {
      clearInterval(intervalId);
@@ -224,41 +224,41 @@ Si analizamos el código de `useEffect` vemos:
 El orden de ejecución es el siguiente:
 
 1. Se ejecuta la función principal del componente y se retorna el código JSX.
-   1. React coge el código JSX retornado por la función y lo pinta en el DOM.
-   1. El componente ha sido montado.
-   1. Esta ejecución corresponde al método `render` de un componente de clase.
+   - React coge el código JSX retornado por la función y lo pinta en el DOM.
+   - El componente ha sido montado.
+   - Esta ejecución corresponde al método `render` de un componente de clase.
 1. Se ejecuta la función que **recibe `useEffect` como primer parámetro**.
-   1. En el ejemplo anterior son las 3 líneas:
+   - En el ejemplo anterior son las 3 líneas:
       ```js
       let intervalId = setInterval(() => {
         setCounter(counter + 1);
       }, 1000);
       ```
-   1. Esta ejecución corresponde al método `componentDidMount()` de un componente de clase.
+   - Esta ejecución corresponde al método `componentDidMount()` de un componente de clase.
 
 ### Actualización de un componente funcional
 
 Cada vez que se ejecuta un cambio de estado o de `props` el componente se re-renderiza. El orden de ejecución es el siguiente:
 
 1. Se ejecuta la función principal del componente y se retorna el código JSX.
-   1. React coge el código JSX retornado por la función y lo pinta en el DOM.
-   1. Esta ejecución corresponde al método `render` de un componente de clase.
+   - React coge el código JSX retornado por la función y lo pinta en el DOM.
+   - Esta ejecución corresponde al método `render` de un componente de clase.
 1. Se ejecuta la función que se **retorna dentro de `useEffect`**.
-   1. En el ejemplo anterior son las 3 líneas:
+   - En el ejemplo anterior son las 3 líneas:
       ```js
       () => {
         clearInterval(intervalId);
       };
       ```
-   1. Esta ejecución corresponde al método `componentWillUnmount()` de un componente de clase.
+   - Esta ejecución corresponde al método `componentWillUnmount()` de un componente de clase.
 1. Se ejecuta la función que **recibe `useEffect` como primer parámetro**.
-   1. En el ejemplo anterior son las 3 líneas:
+   - En el ejemplo anterior son las 3 líneas:
       ```js
       let intervalId = setInterval(() => {
         setCounter(counter + 1);
       }, 1000);
       ```
-   1. Esta ejecución corresponde al método `componentDidMount()` de un componente de clase.
+   - Esta ejecución corresponde al método `componentDidMount()` de un componente de clase.
 
 Si observamos este orden de acciones, podemos pensar que cada vez que se renderiza el componente React **primero lo desmonta y luego lo vuelve a montar**. Esto no es realmente así porque React no quita el componente del DOM y luego lo vuelve a añadir.
 
@@ -269,13 +269,13 @@ Si observamos este orden de acciones, podemos pensar que cada vez que se renderi
 El orden de ejecución es el siguiente:
 
 1. Se ejecuta la función que se **retorna dentro de `useEffect`**.
-   1. En el ejemplo anterior son las 3 líneas:
+   - En el ejemplo anterior son las 3 líneas:
       ```js
       () => {
         clearInterval(intervalId);
       };
       ```
-   1. Esta ejecución corresponde al método `componentWillUnmount()` de un componente de clase.
+   - Esta ejecución corresponde al método `componentWillUnmount()` de un componente de clase.
 
 #### EJERCICIO 3
 
