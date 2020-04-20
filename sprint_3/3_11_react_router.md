@@ -24,7 +24,7 @@ En esta sesión veremos cómo usar React para escribir aplicaciones web de una s
 
 Una de las características fundamentales de la Web es **el enlace**, _link_ o URL (siglas en inglés de "localizador de recursos uniforme"). Los enlaces permiten relacionar páginas entre sí, que unas nos lleven a otras, pero quizá una de las cosas más importantes es que se pueden compartir para que otras personas accedan al mismo contenido que nosotros.
 
-Cuando se habla de SPAs se hace referencia a un tipo de web que consta exclusivamente de **una página**: un solo archivo HTML, con archivos CSS y JavaScript. Toda la interacción transcurre dentro de esa página, manejada con JavaScript, que imita a una ventana de las aplicaciones de escritorio. Por eso muchas veces hablamos de **aplicaciones web** cuando nos referimos a SPAs. Sin embargo, en esta transformación de web a aplicación web se perdería la esencia más útil de la Web si no se conservase un sistema de enlaces que diferencie las diferentes páginas que componen la aplicación.
+Cuando se habla de SPAs se hace referencia a un tipo de web que consta exclusivamente de **una página**: un solo archivo HTML, con archivos CSS y JavaScript. Toda la interacción transcurre dentro de esa página, manejada con JavaScript, que imita a una ventana de las aplicaciones de escritorio. Por eso muchas veces hablamos de **aplicaciones web** cuando nos referimos a SPAs. Sin embargo, en esta transformación de web a aplicación web se perdería la esencia más útil de la Web si no se conservase un sistema de enlaces que diferencie las distintas páginas que componen la aplicación.
 
 Para reconciliar esta situación aparecieron **técnicas de _routing_** en JavaScript (en el lado del cliente) que manipulan intensivamente los _hashes_ (`#`) de las URL y respetan la [History API][mdn-history-api]. Es decir, "simulan" distintas direcciones URL en el navegador, lo que se llaman **rutas**, de forma que el usuario puede usar los botones de "<kbd>página anterior</kbd>" y "<kbd>página siguiente</kbd>" del navegador para desplazarse por distintas pantallas de la aplicación web, y permiten compartir enlaces que lleven específicamente a una pantalla, aunque en realidad todo esté hecho en una sola página (SPA).
 
@@ -32,7 +32,7 @@ Para reconciliar esta situación aparecieron **técnicas de _routing_** en JavaS
 
 React Router es una librería compatible con React (aunque no desarrollada por el equipo de React) que nos permite especificar rutas en nuestra aplicación web usando componentes de React. Es decir, con otras librerías especificaríamos las rutas por código JavaScript, pero con React Router las escribiremos en componentes de React como `<Route path='/about'>`.
 
-React Router se aprovecha de la separación de la interfaz en componentes que hace React. La lógica básica de cómo funciona es simple: depende de la ruta de la página en la que estemos, se pinta un componente u otro. Por ejemplo, podríamos decirle que si estamos en la ruta `/` renderice el componente `<Home />` en la página, pero si estamos en la ruta `/about`, que renderice el componente `<About />`.
+React Router se aprovecha de la separación de la interfaz en componentes que hace React. La lógica básica de cómo funciona es simple: dependiendo de la ruta de la página en la que estemos, se pinta un componente u otro. Por ejemplo, podríamos decirle que si estamos en la ruta `/` renderice el componente `<Home />` en la página, pero si estamos en la ruta `/about`, que renderice el componente `<About />`.
 
 Una de las características de las SPAs es que también mantienen el estado entre pantallas de nuestra página. Con React Router y la [arquitectura de componentes con estado que vimos en la sesión 3.10][session-3-10-stateful-components-architecture] esto se puede observar en el estado de nuestro componente principal, que normalmente se llamará algo parecido a `<App />`. `<App />` tiene el estado relativo a todos los componentes incluídos dentro de sí, y aunque cambiemos un componente dentro de él dependiendo de la ruta, seguimos conservando los datos del estado que tenemos en `<App />`.
 
@@ -244,7 +244,7 @@ class App extends React.Component {
 // ...
 ```
 
-Un ejemplo de como hacer esto lo tenemos en [este codepen](https://codepen.io/adalab/pen/BPVyjz?editors=0010). Mirad cómo pasamos el emoji del chaval y cómo recogemos el ID de la ruta `/child/:id`.
+Un ejemplo de cómo hacer esto lo tenemos en [este codepen](https://codepen.io/adalab/pen/BPVyjz?editors=0010). Mirad cómo pasamos el emoji del chaval y cómo recogemos el ID de la ruta `/child/:id`.
 
 > NOTA: al usar la función `render` la información del match no le llega directamente al componente que queremos pintar. Para que le llegue, debemos recogerla de las `props` y pasársela como en el ejemplo anterior.
 
@@ -301,7 +301,7 @@ En este ejemplo vemos que se usa `Route` de 2 formas: con `children` para pintar
 
 Tutorial sencillo de React Router v4. Incluye más información sobre las distintas plataformas en las que React Router funciona y las diferencias con las versiones anteriores (en inglés).
 
-- [Tutorial de React Router v4](https://medium.com/@pshrmn/a-simple-react-router-v4-tutorial-7f23ff27adf)
+- [Tutorial de React Router v4](https://blog.pshrmn.com/simple-react-router-v4-tutorial/)
 
 ### Blog de Krasimir Tsonev
 
