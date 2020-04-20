@@ -30,7 +30,7 @@ En esta sesión vamos a proponeros una arquitectura concreta para trabajar con c
 
 ## Arquitectura de componentes con estado
 
-Cuando trabajamos en aplicaciones React con varios componentes, la gestión de estado se vuelve compleja. Cuando desde un componente necesito unos datos que están en otro, primero tendré que identificar en cuál están y luego acceder a ellos, ya sea por _props_ o _lifting_. Para manejar esta situación, existen distintas arquitecturas de componentes. En esta sesión os proponemos una concreta con la que trabajar, aunque no es la única ni vale para todas las situaciones, sí que os va a ayudar a estructurar mejor vuestra aplicación React.
+Cuando trabajamos en aplicaciones React con varios componentes, la gestión de estado se vuelve compleja. Cuando desde un componente necesito unos datos que están en otro, primero tendré que identificar en cuál están y luego acceder a ellos, ya sea por _props_ o _lifting_. Para manejar esta situación, existen distintas arquitecturas de componentes. En esta sesión os proponemos una concreta con la que trabajar que, aunque no es la única ni vale para todas las situaciones, sí que os va a ayudar a estructurar mejor vuestra aplicación React.
 
 A pesar de que todos los componentes pueden tener estado, a la hora de hacer aplicaciones web con React, preferiremos **agrupar todos los estados en el componente raíz**. El resto de componentes serán _dummies_ (títeres), que significa que no tendrán estado. Podemos referirnos al estado del componente raíz como **estado de la aplicación** o **estado global**.
 
@@ -89,7 +89,7 @@ class UpdateButton extends React.Component {
 
 ## Servicios en módulos externos
 
-Una buena práctica en desarrollo de software en general es desacoplar las distintas partes de una aplicación y que puedan funcionar de forma independiente. Si, por ejemplo, tenemos desacoplado el acceso a un API que nos da información sobre el tiempo vamos a poder cambiar de proveedor de weather.com a accuweather.com solo modificando ese módulo. Otro ejemplo: si tenemos un módulo de nuestra aplicación que guarda la información de nuestros usuarios en base de datos, vamos a poder cambiar el servicio de AWS a Firebase solo modificando ese módulo.
+Una buena práctica en desarrollo de software en general es desacoplar las distintas partes de una aplicación y que puedan funcionar de forma independiente. Si, por ejemplo, tenemos desacoplado el acceso a un API que nos da información sobre el tiempo, vamos a poder cambiar de proveedor de weather.com a accuweather.com sólo modificando ese módulo. Otro ejemplo: si tenemos un módulo de nuestra aplicación que guarda la información de nuestros usuarios en una base de datos, vamos a poder cambiar el servicio de AWS a Firebase sólo modificando ese módulo.
 
 Siguiendo con el ejemplo anterior, os proponemos usar una carpeta `services` con un servicio `ReasonsService.js` que NO es un componente visual sino simplemente se encarga de hacer las peticiones al API:
 
@@ -124,13 +124,13 @@ class AppRoot extends React.Component {
 
 ```
 
-A simple vista no parece ninguna mejora, simplemente que nos complica más al tener que tener un nuevo fichero. Pero cuando la aplicación va creciendo, vamos a ver que es muy útil tener esta parte desacoplada de los componentes de React.
+A primera vista no parece ninguna mejora, simplemente que nos complica más al tener que tener un nuevo fichero. Pero cuando la aplicación va creciendo, vamos a ver que es muy útil tener esta parte desacoplada de los componentes de React.
 
 ## Loader
 
-Un patrón común en React, y en general en las aplicaciones web, es usar loaders es decir indicadores de que algo está cargando para mantener informado al usuario. En React normalmente tendremos un componente `Loader` que será un texto o una imagen de un spinner, que mostraremos hasta que tengamos los datos y podamos mostrarlos. Normalmente usaremos un patrón habitual de React, _conditional rendering_, que consiste en pintar un componente u otro dependiendo de una condición. Habitualmente usaremos ternarios para hacer esta comprobación directamente en el método render del componente principal.
+Un patrón común en React, y en general en las aplicaciones web, es usar loaders, es decir, indicadores de que algo está cargando para mantener informado al usuario. En React normalmente tendremos un componente `Loader` que será un texto o una imagen de un spinner, y que mostraremos hasta que tengamos los datos y podamos mostrarlos. Normalmente usaremos un patrón habitual de React, _conditional rendering_, que consiste en pintar un componente u otro dependiendo de una condición. Habitualmente usaremos ternarios para hacer esta comprobación directamente en el método render del componente principal.
 
-Vamos a ver un ejemplo con Murrays. Definimos una clase `Loader` con nuestro mensaje de cargando. En nuestro componente principal tenemos en nuestro estado un booleano para saber si se han terminado de cargar los datos, que por defecto es falso. Cuando terminen de cargarse lo pondremos a verdadero. Finalmente pintamos en el método render el `Loader` o los datos, dependiendo del valor del estado.
+Vamos a ver un ejemplo con Murrays. Definimos una clase `Loader` con nuestro mensaje de cargando. En nuestro componente principal tenemos en nuestro estado un booleano para saber si se han terminado de cargar los datos, que por defecto es falso. Cuando terminen de cargarse, lo pondremos a verdadero. Finalmente pintamos en el método render el `Loader` o los datos, dependiendo del valor del estado.
 
 ```js
 class Loader extends React.Component {
@@ -207,7 +207,7 @@ render() {
 
 **Directorio**
 
-En este ejercicio vamos a realizar un directorio de personas, al estilo de LinkedIn, con unos filtros que permiten filtrar las personas que aparecen. Para ello vamos a partir de un array de datos de gente aleatoria generado por https://randomuser.me/. Por ejemplo, un listado de 50 personas con datos aleatorios: https://randomuser.me/api/?results=50
+En este ejercicio vamos a realizar un directorio de personas, al estilo de LinkedIn, con unos filtros que permiten seleccionar las personas que aparecen. Para ello vamos a partir de un array de datos de gente aleatoria generado por https://randomuser.me/. Por ejemplo, un listado de 50 personas con datos aleatorios: https://randomuser.me/api/?results=50
 
 Vamos a mostrar de cada persona
 
