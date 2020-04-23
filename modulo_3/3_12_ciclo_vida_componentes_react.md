@@ -19,7 +19,7 @@ En esta sesión veremos el ciclo de vida de los componentes de React. Veremos ej
 
 ## ¿Para qué sirven los que vamos a ver en esta sesión?
 
-Como ya sabemos, React nos ayuda a modificar el DOM de nuestra apicación de una forma fácil y óptima. Pero React no es todopoderoso, hay cosas que no puede o sabe hacer o que no debe controlar porque no es su responsabilidad (es la nuestra).
+Como ya sabemos, React nos ayuda a modificar el DOM de nuestra aplicación de una forma fácil y óptima. Pero React no es todopoderoso, hay cosas que no puede o sabe hacer o que no debe controlar porque no es su responsabilidad (es la nuestra).
 
 Al menos, los creadores de React han previsto esta situación y nos proporcionan **herramientas para que tomemos el control** de los componentes y programemos nosotras mismas aquellas cosas que React no sabe hacer.
 
@@ -62,11 +62,11 @@ Con los métodos o los hooks del ciclo de vida podemos adaptar esto a nuestras n
 
 ### Desmontaje de un componente
 
-Si el montaje es la primera fase del ciclo de vida de un componente, el **desmontaje es la última fase del ciclo de vida** del componente. Es la parte en la que se va a destruir el componente y va a dejar de mostrarse en pantalla y de existir en memoria del ordenador.
+Si el montaje es la primera fase del ciclo de vida de un componente, el **desmontaje es la última fase del ciclo de vida** del componente. Es la parte en la que se va a destruir el componente y va a dejar de mostrarse en pantalla y de existir en la memoria del ordenador.
 
-Cuando React elimina un componente del DOM y por lo tanto ya no se visualiza en pantalla, decimos que ese componente se ha **desmontado**.
+Cuando React elimina un componente del DOM y, por lo tanto, ya no se visualiza en pantalla, decimos que ese componente se ha **desmontado**.
 
-> **Ejemplo:** cuando cambiamos de una página a otra React Router desmontam los componentes que ya no se deben visualizar.
+> **Ejemplo:** cuando cambiamos de una página a otra React Router desmonta los componentes que ya no se deben visualizar.
 
 Una vez que ya tenemos claros los conceptos vamos a ver **la sintaxis en un componente de clase y uno funcional**.
 
@@ -321,7 +321,7 @@ Las diferencias y semejanzas entre los ciclos de vida de un componente de clase 
 1. ¿`useEffect` es un poco jaleo porque mezcla un montón de cosas? Sí, lo es.
 1. En los **componentes de clase** el código relativo a hacer algo en el montaje y a deshacerlo en el desmontaje se reparte en varios métodos. Esto hace que el componente sea más complejo.
 1. En los **componentes funcionales** el código relativo a hacer algo en el montaje y a deshacerlo en el desmontaje se agrupa en un solo `useEffect`. Esto hace que el componente sea más simple y legible.
-1. Si en un **componentes funcionales** queremos hacer varias cosas diferentes en el montaje y deshacerlas en el desmontaje usaremos varios `useEffect`.
+1. Si en un **componente funcional** queremos hacer varias cosas diferentes en el montaje y deshacerlas en el desmontaje usaremos varios `useEffect`.
 
 #### EJERCICIO 5
 
@@ -404,7 +404,7 @@ const App = () => {
 export default App;
 ```
 
-Pero como ya sabemos, `useEffect` se ejecuta en cada render. Por ello está sucedería lo siguiente:
+Pero como ya sabemos, `useEffect` se ejecuta en cada render. Por ello sucedería lo siguiente:
 
 1. Se ejecuta el componente sin pintar ningún número. El componente es montado en el DOM.
 1. Se ejecuta **la función que recibe `useEffect`** y se piden los datos al servidor.

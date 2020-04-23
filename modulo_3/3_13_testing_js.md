@@ -16,9 +16,9 @@
 
 En esta sesión vamos a tener un primer contacto con el testing automático de nuestros proyectos de front-end, en concreto, de la parte de JavaScript.
 
-Testing es ni más ni menos que probar que una aplicación funciona como se espera, es decir, que cumple con los requisitos con los que se definió. _¿Hasta ahora hemos estado haciendo testing?_ Pues claro: cada vez que creamos una funcionalidad en una web la vamos probando manualmente: abrimos el navegador y probamos, por ejemplo, que la tarea se tacha al marcarla como completada en nuestra lista de tareas, o que las nuevas tareas se guardan en LocalStorage y al recargar el navegador siguen ahí.
+Testing es ni más ni menos que probar que una aplicación funciona como se espera, es decir, que cumple con los requisitos con los que se definió. _¿Hasta ahora hemos estado haciendo testing?_ Pues claro, cada vez que creamos una funcionalidad en una web la vamos probando manualmente: abrimos el navegador y probamos, por ejemplo, que la tarea se tacha al marcarla como completada en nuestra lista de tareas, o que las nuevas tareas se guardan en LocalStorage y al recargar el navegador siguen ahí.
 
-Todas estas pruebas las hacemos de forma manual, es decir, miramos directamente en el navegador si sucede el comportamiento que esperamos. Si no, pues hay un error y toca _debuggearlo_. ¿Existen otras formas de hacer testing? Sí, por ejemplo, los test de usuario se hacen para que un potencial usuario de nuestra web pruebe nuestro producto y nos de feedback. También tenemos los **tests automáticos**, que son en los que nos vamos a centrar en esta sesión. Estos test, en lugar de realizarlos nosotras a mano los va a realizar una máquina por nosotros para hacerlo de forma más rápida y evitarnos ese trabajo tedioso de ir probando manualmente que todo funciona correctamente. ¿Y cómo es posible? Pues porque los vamos a programar. _¿¡A programar!?_ Pues sí, desarrollaremos por tanto un programa (se le llama _código de tests_) que prueba que nuestra aplicación (se le llama _código de producción_) funciona correctamente.
+Todas estas pruebas las hacemos de forma manual, es decir, miramos directamente en el navegador si sucede el comportamiento que esperamos. Si no, pues hay un error y toca _debuggearlo_. ¿Existen otras formas de hacer testing? Sí, por ejemplo, los test de usuario se hacen para que un potencial usuario de nuestra web pruebe nuestro producto y nos dé feedback. También tenemos los **tests automáticos**, que son en los que nos vamos a centrar en esta sesión. Estos test, en lugar de realizarlos nosotras a mano los va a realizar una máquina por nosotras para hacerlo de forma más rápida y evitarnos ese trabajo tedioso de ir probando manualmente que todo funciona correctamente. ¿Y cómo es posible? Pues porque los vamos a programar. _¿¡A programar!?_ Pues sí, desarrollaremos por tanto un programa (se le llama _código de tests_) que prueba que nuestra aplicación (se le llama _código de producción_) funciona correctamente.
 
 ## ¿Para qué sirve lo que vamos a ver en esta sesión?
 
@@ -79,7 +79,7 @@ test('fizzbuzz returns 1 when the input is 1', () => {
 });
 ```
 
-Este código comienza por una descripción de la regla que debe cumplir el test: debe devolver 1 cuando el parámetro de entrada a la función es 1. Luego, en el test en sí, primero preparamos un parámetro en una variable (_arrange_); luego ejecutamos una función `fizzbuzz` y recojo el resultado en otra variable (_act_); y finalmente compruebo si el resultado tiene el valor que espero (_assert_) usando la función `expect` que veremos más adelante para qué sirve.
+Este código comienza por una descripción de la regla que debe cumplir el test: debe devolver 1 cuando el parámetro de entrada a la función es 1. Luego, en el test en sí, primero preparamos un parámetro en una variable (_arrange_); luego ejecutamos una función `fizzbuzz` y recojo el resultado en otra variable (_act_). Finalmente compruebo si el resultado tiene el valor que espero (_assert_) usando la función `expect` que veremos más adelante para qué sirve.
 
 A la hora de hacer tests es fundamental que los requisitos de cómo tiene que funcionar lo que hemos programado sean claros y tangibles. Por ejemplo, si hemos programado un campo de formulario para una contraseña deberemos tener claro si ese campo debe tener un mínimo de caracteres, si está permitido usar espacios o caracteres especiales, qué sucede cuando el usuario pulsa el botón de enviar y la fecha es incorrecta, etc.
 
@@ -90,7 +90,7 @@ En algunos casos se nos pasará algún detalle de estos requisitos, no pasa nada
 Los test unitarios se definen una serie de características
 
 - **Rápidos**: comparados con los tests de integración, los unitarios deben ejecutarse muy rápido. Por ejemplo, cientos de tests en menos de un segundo. Son rápidos en comparación con los de integración, ya que muchos de ellos acceden a sistemas externos (APIs, base de datos, etc).
-- **Aislados**: los test unitarios deben probar una funcionalidad aislada de nuestra aplicación, es decir, una porción de código. Por ejemplo, un componente sin hacer uso de otros componentes internos (otro componente hecho por mí) ni externos (DOM, API, etc).
+- **Aislados**: los tests unitarios deben probar una funcionalidad aislada de nuestra aplicación, es decir, una porción de código. Por ejemplo, un componente, sin hacer uso de otros componentes internos (otro componente hecho por mí) ni externos (DOM, API, etc).
 - **Repetibles**: cuando repito un test con las mismas condiciones, el resultado debe ser el mismo. Por ejemplo, es complicado hacer tests de cosas no predecibles como números aleatorios o cuando alguna condición depende del tiempo.
 - **Automatizados**: se deben poder comprobar sin intervención humana. Por ejemplo, no debe haber una persona revisando logs manualmente sino que debe ser un proceso totalmente automático.
 - **Hechos a tiempo**: deberíamos hacer estos tests antes de que sucedan los errores, no a consecuencia de ellos. Y según _TDD_ (metodología que veremos más adelante) deben ser hechos antes incluso del código.
@@ -183,7 +183,7 @@ En esta función ejecutamos el código para realizar la prueba. Recordamos las p
 
 > NOTA: ¿Pero para esto no podemos usar un `if`? Pues en realidad estamos haciendo una comprobación como en un if, pero no queremos ejecutar código dependiendo de una condición (que es lo que nos permite `if`) sino indicar una condición para que el test sea correcto.
 
-Cuando tenemos muchos tests normalmente vamos a querer agruparlos en los llamados _test suites_. Para definirlo en Jest usamos la función `describe` a la que pasamos una descripción del suite y una función cuyo contenido son los tests.
+Cuando tenemos muchos tests normalmente vamos a querer agruparlos en los llamados _test suites_. Para definirlo, en Jest usamos la función `describe` a la que pasamos una descripción del suite y una función cuyo contenido son los tests.
 
 ```js
 describe('Fizzbuzz', () => {
@@ -247,7 +247,7 @@ Ejemplos:
 - `paddingLeft('hola mi amigo', 6, 'x')` devuelve `'hola mi amigo'`
 - `paddingLeft('xxxx', 0, 'x')` devuelve `'xxxx'`
 
-En primer lugar, desarrollad el código de la función `paddingLeft` en un fichero. Cuando lo tengáis, cread un fichero de tests y cread un test para cada uno de los ejemplos anteriores. Así estamos comprobando que la función hacía lo que se ha pedido que haga.
+En primer lugar, desarrollad el código de la función `paddingLeft` en un fichero. Cuando lo tengáis, cread un fichero de tests y cread un test para cada uno de los ejemplos anteriores. Así estamos comprobando que la función hace lo que se ha pedido que haga.
 
 \_\_\_\_\_\_\_\_\_\_
 
@@ -305,13 +305,13 @@ Estas técnicas tienen dependencias entre ellas. Por ejemplo, no podré hacer de
 
 En esta sesión vamos a aprender TDD que consiste en **escribir los tests antes que el código**. Simplemente eso :) 🔥 (Acabo de oír cómo te explota la cabeza).
 
-Al principio suena a locura el pensar que vamos a escribir algo que prueba un código sin tener ese código que queremos probar pero si nos paramos a pensar un momento siempre que empezamos a programar un código lo primero que necesitamos saber son los requisitos que debe tener ese código para que funcione correctamente. Pensemos en una función `isOdd` que comprueba si un número es impar o no. A menudo la reacción básica es ponernos a escribir el código y probar mil variaciones distintas y escribir, en muchas ocasiones, más código del que necesitamos. Pero lo lógico es empezar pensando qué queremos que haga esa función y por tanto cuáles son los requisitos o las reglas que debe pasar para que consideremos que funciona correctamente. En este caso sería:
+Al principio suena a locura el pensar que vamos a escribir algo que prueba un código sin tener ese código que queremos probar, pero si nos paramos a pensar un momento, siempre que empezamos a programar un código lo primero que necesitamos saber son los requisitos que debe tener ese código para que funcione correctamente. Pensemos en una función `isOdd` que comprueba si un número es impar o no. A menudo la reacción básica es ponernos a escribir el código, probar mil variaciones distintas y escribir, en muchas ocasiones, más código del que necesitamos. Pero lo lógico es empezar pensando qué queremos que haga esa función y, por tanto, cuáles son los requisitos o las reglas que debe pasar para que consideremos que funciona correctamente. En este caso sería:
 
 - Si es un número par devuelve `true`
 - Si es número impar devuelve `false`
 - Si lo que me pasan no es un número devuelve un error
 
-Estos son los requisitos, simples y claros. De haber empezado por el código estaríamos pensando en `if`s y `else`s en vez de definir qué es lo que queremos. Una vez hecho esto, el siguiente paso sería pasar esos requisitos a reglas uno a uno usando tests. Por tanto, la clave de TDD es que pensamos en qué queremos y cuáles son los criterios claros y tangibles para que eso funcione correctamente y a partir de ahí implementamos el código que cumplirá esas reglas.
+Estos son los requisitos, simples y claros. De haber empezado por el código estaríamos pensando en `if`s y `else`s en vez de definir qué es lo que queremos. Una vez hecho esto, el siguiente paso sería pasar esos requisitos a reglas, uno a uno, usando tests. Por tanto, la clave de TDD es que pensamos en qué queremos y cuáles son los criterios claros y tangibles para que eso funcione correctamente y, a partir de ahí, implementamos el código que cumplirá esas reglas.
 
 ### El ciclo de TDD
 
@@ -319,7 +319,7 @@ La metodología de TDD se basa en un proceso cíclico de 3 pasos:
 
 1. Escribo un test definiendo qué tiene que hacer mi aplicación y lo veo fallar (se dice que el test _está en rojo_)
 1. Escribo el código de producción para que ese test pase y lo veo pasar (se dice que el test _está en verde_)
-1. Opcionalmente refactorizo el código de producción para mejorarlo, siempre que sigan pasando todos los tests ¡claro!
+1. Opcionalmente refactorizo el código de producción para mejorarlo, siempre que siga pasando todos los tests ¡claro!
 
 En inglés el ciclo de TDD se suele describir brevemente como _Red - Green - Refactor_.
 
