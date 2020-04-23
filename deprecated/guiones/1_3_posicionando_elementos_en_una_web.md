@@ -26,7 +26,7 @@
 
 ### Contenido de la sesión
 
-[1.2. Mi primera página web](https://adalab.gitbooks.io/curso-programacion-front-end-2018/content/sprint_1/1_3_posicionando_elementos_en_una_web.html)
+[1.2. Mi primera página web](sprint_1/1_3_posicionando_elementos_en_una_web.html)
 
 
 ## Resumen de la sesión

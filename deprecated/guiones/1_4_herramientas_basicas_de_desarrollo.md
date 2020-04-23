@@ -31,7 +31,7 @@
 
 ### Contenido de la sesión
 
-[1.4. Herramientas básicas de desarrollo web](https://adalab.gitbooks.io/curso-programacion-front-end-2018/content/sprint_1/1_4_herramientas_basicas_de_desarrollo_web.html)
+[1.4. Herramientas básicas de desarrollo web](sprint_1/1_4_herramientas_basicas_de_desarrollo_web.html)
 
 
 ## Resumen de la sesión

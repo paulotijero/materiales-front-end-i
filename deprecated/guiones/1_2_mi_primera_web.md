@@ -38,7 +38,7 @@
 
 ### Contenido de la sesión
 
-[1.2 Mi primera web](https://adalab.gitbooks.io/curso-programacion-front-end-2018/content/sprint_1/1_2_mi_primera_web.html)
+[1.2 Mi primera web](sprint_1/1_2_mi_primera_web.html)
 
 
 ### Parte grupal

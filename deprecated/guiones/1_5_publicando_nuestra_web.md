@@ -28,7 +28,7 @@
 
 ### Contenido de la sesión
 
-[1.5. Publicando nuestra web](https://adalab.gitbooks.io/curso-programacion-front-end-2018/content/sprint_1/1_5_publicando_nuestra_web.html)
+[1.5. Publicando nuestra web](sprint_1/1_5_publicando_nuestra_web.html)
 
 
 ## Repaso de la sesión
