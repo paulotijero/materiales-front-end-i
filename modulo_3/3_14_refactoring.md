@@ -14,14 +14,14 @@ Como ya sabemos, _Refactorizar_ código consiste en modificar un código para me
 
 ### Refactorización
 
-Se pueden aprender muchas estrategias de cómo refactorizar y son temas avanzados, por ejemplo, usar _patrones de diseño de software_ para mejorar nuestro código. Además se necesita experiencia para aprender a distinguir código bueno de código mejorable. Normalmente cuando un código nos parece que puede mejorarse es que detectamos un _olor de código_ (en inglés _code smell_) que nos indica que algo no está hecho de la manera más simple y semántica. Algunos ejemplos de _code smells_ son
+Se pueden aprender muchas estrategias de cómo refactorizar y son temas avanzados, por ejemplo, usar _patrones de diseño de software_ para mejorar nuestro código. Además, se necesita experiencia para aprender a distinguir código bueno de código mejorable. Normalmente, cuando un código nos parece que puede mejorarse es que detectamos un _olor de código_ (en inglés _code smell_) que nos indica que algo no está hecho de la manera más simple y semántica. Algunos ejemplos de _code smells_ son
 
 - duplicidad: si veo trozos de código que son casi iguales
-- usar _números mágicos_ (_magic numbers_): que son números en nuestro código sin explicar lo que son (mejor definirlos en una variable para darles un nombre)
+- usar _números mágicos_ (_magic numbers_): que es usar números en nuestro código sin explicar lo que son (mejor definirlos en una variable para darles un nombre)
 - funciones muy largas con muchos parámetros
 - mal nombrado de variables y funciones
 
-Esta parte de refactorización requeriría todo un curso en sí misma. Pero lo que sí queremos que entiendas es la importancia de tener tests para refactorizar porque nos permiten cambiar cosas comprobando que nuestra aplicación sigue funcionando (no se rompe). Haremos un ejercicio específico para demostrar esta afirmación.
+Esta parte de refactorización requeriría todo un curso en sí misma. Pero lo que sí queremos que entiendas es la importancia de tener tests para refactorizar, porque nos permiten cambiar cosas comprobando que nuestra aplicación sigue funcionando (no se rompe). Haremos un ejercicio específico para demostrar esta afirmación.
 
 #### EJERCICIO 1
 
