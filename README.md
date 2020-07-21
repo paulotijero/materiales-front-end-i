@@ -10,7 +10,7 @@
 
 ## Contenido
 
-- [Acerca del curso](#acerca-del-curso)
+- [Acerca del programa](#acerca-del-programa)
 - [Sobre Adalab](#sobre-adalab)
 - [Objetivos generales](#objetivos-generales)
 - [Cómo colaborar](#cómo-colaborar)
